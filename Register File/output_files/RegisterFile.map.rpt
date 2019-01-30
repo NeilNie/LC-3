@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RegisterFile
-Wed Jan 30 16:45:03 2019
+Wed Jan 30 18:57:03 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,9 +13,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Post-Synthesis Netlist Statistics for Top Partition
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -38,125 +39,123 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jan 30 16:45:03 2019       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; RegisterFile                                ;
-; Top-level Entity Name           ; RegisterFile                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 16                                          ;
-; Total pins                      ; 60                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jan 30 18:57:03 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; RegisterFile                                ;
+; Top-level Entity Name              ; RegisterFile                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 296                                         ;
+;     Total combinational functions  ; 296                                         ;
+;     Dedicated logic registers      ; 128                                         ;
+; Total registers                    ; 128                                         ;
+; Total pins                         ; 60                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; RegisterFile       ; RegisterFile       ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; RegisterFile       ; RegisterFile       ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; d_flip_flop.v                    ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v  ;         ;
-; RegisterFile.v                   ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v ;         ;
-; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v     ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; d_flip_flop.v                    ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v    ;         ;
+; RegisterFile.v                   ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v   ;         ;
+; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v       ;         ;
+; mux_8_1_bit_16.v                 ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v ;         ;
+; decoder_3_8.v                    ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v    ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -164,52 +163,178 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 8         ;
+; Estimated Total logic elements              ; 296       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 16        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 16        ;
+; Total combinational functions               ; 296       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 136       ;
+;     -- 3 input functions                    ; 160       ;
+;     -- <=2 input functions                  ; 0         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 16        ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 296       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 128       ;
+;     -- Dedicated logic registers            ; 128       ;
+;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 60        ;
 ;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 172       ;
-; Average fan-out                             ; 1.13      ;
+; Maximum fan-out                             ; 128       ;
+; Total fan-out                               ; 1500      ;
+; Average fan-out                             ; 2.76      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
-; |RegisterFile              ; 16 (0)              ; 16 (0)                    ; 0                 ; 0          ; 60   ; 0            ; |RegisterFile                               ; RegisterFile ; work         ;
-;    |Register:r0|           ; 16 (0)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0                   ; Register     ; work         ;
-;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_0  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_10 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_11 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_12 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_13 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_14 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_15 ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_1  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_2  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_3  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_4  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_5  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_6  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_7  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_8  ; d_flip_flop  ; work         ;
-;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_9  ; d_flip_flop  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
+; |RegisterFile              ; 296 (8)             ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 60   ; 0            ; |RegisterFile                               ; RegisterFile   ; work         ;
+;    |Register:r0|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r0|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r1|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r1|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r2|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r2|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r3|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r3|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r4|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r4|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r5|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r5|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r6|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r6|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |Register:r7|           ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7                   ; Register       ; work         ;
+;       |d_flip_flop:ff_0|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_0  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_10|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_10 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_11|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_11 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_12|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_12 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_13|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_13 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_14|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_14 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_15|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_15 ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_1|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_1  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_2|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_2  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_3|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_3  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_4|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_4  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_5|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_5  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_6|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_6  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_7|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_7  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_8|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_8  ; d_flip_flop    ; work         ;
+;       |d_flip_flop:ff_9|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|Register:r7|d_flip_flop:ff_9  ; d_flip_flop    ; work         ;
+;    |mux_8_1_bit_16:mux0|   ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|mux_8_1_bit_16:mux0           ; mux_8_1_bit_16 ; work         ;
+;    |mux_8_1_bit_16:mux1|   ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFile|mux_8_1_bit_16:mux1           ; mux_8_1_bit_16 ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -218,8 +343,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 128   ;
+; Number of registers using Synchronous Clear  ; 128   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -228,21 +353,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RegisterFile|mux_8_1_bit_16:mux0|out[2] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RegisterFile|mux_8_1_bit_16:mux1|out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 16                          ;
-;     SCLR              ; 16                          ;
-; arriav_lcell_comb     ; 17                          ;
-;     normal            ; 17                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 16                          ;
 ; boundary_port         ; 60                          ;
+; cycloneiii_ff         ; 128                         ;
+;     SCLR              ; 128                         ;
+; cycloneiii_lcell_comb ; 296                         ;
+;     normal            ; 296                         ;
+;         3 data inputs ; 160                         ;
+;         4 data inputs ; 136                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.94                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,7 +396,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 30 16:44:28 2019
+    Info: Processing started: Wed Jan 30 18:56:28 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegisterFile -c RegisterFile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -271,47 +406,83 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: RegisterFile File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: Register File: C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8_1_bit_16.v
+    Info (12023): Found entity 1: mux_8_1_bit_16 File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_3_8.v
+    Info (12023): Found entity 1: decoder_3_8 File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 6
 Info (12127): Elaborating entity "RegisterFile" for the top level hierarchy
-Warning (10034): Output port "Out2" at RegisterFile.v(24) has no driver File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-Info (12128): Elaborating entity "Register" for hierarchy "Register:r0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 31
+Info (12128): Elaborating entity "decoder_3_8" for hierarchy "decoder_3_8:decoder" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 35
+Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(15): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[0]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[1]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[2]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[3]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[4]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[5]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[6]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[7]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (12128): Elaborating entity "Register" for hierarchy "Register:r0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 38
 Info (12128): Elaborating entity "d_flip_flop" for hierarchy "Register:r0|d_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v Line: 14
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Out2[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[7]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[8]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[9]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[10]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[11]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[12]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[13]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[14]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
-    Warning (13410): Pin "Out2[15]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 24
+Info (12128): Elaborating entity "mux_8_1_bit_16" for hierarchy "mux_8_1_bit_16:mux0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at mux_8_1_bit_16.v(23): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[0]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[1]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[2]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[3]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[4]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[5]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[6]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[7]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[8]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[9]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[10]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[11]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[12]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[13]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[14]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Info (10041): Inferred latch for "out[15]" at mux_8_1_bit_16.v(23) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[4]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[5]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[6]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[7]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[8]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[9]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[10]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[11]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[12]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux0|out[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[4]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[5]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[6]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[7]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[8]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[9]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[10]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[11]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[12]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
+Warning (14026): LATCH primitive "mux_8_1_bit_16:mux1|out[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "DR[0]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 27
-    Warning (15610): No output dependent on input pin "DR[1]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 27
-    Warning (15610): No output dependent on input pin "DR[2]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 27
-    Warning (15610): No output dependent on input pin "SR1[0]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 28
-    Warning (15610): No output dependent on input pin "SR1[1]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 28
-    Warning (15610): No output dependent on input pin "SR1[2]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 28
-    Warning (15610): No output dependent on input pin "SR2[0]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 29
-    Warning (15610): No output dependent on input pin "SR2[1]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 29
-    Warning (15610): No output dependent on input pin "SR2[2]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 29
-Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 356 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 28 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Wed Jan 30 16:45:03 2019
+    Info (21061): Implemented 296 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Wed Jan 30 18:57:03 2019
     Info: Elapsed time: 00:00:35
     Info: Total CPU time (on all processors): 00:00:32
 

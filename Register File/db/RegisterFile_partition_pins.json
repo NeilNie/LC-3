@@ -4,6 +4,70 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "Out0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Out0[15]",
+					"strict" : false
+				},
+				{
 					"name" : "Out1[0]",
 					"strict" : false
 				},
@@ -68,7 +132,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "SR0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SR0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SR0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[0]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[0]",
 					"strict" : false
 				},
 				{
@@ -76,7 +168,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Bus[0]",
+					"name" : "DR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DR[1]",
 					"strict" : false
 				},
 				{

@@ -1,0 +1,33 @@
+//
+// 128 -> 16 Mux
+// Neil Nie
+// (c) 2019, All Rights Reserved
+//
+
+
+module mux_8_1_bit_16(
+sel,
+in0,
+in1,
+in2,
+in3,
+in4,
+in5,
+in6,
+in7,
+
+out
+);
+
+reg out;
+
+@always (*) begin
+	
+	if (sel == 3'b000)
+		out <= in0;
+	else if (sel == 3'b001)
+		out <= in1;
+
+end
+
+endmodule
