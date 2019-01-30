@@ -1,0 +1,245 @@
+|RegisterFile
+Bus[0] => Bus[0].IN1
+Bus[1] => Bus[1].IN1
+Bus[2] => Bus[2].IN1
+Bus[3] => Bus[3].IN1
+Bus[4] => Bus[4].IN1
+Bus[5] => Bus[5].IN1
+Bus[6] => Bus[6].IN1
+Bus[7] => Bus[7].IN1
+Bus[8] => Bus[8].IN1
+Bus[9] => Bus[9].IN1
+Bus[10] => Bus[10].IN1
+Bus[11] => Bus[11].IN1
+Bus[12] => Bus[12].IN1
+Bus[13] => Bus[13].IN1
+Bus[14] => Bus[14].IN1
+Bus[15] => Bus[15].IN1
+Out1[0] <= Register:r0.Q
+Out1[1] <= Register:r0.Q
+Out1[2] <= Register:r0.Q
+Out1[3] <= Register:r0.Q
+Out1[4] <= Register:r0.Q
+Out1[5] <= Register:r0.Q
+Out1[6] <= Register:r0.Q
+Out1[7] <= Register:r0.Q
+Out1[8] <= Register:r0.Q
+Out1[9] <= Register:r0.Q
+Out1[10] <= Register:r0.Q
+Out1[11] <= Register:r0.Q
+Out1[12] <= Register:r0.Q
+Out1[13] <= Register:r0.Q
+Out1[14] <= Register:r0.Q
+Out1[15] <= Register:r0.Q
+Out2[0] <= <GND>
+Out2[1] <= <GND>
+Out2[2] <= <GND>
+Out2[3] <= <GND>
+Out2[4] <= <GND>
+Out2[5] <= <GND>
+Out2[6] <= <GND>
+Out2[7] <= <GND>
+Out2[8] <= <GND>
+Out2[9] <= <GND>
+Out2[10] <= <GND>
+Out2[11] <= <GND>
+Out2[12] <= <GND>
+Out2[13] <= <GND>
+Out2[14] <= <GND>
+Out2[15] <= <GND>
+clk => clk.IN1
+WE => WE.IN1
+reset => reset.IN1
+DR[0] => ~NO_FANOUT~
+DR[1] => ~NO_FANOUT~
+DR[2] => ~NO_FANOUT~
+SR1[0] => ~NO_FANOUT~
+SR1[1] => ~NO_FANOUT~
+SR1[2] => ~NO_FANOUT~
+SR2[0] => ~NO_FANOUT~
+SR2[1] => ~NO_FANOUT~
+SR2[2] => ~NO_FANOUT~
+
+
+|RegisterFile|Register:r0
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+D[8] => D[8].IN1
+D[9] => D[9].IN1
+D[10] => D[10].IN1
+D[11] => D[11].IN1
+D[12] => D[12].IN1
+D[13] => D[13].IN1
+D[14] => D[14].IN1
+D[15] => D[15].IN1
+Q[0] <= d_flip_flop:ff_0.Q
+Q[1] <= d_flip_flop:ff_1.Q
+Q[2] <= d_flip_flop:ff_2.Q
+Q[3] <= d_flip_flop:ff_3.Q
+Q[4] <= d_flip_flop:ff_4.Q
+Q[5] <= d_flip_flop:ff_5.Q
+Q[6] <= d_flip_flop:ff_6.Q
+Q[7] <= d_flip_flop:ff_7.Q
+Q[8] <= d_flip_flop:ff_8.Q
+Q[9] <= d_flip_flop:ff_9.Q
+Q[10] <= d_flip_flop:ff_10.Q
+Q[11] <= d_flip_flop:ff_11.Q
+Q[12] <= d_flip_flop:ff_12.Q
+Q[13] <= d_flip_flop:ff_13.Q
+Q[14] <= d_flip_flop:ff_14.Q
+Q[15] <= d_flip_flop:ff_15.Q
+en => en.IN16
+reset => reset.IN16
+clk => clk.IN16
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_0
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_1
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_2
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_3
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_4
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_5
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_6
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_7
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_8
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_9
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_10
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_11
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_12
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_13
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_14
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|RegisterFile|Register:r0|d_flip_flop:ff_15
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+

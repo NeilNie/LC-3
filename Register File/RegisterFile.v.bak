@@ -1,0 +1,22 @@
+//
+// Register File for LC-3 Processor
+// Neil Nie
+// (c) 2019, All Rights Reserved.
+//
+
+
+module RegisterFile(
+Bus,
+Out1,
+Out2,
+
+clk, 
+WE,
+reset,
+DR,
+SR1,
+SR2
+
+);
+
+endmodule
