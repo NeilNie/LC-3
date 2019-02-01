@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/USER1/Digital Logic/Simulations
+vd_flip_flop
+Z0 !s110 1548995363
+!i10b 1
+!s100 iM`Z:X8ekT:7ZTOZEEgTW2
+IhOfng37MZ<ScNC=L3?5j`3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/USER1/Digital Logic/LC-3/Register File/simulation
+Z3 w1548978449
+8C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v
+L0 7
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1548995363.000000
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vdecoder_3_8
+R0
+!i10b 1
+!s100 b=?MGRg4MHBiB[8dOhBKT3
+ISK`@0:JQM85YUo?`djj6P1
+R1
+R2
+R3
+8C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v|
+!i113 1
+R6
+R7
+vmux_8_1_bit_16
+R0
+!i10b 1
+!s100 i_Lb24I:i<eB<i<F7b2m51
+IlFm8MD]]_0XM50QB9f3d41
+R1
+R2
+w1548978450
+8C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v|
+!i113 1
+R6
+R7
+vRegister
+R0
+!i10b 1
+!s100 4M>[0F^f?oY8LYH6>[dg03
+I`9d=^zFl8kOlD30?DH9RF3
+R1
+R2
+R3
+8C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/Register.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v|
+!i113 1
+R6
+R7
+n@register

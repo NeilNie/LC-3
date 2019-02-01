@@ -11,8 +11,9 @@ output Q;
 
 reg Q;
 
+// input select mux
 wire in;
-assign in = (D & ~sel) + (Q & sel);
+assign in = (D & sel) + (Q & ~sel);
 
 always @(posedge clk)
 	if (clr == 1'b1) begin

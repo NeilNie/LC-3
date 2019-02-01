@@ -1,5 +1,5 @@
 Fitter report for RegisterFile
-Wed Jan 30 18:57:28 2019
+Fri Feb 01 13:01:20 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 30 18:57:28 2019       ;
+; Fitter Status                      ; Successful - Fri Feb 01 13:01:20 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; RegisterFile                                ;
 ; Top-level Entity Name              ; RegisterFile                                ;
@@ -207,7 +207,7 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ;     -- Dedicated logic registers            ; 128 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 22 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 24 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 60 / 529 ( 11 % )       ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )          ;
@@ -226,7 +226,7 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%      ;
-; Peak interconnect usage (total/H/V)         ; 2.7% / 3.0% / 2.4%      ;
+; Peak interconnect usage (total/H/V)         ; 2.7% / 2.9% / 2.4%      ;
 ; Maximum fan-out                             ; 128                     ;
 ; Highest non-global fan-out                  ; 128                     ;
 ; Total fan-out                               ; 1506                    ;
@@ -262,7 +262,7 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ;     -- Dedicated logic registers            ; 128 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 22 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 24 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 60                     ; 0                              ;
@@ -311,32 +311,32 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Bus[0]  ; H16   ; 7        ; 65           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[0]  ; C16   ; 7        ; 62           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[10] ; J15   ; 7        ; 60           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[11] ; F17   ; 7        ; 67           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[12] ; B17   ; 7        ; 60           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[13] ; C16   ; 7        ; 62           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[11] ; E17   ; 7        ; 67           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[12] ; A22   ; 7        ; 89           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[13] ; F17   ; 7        ; 67           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[14] ; C25   ; 7        ; 105          ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[15] ; D25   ; 7        ; 105          ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[1]  ; E19   ; 7        ; 94           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[2]  ; A19   ; 7        ; 81           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[2]  ; G18   ; 7        ; 69           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[3]  ; G21   ; 7        ; 74           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[4]  ; B22   ; 7        ; 89           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[5]  ; B19   ; 7        ; 81           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[6]  ; E17   ; 7        ; 67           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[7]  ; C23   ; 7        ; 100          ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Bus[8]  ; J16   ; 7        ; 65           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[6]  ; J16   ; 7        ; 65           ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[7]  ; A23   ; 7        ; 102          ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Bus[8]  ; B17   ; 7        ; 60           ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Bus[9]  ; A21   ; 7        ; 89           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; DR[0]   ; D21   ; 7        ; 96           ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; DR[1]   ; A23   ; 7        ; 102          ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; DR[2]   ; B23   ; 7        ; 102          ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SR0[0]  ; D19   ; 7        ; 83           ; 73           ; 14           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; DR[0]   ; F19   ; 7        ; 94           ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; DR[1]   ; C23   ; 7        ; 100          ; 73           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; DR[2]   ; D23   ; 7        ; 100          ; 73           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SR0[0]  ; A19   ; 7        ; 81           ; 73           ; 14           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SR0[1]  ; J27   ; 6        ; 115          ; 37           ; 0            ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SR0[2]  ; J28   ; 6        ; 115          ; 37           ; 7            ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SR1[0]  ; C19   ; 7        ; 83           ; 73           ; 7            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SR1[1]  ; D20   ; 7        ; 85           ; 73           ; 14           ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SR1[2]  ; C20   ; 7        ; 85           ; 73           ; 7            ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; WE      ; F19   ; 7        ; 94           ; 73           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SR1[2]  ; D18   ; 7        ; 85           ; 73           ; 0            ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; WE      ; B23   ; 7        ; 102          ; 73           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; clk     ; J1    ; 1        ; 0            ; 36           ; 7            ; 128                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; reset   ; E24   ; 7        ; 85           ; 73           ; 21           ; 128                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -347,37 +347,37 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Out0[0]  ; J19   ; 7        ; 72           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[10] ; H19   ; 7        ; 72           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[11] ; G18   ; 7        ; 69           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[0]  ; E25   ; 7        ; 83           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[10] ; H21   ; 7        ; 72           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[11] ; J17   ; 7        ; 69           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; Out0[12] ; F18   ; 7        ; 87           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[13] ; E25   ; 7        ; 83           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[14] ; J17   ; 7        ; 69           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[15] ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[1]  ; C22   ; 7        ; 96           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[13] ; D19   ; 7        ; 83           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[14] ; G22   ; 7        ; 72           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[15] ; G20   ; 7        ; 74           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[1]  ; A17   ; 7        ; 60           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; Out0[2]  ; B18   ; 7        ; 79           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[3]  ; G22   ; 7        ; 72           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[4]  ; C17   ; 7        ; 81           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[5]  ; G20   ; 7        ; 74           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[6]  ; H17   ; 7        ; 67           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[7]  ; H21   ; 7        ; 72           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out0[8]  ; D18   ; 7        ; 85           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[3]  ; G15   ; 7        ; 65           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[4]  ; D16   ; 7        ; 62           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[5]  ; C17   ; 7        ; 81           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[6]  ; H19   ; 7        ; 72           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[7]  ; J19   ; 7        ; 72           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out0[8]  ; D17   ; 7        ; 81           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; Out0[9]  ; B21   ; 7        ; 87           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[0]  ; F22   ; 7        ; 107          ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[10] ; C18   ; 7        ; 87           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[11] ; G16   ; 7        ; 67           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[12] ; C21   ; 7        ; 91           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[13] ; A17   ; 7        ; 60           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[14] ; A22   ; 7        ; 89           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[0]  ; H15   ; 7        ; 60           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[10] ; F22   ; 7        ; 107          ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[11] ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[12] ; C22   ; 7        ; 96           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[13] ; C18   ; 7        ; 87           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[14] ; H17   ; 7        ; 67           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; Out1[15] ; D24   ; 7        ; 98           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[1]  ; G15   ; 7        ; 65           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[2]  ; G17   ; 7        ; 83           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[3]  ; A18   ; 7        ; 79           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[4]  ; C24   ; 7        ; 98           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[5]  ; D16   ; 7        ; 62           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[6]  ; H15   ; 7        ; 60           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[7]  ; D23   ; 7        ; 100          ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; Out1[8]  ; D17   ; 7        ; 81           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[1]  ; D21   ; 7        ; 96           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[2]  ; A18   ; 7        ; 79           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[3]  ; G16   ; 7        ; 67           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[4]  ; C21   ; 7        ; 91           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[5]  ; G17   ; 7        ; 83           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[6]  ; H16   ; 7        ; 65           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[7]  ; C24   ; 7        ; 98           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Out1[8]  ; C20   ; 7        ; 85           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; Out1[9]  ; E18   ; 7        ; 87           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
@@ -401,18 +401,18 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; P22      ; MSEL3                                  ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P28      ; DIFFIO_R23n, nCEO                      ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
 ; B22      ; DIFFIO_T53p, PADD0                     ; Use as regular IO        ; Bus[4]                  ; Dual Purpose Pin          ;
-; C18      ; DIFFIO_T50n, PADD1                     ; Use as regular IO        ; Out1[10]                ; Dual Purpose Pin          ;
-; D18      ; DIFFIO_T50p, PADD2                     ; Use as regular IO        ; Out0[8]                 ; Dual Purpose Pin          ;
-; C17      ; DIFFIO_T46n, PADD3                     ; Use as regular IO        ; Out0[4]                 ; Dual Purpose Pin          ;
-; D17      ; DIFFIO_T46p, PADD4, DQS2T/CQ3T,DPCLK8  ; Use as regular IO        ; Out1[8]                 ; Dual Purpose Pin          ;
-; A19      ; DIFFIO_T45n, PADD5                     ; Use as regular IO        ; Bus[2]                  ; Dual Purpose Pin          ;
+; C18      ; DIFFIO_T50n, PADD1                     ; Use as regular IO        ; Out1[13]                ; Dual Purpose Pin          ;
+; D18      ; DIFFIO_T50p, PADD2                     ; Use as regular IO        ; SR1[2]                  ; Dual Purpose Pin          ;
+; C17      ; DIFFIO_T46n, PADD3                     ; Use as regular IO        ; Out0[5]                 ; Dual Purpose Pin          ;
+; D17      ; DIFFIO_T46p, PADD4, DQS2T/CQ3T,DPCLK8  ; Use as regular IO        ; Out0[8]                 ; Dual Purpose Pin          ;
+; A19      ; DIFFIO_T45n, PADD5                     ; Use as regular IO        ; SR0[0]                  ; Dual Purpose Pin          ;
 ; B19      ; DIFFIO_T45p, PADD6                     ; Use as regular IO        ; Bus[5]                  ; Dual Purpose Pin          ;
-; A18      ; DIFFIO_T44n, PADD7                     ; Use as regular IO        ; Out1[3]                 ; Dual Purpose Pin          ;
+; A18      ; DIFFIO_T44n, PADD7                     ; Use as regular IO        ; Out1[2]                 ; Dual Purpose Pin          ;
 ; B18      ; DIFFIO_T44p, PADD8                     ; Use as regular IO        ; Out0[2]                 ; Dual Purpose Pin          ;
-; C16      ; DIFFIO_T36n, PADD9                     ; Use as regular IO        ; Bus[13]                 ; Dual Purpose Pin          ;
-; D16      ; DIFFIO_T36p, PADD10                    ; Use as regular IO        ; Out1[5]                 ; Dual Purpose Pin          ;
-; A17      ; DIFFIO_T35n, PADD11                    ; Use as regular IO        ; Out1[13]                ; Dual Purpose Pin          ;
-; B17      ; DIFFIO_T35p, PADD12, DQS4T/CQ5T,DPCLK9 ; Use as regular IO        ; Bus[12]                 ; Dual Purpose Pin          ;
+; C16      ; DIFFIO_T36n, PADD9                     ; Use as regular IO        ; Bus[0]                  ; Dual Purpose Pin          ;
+; D16      ; DIFFIO_T36p, PADD10                    ; Use as regular IO        ; Out0[4]                 ; Dual Purpose Pin          ;
+; A17      ; DIFFIO_T35n, PADD11                    ; Use as regular IO        ; Out0[1]                 ; Dual Purpose Pin          ;
+; B17      ; DIFFIO_T35p, PADD12, DQS4T/CQ5T,DPCLK9 ; Use as regular IO        ; Bus[8]                  ; Dual Purpose Pin          ;
 +----------+----------------------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -452,13 +452,13 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; A14      ; 472        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A15      ; 470        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A17      ; 462        ; 7        ; Out1[13]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A18      ; 442        ; 7        ; Out1[3]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A19      ; 440        ; 7        ; Bus[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 462        ; 7        ; Out0[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A18      ; 442        ; 7        ; Out1[2]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 440        ; 7        ; SR0[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A21      ; 425        ; 7        ; Bus[9]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A22      ; 423        ; 7        ; Out1[14]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A23      ; 412        ; 7        ; DR[1]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A22      ; 423        ; 7        ; Bus[12]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A23      ; 412        ; 7        ; Bus[7]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A24      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A25      ; 405        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A26      ; 404        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -701,13 +701,13 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; B14      ; 473        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B15      ; 471        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B17      ; 463        ; 7        ; Bus[12]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 463        ; 7        ; Bus[8]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B18      ; 443        ; 7        ; Out0[2]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B19      ; 441        ; 7        ; Bus[5]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B21      ; 426        ; 7        ; Out0[9]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B22      ; 424        ; 7        ; Bus[4]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B23      ; 413        ; 7        ; DR[2]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B23      ; 413        ; 7        ; WE                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B24      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B25      ; 406        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B26      ; 401        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -728,15 +728,15 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; C13      ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 468        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C16      ; 460        ; 7        ; Bus[13]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C17      ; 438        ; 7        ; Out0[4]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C18      ; 429        ; 7        ; Out1[10]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C16      ; 460        ; 7        ; Bus[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C17      ; 438        ; 7        ; Out0[5]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C18      ; 429        ; 7        ; Out1[13]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C19      ; 435        ; 7        ; SR1[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C20      ; 431        ; 7        ; SR1[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C21      ; 422        ; 7        ; Out1[12]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C22      ; 418        ; 7        ; Out0[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C23      ; 415        ; 7        ; Bus[7]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C24      ; 416        ; 7        ; Out1[4]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C20      ; 431        ; 7        ; Out1[8]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C21      ; 422        ; 7        ; Out1[4]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C22      ; 418        ; 7        ; Out1[12]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C23      ; 415        ; 7        ; DR[1]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C24      ; 416        ; 7        ; Out1[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C25      ; 411        ; 7        ; Bus[14]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C26      ; 400        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C27      ; 382        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -756,14 +756,14 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; D13      ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D14      ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 469        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D16      ; 461        ; 7        ; Out1[5]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D17      ; 439        ; 7        ; Out1[8]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D18      ; 430        ; 7        ; Out0[8]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D19      ; 436        ; 7        ; SR0[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D16      ; 461        ; 7        ; Out0[4]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D17      ; 439        ; 7        ; Out0[8]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D18      ; 430        ; 7        ; SR1[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 436        ; 7        ; Out0[13]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D20      ; 432        ; 7        ; SR1[1]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D21      ; 419        ; 7        ; DR[0]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D21      ; 419        ; 7        ; Out1[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D22      ; 402        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D23      ; 414        ; 7        ; Out1[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D23      ; 414        ; 7        ; DR[2]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D24      ; 417        ; 7        ; Out1[15]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D25      ; 410        ; 7        ; Bus[15]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D26      ; 383        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -785,7 +785,7 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; E14      ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E15      ; 467        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E17      ; 456        ; 7        ; Bus[6]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E17      ; 456        ; 7        ; Bus[11]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E18      ; 427        ; 7        ; Out1[9]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E19      ; 421        ; 7        ; Bus[1]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -793,7 +793,7 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; E22      ; 403        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E23      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E24      ; 433        ; 7        ; reset                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; E25      ; 434        ; 7        ; Out0[13]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E25      ; 434        ; 7        ; Out0[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E26      ; 378        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E27      ; 375        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E28      ; 374        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -813,12 +813,12 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; F14      ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F15      ; 466        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F17      ; 455        ; 7        ; Bus[11]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F17      ; 455        ; 7        ; Bus[13]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F18      ; 428        ; 7        ; Out0[12]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; F19      ; 420        ; 7        ; WE                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F19      ; 420        ; 7        ; DR[0]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F21      ; 408        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F22      ; 409        ; 7        ; Out1[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F22      ; 409        ; 7        ; Out1[10]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F23      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F24      ; 396        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F25      ; 395        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -839,14 +839,14 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; G12      ; 503        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G15      ; 457        ; 7        ; Out1[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G16      ; 453        ; 7        ; Out1[11]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G17      ; 437        ; 7        ; Out1[2]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G18      ; 452        ; 7        ; Out0[11]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G19      ; 451        ; 7        ; Out0[15]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G20      ; 444        ; 7        ; Out0[5]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G15      ; 457        ; 7        ; Out0[3]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 453        ; 7        ; Out1[3]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G17      ; 437        ; 7        ; Out1[5]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G18      ; 452        ; 7        ; Bus[2]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G19      ; 451        ; 7        ; Out1[11]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G20      ; 444        ; 7        ; Out0[15]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G21      ; 445        ; 7        ; Bus[3]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G22      ; 449        ; 7        ; Out0[3]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G22      ; 449        ; 7        ; Out0[14]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G23      ; 398        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G24      ; 397        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G25      ; 393        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -867,13 +867,13 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; H12      ; 507        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H13      ; 494        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 480        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H15      ; 464        ; 7        ; Out1[6]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; H16      ; 459        ; 7        ; Bus[0]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; H17      ; 454        ; 7        ; Out0[6]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H15      ; 464        ; 7        ; Out1[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 459        ; 7        ; Out1[6]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 454        ; 7        ; Out1[14]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H18      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H19      ; 446        ; 7        ; Out0[10]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H19      ; 446        ; 7        ; Out0[6]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H20      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H21      ; 448        ; 7        ; Out0[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H21      ; 448        ; 7        ; Out0[10]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H22      ; 399        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H23      ; 391        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H24      ; 390        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -896,10 +896,10 @@ The pin-out file can be found in C:/Users/USER1/Digital Logic/LC-3/Register File
 ; J13      ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J14      ; 481        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; J15      ; 465        ; 7        ; Bus[10]                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; J16      ; 458        ; 7        ; Bus[8]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; J17      ; 450        ; 7        ; Out0[14]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J16      ; 458        ; 7        ; Bus[6]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J17      ; 450        ; 7        ; Out0[11]                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J19      ; 447        ; 7        ; Out0[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J19      ; 447        ; 7        ; Out0[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J20      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J21      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J22      ; 394        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1537,27 +1537,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SR0[2]   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; SR0[1]   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; SR0[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SR1[2]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SR1[2]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SR1[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SR1[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clk      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Bus[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; WE       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DR[0]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; DR[2]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DR[0]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DR[2]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; DR[1]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; reset    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Bus[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Bus[2]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Bus[2]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Bus[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Bus[4]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Bus[5]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Bus[6]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Bus[7]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Bus[6]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Bus[7]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Bus[8]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Bus[9]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Bus[9]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Bus[10]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Bus[11]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Bus[11]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Bus[12]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Bus[13]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Bus[14]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
@@ -1590,54 +1590,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mux_8_1_bit_16:mux0|out[14]~74       ; 0                 ; 6       ;
 ;      - mux_8_1_bit_16:mux0|out[15]~79       ; 0                 ; 6       ;
 ; SR1[2]                                      ;                   ;         ;
-;      - mux_8_1_bit_16:mux1|out[0]~0         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[0]~1         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[0]~2         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[1]~5         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[1]~6         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[1]~7         ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[2]~10        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[2]~11        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[2]~12        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[3]~15        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[3]~16        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[3]~17        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[4]~20        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[4]~21        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[4]~22        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[5]~25        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[5]~26        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[5]~27        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[6]~30        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[6]~31        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[6]~32        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[7]~35        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[7]~36        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[7]~37        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[8]~40        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[8]~41        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[8]~42        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[9]~45        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[9]~46        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[9]~47        ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[10]~50       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[10]~51       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[10]~52       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[11]~55       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[11]~56       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[11]~57       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[12]~60       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[12]~61       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[12]~62       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[13]~65       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[13]~66       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[13]~67       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[14]~70       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[14]~71       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[14]~72       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[15]~75       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[15]~76       ; 1                 ; 6       ;
-;      - mux_8_1_bit_16:mux1|out[15]~77       ; 1                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[0]~0         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[0]~1         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[0]~2         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[1]~5         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[1]~6         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[1]~7         ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[2]~10        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[2]~11        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[2]~12        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[3]~15        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[3]~16        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[3]~17        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[4]~20        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[4]~21        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[4]~22        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[5]~25        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[5]~26        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[5]~27        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[6]~30        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[6]~31        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[6]~32        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[7]~35        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[7]~36        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[7]~37        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[8]~40        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[8]~41        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[8]~42        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[9]~45        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[9]~46        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[9]~47        ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[10]~50       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[10]~51       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[10]~52       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[11]~55       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[11]~56       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[11]~57       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[12]~60       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[12]~61       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[12]~62       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[13]~65       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[13]~66       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[13]~67       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[14]~70       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[14]~71       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[14]~72       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[15]~75       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[15]~76       ; 0                 ; 6       ;
+;      - mux_8_1_bit_16:mux1|out[15]~77       ; 0                 ; 6       ;
 ; SR1[1]                                      ;                   ;         ;
 ;      - mux_8_1_bit_16:mux1|out[0]~0         ; 0                 ; 6       ;
 ;      - mux_8_1_bit_16:mux1|out[0]~2         ; 0                 ; 6       ;
@@ -1724,15 +1724,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - comb~6                               ; 0                 ; 6       ;
 ;      - comb~7                               ; 0                 ; 6       ;
 ; DR[0]                                       ;                   ;         ;
-;      - comb~0                               ; 1                 ; 6       ;
-;      - comb~1                               ; 1                 ; 6       ;
-;      - comb~2                               ; 1                 ; 6       ;
-;      - comb~3                               ; 1                 ; 6       ;
-;      - comb~4                               ; 1                 ; 6       ;
-;      - comb~5                               ; 1                 ; 6       ;
-;      - comb~6                               ; 1                 ; 6       ;
-;      - comb~7                               ; 1                 ; 6       ;
-; DR[2]                                       ;                   ;         ;
 ;      - comb~0                               ; 0                 ; 6       ;
 ;      - comb~1                               ; 0                 ; 6       ;
 ;      - comb~2                               ; 0                 ; 6       ;
@@ -1741,6 +1732,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - comb~5                               ; 0                 ; 6       ;
 ;      - comb~6                               ; 0                 ; 6       ;
 ;      - comb~7                               ; 0                 ; 6       ;
+; DR[2]                                       ;                   ;         ;
+;      - comb~0                               ; 1                 ; 6       ;
+;      - comb~1                               ; 1                 ; 6       ;
+;      - comb~2                               ; 1                 ; 6       ;
+;      - comb~3                               ; 1                 ; 6       ;
+;      - comb~4                               ; 1                 ; 6       ;
+;      - comb~5                               ; 1                 ; 6       ;
+;      - comb~6                               ; 1                 ; 6       ;
+;      - comb~7                               ; 1                 ; 6       ;
 ; DR[1]                                       ;                   ;         ;
 ;      - comb~0                               ; 0                 ; 6       ;
 ;      - comb~1                               ; 0                 ; 6       ;
@@ -1889,14 +1889,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Register:r0|d_flip_flop:ff_1|Add0~0  ; 0                 ; 6       ;
 ;      - Register:r6|d_flip_flop:ff_1|Add0~0  ; 0                 ; 6       ;
 ; Bus[2]                                      ;                   ;         ;
-;      - Register:r5|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r3|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r1|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r7|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r2|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r4|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r0|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
-;      - Register:r6|d_flip_flop:ff_2|Add0~0  ; 0                 ; 6       ;
+;      - Register:r5|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r3|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r1|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r7|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r2|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r4|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r0|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
+;      - Register:r6|d_flip_flop:ff_2|Add0~0  ; 1                 ; 6       ;
 ; Bus[3]                                      ;                   ;         ;
 ;      - Register:r5|d_flip_flop:ff_3|Add0~0  ; 0                 ; 6       ;
 ;      - Register:r3|d_flip_flop:ff_3|Add0~0  ; 0                 ; 6       ;
@@ -1925,23 +1925,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Register:r0|d_flip_flop:ff_5|Add0~0  ; 1                 ; 6       ;
 ;      - Register:r6|d_flip_flop:ff_5|Add0~0  ; 1                 ; 6       ;
 ; Bus[6]                                      ;                   ;         ;
-;      - Register:r5|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r3|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r1|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r7|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r2|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r4|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r0|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
-;      - Register:r6|d_flip_flop:ff_6|Add0~0  ; 1                 ; 6       ;
+;      - Register:r5|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r3|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r1|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r7|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r2|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r4|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r0|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
+;      - Register:r6|d_flip_flop:ff_6|Add0~0  ; 0                 ; 6       ;
 ; Bus[7]                                      ;                   ;         ;
-;      - Register:r5|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r3|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r1|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r7|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r2|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r4|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r0|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
-;      - Register:r6|d_flip_flop:ff_7|Add0~0  ; 1                 ; 6       ;
+;      - Register:r5|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r3|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r1|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r7|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r2|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r4|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r0|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
+;      - Register:r6|d_flip_flop:ff_7|Add0~0  ; 0                 ; 6       ;
 ; Bus[8]                                      ;                   ;         ;
 ;      - Register:r5|d_flip_flop:ff_8|Add0~0  ; 0                 ; 6       ;
 ;      - Register:r3|d_flip_flop:ff_8|Add0~0  ; 0                 ; 6       ;
@@ -1952,14 +1952,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Register:r0|d_flip_flop:ff_8|Add0~0  ; 0                 ; 6       ;
 ;      - Register:r6|d_flip_flop:ff_8|Add0~0  ; 0                 ; 6       ;
 ; Bus[9]                                      ;                   ;         ;
-;      - Register:r5|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r3|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r1|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r7|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r2|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r4|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r0|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
-;      - Register:r6|d_flip_flop:ff_9|Add0~0  ; 0                 ; 6       ;
+;      - Register:r5|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r3|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r1|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r7|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r2|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r4|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r0|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
+;      - Register:r6|d_flip_flop:ff_9|Add0~0  ; 1                 ; 6       ;
 ; Bus[10]                                     ;                   ;         ;
 ;      - Register:r5|d_flip_flop:ff_10|Add0~0 ; 0                 ; 6       ;
 ;      - Register:r3|d_flip_flop:ff_10|Add0~0 ; 0                 ; 6       ;
@@ -1970,14 +1970,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Register:r0|d_flip_flop:ff_10|Add0~0 ; 0                 ; 6       ;
 ;      - Register:r6|d_flip_flop:ff_10|Add0~0 ; 0                 ; 6       ;
 ; Bus[11]                                     ;                   ;         ;
-;      - Register:r5|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r3|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r1|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r7|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r2|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r4|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r0|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
-;      - Register:r6|d_flip_flop:ff_11|Add0~0 ; 0                 ; 6       ;
+;      - Register:r5|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r3|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r1|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r7|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r2|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r4|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r0|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
+;      - Register:r6|d_flip_flop:ff_11|Add0~0 ; 1                 ; 6       ;
 ; Bus[12]                                     ;                   ;         ;
 ;      - Register:r5|d_flip_flop:ff_12|Add0~0 ; 0                 ; 6       ;
 ;      - Register:r3|d_flip_flop:ff_12|Add0~0 ; 0                 ; 6       ;
@@ -2041,32 +2041,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 360 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 19 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 120 / 209,544 ( < 1 % ) ;
-; Direct links          ; 42 / 342,891 ( < 1 % )  ;
+; Block interconnects   ; 355 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 18 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 118 / 209,544 ( < 1 % ) ;
+; Direct links          ; 38 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
 ; Local interconnects   ; 192 / 119,088 ( < 1 % ) ;
 ; R24 interconnects     ; 27 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 154 / 289,782 ( < 1 % ) ;
+; R4 interconnects      ; 158 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.45) ; Number of LABs  (Total = 22) ;
+; Number of Logic Elements  (Average = 12.33) ; Number of LABs  (Total = 24) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
@@ -2079,7 +2079,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.55) ; Number of LABs  (Total = 22) ;
+; LAB-wide Signals  (Average = 1.42) ; Number of LABs  (Total = 24) ;
 +------------------------------------+------------------------------+
 ; 1 Clock                            ; 17                           ;
 ; 1 Sync. clear                      ; 17                           ;
@@ -2089,21 +2089,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 19.27) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced  (Average = 17.67) ; Number of LABs  (Total = 24) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 1                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 1                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
@@ -2114,58 +2114,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 14                           ;
+; 23                                           ; 1                            ;
+; 24                                           ; 15                           ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.95) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced Out  (Average = 4.46) ; Number of LABs  (Total = 24) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 13                           ;
-; 5                                               ; 1                            ;
-; 6                                               ; 0                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 15                           ;
+; 5                                               ; 0                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 2                            ;
 ; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 2                            ;
+; 9                                               ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.09) ; Number of LABs  (Total = 22) ;
+; Number of Distinct Inputs  (Average = 13.71) ; Number of LABs  (Total = 24) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 13                           ;
-; 16                                           ; 2                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 2                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
+; 20                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2380,7 +2377,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2392,20 +2389,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X81_Y61 to location X91_Y73
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-    Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/USER1/Digital Logic/LC-3/Register File/output_files/RegisterFile.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5241 megabytes
-    Info: Processing ended: Wed Jan 30 18:57:29 2019
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Fri Feb 01 13:01:21 2019
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +----------------------------+

@@ -1,0 +1,29 @@
+{C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v} {1 {vlog -work work -stats=none {C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decoder_3_8
+
+Top level modules:
+	decoder_3_8
+
+} {} {}} {C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v} {1 {vlog -work work -stats=none {C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} {C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v} {1 {vlog -work work -stats=none {C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux_8_1_bit_16
+
+Top level modules:
+	mux_8_1_bit_16
+
+} {} {}} {C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v} {1 {vlog -work work -stats=none {C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module d_flip_flop
+
+Top level modules:
+	d_flip_flop
+
+} {} {}}

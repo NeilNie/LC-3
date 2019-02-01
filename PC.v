@@ -1,0 +1,20 @@
+//
+// PC
+
+module PC(
+clk,
+reset,
+ldPC,
+eabOut,
+selPC,
+Bus,
+PCOut
+);
+
+input [15:0] eabOut, Bus;
+input [1:0] selPC;
+input clk, reset, ldPC;
+
+output [15:0] PCOut;
+
+endmodule

@@ -1,0 +1,19 @@
+//
+// NZP
+//
+
+module NZP (
+Bus,
+clk,
+regWE,
+reset,
+N
+Z,
+P
+);
+
+
+input clk, regWE, reset;
+output N, Z, P;
+
+endmodule
