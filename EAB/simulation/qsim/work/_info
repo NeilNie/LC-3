@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/EAB/simulation/qsim
+vEAB
+!s110 1549311991
+!i10b 1
+!s100 0SAE>3@4BI2EmPi<WG>ho3
+IcJoe]zkfIVhk7TBMDJ?HW2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1549311990
+8EAB.vo
+FEAB.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1549311991.000000
+!s107 EAB.vo|
+!s90 -work|work|EAB.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@e@a@b
+vEAB_vlg_vec_tst
+!s110 1549311992
+!i10b 1
+!s100 PD?3<lhZhIdYjgn4n75eC3
+IO@aJEcCi^VVR;Shk0h5P^3
+R1
+R0
+w1549311988
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+R3
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@e@a@b_vlg_vec_tst

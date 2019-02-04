@@ -1,0 +1,385 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "eabOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_input_2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "selEAB1",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Ra[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "selEAB2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selEAB2[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
