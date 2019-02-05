@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/ALU/simulation/qsim
+vALU
+!s110 1549377318
+!i10b 1
+!s100 jMCBTM]YnAEVP55z1eYzO0
+I:Dd=U8hLi?F94:kQiTUKl1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1549377317
+8ALU.vo
+FALU.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1549377318.000000
+!s107 ALU.vo|
+!s90 -work|work|ALU.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@a@l@u
+vALU_vlg_vec_tst
+!s110 1549377319
+!i10b 1
+!s100 [TZ5HaaJbTm=;=3H;h9Kz2
+I@<daSAZ2ijI7l1Viim_j[3
+R1
+R0
+w1549377314
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1549377319.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4
+n@a@l@u_vlg_vec_tst

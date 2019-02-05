@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/04/2019 15:26:28"
+// Generated on "02/05/2019 08:19:21"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          EAB
 // 
@@ -138,7 +138,7 @@ initial
 begin
 	IR[0] = 1'b0;
 	IR[0] = #10000 1'b1;
-	IR[0] = #10000 1'b0;
+	IR[0] = #60000 1'b0;
 end 
 // PC[ 15 ]
 initial
@@ -210,14 +210,14 @@ initial
 begin
 	PC[2] = 1'b0;
 	PC[2] = #10000 1'b1;
-	PC[2] = #10000 1'b0;
+	PC[2] = #60000 1'b0;
 end 
 // PC[ 1 ]
 initial
 begin
 	PC[1] = 1'b0;
 	PC[1] = #10000 1'b1;
-	PC[1] = #10000 1'b0;
+	PC[1] = #60000 1'b0;
 end 
 // PC[ 0 ]
 initial

@@ -1,5 +1,5 @@
 Fitter report for EAB
-Mon Feb 04 15:25:13 2019
+Tue Feb 05 08:16:16 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,32 +9,31 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Fitter Summary
   3. Fitter Settings
-  4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. Output Pins
- 13. I/O Bank Usage
- 14. All Package Pins
- 15. I/O Assignment Warnings
- 16. Fitter Resource Utilization by Entity
- 17. Delay Chain Summary
- 18. Pad To Core Delay Chain Fanout
- 19. Control Signals
- 20. Routing Usage Summary
- 21. I/O Rules Summary
- 22. I/O Rules Details
- 23. I/O Rules Matrix
- 24. Fitter Device Options
- 25. Operating Settings and Conditions
- 26. Estimated Delay Added for Hold Timing Summary
- 27. Estimated Delay Added for Hold Timing Details
- 28. Fitter Messages
- 29. Fitter Suppressed Messages
+  4. Incremental Compilation Preservation Summary
+  5. Incremental Compilation Partition Settings
+  6. Incremental Compilation Placement Preservation
+  7. Pin-Out File
+  8. Fitter Resource Usage Summary
+  9. Fitter Partition Statistics
+ 10. Input Pins
+ 11. Output Pins
+ 12. I/O Bank Usage
+ 13. All Package Pins
+ 14. I/O Assignment Warnings
+ 15. Fitter Resource Utilization by Entity
+ 16. Delay Chain Summary
+ 17. Pad To Core Delay Chain Fanout
+ 18. Control Signals
+ 19. Routing Usage Summary
+ 20. I/O Rules Summary
+ 21. I/O Rules Details
+ 22. I/O Rules Matrix
+ 23. Fitter Device Options
+ 24. Operating Settings and Conditions
+ 25. Estimated Delay Added for Hold Timing Summary
+ 26. Estimated Delay Added for Hold Timing Details
+ 27. Fitter Messages
+ 28. Fitter Suppressed Messages
 
 
 
@@ -60,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Feb 04 15:25:13 2019       ;
+; Fitter Status                   ; Successful - Tue Feb 05 08:16:16 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; EAB                                         ;
 ; Top-level Entity Name           ; EAB                                         ;
@@ -140,24 +139,6 @@ refer to the applicable agreement for further details.
 ; Enable input tri-state on active configuration pins in user mode   ; Off                                   ; Off                                   ;
 ; Advanced Physical Optimization                                     ; On                                    ; On                                    ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 3           ;
-; Maximum allowed            ; 3           ;
-;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 3           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
-+----------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1449,7 +1430,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - adder_input_2[4]~output ; 1                 ; 0       ;
 ; IR[5]                          ;                   ;         ;
 ;      - Add1~21                 ; 1                 ; 0       ;
-;      - mux_2_input[14]~3       ; 1                 ; 0       ;
+;      - mux_2_input[11]~3       ; 1                 ; 0       ;
 ;      - adder_input_2[5]~output ; 1                 ; 0       ;
 ; IR[6]                          ;                   ;         ;
 ;      - Add0~1                  ; 1                 ; 0       ;
@@ -1458,34 +1439,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IR[8]                          ;                   ;         ;
 ;      - Add0~9                  ; 1                 ; 0       ;
 ;      - mux_2_input[10]~2       ; 1                 ; 0       ;
-;      - mux_2_input[14]~3       ; 1                 ; 0       ;
+;      - mux_2_input[11]~3       ; 1                 ; 0       ;
 ; IR[9]                          ;                   ;         ;
 ;      - Add0~13                 ; 1                 ; 0       ;
 ; IR[10]                         ;                   ;         ;
 ;      - Add0~17                 ; 0                 ; 0       ;
-;      - mux_2_input[8]~0        ; 0                 ; 0       ;
+;      - mux_2_input[6]~0        ; 0                 ; 0       ;
 ;      - mux_2_input[10]~2       ; 0                 ; 0       ;
-;      - mux_2_input[14]~3       ; 0                 ; 0       ;
+;      - mux_2_input[11]~3       ; 0                 ; 0       ;
 ; selEAB2[0]                     ;                   ;         ;
-;      - mux_2_input[8]~0        ; 0                 ; 0       ;
-;      - mux_2_input[14]~1       ; 1                 ; 0       ;
+;      - mux_2_input[6]~0        ; 0                 ; 0       ;
+;      - mux_2_input[6]~1        ; 1                 ; 0       ;
 ;      - mux_2_input[10]~2       ; 0                 ; 0       ;
-;      - mux_2_input[14]~3       ; 0                 ; 0       ;
+;      - mux_2_input[11]~3       ; 0                 ; 0       ;
 ; selEAB2[1]                     ;                   ;         ;
-;      - mux_2_input[8]~0        ; 1                 ; 0       ;
-;      - mux_2_input[14]~1       ; 1                 ; 0       ;
+;      - mux_2_input[6]~0        ; 1                 ; 0       ;
+;      - mux_2_input[6]~1        ; 1                 ; 0       ;
 ;      - mux_2_input[10]~2       ; 1                 ; 0       ;
-;      - mux_2_input[14]~3       ; 1                 ; 0       ;
+;      - mux_2_input[11]~3       ; 1                 ; 0       ;
 +--------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                ;
-+-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name              ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; mux_2_input[14]~1 ; LABCELL_X62_Y1_N12 ; 3       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-+-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                               ;
++------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name             ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; mux_2_input[6]~1 ; LABCELL_X62_Y1_N12 ; 3       ; Latch enable ; no     ; --                   ; --               ; --                        ;
++------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------+
@@ -1742,7 +1723,7 @@ Note: This table only shows the top 5 path(s) that have the largest delay added 
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 3 of the 3 processors detected
+Info (20029): Only one processor detected - disabling parallel compilation
 Info (119006): Selected device 5CGXFC7C7F23C8 for design "EAB"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1751,11 +1732,11 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 94 pins of 94 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
-Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:01
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:17
 Warning (335093): The Timing Analyzer is analyzing 3 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'EAB.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
@@ -1767,26 +1748,26 @@ Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.35 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:10
 Info (144001): Generated suppressed messages file C:/Users/USER1/Digital Logic/LC-3/EAB/output_files/EAB.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6567 megabytes
-    Info: Processing ended: Mon Feb 04 15:25:14 2019
-    Info: Elapsed time: 00:00:57
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 6283 megabytes
+    Info: Processing ended: Tue Feb 05 08:16:17 2019
+    Info: Elapsed time: 00:01:30
+    Info: Total CPU time (on all processors): 00:01:19
 
 
 +----------------------------+

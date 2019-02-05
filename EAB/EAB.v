@@ -25,15 +25,15 @@ reg [15:0] mux_2_input;
 
 // reg [15:0] adder_input_2, adder_input_1;
 
-//always @(selEAB1 or Ra or PC) begin
-//	
-//	if (selEAB1 == 1'b1) begin
-//		adder_input_1 = Ra;
-//	end else if (selEAB1 == 1'b0) begin
-//		adder_input_1 = PC;
-//	end
-//
-//end
+always @(selEAB1 or Ra or PC) begin
+	
+	if (selEAB1 == 1'b1) begin
+		adder_input_1 = Ra;
+	end else if (selEAB1 == 1'b0) begin
+		adder_input_1 = PC;
+	end
+
+end
 
 always @(*) begin
 
@@ -48,12 +48,6 @@ always @(*) begin
 	end
 	
 	adder_input_2 = mux_2_input + IR;
-	
-	if (selEAB1 == 1'b1) begin
-		adder_input_1 = Ra;
-	end else if (selEAB1 == 1'b0) begin
-		adder_input_1 = PC;
-	end
 
 end
 

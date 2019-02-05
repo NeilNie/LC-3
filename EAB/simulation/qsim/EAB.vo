@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/04/2019 15:26:30"
+// DATE "02/05/2019 08:19:23"
 
 // 
 // Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -189,9 +189,9 @@ wire \Ra[6]~input_o ;
 wire \PC[6]~input_o ;
 wire \selEAB2[1]~input_o ;
 wire \selEAB2[0]~input_o ;
-wire \mux_2_input[14]~1_combout ;
+wire \mux_2_input[6]~1_combout ;
 wire \IR[10]~input_o ;
-wire \mux_2_input[8]~0_combout ;
+wire \mux_2_input[6]~0_combout ;
 wire \IR[6]~input_o ;
 wire \Add0~1_sumout ;
 wire \Add1~22 ;
@@ -226,7 +226,7 @@ wire \Add1~38 ;
 wire \Add1~41_sumout ;
 wire \Ra[11]~input_o ;
 wire \PC[11]~input_o ;
-wire \mux_2_input[14]~3_combout ;
+wire \mux_2_input[11]~3_combout ;
 wire \Add0~18 ;
 wire \Add0~21_sumout ;
 wire \Add1~42 ;
@@ -1446,9 +1446,9 @@ defparam \selEAB2[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LABCELL_X62_Y1_N12
-cyclonev_lcell_comb \mux_2_input[14]~1 (
+cyclonev_lcell_comb \mux_2_input[6]~1 (
 // Equation(s):
-// \mux_2_input[14]~1_combout  = ( \selEAB2[0]~input_o  ) # ( !\selEAB2[0]~input_o  & ( \selEAB2[1]~input_o  ) )
+// \mux_2_input[6]~1_combout  = ( \selEAB2[0]~input_o  ) # ( !\selEAB2[0]~input_o  & ( \selEAB2[1]~input_o  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -1459,14 +1459,14 @@ cyclonev_lcell_comb \mux_2_input[14]~1 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\mux_2_input[14]~1_combout ),
+	.combout(\mux_2_input[6]~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \mux_2_input[14]~1 .extended_lut = "off";
-defparam \mux_2_input[14]~1 .lut_mask = 64'h0F0F0F0FFFFFFFFF;
-defparam \mux_2_input[14]~1 .shared_arith = "off";
+defparam \mux_2_input[6]~1 .extended_lut = "off";
+defparam \mux_2_input[6]~1 .lut_mask = 64'h0F0F0F0FFFFFFFFF;
+defparam \mux_2_input[6]~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: IOIBUF_X68_Y0_N1
@@ -1481,9 +1481,9 @@ defparam \IR[10]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LABCELL_X62_Y1_N21
-cyclonev_lcell_comb \mux_2_input[8]~0 (
+cyclonev_lcell_comb \mux_2_input[6]~0 (
 // Equation(s):
-// \mux_2_input[8]~0_combout  = ( !\selEAB2[1]~input_o  & ( \selEAB2[0]~input_o  & ( \IR[10]~input_o  ) ) )
+// \mux_2_input[6]~0_combout  = ( !\selEAB2[1]~input_o  & ( \selEAB2[0]~input_o  & ( \IR[10]~input_o  ) ) )
 
 	.dataa(!\IR[10]~input_o ),
 	.datab(gnd),
@@ -1494,27 +1494,27 @@ cyclonev_lcell_comb \mux_2_input[8]~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\mux_2_input[8]~0_combout ),
+	.combout(\mux_2_input[6]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \mux_2_input[8]~0 .extended_lut = "off";
-defparam \mux_2_input[8]~0 .lut_mask = 64'h0000000055550000;
-defparam \mux_2_input[8]~0 .shared_arith = "off";
+defparam \mux_2_input[6]~0 .extended_lut = "off";
+defparam \mux_2_input[6]~0 .lut_mask = 64'h0000000055550000;
+defparam \mux_2_input[6]~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X62_Y1_N0
 cyclonev_lcell_comb \mux_2_input[6] (
 // Equation(s):
-// mux_2_input[6] = ( mux_2_input[6] & ( \mux_2_input[8]~0_combout  ) ) # ( !mux_2_input[6] & ( \mux_2_input[8]~0_combout  & ( \mux_2_input[14]~1_combout  ) ) ) # ( mux_2_input[6] & ( !\mux_2_input[8]~0_combout  & ( !\mux_2_input[14]~1_combout  ) ) )
+// mux_2_input[6] = ( mux_2_input[6] & ( \mux_2_input[6]~0_combout  ) ) # ( !mux_2_input[6] & ( \mux_2_input[6]~0_combout  & ( \mux_2_input[6]~1_combout  ) ) ) # ( mux_2_input[6] & ( !\mux_2_input[6]~0_combout  & ( !\mux_2_input[6]~1_combout  ) ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\mux_2_input[14]~1_combout ),
+	.datad(!\mux_2_input[6]~1_combout ),
 	.datae(!mux_2_input[6]),
-	.dataf(!\mux_2_input[8]~0_combout ),
+	.dataf(!\mux_2_input[6]~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1804,10 +1804,10 @@ defparam \mux_2_input[10]~2 .shared_arith = "off";
 // Location: LABCELL_X62_Y1_N9
 cyclonev_lcell_comb \mux_2_input[9] (
 // Equation(s):
-// mux_2_input[9] = ( \mux_2_input[10]~2_combout  & ( (mux_2_input[9]) # (\mux_2_input[14]~1_combout ) ) ) # ( !\mux_2_input[10]~2_combout  & ( (!\mux_2_input[14]~1_combout  & mux_2_input[9]) ) )
+// mux_2_input[9] = ( \mux_2_input[10]~2_combout  & ( (mux_2_input[9]) # (\mux_2_input[6]~1_combout ) ) ) # ( !\mux_2_input[10]~2_combout  & ( (!\mux_2_input[6]~1_combout  & mux_2_input[9]) ) )
 
 	.dataa(gnd),
-	.datab(!\mux_2_input[14]~1_combout ),
+	.datab(!\mux_2_input[6]~1_combout ),
 	.datac(!mux_2_input[9]),
 	.datad(gnd),
 	.datae(gnd),
@@ -1981,9 +1981,9 @@ defparam \PC[11]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LABCELL_X62_Y1_N27
-cyclonev_lcell_comb \mux_2_input[14]~3 (
+cyclonev_lcell_comb \mux_2_input[11]~3 (
 // Equation(s):
-// \mux_2_input[14]~3_combout  = ( \selEAB2[0]~input_o  & ( (!\selEAB2[1]~input_o  & (\IR[10]~input_o )) # (\selEAB2[1]~input_o  & ((\IR[5]~input_o ))) ) ) # ( !\selEAB2[0]~input_o  & ( (!\selEAB2[1]~input_o  & (\IR[5]~input_o )) # (\selEAB2[1]~input_o  & 
+// \mux_2_input[11]~3_combout  = ( \selEAB2[0]~input_o  & ( (!\selEAB2[1]~input_o  & (\IR[10]~input_o )) # (\selEAB2[1]~input_o  & ((\IR[5]~input_o ))) ) ) # ( !\selEAB2[0]~input_o  & ( (!\selEAB2[1]~input_o  & (\IR[5]~input_o )) # (\selEAB2[1]~input_o  & 
 // ((\IR[8]~input_o ))) ) )
 
 	.dataa(!\IR[10]~input_o ),
@@ -1995,27 +1995,27 @@ cyclonev_lcell_comb \mux_2_input[14]~3 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\mux_2_input[14]~3_combout ),
+	.combout(\mux_2_input[11]~3_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \mux_2_input[14]~3 .extended_lut = "off";
-defparam \mux_2_input[14]~3 .lut_mask = 64'h0C3F0C3F47474747;
-defparam \mux_2_input[14]~3 .shared_arith = "off";
+defparam \mux_2_input[11]~3 .extended_lut = "off";
+defparam \mux_2_input[11]~3 .lut_mask = 64'h0C3F0C3F47474747;
+defparam \mux_2_input[11]~3 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X62_Y1_N24
 cyclonev_lcell_comb \mux_2_input[11] (
 // Equation(s):
-// mux_2_input[11] = ( \mux_2_input[14]~1_combout  & ( \mux_2_input[14]~3_combout  ) ) # ( !\mux_2_input[14]~1_combout  & ( mux_2_input[11] ) )
+// mux_2_input[11] = ( \mux_2_input[6]~1_combout  & ( \mux_2_input[11]~3_combout  ) ) # ( !\mux_2_input[6]~1_combout  & ( mux_2_input[11] ) )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!\mux_2_input[14]~3_combout ),
+	.datac(!\mux_2_input[11]~3_combout ),
 	.datad(!mux_2_input[11]),
 	.datae(gnd),
-	.dataf(!\mux_2_input[14]~1_combout ),
+	.dataf(!\mux_2_input[6]~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),

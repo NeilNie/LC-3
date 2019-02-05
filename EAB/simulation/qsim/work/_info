@@ -9,46 +9,46 @@ z2
 cModel Technology
 Z0 dC:/Users/USER1/Digital Logic/LC-3/EAB/simulation/qsim
 vEAB
-!s110 1549311991
+Z1 !s110 1549372766
 !i10b 1
-!s100 0SAE>3@4BI2EmPi<WG>ho3
-IcJoe]zkfIVhk7TBMDJ?HW2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 ocQCb7nhUmMd1VD35iF1e0
+IH0WFR]<_oiU^X;lPU?>EE2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1549311990
+w1549372763
 8EAB.vo
 FEAB.vo
 L0 31
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z3 !s108 1549311991.000000
+Z4 !s108 1549372766.000000
 !s107 EAB.vo|
 !s90 -work|work|EAB.vo|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@e@a@b
 vEAB_vlg_vec_tst
-!s110 1549311992
-!i10b 1
-!s100 PD?3<lhZhIdYjgn4n75eC3
-IO@aJEcCi^VVR;Shk0h5P^3
 R1
+!i10b 1
+!s100 Ql?CGRcYjbQHd0Gof0DlK0
+I5>HMaDbcI?IoN3Q:fURZo2
+R2
 R0
-w1549311988
+w1549372761
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
-R2
+R3
 r1
 !s85 0
 31
-R3
+R4
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R4
 R5
+R6
 n@e@a@b_vlg_vec_tst

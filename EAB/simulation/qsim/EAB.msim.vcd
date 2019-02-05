@@ -3,7 +3,7 @@ $comment
 		vcd file EAB.msim.vcd -direction
 $end
 $date
-	Mon Feb 04 15:26:33 2019
+	Tue Feb 05 08:19:28 2019
 $end
 $version
 	ModelSim Version 10.5b
@@ -109,9 +109,9 @@ $var wire 1 { Ra[6]~input_o $end
 $var wire 1 | PC[6]~input_o $end
 $var wire 1 } selEAB2[1]~input_o $end
 $var wire 1 ~ selEAB2[0]~input_o $end
-$var wire 1 !! mux_2_input[14]~1_combout $end
+$var wire 1 !! mux_2_input[6]~1_combout $end
 $var wire 1 "! IR[10]~input_o $end
-$var wire 1 #! mux_2_input[8]~0_combout $end
+$var wire 1 #! mux_2_input[6]~0_combout $end
 $var wire 1 $! IR[6]~input_o $end
 $var wire 1 %! Add0~1_sumout $end
 $var wire 1 &! Add1~22 $end
@@ -146,7 +146,7 @@ $var wire 1 B! Add1~38 $end
 $var wire 1 C! Add1~41_sumout $end
 $var wire 1 D! Ra[11]~input_o $end
 $var wire 1 E! PC[11]~input_o $end
-$var wire 1 F! mux_2_input[14]~3_combout $end
+$var wire 1 F! mux_2_input[11]~3_combout $end
 $var wire 1 G! Add0~18 $end
 $var wire 1 H! Add0~21_sumout $end
 $var wire 1 I! Add1~42 $end
@@ -487,9 +487,6 @@ b111000 #
 0$
 b1 %
 b0 %
-b0 !
-b10 "
-b0 "
 b11000 #
 b1000 #
 b0 #
@@ -497,12 +494,8 @@ b0 #
 0l
 0q
 0v
-0d
-0h
 0~
 0}
-0_
-0E
 0!!
 0h!
 0z
@@ -510,8 +503,14 @@ b0 #
 0u
 0f!
 0p
-0a
-0U
+1e!
+1d!
+1k
+1f
+1T
+1S
+14
+13
 0R
 02
 0Q
@@ -528,14 +527,48 @@ b0 %
 1]
 0}
 0!!
+0e!
+0d!
+0k
+0f
+0T
+0S
+04
+03
 #50000
 b1 %
 0$
 1~
 0]
 1!!
+1e!
+1d!
+1k
+1f
+1T
+1S
+14
+13
 #60000
 b0 %
 0~
 0!!
+#70000
+b0 !
+b10 "
+b0 "
+0d
+0h
+0_
+0E
+0e!
+0k
+0d!
+0f
+0a
+0U
+0T
+04
+0S
+03
 #100000
