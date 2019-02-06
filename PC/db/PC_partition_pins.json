@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PCOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PCOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ldPC",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "selPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[8]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[9]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[10]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[11]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[12]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[13]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[14]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

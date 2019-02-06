@@ -1,0 +1,242 @@
+|PC
+clk => clk.IN1
+reset => reset.IN1
+ldPC => ldPC.IN1
+eabOut[0] => PC[0].DATAB
+eabOut[1] => PC[1].DATAB
+eabOut[2] => PC[2].DATAB
+eabOut[3] => PC[3].DATAB
+eabOut[4] => PC[4].DATAB
+eabOut[5] => PC[5].DATAB
+eabOut[6] => PC[6].DATAB
+eabOut[7] => PC[7].DATAB
+eabOut[8] => PC[8].DATAB
+eabOut[9] => PC[9].DATAB
+eabOut[10] => PC[10].DATAB
+eabOut[11] => PC[11].DATAB
+eabOut[12] => PC[12].DATAB
+eabOut[13] => PC[13].DATAB
+eabOut[14] => PC[14].DATAB
+eabOut[15] => PC[15].DATAB
+selPC[0] => Equal0.IN1
+selPC[0] => Equal1.IN0
+selPC[0] => Equal2.IN1
+selPC[1] => Equal0.IN0
+selPC[1] => Equal1.IN1
+selPC[1] => Equal2.IN0
+Bus[0] => PC[0].DATAA
+Bus[1] => PC[1].DATAA
+Bus[2] => PC[2].DATAA
+Bus[3] => PC[3].DATAA
+Bus[4] => PC[4].DATAA
+Bus[5] => PC[5].DATAA
+Bus[6] => PC[6].DATAA
+Bus[7] => PC[7].DATAA
+Bus[8] => PC[8].DATAA
+Bus[9] => PC[9].DATAA
+Bus[10] => PC[10].DATAA
+Bus[11] => PC[11].DATAA
+Bus[12] => PC[12].DATAA
+Bus[13] => PC[13].DATAA
+Bus[14] => PC[14].DATAA
+Bus[15] => PC[15].DATAA
+PCOut[0] <= PC_register:pc_reg.Q
+PCOut[1] <= PC_register:pc_reg.Q
+PCOut[2] <= PC_register:pc_reg.Q
+PCOut[3] <= PC_register:pc_reg.Q
+PCOut[4] <= PC_register:pc_reg.Q
+PCOut[5] <= PC_register:pc_reg.Q
+PCOut[6] <= PC_register:pc_reg.Q
+PCOut[7] <= PC_register:pc_reg.Q
+PCOut[8] <= PC_register:pc_reg.Q
+PCOut[9] <= PC_register:pc_reg.Q
+PCOut[10] <= PC_register:pc_reg.Q
+PCOut[11] <= PC_register:pc_reg.Q
+PCOut[12] <= PC_register:pc_reg.Q
+PCOut[13] <= PC_register:pc_reg.Q
+PCOut[14] <= PC_register:pc_reg.Q
+PCOut[15] <= PC_register:pc_reg.Q
+
+
+|PC|PC_register:pc_reg
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+D[8] => D[8].IN1
+D[9] => D[9].IN1
+D[10] => D[10].IN1
+D[11] => D[11].IN1
+D[12] => D[12].IN1
+D[13] => D[13].IN1
+D[14] => D[14].IN1
+D[15] => D[15].IN1
+Q[0] <= d_negedge_flip_flop:ff_0.Q
+Q[1] <= d_negedge_flip_flop:ff_1.Q
+Q[2] <= d_negedge_flip_flop:ff_2.Q
+Q[3] <= d_negedge_flip_flop:ff_3.Q
+Q[4] <= d_negedge_flip_flop:ff_4.Q
+Q[5] <= d_negedge_flip_flop:ff_5.Q
+Q[6] <= d_negedge_flip_flop:ff_6.Q
+Q[7] <= d_negedge_flip_flop:ff_7.Q
+Q[8] <= d_negedge_flip_flop:ff_8.Q
+Q[9] <= d_negedge_flip_flop:ff_9.Q
+Q[10] <= d_negedge_flip_flop:ff_10.Q
+Q[11] <= d_negedge_flip_flop:ff_11.Q
+Q[12] <= d_negedge_flip_flop:ff_12.Q
+Q[13] <= d_negedge_flip_flop:ff_13.Q
+Q[14] <= d_negedge_flip_flop:ff_14.Q
+Q[15] <= d_negedge_flip_flop:ff_15.Q
+en => en.IN16
+reset => reset.IN16
+clk => clk.IN16
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_0
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_1
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_2
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_3
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_4
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_5
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_6
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_7
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_8
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_9
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_10
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_11
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_12
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_13
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_14
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_15
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
