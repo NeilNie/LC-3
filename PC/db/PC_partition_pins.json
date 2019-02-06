@@ -80,15 +80,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "eabOut[0]",
+					"strict" : false
+				},
+				{
 					"name" : "selPC[0]",
 					"strict" : false
 				},
 				{
 					"name" : "selPC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "eabOut[0]",
 					"strict" : false
 				},
 				{

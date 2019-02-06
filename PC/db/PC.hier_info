@@ -40,25 +40,25 @@ Bus[12] => PC[12].DATAA
 Bus[13] => PC[13].DATAA
 Bus[14] => PC[14].DATAA
 Bus[15] => PC[15].DATAA
-PCOut[0] <= PC_register:pc_reg.Q
-PCOut[1] <= PC_register:pc_reg.Q
-PCOut[2] <= PC_register:pc_reg.Q
-PCOut[3] <= PC_register:pc_reg.Q
-PCOut[4] <= PC_register:pc_reg.Q
-PCOut[5] <= PC_register:pc_reg.Q
-PCOut[6] <= PC_register:pc_reg.Q
-PCOut[7] <= PC_register:pc_reg.Q
-PCOut[8] <= PC_register:pc_reg.Q
-PCOut[9] <= PC_register:pc_reg.Q
-PCOut[10] <= PC_register:pc_reg.Q
-PCOut[11] <= PC_register:pc_reg.Q
-PCOut[12] <= PC_register:pc_reg.Q
-PCOut[13] <= PC_register:pc_reg.Q
-PCOut[14] <= PC_register:pc_reg.Q
-PCOut[15] <= PC_register:pc_reg.Q
+PCOut[0] << bit_16_register:pc_reg.Q
+PCOut[1] << bit_16_register:pc_reg.Q
+PCOut[2] << bit_16_register:pc_reg.Q
+PCOut[3] << bit_16_register:pc_reg.Q
+PCOut[4] << bit_16_register:pc_reg.Q
+PCOut[5] << bit_16_register:pc_reg.Q
+PCOut[6] << bit_16_register:pc_reg.Q
+PCOut[7] << bit_16_register:pc_reg.Q
+PCOut[8] << bit_16_register:pc_reg.Q
+PCOut[9] << bit_16_register:pc_reg.Q
+PCOut[10] << bit_16_register:pc_reg.Q
+PCOut[11] << bit_16_register:pc_reg.Q
+PCOut[12] << bit_16_register:pc_reg.Q
+PCOut[13] << bit_16_register:pc_reg.Q
+PCOut[14] << bit_16_register:pc_reg.Q
+PCOut[15] << bit_16_register:pc_reg.Q
 
 
-|PC|PC_register:pc_reg
+|PC|bit_16_register:pc_reg
 D[0] => D[0].IN1
 D[1] => D[1].IN1
 D[2] => D[2].IN1
@@ -96,7 +96,7 @@ reset => reset.IN16
 clk => clk.IN16
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_0
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_0
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -105,7 +105,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_1
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_1
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -114,7 +114,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_2
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_2
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -123,7 +123,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_3
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_3
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -132,7 +132,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_4
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_4
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -141,7 +141,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_5
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_5
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -150,7 +150,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_6
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_6
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -159,7 +159,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_7
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_7
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -168,7 +168,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_8
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_8
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -177,7 +177,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_9
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_9
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -186,7 +186,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_10
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_10
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -195,7 +195,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_11
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_11
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -204,7 +204,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_12
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_12
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -213,7 +213,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_13
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_13
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -222,7 +222,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_14
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_14
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -231,7 +231,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|PC|PC_register:pc_reg|d_negedge_flip_flop:ff_15
+|PC|bit_16_register:pc_reg|d_negedge_flip_flop:ff_15
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
