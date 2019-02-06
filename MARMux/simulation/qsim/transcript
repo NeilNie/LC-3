@@ -1,0 +1,31 @@
+# do MARMux.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:47:59 on Feb 06,2019
+# vlog -work work MARMux.vo 
+# -- Compiling module MARMux
+# 
+# Top level modules:
+# 	MARMux
+# End time: 07:48:00 on Feb 06,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:48:00 on Feb 06,2019
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module MARMux_vlg_vec_tst
+# 
+# Top level modules:
+# 	MARMux_vlg_vec_tst
+# End time: 07:48:00 on Feb 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MARMux_vlg_vec_tst 
+# Start time: 07:48:01 on Feb 06,2019
+# Loading work.MARMux_vlg_vec_tst
+# Loading work.MARMux
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# after#23
+# ** Note: $finish    : Waveform.vwf.vt(48)
+#    Time: 50 ns  Iteration: 0  Instance: /MARMux_vlg_vec_tst
+# End time: 07:48:01 on Feb 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

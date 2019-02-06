@@ -1,0 +1,1078 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "02/06/2019 07:47:57"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module MARMux (
+	IR,
+	eabOut,
+	selMAR,
+	MARMuxOut);
+input 	[7:0] IR;
+input 	[15:0] eabOut;
+input 	selMAR;
+output 	[15:0] MARMuxOut;
+
+// Design Ports Information
+// MARMuxOut[0]	=>  Location: PIN_U22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[1]	=>  Location: PIN_AA19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[2]	=>  Location: PIN_W16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[3]	=>  Location: PIN_V16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[4]	=>  Location: PIN_Y17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[5]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[6]	=>  Location: PIN_V13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[7]	=>  Location: PIN_AA18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[8]	=>  Location: PIN_V19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[9]	=>  Location: PIN_AA22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[10]	=>  Location: PIN_R14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[11]	=>  Location: PIN_AA13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[12]	=>  Location: PIN_AB21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[13]	=>  Location: PIN_W21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[14]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// MARMuxOut[15]	=>  Location: PIN_AA17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[0]	=>  Location: PIN_AB22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// selMAR	=>  Location: PIN_V20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[0]	=>  Location: PIN_Y20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[1]	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[1]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[2]	=>  Location: PIN_V21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[2]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[3]	=>  Location: PIN_Y19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[3]	=>  Location: PIN_P14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[4]	=>  Location: PIN_Y15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[4]	=>  Location: PIN_V14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[5]	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[5]	=>  Location: PIN_AB17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[6]	=>  Location: PIN_AB20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[6]	=>  Location: PIN_T12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// IR[7]	=>  Location: PIN_V15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[7]	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[8]	=>  Location: PIN_V18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[9]	=>  Location: PIN_Y22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[10]	=>  Location: PIN_W22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[11]	=>  Location: PIN_T14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[12]	=>  Location: PIN_T13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[13]	=>  Location: PIN_U17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[14]	=>  Location: PIN_Y14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// eabOut[15]	=>  Location: PIN_AB18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \IR[0]~input_o ;
+wire \eabOut[0]~input_o ;
+wire \selMAR~input_o ;
+wire \MARMuxOut~0_combout ;
+wire \IR[1]~input_o ;
+wire \eabOut[1]~input_o ;
+wire \MARMuxOut~1_combout ;
+wire \eabOut[2]~input_o ;
+wire \IR[2]~input_o ;
+wire \MARMuxOut~2_combout ;
+wire \eabOut[3]~input_o ;
+wire \IR[3]~input_o ;
+wire \MARMuxOut~3_combout ;
+wire \eabOut[4]~input_o ;
+wire \IR[4]~input_o ;
+wire \MARMuxOut~4_combout ;
+wire \eabOut[5]~input_o ;
+wire \IR[5]~input_o ;
+wire \MARMuxOut~5_combout ;
+wire \IR[6]~input_o ;
+wire \eabOut[6]~input_o ;
+wire \MARMuxOut~6_combout ;
+wire \IR[7]~input_o ;
+wire \eabOut[7]~input_o ;
+wire \MARMuxOut~7_combout ;
+wire \eabOut[8]~input_o ;
+wire \MARMuxOut~8_combout ;
+wire \eabOut[9]~input_o ;
+wire \MARMuxOut~9_combout ;
+wire \eabOut[10]~input_o ;
+wire \MARMuxOut~10_combout ;
+wire \eabOut[11]~input_o ;
+wire \MARMuxOut~11_combout ;
+wire \eabOut[12]~input_o ;
+wire \MARMuxOut~12_combout ;
+wire \eabOut[13]~input_o ;
+wire \MARMuxOut~13_combout ;
+wire \eabOut[14]~input_o ;
+wire \MARMuxOut~14_combout ;
+wire \eabOut[15]~input_o ;
+wire \MARMuxOut~15_combout ;
+
+
+// Location: IOOBUF_X70_Y0_N53
+cyclonev_io_obuf \MARMuxOut[0]~output (
+	.i(\MARMuxOut~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[0]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[0]~output .bus_hold = "false";
+defparam \MARMuxOut[0]~output .open_drain_output = "false";
+defparam \MARMuxOut[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y0_N53
+cyclonev_io_obuf \MARMuxOut[1]~output (
+	.i(\MARMuxOut~1_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[1]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[1]~output .bus_hold = "false";
+defparam \MARMuxOut[1]~output .open_drain_output = "false";
+defparam \MARMuxOut[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X64_Y0_N2
+cyclonev_io_obuf \MARMuxOut[2]~output (
+	.i(\MARMuxOut~2_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[2]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[2]~output .bus_hold = "false";
+defparam \MARMuxOut[2]~output .open_drain_output = "false";
+defparam \MARMuxOut[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X64_Y0_N19
+cyclonev_io_obuf \MARMuxOut[3]~output (
+	.i(\MARMuxOut~3_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[3]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[3]~output .bus_hold = "false";
+defparam \MARMuxOut[3]~output .open_drain_output = "false";
+defparam \MARMuxOut[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N42
+cyclonev_io_obuf \MARMuxOut[4]~output (
+	.i(\MARMuxOut~4_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[4]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[4]~output .bus_hold = "false";
+defparam \MARMuxOut[4]~output .open_drain_output = "false";
+defparam \MARMuxOut[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y0_N53
+cyclonev_io_obuf \MARMuxOut[5]~output (
+	.i(\MARMuxOut~5_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[5]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[5]~output .bus_hold = "false";
+defparam \MARMuxOut[5]~output .open_drain_output = "false";
+defparam \MARMuxOut[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X50_Y0_N59
+cyclonev_io_obuf \MARMuxOut[6]~output (
+	.i(\MARMuxOut~6_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[6]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[6]~output .bus_hold = "false";
+defparam \MARMuxOut[6]~output .open_drain_output = "false";
+defparam \MARMuxOut[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y0_N36
+cyclonev_io_obuf \MARMuxOut[7]~output (
+	.i(\MARMuxOut~7_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[7]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[7]~output .bus_hold = "false";
+defparam \MARMuxOut[7]~output .open_drain_output = "false";
+defparam \MARMuxOut[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X70_Y0_N19
+cyclonev_io_obuf \MARMuxOut[8]~output (
+	.i(\MARMuxOut~8_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[8]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[8]~output .bus_hold = "false";
+defparam \MARMuxOut[8]~output .open_drain_output = "false";
+defparam \MARMuxOut[8]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X64_Y0_N36
+cyclonev_io_obuf \MARMuxOut[9]~output (
+	.i(\MARMuxOut~9_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[9]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[9]~output .bus_hold = "false";
+defparam \MARMuxOut[9]~output .open_drain_output = "false";
+defparam \MARMuxOut[9]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y0_N2
+cyclonev_io_obuf \MARMuxOut[10]~output (
+	.i(\MARMuxOut~10_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[10]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[10]~output .bus_hold = "false";
+defparam \MARMuxOut[10]~output .open_drain_output = "false";
+defparam \MARMuxOut[10]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y0_N36
+cyclonev_io_obuf \MARMuxOut[11]~output (
+	.i(\MARMuxOut~11_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[11]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[11]~output .bus_hold = "false";
+defparam \MARMuxOut[11]~output .open_drain_output = "false";
+defparam \MARMuxOut[11]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N76
+cyclonev_io_obuf \MARMuxOut[12]~output (
+	.i(\MARMuxOut~12_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[12]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[12]~output .bus_hold = "false";
+defparam \MARMuxOut[12]~output .open_drain_output = "false";
+defparam \MARMuxOut[12]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y0_N36
+cyclonev_io_obuf \MARMuxOut[13]~output (
+	.i(\MARMuxOut~13_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[13]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[13]~output .bus_hold = "false";
+defparam \MARMuxOut[13]~output .open_drain_output = "false";
+defparam \MARMuxOut[13]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X50_Y0_N76
+cyclonev_io_obuf \MARMuxOut[14]~output (
+	.i(\MARMuxOut~14_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[14]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[14]~output .bus_hold = "false";
+defparam \MARMuxOut[14]~output .open_drain_output = "false";
+defparam \MARMuxOut[14]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y0_N53
+cyclonev_io_obuf \MARMuxOut[15]~output (
+	.i(\MARMuxOut~15_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(MARMuxOut[15]),
+	.obar());
+// synopsys translate_off
+defparam \MARMuxOut[15]~output .bus_hold = "false";
+defparam \MARMuxOut[15]~output .open_drain_output = "false";
+defparam \MARMuxOut[15]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X64_Y0_N52
+cyclonev_io_ibuf \IR[0]~input (
+	.i(IR[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[0]~input_o ));
+// synopsys translate_off
+defparam \IR[0]~input .bus_hold = "false";
+defparam \IR[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X66_Y0_N58
+cyclonev_io_ibuf \eabOut[0]~input (
+	.i(eabOut[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[0]~input_o ));
+// synopsys translate_off
+defparam \eabOut[0]~input .bus_hold = "false";
+defparam \eabOut[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X62_Y0_N18
+cyclonev_io_ibuf \selMAR~input (
+	.i(selMAR),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\selMAR~input_o ));
+// synopsys translate_off
+defparam \selMAR~input .bus_hold = "false";
+defparam \selMAR~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N0
+cyclonev_lcell_comb \MARMuxOut~0 (
+// Equation(s):
+// \MARMuxOut~0_combout  = ( \selMAR~input_o  & ( \IR[0]~input_o  ) ) # ( !\selMAR~input_o  & ( \eabOut[0]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\IR[0]~input_o ),
+	.datac(!\eabOut[0]~input_o ),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~0 .extended_lut = "off";
+defparam \MARMuxOut~0 .lut_mask = 64'h0F0F33330F0F3333;
+defparam \MARMuxOut~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N52
+cyclonev_io_ibuf \IR[1]~input (
+	.i(IR[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[1]~input_o ));
+// synopsys translate_off
+defparam \IR[1]~input .bus_hold = "false";
+defparam \IR[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N35
+cyclonev_io_ibuf \eabOut[1]~input (
+	.i(eabOut[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[1]~input_o ));
+// synopsys translate_off
+defparam \eabOut[1]~input .bus_hold = "false";
+defparam \eabOut[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N0
+cyclonev_lcell_comb \MARMuxOut~1 (
+// Equation(s):
+// \MARMuxOut~1_combout  = ( \selMAR~input_o  & ( \IR[1]~input_o  ) ) # ( !\selMAR~input_o  & ( \eabOut[1]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\IR[1]~input_o ),
+	.datac(!\eabOut[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~1 .extended_lut = "off";
+defparam \MARMuxOut~1 .lut_mask = 64'h0F0F0F0F33333333;
+defparam \MARMuxOut~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X68_Y0_N52
+cyclonev_io_ibuf \eabOut[2]~input (
+	.i(eabOut[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[2]~input_o ));
+// synopsys translate_off
+defparam \eabOut[2]~input .bus_hold = "false";
+defparam \eabOut[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X70_Y0_N35
+cyclonev_io_ibuf \IR[2]~input (
+	.i(IR[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[2]~input_o ));
+// synopsys translate_off
+defparam \IR[2]~input .bus_hold = "false";
+defparam \IR[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N9
+cyclonev_lcell_comb \MARMuxOut~2 (
+// Equation(s):
+// \MARMuxOut~2_combout  = ( \selMAR~input_o  & ( \IR[2]~input_o  ) ) # ( !\selMAR~input_o  & ( \IR[2]~input_o  & ( \eabOut[2]~input_o  ) ) ) # ( !\selMAR~input_o  & ( !\IR[2]~input_o  & ( \eabOut[2]~input_o  ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\eabOut[2]~input_o ),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(!\IR[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~2 .extended_lut = "off";
+defparam \MARMuxOut~2 .lut_mask = 64'h0F0F00000F0FFFFF;
+defparam \MARMuxOut~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X68_Y0_N18
+cyclonev_io_ibuf \eabOut[3]~input (
+	.i(eabOut[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[3]~input_o ));
+// synopsys translate_off
+defparam \eabOut[3]~input .bus_hold = "false";
+defparam \eabOut[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X66_Y0_N41
+cyclonev_io_ibuf \IR[3]~input (
+	.i(IR[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[3]~input_o ));
+// synopsys translate_off
+defparam \IR[3]~input .bus_hold = "false";
+defparam \IR[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N42
+cyclonev_lcell_comb \MARMuxOut~3 (
+// Equation(s):
+// \MARMuxOut~3_combout  = ( \selMAR~input_o  & ( \IR[3]~input_o  ) ) # ( !\selMAR~input_o  & ( \eabOut[3]~input_o  ) )
+
+	.dataa(!\eabOut[3]~input_o ),
+	.datab(gnd),
+	.datac(!\IR[3]~input_o ),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~3 .extended_lut = "off";
+defparam \MARMuxOut~3 .lut_mask = 64'h55550F0F55550F0F;
+defparam \MARMuxOut~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y0_N18
+cyclonev_io_ibuf \eabOut[4]~input (
+	.i(eabOut[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[4]~input_o ));
+// synopsys translate_off
+defparam \eabOut[4]~input .bus_hold = "false";
+defparam \eabOut[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N1
+cyclonev_io_ibuf \IR[4]~input (
+	.i(IR[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[4]~input_o ));
+// synopsys translate_off
+defparam \IR[4]~input .bus_hold = "false";
+defparam \IR[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N39
+cyclonev_lcell_comb \MARMuxOut~4 (
+// Equation(s):
+// \MARMuxOut~4_combout  = ( \selMAR~input_o  & ( \IR[4]~input_o  ) ) # ( !\selMAR~input_o  & ( \eabOut[4]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\eabOut[4]~input_o ),
+	.datac(!\IR[4]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~4 .extended_lut = "off";
+defparam \MARMuxOut~4 .lut_mask = 64'h333333330F0F0F0F;
+defparam \MARMuxOut~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y0_N52
+cyclonev_io_ibuf \eabOut[5]~input (
+	.i(eabOut[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[5]~input_o ));
+// synopsys translate_off
+defparam \eabOut[5]~input .bus_hold = "false";
+defparam \eabOut[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y0_N41
+cyclonev_io_ibuf \IR[5]~input (
+	.i(IR[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[5]~input_o ));
+// synopsys translate_off
+defparam \IR[5]~input .bus_hold = "false";
+defparam \IR[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N15
+cyclonev_lcell_comb \MARMuxOut~5 (
+// Equation(s):
+// \MARMuxOut~5_combout  = ( \IR[5]~input_o  & ( \selMAR~input_o  ) ) # ( \IR[5]~input_o  & ( !\selMAR~input_o  & ( \eabOut[5]~input_o  ) ) ) # ( !\IR[5]~input_o  & ( !\selMAR~input_o  & ( \eabOut[5]~input_o  ) ) )
+
+	.dataa(!\eabOut[5]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\IR[5]~input_o ),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~5 .extended_lut = "off";
+defparam \MARMuxOut~5 .lut_mask = 64'h555555550000FFFF;
+defparam \MARMuxOut~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X58_Y0_N92
+cyclonev_io_ibuf \IR[6]~input (
+	.i(IR[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[6]~input_o ));
+// synopsys translate_off
+defparam \IR[6]~input .bus_hold = "false";
+defparam \IR[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N18
+cyclonev_io_ibuf \eabOut[6]~input (
+	.i(eabOut[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[6]~input_o ));
+// synopsys translate_off
+defparam \eabOut[6]~input .bus_hold = "false";
+defparam \eabOut[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N48
+cyclonev_lcell_comb \MARMuxOut~6 (
+// Equation(s):
+// \MARMuxOut~6_combout  = ( \selMAR~input_o  & ( \IR[6]~input_o  ) ) # ( !\selMAR~input_o  & ( \eabOut[6]~input_o  ) )
+
+	.dataa(!\IR[6]~input_o ),
+	.datab(gnd),
+	.datac(!\eabOut[6]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~6 .extended_lut = "off";
+defparam \MARMuxOut~6 .lut_mask = 64'h0F0F0F0F55555555;
+defparam \MARMuxOut~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y0_N1
+cyclonev_io_ibuf \IR[7]~input (
+	.i(IR[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\IR[7]~input_o ));
+// synopsys translate_off
+defparam \IR[7]~input .bus_hold = "false";
+defparam \IR[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X58_Y0_N58
+cyclonev_io_ibuf \eabOut[7]~input (
+	.i(eabOut[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[7]~input_o ));
+// synopsys translate_off
+defparam \eabOut[7]~input .bus_hold = "false";
+defparam \eabOut[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N57
+cyclonev_lcell_comb \MARMuxOut~7 (
+// Equation(s):
+// \MARMuxOut~7_combout  = ( \eabOut[7]~input_o  & ( \selMAR~input_o  & ( \IR[7]~input_o  ) ) ) # ( !\eabOut[7]~input_o  & ( \selMAR~input_o  & ( \IR[7]~input_o  ) ) ) # ( \eabOut[7]~input_o  & ( !\selMAR~input_o  ) )
+
+	.dataa(!\IR[7]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\eabOut[7]~input_o ),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~7 .extended_lut = "off";
+defparam \MARMuxOut~7 .lut_mask = 64'h0000FFFF55555555;
+defparam \MARMuxOut~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X70_Y0_N1
+cyclonev_io_ibuf \eabOut[8]~input (
+	.i(eabOut[8]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[8]~input_o ));
+// synopsys translate_off
+defparam \eabOut[8]~input .bus_hold = "false";
+defparam \eabOut[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N21
+cyclonev_lcell_comb \MARMuxOut~8 (
+// Equation(s):
+// \MARMuxOut~8_combout  = ( !\selMAR~input_o  & ( \eabOut[8]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(!\eabOut[8]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~8 .extended_lut = "off";
+defparam \MARMuxOut~8 .lut_mask = 64'h00000000FFFF0000;
+defparam \MARMuxOut~8 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X66_Y0_N92
+cyclonev_io_ibuf \eabOut[9]~input (
+	.i(eabOut[9]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[9]~input_o ));
+// synopsys translate_off
+defparam \eabOut[9]~input .bus_hold = "false";
+defparam \eabOut[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N24
+cyclonev_lcell_comb \MARMuxOut~9 (
+// Equation(s):
+// \MARMuxOut~9_combout  = ( !\selMAR~input_o  & ( \eabOut[9]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(!\eabOut[9]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~9 .extended_lut = "off";
+defparam \MARMuxOut~9 .lut_mask = 64'h00000000FFFF0000;
+defparam \MARMuxOut~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X66_Y0_N75
+cyclonev_io_ibuf \eabOut[10]~input (
+	.i(eabOut[10]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[10]~input_o ));
+// synopsys translate_off
+defparam \eabOut[10]~input .bus_hold = "false";
+defparam \eabOut[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N30
+cyclonev_lcell_comb \MARMuxOut~10 (
+// Equation(s):
+// \MARMuxOut~10_combout  = ( !\selMAR~input_o  & ( \eabOut[10]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\eabOut[10]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~10 .extended_lut = "off";
+defparam \MARMuxOut~10 .lut_mask = 64'h3333000033330000;
+defparam \MARMuxOut~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X60_Y0_N18
+cyclonev_io_ibuf \eabOut[11]~input (
+	.i(eabOut[11]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[11]~input_o ));
+// synopsys translate_off
+defparam \eabOut[11]~input .bus_hold = "false";
+defparam \eabOut[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N30
+cyclonev_lcell_comb \MARMuxOut~11 (
+// Equation(s):
+// \MARMuxOut~11_combout  = ( \eabOut[11]~input_o  & ( !\selMAR~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\eabOut[11]~input_o ),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~11 .extended_lut = "off";
+defparam \MARMuxOut~11 .lut_mask = 64'h0000FFFF00000000;
+defparam \MARMuxOut~11 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N1
+cyclonev_io_ibuf \eabOut[12]~input (
+	.i(eabOut[12]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[12]~input_o ));
+// synopsys translate_off
+defparam \eabOut[12]~input .bus_hold = "false";
+defparam \eabOut[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N9
+cyclonev_lcell_comb \MARMuxOut~12 (
+// Equation(s):
+// \MARMuxOut~12_combout  = ( \eabOut[12]~input_o  & ( !\selMAR~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\eabOut[12]~input_o ),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~12_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~12 .extended_lut = "off";
+defparam \MARMuxOut~12 .lut_mask = 64'h0000FFFF00000000;
+defparam \MARMuxOut~12 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X72_Y0_N1
+cyclonev_io_ibuf \eabOut[13]~input (
+	.i(eabOut[13]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[13]~input_o ));
+// synopsys translate_off
+defparam \eabOut[13]~input .bus_hold = "false";
+defparam \eabOut[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X67_Y1_N39
+cyclonev_lcell_comb \MARMuxOut~13 (
+// Equation(s):
+// \MARMuxOut~13_combout  = ( !\selMAR~input_o  & ( \eabOut[13]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\selMAR~input_o ),
+	.dataf(!\eabOut[13]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~13 .extended_lut = "off";
+defparam \MARMuxOut~13 .lut_mask = 64'h00000000FFFF0000;
+defparam \MARMuxOut~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y0_N18
+cyclonev_io_ibuf \eabOut[14]~input (
+	.i(eabOut[14]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[14]~input_o ));
+// synopsys translate_off
+defparam \eabOut[14]~input .bus_hold = "false";
+defparam \eabOut[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N42
+cyclonev_lcell_comb \MARMuxOut~14 (
+// Equation(s):
+// \MARMuxOut~14_combout  = ( !\selMAR~input_o  & ( \eabOut[14]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\eabOut[14]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~14 .extended_lut = "off";
+defparam \MARMuxOut~14 .lut_mask = 64'h0F0F0F0F00000000;
+defparam \MARMuxOut~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y0_N35
+cyclonev_io_ibuf \eabOut[15]~input (
+	.i(eabOut[15]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\eabOut[15]~input_o ));
+// synopsys translate_off
+defparam \eabOut[15]~input .bus_hold = "false";
+defparam \eabOut[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y1_N18
+cyclonev_lcell_comb \MARMuxOut~15 (
+// Equation(s):
+// \MARMuxOut~15_combout  = ( \eabOut[15]~input_o  & ( !\selMAR~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\eabOut[15]~input_o ),
+	.dataf(!\selMAR~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\MARMuxOut~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \MARMuxOut~15 .extended_lut = "off";
+defparam \MARMuxOut~15 .lut_mask = 64'h0000FFFF00000000;
+defparam \MARMuxOut~15 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X55_Y20_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

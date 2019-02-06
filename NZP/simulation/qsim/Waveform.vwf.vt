@@ -1,0 +1,164 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/06/2019 08:37:54"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          NZP
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module NZP_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [15:0] Bus;
+reg clk;
+reg regWE;
+reg reset;
+// wires                                               
+wire N;
+wire P;
+wire Z;
+
+// assign statements (if any)                          
+NZP i1 (
+// port map - connection between master ports and signals/registers   
+	.Bus(Bus),
+	.N(N),
+	.P(P),
+	.Z(Z),
+	.clk(clk),
+	.regWE(regWE),
+	.reset(reset)
+);
+initial 
+begin 
+#50000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// regWE
+initial
+begin
+	regWE = 1'b0;
+	regWE = #10000 1'b1;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+// Bus[ 15 ]
+initial
+begin
+	Bus[15] = 1'b0;
+	Bus[15] = #20000 1'b1;
+	Bus[15] = #10000 1'b0;
+end 
+// Bus[ 14 ]
+initial
+begin
+	Bus[14] = 1'b0;
+	Bus[14] = #20000 1'b1;
+	Bus[14] = #10000 1'b0;
+end 
+// Bus[ 13 ]
+initial
+begin
+	Bus[13] = 1'b0;
+end 
+// Bus[ 12 ]
+initial
+begin
+	Bus[12] = 1'b0;
+end 
+// Bus[ 11 ]
+initial
+begin
+	Bus[11] = 1'b0;
+end 
+// Bus[ 10 ]
+initial
+begin
+	Bus[10] = 1'b0;
+end 
+// Bus[ 9 ]
+initial
+begin
+	Bus[9] = 1'b0;
+end 
+// Bus[ 8 ]
+initial
+begin
+	Bus[8] = 1'b0;
+end 
+// Bus[ 7 ]
+initial
+begin
+	Bus[7] = 1'b0;
+end 
+// Bus[ 6 ]
+initial
+begin
+	Bus[6] = 1'b0;
+end 
+// Bus[ 5 ]
+initial
+begin
+	Bus[5] = 1'b0;
+end 
+// Bus[ 4 ]
+initial
+begin
+	Bus[4] = 1'b0;
+end 
+// Bus[ 3 ]
+initial
+begin
+	Bus[3] = 1'b0;
+end 
+// Bus[ 2 ]
+initial
+begin
+	Bus[2] = 1'b0;
+end 
+// Bus[ 1 ]
+initial
+begin
+	Bus[1] = 1'b1;
+	Bus[1] = #20000 1'b0;
+end 
+// Bus[ 0 ]
+initial
+begin
+	Bus[0] = 1'b1;
+	Bus[0] = #20000 1'b0;
+end 
+endmodule
+

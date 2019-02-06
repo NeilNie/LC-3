@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MARMuxOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MARMuxOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selMAR",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "eabOut[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

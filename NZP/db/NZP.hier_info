@@ -1,0 +1,85 @@
+|NZP
+Bus[0] => LessThan0.IN32
+Bus[0] => Equal0.IN15
+Bus[1] => LessThan0.IN31
+Bus[1] => Equal0.IN14
+Bus[2] => LessThan0.IN30
+Bus[2] => Equal0.IN13
+Bus[3] => LessThan0.IN29
+Bus[3] => Equal0.IN12
+Bus[4] => LessThan0.IN28
+Bus[4] => Equal0.IN11
+Bus[5] => LessThan0.IN27
+Bus[5] => Equal0.IN10
+Bus[6] => LessThan0.IN26
+Bus[6] => Equal0.IN9
+Bus[7] => LessThan0.IN25
+Bus[7] => Equal0.IN8
+Bus[8] => LessThan0.IN24
+Bus[8] => Equal0.IN7
+Bus[9] => LessThan0.IN23
+Bus[9] => Equal0.IN6
+Bus[10] => LessThan0.IN22
+Bus[10] => Equal0.IN5
+Bus[11] => LessThan0.IN21
+Bus[11] => Equal0.IN4
+Bus[12] => LessThan0.IN20
+Bus[12] => Equal0.IN3
+Bus[13] => LessThan0.IN19
+Bus[13] => Equal0.IN2
+Bus[14] => LessThan0.IN18
+Bus[14] => Equal0.IN1
+Bus[15] => LessThan0.IN17
+Bus[15] => Z_buffer.IN1
+Bus[15] => Z_buffer.OUTPUTSELECT
+Bus[15] => P_buffer.OUTPUTSELECT
+Bus[15] => comb.IN1
+Bus[15] => Equal0.IN0
+Bus[15] => comb.IN1
+clk => clk.IN1
+regWE => regWE.IN1
+reset => reset.IN1
+N <= NZP_register:register.Q
+Z <= NZP_register:register.Q
+P <= NZP_register:register.Q
+
+
+|NZP|NZP_register:register
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+Q[0] <= d_negedge_flip_flop:ff_0.Q
+Q[1] <= d_negedge_flip_flop:ff_1.Q
+Q[2] <= d_negedge_flip_flop:ff_2.Q
+en => en.IN3
+reset => reset.IN3
+clk => clk.IN3
+
+
+|NZP|NZP_register:register|d_negedge_flip_flop:ff_0
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|NZP|NZP_register:register|d_negedge_flip_flop:ff_1
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+
+|NZP|NZP_register:register|d_negedge_flip_flop:ff_2
+clk => Q~reg0.CLK
+D => in.IN0
+sel => in.IN1
+sel => in.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => Q.OUTPUTSELECT
+
+

@@ -1,0 +1,218 @@
+$comment
+	File created using the following command:
+		vcd file MARMux.msim.vcd -direction
+$end
+$date
+	Wed Feb 06 07:48:01 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module MARMux_vlg_vec_tst $end
+$var reg 8 ! IR [7:0] $end
+$var reg 16 " eabOut [15:0] $end
+$var reg 1 # selMAR $end
+$var wire 1 $ MARMuxOut [15] $end
+$var wire 1 % MARMuxOut [14] $end
+$var wire 1 & MARMuxOut [13] $end
+$var wire 1 ' MARMuxOut [12] $end
+$var wire 1 ( MARMuxOut [11] $end
+$var wire 1 ) MARMuxOut [10] $end
+$var wire 1 * MARMuxOut [9] $end
+$var wire 1 + MARMuxOut [8] $end
+$var wire 1 , MARMuxOut [7] $end
+$var wire 1 - MARMuxOut [6] $end
+$var wire 1 . MARMuxOut [5] $end
+$var wire 1 / MARMuxOut [4] $end
+$var wire 1 0 MARMuxOut [3] $end
+$var wire 1 1 MARMuxOut [2] $end
+$var wire 1 2 MARMuxOut [1] $end
+$var wire 1 3 MARMuxOut [0] $end
+
+$scope module i1 $end
+$var wire 1 4 gnd $end
+$var wire 1 5 vcc $end
+$var wire 1 6 unknown $end
+$var tri1 1 7 devclrn $end
+$var tri1 1 8 devpor $end
+$var tri1 1 9 devoe $end
+$var wire 1 : ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 ; IR[0]~input_o $end
+$var wire 1 < eabOut[0]~input_o $end
+$var wire 1 = selMAR~input_o $end
+$var wire 1 > MARMuxOut~0_combout $end
+$var wire 1 ? IR[1]~input_o $end
+$var wire 1 @ eabOut[1]~input_o $end
+$var wire 1 A MARMuxOut~1_combout $end
+$var wire 1 B eabOut[2]~input_o $end
+$var wire 1 C IR[2]~input_o $end
+$var wire 1 D MARMuxOut~2_combout $end
+$var wire 1 E eabOut[3]~input_o $end
+$var wire 1 F IR[3]~input_o $end
+$var wire 1 G MARMuxOut~3_combout $end
+$var wire 1 H eabOut[4]~input_o $end
+$var wire 1 I IR[4]~input_o $end
+$var wire 1 J MARMuxOut~4_combout $end
+$var wire 1 K eabOut[5]~input_o $end
+$var wire 1 L IR[5]~input_o $end
+$var wire 1 M MARMuxOut~5_combout $end
+$var wire 1 N IR[6]~input_o $end
+$var wire 1 O eabOut[6]~input_o $end
+$var wire 1 P MARMuxOut~6_combout $end
+$var wire 1 Q IR[7]~input_o $end
+$var wire 1 R eabOut[7]~input_o $end
+$var wire 1 S MARMuxOut~7_combout $end
+$var wire 1 T eabOut[8]~input_o $end
+$var wire 1 U MARMuxOut~8_combout $end
+$var wire 1 V eabOut[9]~input_o $end
+$var wire 1 W MARMuxOut~9_combout $end
+$var wire 1 X eabOut[10]~input_o $end
+$var wire 1 Y MARMuxOut~10_combout $end
+$var wire 1 Z eabOut[11]~input_o $end
+$var wire 1 [ MARMuxOut~11_combout $end
+$var wire 1 \ eabOut[12]~input_o $end
+$var wire 1 ] MARMuxOut~12_combout $end
+$var wire 1 ^ eabOut[13]~input_o $end
+$var wire 1 _ MARMuxOut~13_combout $end
+$var wire 1 ` eabOut[14]~input_o $end
+$var wire 1 a MARMuxOut~14_combout $end
+$var wire 1 b eabOut[15]~input_o $end
+$var wire 1 c MARMuxOut~15_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+b1100 "
+0#
+03
+02
+11
+10
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+04
+15
+x6
+17
+18
+19
+0:
+1;
+0<
+0=
+0>
+1?
+0@
+0A
+1B
+0C
+1D
+1E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+$end
+#10000
+1#
+1=
+0G
+0D
+1A
+1>
+13
+12
+01
+00
+#20000
+0#
+0=
+1G
+1D
+0A
+0>
+03
+02
+11
+10
+#30000
+b1011 !
+b1111 !
+b101100 "
+b111100 "
+b110100 "
+b110000 "
+1#
+0B
+0E
+1H
+1K
+1C
+1F
+1=
+1A
+1>
+13
+12
+#40000
+b111 !
+b11 !
+0#
+0C
+0F
+0=
+1M
+1J
+0G
+0D
+0A
+0>
+03
+02
+01
+00
+1/
+1.
+#50000

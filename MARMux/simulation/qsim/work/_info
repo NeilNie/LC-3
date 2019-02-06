@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/MARMux/simulation/qsim
+vMARMux
+Z1 !s110 1549457280
+!i10b 1
+!s100 ;g3B>71;fU7b7Y5iQeF9N1
+IJI@ZkN2CV1;5Ga:oMkdhj0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1549457277
+8MARMux.vo
+FMARMux.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1549457279.000000
+!s107 MARMux.vo|
+!s90 -work|work|MARMux.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@m@a@r@mux
+vMARMux_vlg_vec_tst
+R1
+!i10b 1
+!s100 4N`;?J?zzJ5DZDeg_[S:10
+IdoS=f=PX2h_YRY_;g<k<H2
+R2
+R0
+w1549457275
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1549457280.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@m@a@r@mux_vlg_vec_tst

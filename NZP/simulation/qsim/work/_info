@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/NZP/simulation/qsim
+vNZP
+Z1 !s110 1549460279
+!i10b 1
+!s100 DgzI5YC3Z=C0L=YaXGUHb1
+Ild<@8n:6z5O_H_i;jNDP`2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1549460278
+8NZP.vo
+FNZP.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1549460279.000000
+!s107 NZP.vo|
+!s90 -work|work|NZP.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@n@z@p
+vNZP_vlg_vec_tst
+R1
+!i10b 1
+!s100 [[m8N?9iS^F]dUE>34D_W2
+ILh;ZdCYSNEhdW_@Z<lZTN2
+R2
+R0
+w1549460275
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@n@z@p_vlg_vec_tst
