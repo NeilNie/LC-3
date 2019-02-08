@@ -46,9 +46,26 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name VERILOG_FILE LC3Control.v
-set_global_assignment -name QIP_FILE memory.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE "../Register File/RegisterFile.v"
+set_global_assignment -name VERILOG_FILE "../Register File/Register.v"
+set_global_assignment -name VERILOG_FILE "../Register File/mux_8_1_bit_16.v"
+set_global_assignment -name VERILOG_FILE "../Register File/decoder_3_8.v"
+set_global_assignment -name VERILOG_FILE "../Register File/d_flip_flop.v"
+set_global_assignment -name VERILOG_FILE ../PC/PC.v
+set_global_assignment -name VERILOG_FILE ../PC/d_negedge_flip_flop.v
+set_global_assignment -name VERILOG_FILE ../PC/bit_16_register.v
+set_global_assignment -name VERILOG_FILE ../NZP/NZP_register.v
+set_global_assignment -name VERILOG_FILE ../NZP/NZP.v
+set_global_assignment -name VERILOG_FILE ../Memory/Memory.v
+set_global_assignment -name VERILOG_FILE ../Memory/mem.v
+set_global_assignment -name VERILOG_FILE ../MARMux/MARMux.v
+set_global_assignment -name VERILOG_FILE ../IR/IR.v
+set_global_assignment -name VERILOG_FILE ../EAB/EAB.v
+set_global_assignment -name VERILOG_FILE ../ALU/ALU.v
+set_global_assignment -name VERILOG_FILE LC3Control.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"

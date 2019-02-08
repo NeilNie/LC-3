@@ -7,9 +7,9 @@ module EAB(
 	PC,
 	selEAB1,
 	selEAB2,
-	eabOut,
-	adder_input_1,
-	adder_input_2
+	eabOut
+//	adder_input_1,
+//	adder_input_2
 );
 
 input [15:0] Ra, PC;
@@ -18,12 +18,10 @@ input [1:0] selEAB2;
 input selEAB1;
 
 output [15:0] eabOut;
-output reg [15:0] adder_input_1;
-output reg [15:0] adder_input_2;
 
 reg [15:0] mux_2_input;
 
-// reg [15:0] adder_input_2, adder_input_1;
+reg [15:0] adder_input_2, adder_input_1;
 
 always @(selEAB1 or Ra or PC) begin
 	

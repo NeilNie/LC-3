@@ -7,11 +7,11 @@
 
 
 module ALU(
-Ra,
-Rb,
-IR,
-aluControl,
-aluOut
+	Ra,
+	Rb,
+	IR,
+	aluControl,
+	aluOut
 );
 
 input [15:0] Ra, Rb;

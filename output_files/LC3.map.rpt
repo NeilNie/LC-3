@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3
-Fri Feb 01 18:08:34 2019
+Fri Feb 08 13:17:31 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,13 +9,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Post-Synthesis Netlist Statistics for Top Partition
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  4. Source assignments for Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated
+  5. Parameter Settings for User Entity Instance: Memory:memory|mem:mem_inst|altsyncram:altsyncram_component
+  6. Port Connectivity Checks: "ALU:alu"
+  7. Port Connectivity Checks: "EAB:eab"
+  8. Port Connectivity Checks: "MARMux:mar_mux"
+  9. Port Connectivity Checks: "NZP:nzp"
+ 10. Port Connectivity Checks: "RegisterFile:reg_file"
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,196 +40,233 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 01 18:08:34 2019       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; LC3                                         ;
-; Top-level Entity Name           ; LC3                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 1                                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Fri Feb 08 13:17:31 2019           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; LC3                                         ;
+; Top-level Entity Name              ; LC3                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; LC3                ; LC3                ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; LC3                ; LC3                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; LC3.v                            ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/LC-3/LC3.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                 ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                  ;
++---------------------------------+--------------------+------+----------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; in    ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:memory|mem:mem_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                        ;
++------------------------------------+----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                     ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                     ;
+; WIDTH_A                            ; 16                   ; Signed Integer                              ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer                              ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer                              ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WIDTH_B                            ; 1                    ; Untyped                                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_skf1      ; Untyped                                     ;
++------------------------------------+----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |LC3                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 1    ; 0            ; |LC3                ; LC3         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "Ra[15..1]" will be connected to GND.                                       ;
+; IR   ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (6 bits) it drives.  The 10 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EAB:eab"                                                                                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; IR   ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (11 bits) it drives.  The 5 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "Ra[15..1]" will be connected to GND.                                       ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 1                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MARMux:mar_mux"                                                                                                                                                                  ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; IR   ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "NZP:nzp"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; N    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; P    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterFile:reg_file"                                                                                                                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Out0 ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out0[15..1]" have no fanouts                   ;
+; Out1 ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out1[15..1]" have no fanouts                   ;
+; DR   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "DR[2..1]" will be connected to GND.  ;
+; SR0  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "SR0[2..1]" will be connected to GND. ;
+; SR1  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "SR1[2..1]" will be connected to GND. ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -236,36 +275,297 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Feb 01 18:08:06 2019
+    Info: Processing started: Fri Feb 08 13:16:57 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
+Info (12021): Found 1 design units, including 1 entities, in source file register file/registerfile.v
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file register file/register.v
+    Info (12023): Found entity 1: Register File: C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file register file/mux_8_1_bit_16.v
+    Info (12023): Found entity 1: mux_8_1_bit_16 File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file register file/decoder_3_8.v
+    Info (12023): Found entity 1: decoder_3_8 File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file register file/d_flip_flop.v
+    Info (12023): Found entity 1: d_flip_flop File: C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file pc/pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file pc/d_negedge_flip_flop.v
+    Info (12023): Found entity 1: d_negedge_flip_flop File: C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file pc/bit_16_register.v
+    Info (12023): Found entity 1: bit_16_register File: C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nzp/nzp_register.v
+    Info (12023): Found entity 1: NZP_register File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file nzp/nzp.v
+    Info (12023): Found entity 1: NZP File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file memory/memory.v
+    Info (12023): Found entity 1: Memory File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file memory/mem.v
+    Info (12023): Found entity 1: mem File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file marmux/marmux.v
+    Info (12023): Found entity 1: MARMux File: C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file lc3control/lc3control.v
+    Info (12023): Found entity 1: LC3Control File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file ir/ir.v
+    Info (12023): Found entity 1: IR File: C:/Users/USER1/Digital Logic/LC-3/IR/IR.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file eab/eab.v
+    Info (12023): Found entity 1: EAB File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file alu/alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 9
+Warning (10275): Verilog HDL Module Instantiation warning at LC3.v(154): ignored dangling comma in List of Port Connections File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 154
+Warning (10238): Verilog Module Declaration warning at LC3.v(20): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "LC3" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file lc3.v
     Info (12023): Found entity 1: LC3 File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file eab.v
-    Info (12023): Found entity 1: EAB File: C:/Users/USER1/Digital Logic/LC-3/EAB.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file marmux.v
-    Info (12023): Found entity 1: MARMux File: C:/Users/USER1/Digital Logic/LC-3/MARMux.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: C:/Users/USER1/Digital Logic/LC-3/PC.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file ir.v
-    Info (12023): Found entity 1: IR File: C:/Users/USER1/Digital Logic/LC-3/IR.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/USER1/Digital Logic/LC-3/ALU.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file nzp.v
-    Info (12023): Found entity 1: NZP File: C:/Users/USER1/Digital Logic/LC-3/NZP.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file tri_state_buffer.v
+    Info (12023): Found entity 1: tri_state_buffer File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at LC3.v(86): created implicit net for "regOut0" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 86
+Warning (10236): Verilog HDL Implicit Net warning at LC3.v(88): created implicit net for "SR0" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 88
 Info (12127): Elaborating entity "LC3" for the top level hierarchy
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "in" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 9
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Fri Feb 01 18:08:34 2019
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:26
+Info (12128): Elaborating entity "tri_state_buffer" for hierarchy "tri_state_buffer:MARBuffer" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at tri_state_buffer.v(20): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[0]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[1]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[2]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[3]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[4]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[5]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[6]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[7]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[8]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[9]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[10]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[11]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[12]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[13]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[14]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (10041): Inferred latch for "out[15]" at tri_state_buffer.v(20) File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:reg_file" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 89
+Info (12128): Elaborating entity "decoder_3_8" for hierarchy "RegisterFile:reg_file|decoder_3_8:decoder" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 35
+Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(15): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[0]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[1]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[2]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[3]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[4]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[5]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[6]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (10041): Inferred latch for "out[7]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:reg_file|Register:r0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 38
+Info (12128): Elaborating entity "d_flip_flop" for hierarchy "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v Line: 14
+Info (12128): Elaborating entity "mux_8_1_bit_16" for hierarchy "RegisterFile:reg_file|mux_8_1_bit_16:mux0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at mux_8_1_bit_16.v(22): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[0]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[1]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[2]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[3]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[4]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[5]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[6]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[7]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[8]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[9]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[10]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[11]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[12]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[13]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[14]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (10041): Inferred latch for "out[15]" at mux_8_1_bit_16.v(22) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 22
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 101
+Warning (10230): Verilog HDL assignment warning at PC.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at PC.v(30): inferring latch(es) for variable "PC", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 30
+Info (10041): Inferred latch for "PC[0]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[1]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[2]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[3]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[4]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[5]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[6]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[7]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[8]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[9]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[10]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[11]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[12]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[13]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[14]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (10041): Inferred latch for "PC[15]" at PC.v(34) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 34
+Info (12128): Elaborating entity "bit_16_register" for hierarchy "PC:pc|bit_16_register:pc_reg" File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 25
+Info (12128): Elaborating entity "d_negedge_flip_flop" for hierarchy "PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v Line: 15
+Info (12128): Elaborating entity "NZP" for hierarchy "NZP:nzp" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 111
+Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "N_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "P_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "Z_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Info (10041): Inferred latch for "Z_buffer" at NZP.v(29) File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Info (10041): Inferred latch for "P_buffer" at NZP.v(29) File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Info (10041): Inferred latch for "N_buffer" at NZP.v(29) File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
+Info (12128): Elaborating entity "NZP_register" for hierarchy "NZP:nzp|NZP_register:register" File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 27
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memory" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 124
+Warning (10235): Verilog HDL Always Construct warning at Memory.v(29): variable "selMDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 29
+Info (12128): Elaborating entity "mem" for hierarchy "Memory:memory|mem:mem_inst" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 45
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component" File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
+Info (12130): Elaborated megafunction instantiation "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component" File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
+Info (12133): Instantiated megafunction "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65536"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_skf1.tdf
+    Info (12023): Found entity 1: altsyncram_skf1 File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_skf1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_skf1" for hierarchy "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
+    Info (12023): Found entity 1: decode_rsa File: C:/Users/USER1/Digital Logic/LC-3/db/decode_rsa.tdf Line: 22
+Info (12128): Elaborating entity "decode_rsa" for hierarchy "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|decode_rsa:decode3" File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_skf1.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a File: C:/Users/USER1/Digital Logic/LC-3/db/decode_k8a.tdf Line: 22
+Info (12128): Elaborating entity "decode_k8a" for hierarchy "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|decode_k8a:rden_decode" File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_skf1.tdf Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
+    Info (12023): Found entity 1: mux_qob File: C:/Users/USER1/Digital Logic/LC-3/db/mux_qob.tdf Line: 22
+Info (12128): Elaborating entity "mux_qob" for hierarchy "Memory:memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|mux_qob:mux2" File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_skf1.tdf Line: 46
+Info (12128): Elaborating entity "MARMux" for hierarchy "MARMux:mar_mux" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 133
+Info (12128): Elaborating entity "IR" for hierarchy "IR:ir" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 143
+Info (12128): Elaborating entity "EAB" for hierarchy "EAB:eab" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 154
+Warning (10240): Verilog HDL Always Construct warning at EAB.v(26): inferring latch(es) for variable "adder_input_1", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at EAB.v(38): inferring latch(es) for variable "mux_2_input", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 38
+Info (10041): Inferred latch for "mux_2_input[0]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[1]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[2]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[3]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[4]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[5]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[6]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[7]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[8]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[9]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[10]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[11]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[12]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[13]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[14]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "mux_2_input[15]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 164
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(39): inferring latch(es) for variable "aluOut", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[0]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[1]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[2]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[3]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[4]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[5]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[6]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[7]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[8]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[9]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[10]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[11]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[12]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[13]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[14]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Info (10041): Inferred latch for "aluOut[15]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
+Error (12014): Net "regOut0", which fans out to "ALU:alu|Ra[0]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 86
+    Error (12015): Net is fed by "RegisterFile:reg_file|Out1[0]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 17
+    Error (12015): Net is fed by "RegisterFile:reg_file|Out0[0]" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 16
+Error (12014): Net "Bus[15]", which fans out to "IR:ir|Bus[15]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[15]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[15]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[15]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[15]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[14]", which fans out to "IR:ir|Bus[14]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[14]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[14]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[14]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[14]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[13]", which fans out to "IR:ir|Bus[13]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[13]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[13]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[13]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[13]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[12]", which fans out to "IR:ir|Bus[12]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[12]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[12]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[12]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[12]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[11]", which fans out to "IR:ir|Bus[11]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[11]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[11]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[11]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[11]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[10]", which fans out to "IR:ir|Bus[10]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[10]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[10]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[10]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[10]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[9]", which fans out to "IR:ir|Bus[9]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[9]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[9]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[9]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[9]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[8]", which fans out to "IR:ir|Bus[8]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[8]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[8]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[8]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[8]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[7]", which fans out to "IR:ir|Bus[7]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[7]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[7]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[7]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[7]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[6]", which fans out to "IR:ir|Bus[6]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[6]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[6]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[6]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[6]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[5]", which fans out to "IR:ir|Bus[5]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[5]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[5]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[5]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[5]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[4]", which fans out to "IR:ir|Bus[4]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[4]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[4]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[4]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[4]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[3]", which fans out to "IR:ir|Bus[3]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[3]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[3]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[3]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[3]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[2]", which fans out to "IR:ir|Bus[2]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[2]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[2]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[2]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[2]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[1]", which fans out to "IR:ir|Bus[1]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[1]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[1]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[1]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[1]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Error (12014): Net "Bus[0]", which fans out to "IR:ir|Bus[0]", cannot be assigned more than one value File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 46
+    Error (12015): Net is fed by "tri_state_buffer:MARBuffer|out[0]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:PCBuffer|out[0]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:ALUBuffer|out[0]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+    Error (12015): Net is fed by "tri_state_buffer:MemBuffer|out[0]" File: C:/Users/USER1/Digital Logic/LC-3/tri_state_buffer.v Line: 20
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/USER1/Digital Logic/LC-3/output_files/LC3.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 83 errors, 18 warnings
+    Error: Peak virtual memory: 4752 megabytes
+    Error: Processing ended: Fri Feb 08 13:17:32 2019
+    Error: Elapsed time: 00:00:35
+    Error: Total CPU time (on all processors): 00:00:32
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/USER1/Digital Logic/LC-3/output_files/LC3.map.smsg.
 
 

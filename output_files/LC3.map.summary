@@ -1,17 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Feb 01 18:08:34 2019
+Analysis & Synthesis Status : Failed - Fri Feb 08 13:17:31 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LC3
 Top-level Entity Name : LC3
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 1
-Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
-Total DLLs : 0
+Family : Cyclone IV E
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

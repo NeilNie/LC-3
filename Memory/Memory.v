@@ -9,6 +9,7 @@ module Memory(
 	ldMDR,
 	memWE,
 	selMDR,
+	MDROut,
 	clk,
 	reset
 );
@@ -16,12 +17,12 @@ module Memory(
 // module I/O
 input [15:0] Bus;
 input ldMAR, ldMDR, memWE, selMDR, clk, reset;
+output [15:0] MDROut;
 
 // internal variables
 reg [15:0] MDRIn;
 wire [15:0] memOut;
 wire [15:0] MAROut;
-wire [15:0] MDROut;
 
 // MDRMux
 always @ (Bus or memOut) 
