@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/01/2019 13:05:07"
+// Generated on "02/11/2019 13:20:15"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          RegisterFile
 // 
@@ -70,21 +70,21 @@ initial
 begin
 	Bus[15] = 1'b0;
 	Bus[15] = #5000 1'b1;
-	Bus[15] = #5000 1'b0;
+	Bus[15] = #10000 1'b0;
 end 
 // Bus[ 14 ]
 initial
 begin
 	Bus[14] = 1'b0;
 	Bus[14] = #5000 1'b1;
-	Bus[14] = #5000 1'b0;
+	Bus[14] = #10000 1'b0;
 end 
 // Bus[ 13 ]
 initial
 begin
 	Bus[13] = 1'b0;
 	Bus[13] = #5000 1'b1;
-	Bus[13] = #5000 1'b0;
+	Bus[13] = #10000 1'b0;
 end 
 // Bus[ 12 ]
 initial
@@ -173,6 +173,8 @@ end
 initial
 begin
 	DR[0] = 1'b0;
+	DR[0] = #10000 1'b1;
+	DR[0] = #5000 1'b0;
 end 
 // SR0[ 2 ]
 initial
@@ -205,6 +207,8 @@ end
 initial
 begin
 	SR1[0] = 1'b0;
+	SR1[0] = #20000 1'b1;
+	SR1[0] = #5000 1'b0;
 end 
 
 // WE
@@ -212,7 +216,7 @@ initial
 begin
 	WE = 1'b0;
 	WE = #5000 1'b1;
-	WE = #5000 1'b0;
+	WE = #10000 1'b0;
 end 
 
 // reset

@@ -1,5 +1,5 @@
 Timing Analyzer report for RegisterFile
-Fri Feb 01 13:01:34 2019
+Mon Feb 11 13:19:01 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -103,7 +103,7 @@ refer to the applicable agreement for further details.
 +-------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
-; 1225.49 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1226.99 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -119,7 +119,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+---------------------+
 ; Clock ; Slack ; End Point TNS       ;
 +-------+-------+---------------------+
-; clk   ; 0.184 ; 0.000               ;
+; clk   ; 0.185 ; 0.000               ;
 +-------+-------+---------------------+
 
 
@@ -128,7 +128,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.403 ; 0.000              ;
+; clk   ; 0.404 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -158,14 +158,6 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.184 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
-; 0.184 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.080     ; 0.734      ;
 ; 0.185 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
@@ -182,30 +174,6 @@ No paths to report.
 ; 0.185 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
@@ -214,22 +182,6 @@ No paths to report.
 ; 0.185 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
@@ -238,26 +190,74 @@ No paths to report.
 ; 0.185 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
 ; 0.185 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
-; 0.185 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.079     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
+; 0.186 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.078     ; 0.734      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -266,14 +266,6 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.403 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
-; 0.403 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
 ; 0.404 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
@@ -290,30 +282,6 @@ No paths to report.
 ; 0.404 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
@@ -322,22 +290,6 @@ No paths to report.
 ; 0.404 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
@@ -346,26 +298,74 @@ No paths to report.
 ; 0.404 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.404 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
-; 0.404 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -380,7 +380,7 @@ No synchronizer chains to report.
 +-------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
-; 1367.99 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1369.86 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -390,7 +390,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.269 ; 0.000              ;
+; clk   ; 0.270 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -399,7 +399,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.355 ; 0.000             ;
+; clk   ; 0.356 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -429,70 +429,22 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.269 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.269 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.071     ; 0.659      ;
-; 0.270 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
@@ -501,14 +453,6 @@ No paths to report.
 ; 0.270 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
@@ -525,10 +469,66 @@ No paths to report.
 ; 0.270 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
 ; 0.270 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
-; 0.270 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r6|d_flip_flop:ff_0|Q  ; Register:r6|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r0|d_flip_flop:ff_0|Q  ; Register:r0|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r4|d_flip_flop:ff_0|Q  ; Register:r4|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r2|d_flip_flop:ff_0|Q  ; Register:r2|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r7|d_flip_flop:ff_0|Q  ; Register:r7|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r1|d_flip_flop:ff_0|Q  ; Register:r1|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r3|d_flip_flop:ff_0|Q  ; Register:r3|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.270 ; Register:r5|d_flip_flop:ff_0|Q  ; Register:r5|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 1.000        ; -0.070     ; 0.659      ;
+; 0.271 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
+; 0.271 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.069     ; 0.659      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -537,70 +537,22 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.355 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
-; 0.356 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
@@ -609,14 +561,6 @@ No paths to report.
 ; 0.356 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
@@ -633,10 +577,66 @@ No paths to report.
 ; 0.356 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r6|d_flip_flop:ff_0|Q  ; Register:r6|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r0|d_flip_flop:ff_0|Q  ; Register:r0|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r4|d_flip_flop:ff_0|Q  ; Register:r4|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r2|d_flip_flop:ff_0|Q  ; Register:r2|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r7|d_flip_flop:ff_0|Q  ; Register:r7|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r1|d_flip_flop:ff_0|Q  ; Register:r1|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r3|d_flip_flop:ff_0|Q  ; Register:r3|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; Register:r5|d_flip_flop:ff_0|Q  ; Register:r5|d_flip_flop:ff_0|Q  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.357 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -651,7 +651,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.596 ; 0.000              ;
+; clk   ; 0.593 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -660,7 +660,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.182 ; 0.000             ;
+; clk   ; 0.179 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -681,7 +681,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -138.918                        ;
+; clk   ; -3.000 ; -144.343                        ;
 +-------+--------+---------------------------------+
 
 
@@ -690,106 +690,106 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.596 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.596 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 1.000        ; -0.041     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
-; 0.597 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.040     ; 0.350      ;
+; 0.593 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.593 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 1.000        ; -0.044     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
+; 0.594 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 1.000        ; -0.043     ; 0.350      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -798,106 +798,106 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.182 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r6|d_flip_flop:ff_1|Q  ; Register:r6|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r0|d_flip_flop:ff_1|Q  ; Register:r0|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r4|d_flip_flop:ff_1|Q  ; Register:r4|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r2|d_flip_flop:ff_1|Q  ; Register:r2|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r7|d_flip_flop:ff_1|Q  ; Register:r7|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r1|d_flip_flop:ff_1|Q  ; Register:r1|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r3|d_flip_flop:ff_1|Q  ; Register:r3|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; Register:r5|d_flip_flop:ff_1|Q  ; Register:r5|d_flip_flop:ff_1|Q  ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
-; 0.183 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.179 ; Register:r6|d_flip_flop:ff_15|Q ; Register:r6|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r0|d_flip_flop:ff_15|Q ; Register:r0|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r4|d_flip_flop:ff_15|Q ; Register:r4|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r2|d_flip_flop:ff_15|Q ; Register:r2|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r1|d_flip_flop:ff_15|Q ; Register:r1|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r3|d_flip_flop:ff_15|Q ; Register:r3|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r5|d_flip_flop:ff_15|Q ; Register:r5|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r6|d_flip_flop:ff_7|Q  ; Register:r6|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r0|d_flip_flop:ff_7|Q  ; Register:r0|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r4|d_flip_flop:ff_7|Q  ; Register:r4|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r2|d_flip_flop:ff_7|Q  ; Register:r2|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r7|d_flip_flop:ff_7|Q  ; Register:r7|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r1|d_flip_flop:ff_7|Q  ; Register:r1|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r3|d_flip_flop:ff_7|Q  ; Register:r3|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; Register:r5|d_flip_flop:ff_7|Q  ; Register:r5|d_flip_flop:ff_7|Q  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_15|Q ; Register:r7|d_flip_flop:ff_15|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_14|Q ; Register:r6|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_14|Q ; Register:r0|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_14|Q ; Register:r4|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_14|Q ; Register:r2|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_14|Q ; Register:r7|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_14|Q ; Register:r1|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_14|Q ; Register:r3|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_14|Q ; Register:r5|d_flip_flop:ff_14|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_13|Q ; Register:r6|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_13|Q ; Register:r0|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_13|Q ; Register:r4|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_13|Q ; Register:r2|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_13|Q ; Register:r7|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_13|Q ; Register:r1|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_13|Q ; Register:r3|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_13|Q ; Register:r5|d_flip_flop:ff_13|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_12|Q ; Register:r6|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_12|Q ; Register:r0|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_12|Q ; Register:r4|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_12|Q ; Register:r2|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_12|Q ; Register:r7|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_12|Q ; Register:r1|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_12|Q ; Register:r3|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_12|Q ; Register:r5|d_flip_flop:ff_12|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_11|Q ; Register:r6|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_11|Q ; Register:r0|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_11|Q ; Register:r4|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_11|Q ; Register:r2|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_11|Q ; Register:r7|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_11|Q ; Register:r1|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_11|Q ; Register:r3|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_11|Q ; Register:r5|d_flip_flop:ff_11|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_10|Q ; Register:r6|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_10|Q ; Register:r0|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_10|Q ; Register:r4|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_10|Q ; Register:r2|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_10|Q ; Register:r7|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_10|Q ; Register:r1|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_10|Q ; Register:r3|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_10|Q ; Register:r5|d_flip_flop:ff_10|Q ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_9|Q  ; Register:r6|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_9|Q  ; Register:r0|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_9|Q  ; Register:r4|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_9|Q  ; Register:r2|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_9|Q  ; Register:r7|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_9|Q  ; Register:r1|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_9|Q  ; Register:r3|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_9|Q  ; Register:r5|d_flip_flop:ff_9|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_8|Q  ; Register:r6|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_8|Q  ; Register:r0|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_8|Q  ; Register:r4|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_8|Q  ; Register:r2|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_8|Q  ; Register:r7|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_8|Q  ; Register:r1|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_8|Q  ; Register:r3|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_8|Q  ; Register:r5|d_flip_flop:ff_8|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_6|Q  ; Register:r6|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_6|Q  ; Register:r0|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_6|Q  ; Register:r4|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_6|Q  ; Register:r2|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_6|Q  ; Register:r7|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_6|Q  ; Register:r1|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_6|Q  ; Register:r3|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_6|Q  ; Register:r5|d_flip_flop:ff_6|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_5|Q  ; Register:r6|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_5|Q  ; Register:r0|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_5|Q  ; Register:r4|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_5|Q  ; Register:r2|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_5|Q  ; Register:r7|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_5|Q  ; Register:r1|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_5|Q  ; Register:r3|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_5|Q  ; Register:r5|d_flip_flop:ff_5|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_4|Q  ; Register:r6|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_4|Q  ; Register:r0|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_4|Q  ; Register:r4|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_4|Q  ; Register:r2|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r7|d_flip_flop:ff_4|Q  ; Register:r7|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r1|d_flip_flop:ff_4|Q  ; Register:r1|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r3|d_flip_flop:ff_4|Q  ; Register:r3|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r5|d_flip_flop:ff_4|Q  ; Register:r5|d_flip_flop:ff_4|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r6|d_flip_flop:ff_3|Q  ; Register:r6|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r0|d_flip_flop:ff_3|Q  ; Register:r0|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r4|d_flip_flop:ff_3|Q  ; Register:r4|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Register:r2|d_flip_flop:ff_3|Q  ; Register:r2|d_flip_flop:ff_3|Q  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -912,8 +912,8 @@ No synchronizer chains to report.
 +------------------+-------+-------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 0.184 ; 0.182 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; 0.184 ; 0.182 ; N/A      ; N/A     ; -3.000              ;
+; Worst-case Slack ; 0.185 ; 0.179 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; 0.185 ; 0.179 ; N/A      ; N/A     ; -3.000              ;
 ; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; -167.48             ;
 ;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; -167.480            ;
 +------------------+-------+-------+----------+---------+---------------------+
@@ -1131,7 +1131,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 128      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 0        ; 0        ; 0        ; 128      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1141,7 +1141,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 128      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 0        ; 0        ; 0        ; 128      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1337,7 +1337,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Feb 01 13:01:29 2019
+    Info: Processing started: Mon Feb 11 13:18:57 2019
 Info: Command: quartus_sta RegisterFile -c RegisterFile
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1352,14 +1352,14 @@ Info (332143): No user constrained clock uncertainty found in the design. Callin
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
-Info (332146): Worst-case setup slack is 0.184
+Info (332146): Worst-case setup slack is 0.185
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.184               0.000 clk 
-Info (332146): Worst-case hold slack is 0.403
+    Info (332119):     0.185               0.000 clk 
+Info (332146): Worst-case hold slack is 0.404
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.403               0.000 clk 
+    Info (332119):     0.404               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -1372,14 +1372,14 @@ Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.269
+Info (332146): Worst-case setup slack is 0.270
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.269               0.000 clk 
-Info (332146): Worst-case hold slack is 0.355
+    Info (332119):     0.270               0.000 clk 
+Info (332146): Worst-case hold slack is 0.356
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.355               0.000 clk 
+    Info (332119):     0.356               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -1390,14 +1390,14 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000            -167.480 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.596
+Info (332146): Worst-case setup slack is 0.593
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.596               0.000 clk 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):     0.593               0.000 clk 
+Info (332146): Worst-case hold slack is 0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 clk 
+    Info (332119):     0.179               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -1405,13 +1405,13 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -138.918 clk 
+    Info (332119):    -3.000            -144.343 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Fri Feb 01 13:01:34 2019
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Mon Feb 11 13:19:01 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

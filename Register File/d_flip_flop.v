@@ -15,7 +15,7 @@ reg Q;
 wire in;
 assign in = (D & sel) + (Q & ~sel);
 
-always @(posedge clk)
+always @(negedge clk)
 	if (clr == 1'b1) begin
 		Q <= 1'b0;
 	end else begin

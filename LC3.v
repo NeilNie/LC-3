@@ -14,18 +14,22 @@ module LC3 (clk,
 	selMAR, selEAB1, selEAB2,
 	ldPC, ldIR, ldMAR, ldMDR,
 	selPC, selMDR,
-	SR1, SR2, DR,
+	SR0, SR1, DR,
 	regWE, memWE,
+	Bus
 	// ------------------------------
 );
 
 input clk;
 
-//wire reset, aluControl, enaALU, enaMARM, enaMDR, enaPC;
-//wire selMAR, selEAB1, selEAB2;
+//wire [1:0] selEAB2;
+//wire [1:0] aluControl;
+//wire [1:0] selPC;
+//wire reset, enaALU, enaMARM, enaMDR, enaPC;
+//wire selMAR, selEAB1;
 //wire ldPC, ldIR, ldMAR, ldMDR;
-//wire selPC, selMDR;
-//wire SR1, SR2, DR;
+//wire selMDR;
+//wire [2:0] SR0, SR1, DR;
 //wire regWE, memWE;
 
 // for testing purposes only ---------------
@@ -36,18 +40,18 @@ input reset, enaALU, enaMARM, enaMDR, enaPC;
 input selMAR, selEAB1;
 input ldPC, ldIR, ldMAR, ldMDR;
 input selMDR;
-input SR1, SR2, DR;
+input [2:0] SR0, SR1, DR;
 input regWE, memWE;
 // ----------------------------------------
 
 // internal wires
-reg [15:0] Bus_reg;
+output [15:0] Bus;
 wire [15:0] PC;
-wire [15:0] Bus;
 wire [15:0] aluOut;
 wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
-wire [15:0] sa, regOut1;
+wire [15:0] regOut0;
+wire [15:0] regOut1;
 wire [15:0] eabOut;
 wire [15:0] IR;
 wire N, Z, P;
@@ -56,10 +60,19 @@ wire N, Z, P;
 // ===================== Implementation begin ============================
 // =======================================================================
 
-tri_state_buffer MARBuffer(.sel(enaMARM), .in(MARMuxOut), .out(Bus_reg));
-tri_state_buffer PCBuffer(.sel(enaPC), .in(PC), .out(Bus_reg));
-tri_state_buffer ALUBuffer(.sel(enaALU), .in(aluOut), .out(Bus_reg));
-tri_state_buffer MemBuffer(.sel(enaMDR), .in(MDROut), .out(Bus_reg));
+bus_tri_state_buffer tsb(
+	.MARMuxOut(MARMuxOut),
+	.enaMARM(enaMARM),
+	.PC(PC),
+	.enaPC(enaPC),
+	.aluOut(aluOut),
+	.enaALU(enaALU),
+	.MDROut(MDROut),
+	.enaMDR(enaMDR),
+	.Bus(Bus)
+);
+
+// -----------------------------------------------------
 
 // Finite State Machine Control 
 //LC3Control FSM(
@@ -83,7 +96,7 @@ tri_state_buffer MemBuffer(.sel(enaMDR), .in(MDROut), .out(Bus_reg));
 
 RegisterFile reg_file(
 
-	.Bus(Bus), .Out0(regOut0), .Out1(regOut0),
+	.Bus(Bus), .Out0(regOut0), .Out1(regOut1),
 	.clk(clk), .WE(regWE), .reset(reset),
 	.DR(DR), .SR0(SR0), .SR1(SR1)
 );

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/01/2019 13:05:08"
+// DATE "02/11/2019 13:20:17"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -1149,7 +1149,7 @@ defparam \reset~input .simulate_z_as = "z";
 
 // Location: FF_X87_Y70_N23
 dffeas \r4|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1222,7 +1222,7 @@ defparam \r0|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N25
 dffeas \r0|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1292,7 +1292,7 @@ defparam \r6|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N27
 dffeas \r6|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1345,7 +1345,7 @@ defparam \r2|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N1
 dffeas \r2|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1425,7 +1425,7 @@ defparam \r7|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N7
 dffeas \r7|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1478,7 +1478,7 @@ defparam \r3|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N11
 dffeas \r3|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1531,7 +1531,7 @@ defparam \r1|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N17
 dffeas \r1|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1601,7 +1601,7 @@ defparam \r5|ff_0|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y70_N21
 dffeas \r5|ff_0|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_0|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1681,7 +1681,7 @@ defparam \r6|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N11
 dffeas \r6|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1717,7 +1717,7 @@ defparam \r2|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N1
 dffeas \r2|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1753,7 +1753,7 @@ defparam \r4|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N3
 dffeas \r4|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1789,7 +1789,7 @@ defparam \r0|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N13
 dffeas \r0|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1859,7 +1859,7 @@ defparam \r1|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N25
 dffeas \r1|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1895,7 +1895,7 @@ defparam \r3|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N31
 dffeas \r3|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1948,7 +1948,7 @@ defparam \r5|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N29
 dffeas \r5|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -1984,7 +1984,7 @@ defparam \r7|ff_1|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y70_N7
 dffeas \r7|ff_1|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_1|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2064,7 +2064,7 @@ defparam \r7|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N31
 dffeas \r7|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2100,7 +2100,7 @@ defparam \r5|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N21
 dffeas \r5|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2136,7 +2136,7 @@ defparam \r1|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N25
 dffeas \r1|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2172,7 +2172,7 @@ defparam \r3|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N19
 dffeas \r3|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2242,7 +2242,7 @@ defparam \r6|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N3
 dffeas \r6|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2278,7 +2278,7 @@ defparam \r2|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N9
 dffeas \r2|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2314,7 +2314,7 @@ defparam \r4|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N11
 dffeas \r4|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2350,7 +2350,7 @@ defparam \r0|ff_2|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y70_N5
 dffeas \r0|ff_2|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_2|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2447,7 +2447,7 @@ defparam \r7|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N11
 dffeas \r7|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2483,7 +2483,7 @@ defparam \r5|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N5
 dffeas \r5|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2519,7 +2519,7 @@ defparam \r3|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N23
 dffeas \r3|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2555,7 +2555,7 @@ defparam \r1|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N25
 dffeas \r1|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2625,7 +2625,7 @@ defparam \r0|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N1
 dffeas \r0|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2661,7 +2661,7 @@ defparam \r4|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N15
 dffeas \r4|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2714,7 +2714,7 @@ defparam \r2|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N21
 dffeas \r2|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2750,7 +2750,7 @@ defparam \r6|ff_3|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y69_N31
 dffeas \r6|ff_3|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_3|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2830,7 +2830,7 @@ defparam \r6|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N11
 dffeas \r6|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2866,7 +2866,7 @@ defparam \r0|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N13
 dffeas \r0|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2902,7 +2902,7 @@ defparam \r4|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N3
 dffeas \r4|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2955,7 +2955,7 @@ defparam \r2|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N1
 dffeas \r2|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3008,7 +3008,7 @@ defparam \r7|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N7
 dffeas \r7|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3044,7 +3044,7 @@ defparam \r3|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N31
 dffeas \r3|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3080,7 +3080,7 @@ defparam \r1|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N25
 dffeas \r1|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3133,7 +3133,7 @@ defparam \r5|ff_4|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y71_N29
 dffeas \r5|ff_4|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_4|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3213,7 +3213,7 @@ defparam \r2|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N13
 dffeas \r2|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3249,7 +3249,7 @@ defparam \r4|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N11
 dffeas \r4|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3285,7 +3285,7 @@ defparam \r0|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N5
 dffeas \r0|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3338,7 +3338,7 @@ defparam \r6|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N23
 dffeas \r6|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3391,7 +3391,7 @@ defparam \r7|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N7
 dffeas \r7|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3427,7 +3427,7 @@ defparam \r3|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N31
 dffeas \r3|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3463,7 +3463,7 @@ defparam \r1|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N25
 dffeas \r1|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3516,7 +3516,7 @@ defparam \r5|ff_5|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X85_Y71_N1
 dffeas \r5|ff_5|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_5|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3596,7 +3596,7 @@ defparam \r2|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N1
 dffeas \r2|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3632,7 +3632,7 @@ defparam \r4|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N11
 dffeas \r4|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3668,7 +3668,7 @@ defparam \r0|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N25
 dffeas \r0|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3721,7 +3721,7 @@ defparam \r6|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N3
 dffeas \r6|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3774,7 +3774,7 @@ defparam \r3|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N7
 dffeas \r3|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3810,7 +3810,7 @@ defparam \r1|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N17
 dffeas \r1|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3863,7 +3863,7 @@ defparam \r5|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N21
 dffeas \r5|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3899,7 +3899,7 @@ defparam \r7|ff_6|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y69_N23
 dffeas \r7|ff_6|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_6|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3979,7 +3979,7 @@ defparam \r6|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N11
 dffeas \r6|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4015,7 +4015,7 @@ defparam \r0|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N21
 dffeas \r0|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4051,7 +4051,7 @@ defparam \r4|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N27
 dffeas \r4|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4104,7 +4104,7 @@ defparam \r2|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N13
 dffeas \r2|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4157,7 +4157,7 @@ defparam \r7|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N23
 dffeas \r7|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4193,7 +4193,7 @@ defparam \r5|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N29
 dffeas \r5|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4229,7 +4229,7 @@ defparam \r3|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N7
 dffeas \r3|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4265,7 +4265,7 @@ defparam \r1|ff_7|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y69_N1
 dffeas \r1|ff_7|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_7|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4362,7 +4362,7 @@ defparam \r4|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N15
 dffeas \r4|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4398,7 +4398,7 @@ defparam \r0|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N21
 dffeas \r0|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4451,7 +4451,7 @@ defparam \r2|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N5
 dffeas \r2|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4487,7 +4487,7 @@ defparam \r6|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N19
 dffeas \r6|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4540,7 +4540,7 @@ defparam \r7|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N11
 dffeas \r7|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4576,7 +4576,7 @@ defparam \r5|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N1
 dffeas \r5|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4612,7 +4612,7 @@ defparam \r3|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N27
 dffeas \r3|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4648,7 +4648,7 @@ defparam \r1|ff_8|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X87_Y71_N17
 dffeas \r1|ff_8|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_8|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4745,7 +4745,7 @@ defparam \r6|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N7
 dffeas \r6|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4781,7 +4781,7 @@ defparam \r2|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N17
 dffeas \r2|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4817,7 +4817,7 @@ defparam \r0|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N13
 dffeas \r0|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4853,7 +4853,7 @@ defparam \r4|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N15
 dffeas \r4|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4923,7 +4923,7 @@ defparam \r7|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N11
 dffeas \r7|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4959,7 +4959,7 @@ defparam \r5|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N1
 dffeas \r5|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4995,7 +4995,7 @@ defparam \r3|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N31
 dffeas \r3|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5031,7 +5031,7 @@ defparam \r1|ff_9|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y70_N21
 dffeas \r1|ff_9|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_9|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5128,7 +5128,7 @@ defparam \r6|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N11
 dffeas \r6|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5164,7 +5164,7 @@ defparam \r0|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N21
 dffeas \r0|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5200,7 +5200,7 @@ defparam \r4|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N31
 dffeas \r4|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5253,7 +5253,7 @@ defparam \r2|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N17
 dffeas \r2|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5306,7 +5306,7 @@ defparam \r7|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N27
 dffeas \r7|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5342,7 +5342,7 @@ defparam \r5|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N29
 dffeas \r5|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5378,7 +5378,7 @@ defparam \r1|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N13
 dffeas \r1|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5414,7 +5414,7 @@ defparam \r3|ff_10|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y69_N7
 dffeas \r3|ff_10|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_10|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5511,7 +5511,7 @@ defparam \r4|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N7
 dffeas \r4|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5547,7 +5547,7 @@ defparam \r0|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N25
 dffeas \r0|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5600,7 +5600,7 @@ defparam \r6|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N27
 dffeas \r6|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5636,7 +5636,7 @@ defparam \r2|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N21
 dffeas \r2|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5689,7 +5689,7 @@ defparam \r7|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N11
 dffeas \r7|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5725,7 +5725,7 @@ defparam \r5|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N5
 dffeas \r5|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5761,7 +5761,7 @@ defparam \r1|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N13
 dffeas \r1|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5797,7 +5797,7 @@ defparam \r3|ff_11|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y69_N3
 dffeas \r3|ff_11|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_11|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5894,7 +5894,7 @@ defparam \r6|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N3
 dffeas \r6|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5930,7 +5930,7 @@ defparam \r4|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N23
 dffeas \r4|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5966,7 +5966,7 @@ defparam \r0|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N21
 dffeas \r0|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6019,7 +6019,7 @@ defparam \r2|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N17
 dffeas \r2|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6072,7 +6072,7 @@ defparam \r5|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N13
 dffeas \r5|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6108,7 +6108,7 @@ defparam \r3|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N19
 dffeas \r3|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6144,7 +6144,7 @@ defparam \r1|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N25
 dffeas \r1|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6197,7 +6197,7 @@ defparam \r7|ff_12|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X88_Y71_N15
 dffeas \r7|ff_12|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_12|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6277,7 +6277,7 @@ defparam \r6|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N23
 dffeas \r6|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6313,7 +6313,7 @@ defparam \r4|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N15
 dffeas \r4|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6349,7 +6349,7 @@ defparam \r0|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N25
 dffeas \r0|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6402,7 +6402,7 @@ defparam \r2|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N29
 dffeas \r2|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6455,7 +6455,7 @@ defparam \r5|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N13
 dffeas \r5|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6491,7 +6491,7 @@ defparam \r3|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N11
 dffeas \r3|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6527,7 +6527,7 @@ defparam \r1|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N9
 dffeas \r1|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6580,7 +6580,7 @@ defparam \r7|ff_13|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X86_Y70_N27
 dffeas \r7|ff_13|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_13|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6660,7 +6660,7 @@ defparam \r6|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N3
 dffeas \r6|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6696,7 +6696,7 @@ defparam \r2|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N5
 dffeas \r2|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6732,7 +6732,7 @@ defparam \r0|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N25
 dffeas \r0|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6768,7 +6768,7 @@ defparam \r4|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N7
 dffeas \r4|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6838,7 +6838,7 @@ defparam \r1|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N21
 dffeas \r1|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6874,7 +6874,7 @@ defparam \r3|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N11
 dffeas \r3|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6927,7 +6927,7 @@ defparam \r7|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N15
 dffeas \r7|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6963,7 +6963,7 @@ defparam \r5|ff_14|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X89_Y69_N29
 dffeas \r5|ff_14|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_14|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7043,7 +7043,7 @@ defparam \r6|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N17
 dffeas \r6|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r6|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7079,7 +7079,7 @@ defparam \r0|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N7
 dffeas \r0|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r0|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7115,7 +7115,7 @@ defparam \r4|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N1
 dffeas \r4|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r4|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7168,7 +7168,7 @@ defparam \r2|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N19
 dffeas \r2|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r2|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7221,7 +7221,7 @@ defparam \r7|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X91_Y70_N17
 dffeas \r7|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r7|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7257,7 +7257,7 @@ defparam \r5|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N29
 dffeas \r5|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r5|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7293,7 +7293,7 @@ defparam \r3|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N11
 dffeas \r3|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r3|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7329,7 +7329,7 @@ defparam \r1|ff_15|Add0~0 .sum_lutc_input = "datac";
 
 // Location: FF_X90_Y69_N21
 dffeas \r1|ff_15|Q (
-	.clk(\clk~inputclkctrl_outclk ),
+	.clk(!\clk~inputclkctrl_outclk ),
 	.d(\r1|ff_15|Add0~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),

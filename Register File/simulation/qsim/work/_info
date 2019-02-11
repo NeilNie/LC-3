@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim
 vhard_block
-Z1 !s110 1549044310
+Z1 !s110 1549909218
 !i10b 1
 !s100 dVb`i>^o7M^i;gZ]Ed6kJ1
 ILDV0`IJ9C`ne9gzRYVoDZ0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1549044308
+Z3 w1549909217
 Z4 8RegisterFile.vo
 Z5 FRegisterFile.vo
 L0 8856
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1549044309.000000
+Z7 !s108 1549909218.000000
 Z8 !s107 RegisterFile.vo|
 Z9 !s90 -work|work|RegisterFile.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vRegisterFile
 R1
 !i10b 1
-!s100 EJS_Dm=3n8?SSFgNfKa]G2
-I5Z6XgnA0`UIQb::Vj39WX1
+!s100 da`>zLH8NPB9QQhii2e7d1
+Ia5UV3mLl_hPmJ=;B[8m`j1
 R2
 R0
 R3
@@ -54,11 +54,11 @@ n@register@file
 vRegisterFile_vlg_vec_tst
 R1
 !i10b 1
-!s100 d<XPoJ`YjiRCU=9]^J5Q?0
-IdYz4Pbf9XHj9kMcoGn9z<0
+!s100 QkZZ7:zbRinF_0VhdebN@1
+IUGcdPO0]2Ik?c;A@T0^PK0
 R2
 R0
-w1549044307
+w1549909216
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
@@ -66,7 +66,7 @@ R6
 r1
 !s85 0
 31
-!s108 1549044310.000000
+R7
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1

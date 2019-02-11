@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/simulation/qsim
+vhard_block
+Z1 !s110 1549909479
+!i10b 1
+!s100 ]?FJK]5486;NNYJTVLldo1
+IjmK^QzP5M6A]MZ1@hV7aa0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1549909477
+Z4 8LC3.vo
+Z5 FLC3.vo
+L0 25032
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1549909478.000000
+Z8 !s107 LC3.vo|
+Z9 !s90 -work|work|LC3.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vLC3
+R1
+!i10b 1
+!s100 ^R>BOBUTfdKN@Xl<RVh5X2
+IgkJ=oabb@69G@DBn03_d03
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@l@c3
+vLC3_vlg_vec_tst
+R1
+!i10b 1
+!s100 n^CbX^0MT@Fnh[FHAoci50
+IPFfKbmmJ1f@_cW;Jhz5>h0
+R2
+R0
+w1549909476
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1549909479.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@l@c3_vlg_vec_tst

@@ -22,6 +22,8 @@ run -all
 quit -f
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -40,6 +42,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 </modelsim_script_timing>
@@ -745,8 +749,8 @@ TRANSITION_LIST("Bus[15]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 35.0;
 	}
 }
 
@@ -756,8 +760,8 @@ TRANSITION_LIST("Bus[14]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 35.0;
 	}
 }
 
@@ -767,8 +771,8 @@ TRANSITION_LIST("Bus[13]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 35.0;
 	}
 }
 
@@ -920,7 +924,9 @@ TRANSITION_LIST("DR[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL 0 FOR 35.0;
 	}
 }
 
@@ -1264,7 +1270,9 @@ TRANSITION_LIST("SR1[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL 0 FOR 25.0;
 	}
 }
 
@@ -1274,8 +1282,8 @@ TRANSITION_LIST("WE")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 35.0;
 	}
 }
 
@@ -1564,7 +1572,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "SR1";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
 	TREE_LEVEL = 0;
