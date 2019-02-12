@@ -3,35 +3,35 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'selPC[0]'
-Slack : -7.615
-TNS   : -109.125
+Slack : -8.062
+TNS   : -109.645
 
 Type  : Slow 1200mV 85C Model Setup 'enaALU'
-Slack : -7.351
-TNS   : -108.952
+Slack : -6.613
+TNS   : -99.020
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.509
-TNS   : -1901.751
+Slack : -3.856
+TNS   : -1904.639
 
 Type  : Slow 1200mV 85C Model Setup 'selEAB2[0]'
-Slack : -2.148
-TNS   : -5.935
+Slack : -2.384
+TNS   : -6.080
 
 Type  : Slow 1200mV 85C Model Hold 'selPC[0]'
-Slack : -1.022
-TNS   : -1.611
+Slack : 0.152
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.383
+Slack : 0.385
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'selEAB2[0]'
-Slack : 0.599
+Slack : 0.762
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'enaALU'
-Slack : 1.012
+Slack : 0.957
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -51,35 +51,35 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'selPC[0]'
-Slack : -7.016
-TNS   : -100.270
+Slack : -7.417
+TNS   : -99.840
 
 Type  : Slow 1200mV 0C Model Setup 'enaALU'
-Slack : -6.765
-TNS   : -99.724
+Slack : -6.048
+TNS   : -90.080
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.171
-TNS   : -1675.670
+Slack : -3.571
+TNS   : -1677.227
 
 Type  : Slow 1200mV 0C Model Setup 'selEAB2[0]'
-Slack : -1.982
-TNS   : -5.637
+Slack : -2.196
+TNS   : -5.723
 
 Type  : Slow 1200mV 0C Model Hold 'selPC[0]'
-Slack : -0.814
-TNS   : -1.174
+Slack : 0.183
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'selEAB2[0]'
-Slack : 0.558
+Slack : 0.701
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'enaALU'
-Slack : 0.971
+Slack : 0.846
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -99,44 +99,44 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'selPC[0]'
-Slack : -3.843
-TNS   : -56.346
+Slack : -4.230
+TNS   : -58.335
 
 Type  : Fast 1200mV 0C Model Setup 'enaALU'
-Slack : -3.187
-TNS   : -45.383
+Slack : -2.841
+TNS   : -41.108
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.938
-TNS   : -819.471
+Slack : -1.952
+TNS   : -822.384
 
 Type  : Fast 1200mV 0C Model Setup 'selEAB2[0]'
-Slack : -0.661
-TNS   : -1.668
+Slack : -0.739
+TNS   : -1.753
 
 Type  : Fast 1200mV 0C Model Hold 'selPC[0]'
-Slack : -0.687
-TNS   : -1.590
+Slack : 0.005
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.168
+Slack : 0.169
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'selEAB2[0]'
-Slack : 0.207
+Slack : 0.304
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'enaALU'
-Slack : 0.229
+Slack : 0.331
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -811.075
+TNS   : -810.346
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enaALU'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -3.001
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'selEAB2[0]'
 Slack : -3.000

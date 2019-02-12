@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ALU
-Tue Feb 05 09:35:17 2019
+Tue Feb 12 10:17:41 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Feb 05 09:35:17 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Feb 12 10:17:41 2019 ;
 ; Revision Name             ; ALU                                   ;
 ; Top-level Entity Name     ; ALU                                   ;
 ; Family                    ; Cyclone V                             ;
@@ -93,14 +93,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Feb 05 09:35:14 2019
+    Info: Processing started: Tue Feb 12 10:17:38 2019
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/USER1/Digital Logic/LC-3/ALU/simulation/qsim/" ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ALU.vo in folder "C:/Users/USER1/Digital Logic/LC-3/ALU/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4729 megabytes
-    Info: Processing ended: Tue Feb 05 09:35:17 2019
+    Info: Peak virtual memory: 4731 megabytes
+    Info: Processing ended: Tue Feb 12 10:17:41 2019
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

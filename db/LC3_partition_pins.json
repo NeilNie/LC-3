@@ -68,15 +68,195 @@
 					"strict" : false
 				},
 				{
-					"name" : "enaMARM",
+					"name" : "regOut0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "enaPC",
+					"name" : "regOut0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "enaALU",
+					"name" : "regOut0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut0[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regOut1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOut[15]",
 					"strict" : false
 				},
 				{
@@ -112,6 +292,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "enaMARM",
+					"strict" : false
+				},
+				{
+					"name" : "enaPC",
+					"strict" : false
+				},
+				{
+					"name" : "enaALU",
+					"strict" : false
+				},
+				{
 					"name" : "selEAB1",
 					"strict" : false
 				},
@@ -128,26 +320,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ldIR",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "ldPC",
-					"strict" : false
-				},
-				{
-					"name" : "ldMDR",
-					"strict" : false
-				},
-				{
-					"name" : "selMDR",
-					"strict" : false
-				},
-				{
 					"name" : "regWE",
 					"strict" : false
 				},
@@ -161,6 +333,26 @@
 				},
 				{
 					"name" : "DR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "ldIR",
+					"strict" : false
+				},
+				{
+					"name" : "ldPC",
+					"strict" : false
+				},
+				{
+					"name" : "ldMDR",
+					"strict" : false
+				},
+				{
+					"name" : "selMDR",
 					"strict" : false
 				},
 				{

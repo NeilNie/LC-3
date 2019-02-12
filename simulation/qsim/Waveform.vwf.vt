@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/11/2019 13:24:36"
+// Generated on "02/12/2019 10:54:06"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LC3
 // 
@@ -52,6 +52,9 @@ reg selMDR;
 reg [1:0] selPC;
 // wires                                               
 wire [15:0] Bus;
+wire [15:0] aluOut;
+wire [15:0] regOut0;
+wire [15:0] regOut1;
 
 // assign statements (if any)                          
 LC3 i1 (
@@ -61,6 +64,7 @@ LC3 i1 (
 	.SR0(SR0),
 	.SR1(SR1),
 	.aluControl(aluControl),
+	.aluOut(aluOut),
 	.clk(clk),
 	.enaALU(enaALU),
 	.enaMARM(enaMARM),
@@ -71,6 +75,8 @@ LC3 i1 (
 	.ldMDR(ldMDR),
 	.ldPC(ldPC),
 	.memWE(memWE),
+	.regOut0(regOut0),
+	.regOut1(regOut1),
 	.regWE(regWE),
 	.reset(reset),
 	.selEAB1(selEAB1),
@@ -125,7 +131,7 @@ initial
 begin
 	SR0[0] = 1'b0;
 	SR0[0] = #70000 1'b1;
-	SR0[0] = #10000 1'b0;
+	SR0[0] = #20000 1'b0;
 end 
 // SR1[ 2 ]
 initial
@@ -137,7 +143,7 @@ initial
 begin
 	SR1[1] = 1'b0;
 	SR1[1] = #70000 1'b1;
-	SR1[1] = #10000 1'b0;
+	SR1[1] = #20000 1'b0;
 end 
 // SR1[ 0 ]
 initial
@@ -162,7 +168,7 @@ initial
 begin
 	aluControl[0] = 1'b0;
 	aluControl[0] = #70000 1'b1;
-	aluControl[0] = #10000 1'b0;
+	aluControl[0] = #20000 1'b0;
 end 
 
 // enaALU
@@ -170,7 +176,7 @@ initial
 begin
 	enaALU = 1'b0;
 	enaALU = #70000 1'b1;
-	enaALU = #20000 1'b0;
+	enaALU = #60000 1'b0;
 end 
 
 // enaMARM
@@ -220,6 +226,7 @@ end
 initial
 begin
 	ldPC = 1'b1;
+	ldPC = #40000 1'b0;
 end 
 // selPC[ 1 ]
 initial

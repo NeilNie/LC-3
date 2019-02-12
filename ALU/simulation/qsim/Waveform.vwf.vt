@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/05/2019 09:35:13"
+// Generated on "02/12/2019 10:17:37"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          ALU
 // 

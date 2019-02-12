@@ -30,11 +30,11 @@ always @ (posedge clk)
 always @ (eabOut or Bus or PC_inc or selPC) begin
 	
 	if (selPC == 2'b00) begin
-		PC = PC_inc;
+		PC <= PC_inc;
 	end else if (selPC == 2'b01) begin
-		PC = eabOut;
+		PC <= eabOut;
 	end else if (selPC == 2'b10) begin
-		PC = Bus;
+		PC <= Bus;
 	end
 
 end

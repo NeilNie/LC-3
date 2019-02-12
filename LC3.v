@@ -16,7 +16,12 @@ module LC3 (clk,
 	selPC, selMDR,
 	SR0, SR1, DR,
 	regWE, memWE,
-	Bus
+	Bus,
+	
+	// more testing
+	regOut0,
+	regOut1,
+	aluOut
 	// ------------------------------
 );
 
@@ -47,11 +52,11 @@ input regWE, memWE;
 // internal wires
 output [15:0] Bus;
 wire [15:0] PC;
-wire [15:0] aluOut;
+output [15:0] aluOut;
 wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
-wire [15:0] regOut0;
-wire [15:0] regOut1;
+output [15:0] regOut0;
+output [15:0] regOut1;
 wire [15:0] eabOut;
 wire [15:0] IR;
 wire N, Z, P;

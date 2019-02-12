@@ -19,7 +19,8 @@ output reg [15:0] Bus;
 input [15:0] MARMuxOut, PC, aluOut, MDROut;
 input enaMARM, enaPC, enaALU, enaMDR;
 
-always @ (MARMuxOut or enaMARM or PC or enaPC or aluOut or enaALU or MDROut or enaMDR) begin
+//MARMuxOut or enaMARM or PC or enaPC or aluOut or enaALU or MDROut or enaMDR
+always @ (*) begin
 
 	if (enaMARM == 1'b1) begin
 		Bus <= MARMuxOut;

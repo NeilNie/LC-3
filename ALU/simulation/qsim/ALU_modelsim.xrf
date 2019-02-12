@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v
+source_file = 1, C:/Users/USER1/Digital Logic/LC-3/ALU/Waveform.vwf
 source_file = 1, C:/Users/USER1/Digital Logic/LC-3/ALU/db/ALU.cbx.xml
 design_name = ALU
 instance = comp, \aluOut[0]~output , aluOut[0]~output, ALU, 1
