@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3Control
-Tue Feb 12 23:55:41 2019
+Wed Feb 13 08:58:25 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -12,15 +12,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |LC3Control|current_state
-  8. State Machine - |LC3Control|next_state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +43,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 12 23:55:41 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 13 08:58:25 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3Control                                  ;
 ; Top-level Entity Name              ; LC3Control                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 37                                          ;
+;     Total combinational functions  ; 22                                          ;
+;     Dedicated logic registers      ; 24                                          ;
+; Total registers                    ; 24                                          ;
 ; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -158,35 +155,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 49    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; IR[0] ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 49    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 37        ;
+;                                             ;           ;
+; Total combinational functions               ; 22        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 14        ;
+;     -- 3 input functions                    ; 3         ;
+;     -- <=2 input functions                  ; 5         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 22        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 24        ;
+;     -- Dedicated logic registers            ; 24        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 49        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 24        ;
+; Total fan-out                               ; 201       ;
+; Average fan-out                             ; 1.40      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -194,69 +192,28 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |LC3Control                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 49   ; 0            ; |LC3Control         ; LC3Control  ; work         ;
+; |LC3Control                ; 22 (22)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 49   ; 0            ; |LC3Control         ; LC3Control  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------+
-; State Machine - |LC3Control|current_state                                                                        ;
-+----------------------+----------------------+----------------------+----------------------+----------------------+
-; Name                 ; current_state.100011 ; current_state.100001 ; current_state.100000 ; current_state.010010 ;
-+----------------------+----------------------+----------------------+----------------------+----------------------+
-; current_state.010010 ; 0                    ; 0                    ; 0                    ; 0                    ;
-; current_state.100000 ; 0                    ; 0                    ; 1                    ; 1                    ;
-; current_state.100001 ; 0                    ; 1                    ; 0                    ; 1                    ;
-; current_state.100011 ; 1                    ; 0                    ; 0                    ; 1                    ;
-+----------------------+----------------------+----------------------+----------------------+----------------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------+
-; State Machine - |LC3Control|next_state                                        ;
-+-------------------+-------------------+-------------------+-------------------+
-; Name              ; next_state.100001 ; next_state.100011 ; next_state.100000 ;
-+-------------------+-------------------+-------------------+-------------------+
-; next_state.100001 ; 0                 ; 0                 ; 0                 ;
-; next_state.100000 ; 1                 ; 0                 ; 1                 ;
-; next_state.100011 ; 1                 ; 1                 ; 0                 ;
-+-------------------+-------------------+-------------------+-------------------+
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; current_state.100000                   ; Lost fanout        ;
-; current_state~2                        ; Lost fanout        ;
-; current_state~3                        ; Lost fanout        ;
-; current_state~4                        ; Lost fanout        ;
-; current_state~5                        ; Lost fanout        ;
-; current_state~7                        ; Lost fanout        ;
-; next_state~10                          ; Lost fanout        ;
-; next_state~11                          ; Lost fanout        ;
-; next_state~12                          ; Lost fanout        ;
-; next_state~13                          ; Lost fanout        ;
-; current_state.010010                   ; Lost fanout        ;
-; current_state.100001                   ; Lost fanout        ;
-; current_state.100011                   ; Lost fanout        ;
-; next_state.100000                      ; Lost fanout        ;
-; next_state.100011                      ; Lost fanout        ;
-; next_state.100001                      ; Lost fanout        ;
-; Total Number of Removed Registers = 16 ;                    ;
-+----------------------------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+----------------------+--------------------+----------------------------------------+
-; Register name        ; Reason for Removal ; Registers Removed due to This Register ;
-+----------------------+--------------------+----------------------------------------+
-; current_state~2      ; Lost Fanouts       ; next_state.100011, next_state.100001   ;
-; current_state.100000 ; Lost Fanouts       ; next_state.100000                      ;
-+----------------------+--------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ldPC~reg0                              ; Stuck at VCC due to stuck port data_in ;
+; selPC[0]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; selPC[1]~reg0                          ; Stuck at GND due to stuck port data_in ;
+; ldMAR~reg0                             ; Stuck at VCC due to stuck port data_in ;
+; ldIR~reg0                              ; Stuck at VCC due to stuck port data_in ;
+; enaMDR~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; ldMDR~reg0                             ; Stuck at VCC due to stuck port data_in ;
+; selMDR~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; regWE~reg0                             ; Merged with enaALU~reg0                ;
+; enaALU~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 10 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -264,23 +221,25 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |LC3Control|next_state     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |LC3Control|aluControl[0]~reg0 ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3Control|J[5]               ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 12 LEs               ; 156 LEs                ; Yes        ; |LC3Control|J[3]               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +-----------------------------------------------------+
@@ -289,12 +248,18 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 49                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_ff         ; 24                          ;
+;     ENA               ; 17                          ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 24                          ;
+;     normal            ; 24                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -313,7 +278,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 12 23:55:12 2019
+    Info: Processing started: Wed Feb 13 08:57:53 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3Control -c LC3Control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -352,87 +317,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file lc3control.v
     Info (12023): Found entity 1: LC3Control File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 7
 Info (12127): Elaborating entity "LC3Control" for the top level hierarchy
-Warning (10034): Output port "aluControl" at LC3Control.v(31) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
 Warning (10034): Output port "selEAB2" at LC3Control.v(31) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-Warning (10034): Output port "selPC" at LC3Control.v(31) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-Warning (10034): Output port "SR1" at LC3Control.v(32) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-Warning (10034): Output port "SR2" at LC3Control.v(32) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-Warning (10034): Output port "DR" at LC3Control.v(32) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
 Warning (10034): Output port "reset" at LC3Control.v(28) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 28
-Warning (10034): Output port "enaALU" at LC3Control.v(28) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 28
 Warning (10034): Output port "enaMARM" at LC3Control.v(29) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
-Warning (10034): Output port "enaMDR" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "enaPC" at LC3Control.v(29) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
 Warning (10034): Output port "selMAR" at LC3Control.v(29) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
 Warning (10034): Output port "selEAB1" at LC3Control.v(29) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
-Warning (10034): Output port "ldPC" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "ldIR" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "ldMAR" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "ldMDR" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "selMDR" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Warning (10034): Output port "regWE" at LC3Control.v(29) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
 Warning (10034): Output port "memWE" at LC3Control.v(30) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "reset" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 28
-    Warning (13410): Pin "aluControl[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-    Warning (13410): Pin "aluControl[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-    Warning (13410): Pin "enaALU" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 28
+    Warning (13410): Pin "enaALU" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 28
     Warning (13410): Pin "enaMARM" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
-    Warning (13410): Pin "enaMDR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "enaPC" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
+    Warning (13410): Pin "enaMDR" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
     Warning (13410): Pin "selMAR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
     Warning (13410): Pin "selEAB1" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
     Warning (13410): Pin "selEAB2[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
     Warning (13410): Pin "selEAB2[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-    Warning (13410): Pin "ldPC" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "ldIR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "ldMAR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "ldMDR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "selPC[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-    Warning (13410): Pin "selPC[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 31
-    Warning (13410): Pin "selMDR" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-    Warning (13410): Pin "SR1[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "SR1[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "SR1[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "SR2[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "SR2[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "SR2[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "DR[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "DR[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "DR[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 32
-    Warning (13410): Pin "regWE" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
+    Warning (13410): Pin "ldPC" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
+    Warning (13410): Pin "ldIR" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
+    Warning (13410): Pin "ldMAR" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
+    Warning (13410): Pin "ldMDR" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
+    Warning (13410): Pin "selPC[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 38
+    Warning (13410): Pin "selPC[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 38
+    Warning (13410): Pin "selMDR" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
+    Warning (13410): Pin "regWE" is stuck at VCC File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 29
     Warning (13410): Pin "memWE" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 30
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 20 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "IR[0]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[1]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[2]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "IR[3]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
     Warning (15610): No output dependent on input pin "IR[4]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
     Warning (15610): No output dependent on input pin "IR[5]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[6]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[7]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[8]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[9]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[10]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[11]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[12]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[13]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[14]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
-    Warning (15610): No output dependent on input pin "IR[15]" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 25
     Warning (15610): No output dependent on input pin "N" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 26
     Warning (15610): No output dependent on input pin "Z" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 26
     Warning (15610): No output dependent on input pin "P" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 26
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 26
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 29 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4755 megabytes
-    Info: Processing ended: Tue Feb 12 23:55:41 2019
-    Info: Elapsed time: 00:00:29
+    Info (21061): Implemented 37 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Wed Feb 13 08:58:25 2019
+    Info: Elapsed time: 00:00:32
     Info: Total CPU time (on all processors): 00:00:27
 
 

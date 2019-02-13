@@ -2,7 +2,112 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "aluControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "enaPC",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SR1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SR2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SR2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SR2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "IR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[15]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
