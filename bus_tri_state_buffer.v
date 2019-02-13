@@ -16,7 +16,10 @@ module bus_tri_state_buffer(
 );
 
 output reg [15:0] Bus;
-input [15:0] MARMuxOut, PC, aluOut, MDROut;
+input [15:0] MARMuxOut;
+input [15:0] PC;
+input [15:0] aluOut;
+input [15:0] MDROut;
 input enaMARM, enaPC, enaALU, enaMDR;
 
 //MARMuxOut or enaMARM or PC or enaPC or aluOut or enaALU or MDROut or enaMDR

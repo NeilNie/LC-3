@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/12/2019 10:54:07"
+// DATE "02/12/2019 15:15:47"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -53,7 +53,7 @@ module LC3 (
 	Bus,
 	regOut0,
 	regOut1,
-	aluOut);
+	ALUOut);
 input 	clk;
 input 	reset;
 input 	[1:0] aluControl;
@@ -78,7 +78,7 @@ input 	memWE;
 output 	[15:0] Bus;
 output 	[15:0] regOut0;
 output 	[15:0] regOut1;
-output 	[15:0] aluOut;
+output 	[15:0] ALUOut;
 
 // Design Ports Information
 // Bus[0]	=>  Location: PIN_C14,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -129,22 +129,22 @@ output 	[15:0] aluOut;
 // regOut1[13]	=>  Location: PIN_G19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // regOut1[14]	=>  Location: PIN_G12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // regOut1[15]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[0]	=>  Location: PIN_B21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[1]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[2]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[3]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[4]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[5]	=>  Location: PIN_D18,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[6]	=>  Location: PIN_Y15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[7]	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[8]	=>  Location: PIN_F18,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[9]	=>  Location: PIN_Y14,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[10]	=>  Location: PIN_AD15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[11]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[12]	=>  Location: PIN_AF15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[13]	=>  Location: PIN_E18,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[14]	=>  Location: PIN_A21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// aluOut[15]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[0]	=>  Location: PIN_B21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[1]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[2]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[3]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[4]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[5]	=>  Location: PIN_D18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[6]	=>  Location: PIN_Y15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[7]	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[8]	=>  Location: PIN_F18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[9]	=>  Location: PIN_Y14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[10]	=>  Location: PIN_AD15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[11]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[12]	=>  Location: PIN_AF15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[13]	=>  Location: PIN_E18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[14]	=>  Location: PIN_A21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ALUOut[15]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SR0[2]	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SR0[1]	=>  Location: PIN_C16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SR0[0]	=>  Location: PIN_H15,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -236,22 +236,22 @@ wire \regOut1[12]~output_o ;
 wire \regOut1[13]~output_o ;
 wire \regOut1[14]~output_o ;
 wire \regOut1[15]~output_o ;
-wire \aluOut[0]~output_o ;
-wire \aluOut[1]~output_o ;
-wire \aluOut[2]~output_o ;
-wire \aluOut[3]~output_o ;
-wire \aluOut[4]~output_o ;
-wire \aluOut[5]~output_o ;
-wire \aluOut[6]~output_o ;
-wire \aluOut[7]~output_o ;
-wire \aluOut[8]~output_o ;
-wire \aluOut[9]~output_o ;
-wire \aluOut[10]~output_o ;
-wire \aluOut[11]~output_o ;
-wire \aluOut[12]~output_o ;
-wire \aluOut[13]~output_o ;
-wire \aluOut[14]~output_o ;
-wire \aluOut[15]~output_o ;
+wire \ALUOut[0]~output_o ;
+wire \ALUOut[1]~output_o ;
+wire \ALUOut[2]~output_o ;
+wire \ALUOut[3]~output_o ;
+wire \ALUOut[4]~output_o ;
+wire \ALUOut[5]~output_o ;
+wire \ALUOut[6]~output_o ;
+wire \ALUOut[7]~output_o ;
+wire \ALUOut[8]~output_o ;
+wire \ALUOut[9]~output_o ;
+wire \ALUOut[10]~output_o ;
+wire \ALUOut[11]~output_o ;
+wire \ALUOut[12]~output_o ;
+wire \ALUOut[13]~output_o ;
+wire \ALUOut[14]~output_o ;
+wire \ALUOut[15]~output_o ;
 wire \selMAR~input_o ;
 wire \enaMARM~input_o ;
 wire \clk~input_o ;
@@ -2368,211 +2368,211 @@ defparam \regOut1[15]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X87_Y73_N2
-cycloneive_io_obuf \aluOut[0]~output (
+cycloneive_io_obuf \ALUOut[0]~output (
 	.i(\alu|aluOut[0]~4_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[0]~output_o ),
+	.o(\ALUOut[0]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[0]~output .bus_hold = "false";
-defparam \aluOut[0]~output .open_drain_output = "false";
+defparam \ALUOut[0]~output .bus_hold = "false";
+defparam \ALUOut[0]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X20_Y73_N23
-cycloneive_io_obuf \aluOut[1]~output (
+cycloneive_io_obuf \ALUOut[1]~output (
 	.i(\alu|aluOut[1]~7_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[1]~output_o ),
+	.o(\ALUOut[1]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[1]~output .bus_hold = "false";
-defparam \aluOut[1]~output .open_drain_output = "false";
+defparam \ALUOut[1]~output .bus_hold = "false";
+defparam \ALUOut[1]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X29_Y73_N9
-cycloneive_io_obuf \aluOut[2]~output (
+cycloneive_io_obuf \ALUOut[2]~output (
 	.i(\alu|aluOut[2]~10_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[2]~output_o ),
+	.o(\ALUOut[2]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[2]~output .bus_hold = "false";
-defparam \aluOut[2]~output .open_drain_output = "false";
+defparam \ALUOut[2]~output .bus_hold = "false";
+defparam \ALUOut[2]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X35_Y73_N16
-cycloneive_io_obuf \aluOut[3]~output (
+cycloneive_io_obuf \ALUOut[3]~output (
 	.i(\alu|aluOut[3]~13_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[3]~output_o ),
+	.o(\ALUOut[3]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[3]~output .bus_hold = "false";
-defparam \aluOut[3]~output .open_drain_output = "false";
+defparam \ALUOut[3]~output .bus_hold = "false";
+defparam \ALUOut[3]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X35_Y73_N23
-cycloneive_io_obuf \aluOut[4]~output (
+cycloneive_io_obuf \ALUOut[4]~output (
 	.i(\alu|aluOut[4]~16_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[4]~output_o ),
+	.o(\ALUOut[4]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[4]~output .bus_hold = "false";
-defparam \aluOut[4]~output .open_drain_output = "false";
+defparam \ALUOut[4]~output .bus_hold = "false";
+defparam \ALUOut[4]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X85_Y73_N2
-cycloneive_io_obuf \aluOut[5]~output (
+cycloneive_io_obuf \ALUOut[5]~output (
 	.i(\alu|aluOut[5]~19_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[5]~output_o ),
+	.o(\ALUOut[5]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[5]~output .bus_hold = "false";
-defparam \aluOut[5]~output .open_drain_output = "false";
+defparam \ALUOut[5]~output .bus_hold = "false";
+defparam \ALUOut[5]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X56_Y0_N2
-cycloneive_io_obuf \aluOut[6]~output (
+cycloneive_io_obuf \ALUOut[6]~output (
 	.i(\alu|aluOut[6]~22_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[6]~output_o ),
+	.o(\ALUOut[6]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[6]~output .bus_hold = "false";
-defparam \aluOut[6]~output .open_drain_output = "false";
+defparam \ALUOut[6]~output .bus_hold = "false";
+defparam \ALUOut[6]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X20_Y73_N9
-cycloneive_io_obuf \aluOut[7]~output (
+cycloneive_io_obuf \ALUOut[7]~output (
 	.i(\alu|aluOut[7]~25_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[7]~output_o ),
+	.o(\ALUOut[7]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[7]~output .bus_hold = "false";
-defparam \aluOut[7]~output .open_drain_output = "false";
+defparam \ALUOut[7]~output .bus_hold = "false";
+defparam \ALUOut[7]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X87_Y73_N16
-cycloneive_io_obuf \aluOut[8]~output (
+cycloneive_io_obuf \ALUOut[8]~output (
 	.i(\alu|aluOut[8]~28_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[8]~output_o ),
+	.o(\ALUOut[8]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[8]~output .bus_hold = "false";
-defparam \aluOut[8]~output .open_drain_output = "false";
+defparam \ALUOut[8]~output .bus_hold = "false";
+defparam \ALUOut[8]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X56_Y0_N9
-cycloneive_io_obuf \aluOut[9]~output (
+cycloneive_io_obuf \ALUOut[9]~output (
 	.i(\alu|aluOut[9]~31_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[9]~output_o ),
+	.o(\ALUOut[9]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[9]~output .bus_hold = "false";
-defparam \aluOut[9]~output .open_drain_output = "false";
+defparam \ALUOut[9]~output .bus_hold = "false";
+defparam \ALUOut[9]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X60_Y0_N16
-cycloneive_io_obuf \aluOut[10]~output (
+cycloneive_io_obuf \ALUOut[10]~output (
 	.i(\alu|aluOut[10]~34_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[10]~output_o ),
+	.o(\ALUOut[10]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[10]~output .bus_hold = "false";
-defparam \aluOut[10]~output .open_drain_output = "false";
+defparam \ALUOut[10]~output .bus_hold = "false";
+defparam \ALUOut[10]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X23_Y73_N2
-cycloneive_io_obuf \aluOut[11]~output (
+cycloneive_io_obuf \ALUOut[11]~output (
 	.i(\alu|aluOut[11]~37_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[11]~output_o ),
+	.o(\ALUOut[11]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[11]~output .bus_hold = "false";
-defparam \aluOut[11]~output .open_drain_output = "false";
+defparam \ALUOut[11]~output .bus_hold = "false";
+defparam \ALUOut[11]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X60_Y0_N2
-cycloneive_io_obuf \aluOut[12]~output (
+cycloneive_io_obuf \ALUOut[12]~output (
 	.i(\alu|aluOut[12]~40_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[12]~output_o ),
+	.o(\ALUOut[12]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[12]~output .bus_hold = "false";
-defparam \aluOut[12]~output .open_drain_output = "false";
+defparam \ALUOut[12]~output .bus_hold = "false";
+defparam \ALUOut[12]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X87_Y73_N9
-cycloneive_io_obuf \aluOut[13]~output (
+cycloneive_io_obuf \ALUOut[13]~output (
 	.i(\alu|aluOut[13]~43_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[13]~output_o ),
+	.o(\ALUOut[13]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[13]~output .bus_hold = "false";
-defparam \aluOut[13]~output .open_drain_output = "false";
+defparam \ALUOut[13]~output .bus_hold = "false";
+defparam \ALUOut[13]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X89_Y73_N23
-cycloneive_io_obuf \aluOut[14]~output (
+cycloneive_io_obuf \ALUOut[14]~output (
 	.i(\alu|aluOut[14]~46_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[14]~output_o ),
+	.o(\ALUOut[14]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[14]~output .bus_hold = "false";
-defparam \aluOut[14]~output .open_drain_output = "false";
+defparam \ALUOut[14]~output .bus_hold = "false";
+defparam \ALUOut[14]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X20_Y73_N2
-cycloneive_io_obuf \aluOut[15]~output (
+cycloneive_io_obuf \ALUOut[15]~output (
 	.i(\alu|aluOut[15]~49_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\aluOut[15]~output_o ),
+	.o(\ALUOut[15]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \aluOut[15]~output .bus_hold = "false";
-defparam \aluOut[15]~output .open_drain_output = "false";
+defparam \ALUOut[15]~output .bus_hold = "false";
+defparam \ALUOut[15]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X58_Y73_N8
@@ -25975,37 +25975,37 @@ assign regOut1[14] = \regOut1[14]~output_o ;
 
 assign regOut1[15] = \regOut1[15]~output_o ;
 
-assign aluOut[0] = \aluOut[0]~output_o ;
+assign ALUOut[0] = \ALUOut[0]~output_o ;
 
-assign aluOut[1] = \aluOut[1]~output_o ;
+assign ALUOut[1] = \ALUOut[1]~output_o ;
 
-assign aluOut[2] = \aluOut[2]~output_o ;
+assign ALUOut[2] = \ALUOut[2]~output_o ;
 
-assign aluOut[3] = \aluOut[3]~output_o ;
+assign ALUOut[3] = \ALUOut[3]~output_o ;
 
-assign aluOut[4] = \aluOut[4]~output_o ;
+assign ALUOut[4] = \ALUOut[4]~output_o ;
 
-assign aluOut[5] = \aluOut[5]~output_o ;
+assign ALUOut[5] = \ALUOut[5]~output_o ;
 
-assign aluOut[6] = \aluOut[6]~output_o ;
+assign ALUOut[6] = \ALUOut[6]~output_o ;
 
-assign aluOut[7] = \aluOut[7]~output_o ;
+assign ALUOut[7] = \ALUOut[7]~output_o ;
 
-assign aluOut[8] = \aluOut[8]~output_o ;
+assign ALUOut[8] = \ALUOut[8]~output_o ;
 
-assign aluOut[9] = \aluOut[9]~output_o ;
+assign ALUOut[9] = \ALUOut[9]~output_o ;
 
-assign aluOut[10] = \aluOut[10]~output_o ;
+assign ALUOut[10] = \ALUOut[10]~output_o ;
 
-assign aluOut[11] = \aluOut[11]~output_o ;
+assign ALUOut[11] = \ALUOut[11]~output_o ;
 
-assign aluOut[12] = \aluOut[12]~output_o ;
+assign ALUOut[12] = \ALUOut[12]~output_o ;
 
-assign aluOut[13] = \aluOut[13]~output_o ;
+assign ALUOut[13] = \ALUOut[13]~output_o ;
 
-assign aluOut[14] = \aluOut[14]~output_o ;
+assign ALUOut[14] = \ALUOut[14]~output_o ;
 
-assign aluOut[15] = \aluOut[15]~output_o ;
+assign ALUOut[15] = \ALUOut[15]~output_o ;
 
 endmodule
 

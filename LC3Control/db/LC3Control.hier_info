@@ -1,4 +1,6 @@
 |LC3Control
+clk => next_state~7.DATAIN
+clk => current_state~1.DATAIN
 IR[0] => ~NO_FANOUT~
 IR[1] => ~NO_FANOUT~
 IR[2] => ~NO_FANOUT~
@@ -18,7 +20,6 @@ IR[15] => ~NO_FANOUT~
 N => ~NO_FANOUT~
 Z => ~NO_FANOUT~
 P => ~NO_FANOUT~
-clk <= <GND>
 reset <= <GND>
 aluControl[0] <= <GND>
 aluControl[1] <= <GND>

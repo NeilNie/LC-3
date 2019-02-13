@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3
-Tue Feb 12 10:52:49 2019
+Tue Feb 12 15:13:25 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 12 10:52:49 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 12 15:13:25 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
@@ -710,7 +710,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 12 10:52:16 2019
+    Info: Processing started: Tue Feb 12 15:12:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -755,23 +755,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file bus_tri
     Info (12023): Found entity 1: bus_tri_state_buffer File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 6
 Info (12127): Elaborating entity "LC3" for the top level hierarchy
 Info (12128): Elaborating entity "bus_tri_state_buffer" for hierarchy "bus_tri_state_buffer:tsb" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 78
-Warning (10240): Verilog HDL Always Construct warning at bus_tri_state_buffer.v(25): inferring latch(es) for variable "Bus", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 25
-Info (10041): Inferred latch for "Bus[0]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[1]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[2]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[3]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[4]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[5]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[6]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[7]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[8]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[9]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[10]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[11]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[12]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[13]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[14]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
-Info (10041): Inferred latch for "Bus[15]" at bus_tri_state_buffer.v(27) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at bus_tri_state_buffer.v(28): inferring latch(es) for variable "Bus", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[0]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[1]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[2]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[3]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[4]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[5]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[6]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[7]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[8]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[9]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[10]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[11]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[12]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[13]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[14]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
+Info (10041): Inferred latch for "Bus[15]" at bus_tri_state_buffer.v(28) File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:reg_file" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 107
 Info (12128): Elaborating entity "decoder_3_8" for hierarchy "RegisterFile:reg_file|decoder_3_8:decoder" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 35
 Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(15): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
@@ -960,37 +960,37 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "EAB:eab|mux_2_input[13]" merged with LATCH primitive "EAB:eab|mux_2_input[11]" File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
     Info (13026): Duplicate LATCH primitive "EAB:eab|mux_2_input[14]" merged with LATCH primitive "EAB:eab|mux_2_input[11]" File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
     Info (13026): Duplicate LATCH primitive "EAB:eab|mux_2_input[15]" merged with LATCH primitive "EAB:eab|mux_2_input[11]" File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[0] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[0] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[1] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[1] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[2] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[2] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[3] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[3] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[4] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[4] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[5] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[5] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[6] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[6] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[7] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[7] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[8] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[8] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[9] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[9] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[10] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[10] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[11] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[11] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[12] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[12] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[13] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[13] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[14] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[14] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
-Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[15] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 27
+Warning (13012): Latch bus_tri_state_buffer:tsb|Bus[15] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal enaMARM File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
 Warning (13012): Latch EAB:eab|mux_2_input[6] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
     Warning (13013): Ports D and ENA on the latch are fed by the same signal selEAB2[0] File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 41
@@ -1040,10 +1040,10 @@ Info (21057): Implemented 952 device resources after synthesis - the final resou
     Info (21061): Implemented 730 logic cells
     Info (21064): Implemented 128 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 133 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Tue Feb 12 10:52:49 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Tue Feb 12 15:13:25 2019
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:36
 
 
 +------------------------------------------+

@@ -3,7 +3,7 @@ $comment
 		vcd file LC3.msim.vcd -direction
 $end
 $date
-	Tue Feb 12 10:54:10 2019
+	Tue Feb 12 15:15:49 2019
 $end
 $version
 	ModelSim Version 10.5b
@@ -34,38 +34,38 @@ $var reg 2 2 selEAB2 [1:0] $end
 $var reg 1 3 selMAR $end
 $var reg 1 4 selMDR $end
 $var reg 2 5 selPC [1:0] $end
-$var wire 1 6 Bus [15] $end
-$var wire 1 7 Bus [14] $end
-$var wire 1 8 Bus [13] $end
-$var wire 1 9 Bus [12] $end
-$var wire 1 : Bus [11] $end
-$var wire 1 ; Bus [10] $end
-$var wire 1 < Bus [9] $end
-$var wire 1 = Bus [8] $end
-$var wire 1 > Bus [7] $end
-$var wire 1 ? Bus [6] $end
-$var wire 1 @ Bus [5] $end
-$var wire 1 A Bus [4] $end
-$var wire 1 B Bus [3] $end
-$var wire 1 C Bus [2] $end
-$var wire 1 D Bus [1] $end
-$var wire 1 E Bus [0] $end
-$var wire 1 F aluOut [15] $end
-$var wire 1 G aluOut [14] $end
-$var wire 1 H aluOut [13] $end
-$var wire 1 I aluOut [12] $end
-$var wire 1 J aluOut [11] $end
-$var wire 1 K aluOut [10] $end
-$var wire 1 L aluOut [9] $end
-$var wire 1 M aluOut [8] $end
-$var wire 1 N aluOut [7] $end
-$var wire 1 O aluOut [6] $end
-$var wire 1 P aluOut [5] $end
-$var wire 1 Q aluOut [4] $end
-$var wire 1 R aluOut [3] $end
-$var wire 1 S aluOut [2] $end
-$var wire 1 T aluOut [1] $end
-$var wire 1 U aluOut [0] $end
+$var wire 1 6 ALUOut [15] $end
+$var wire 1 7 ALUOut [14] $end
+$var wire 1 8 ALUOut [13] $end
+$var wire 1 9 ALUOut [12] $end
+$var wire 1 : ALUOut [11] $end
+$var wire 1 ; ALUOut [10] $end
+$var wire 1 < ALUOut [9] $end
+$var wire 1 = ALUOut [8] $end
+$var wire 1 > ALUOut [7] $end
+$var wire 1 ? ALUOut [6] $end
+$var wire 1 @ ALUOut [5] $end
+$var wire 1 A ALUOut [4] $end
+$var wire 1 B ALUOut [3] $end
+$var wire 1 C ALUOut [2] $end
+$var wire 1 D ALUOut [1] $end
+$var wire 1 E ALUOut [0] $end
+$var wire 1 F Bus [15] $end
+$var wire 1 G Bus [14] $end
+$var wire 1 H Bus [13] $end
+$var wire 1 I Bus [12] $end
+$var wire 1 J Bus [11] $end
+$var wire 1 K Bus [10] $end
+$var wire 1 L Bus [9] $end
+$var wire 1 M Bus [8] $end
+$var wire 1 N Bus [7] $end
+$var wire 1 O Bus [6] $end
+$var wire 1 P Bus [5] $end
+$var wire 1 Q Bus [4] $end
+$var wire 1 R Bus [3] $end
+$var wire 1 S Bus [2] $end
+$var wire 1 T Bus [1] $end
+$var wire 1 U Bus [0] $end
 $var wire 1 V regOut0 [15] $end
 $var wire 1 W regOut0 [14] $end
 $var wire 1 X regOut0 [13] $end
@@ -154,22 +154,22 @@ $var wire 1 J! regOut1[12]~output_o $end
 $var wire 1 K! regOut1[13]~output_o $end
 $var wire 1 L! regOut1[14]~output_o $end
 $var wire 1 M! regOut1[15]~output_o $end
-$var wire 1 N! aluOut[0]~output_o $end
-$var wire 1 O! aluOut[1]~output_o $end
-$var wire 1 P! aluOut[2]~output_o $end
-$var wire 1 Q! aluOut[3]~output_o $end
-$var wire 1 R! aluOut[4]~output_o $end
-$var wire 1 S! aluOut[5]~output_o $end
-$var wire 1 T! aluOut[6]~output_o $end
-$var wire 1 U! aluOut[7]~output_o $end
-$var wire 1 V! aluOut[8]~output_o $end
-$var wire 1 W! aluOut[9]~output_o $end
-$var wire 1 X! aluOut[10]~output_o $end
-$var wire 1 Y! aluOut[11]~output_o $end
-$var wire 1 Z! aluOut[12]~output_o $end
-$var wire 1 [! aluOut[13]~output_o $end
-$var wire 1 \! aluOut[14]~output_o $end
-$var wire 1 ]! aluOut[15]~output_o $end
+$var wire 1 N! ALUOut[0]~output_o $end
+$var wire 1 O! ALUOut[1]~output_o $end
+$var wire 1 P! ALUOut[2]~output_o $end
+$var wire 1 Q! ALUOut[3]~output_o $end
+$var wire 1 R! ALUOut[4]~output_o $end
+$var wire 1 S! ALUOut[5]~output_o $end
+$var wire 1 T! ALUOut[6]~output_o $end
+$var wire 1 U! ALUOut[7]~output_o $end
+$var wire 1 V! ALUOut[8]~output_o $end
+$var wire 1 W! ALUOut[9]~output_o $end
+$var wire 1 X! ALUOut[10]~output_o $end
+$var wire 1 Y! ALUOut[11]~output_o $end
+$var wire 1 Z! ALUOut[12]~output_o $end
+$var wire 1 [! ALUOut[13]~output_o $end
+$var wire 1 \! ALUOut[14]~output_o $end
+$var wire 1 ]! ALUOut[15]~output_o $end
 $var wire 1 ^! selMAR~input_o $end
 $var wire 1 _! enaMARM~input_o $end
 $var wire 1 `! clk~input_o $end
@@ -2992,7 +2992,7 @@ $end
 11"
 1V-
 1|
-1E
+1U
 #15000
 1%
 1`!
@@ -3026,10 +3026,10 @@ $end
 1H)
 0V-
 0|
-0E
+0U
 1U-
 1}
-1D
+1T
 #25000
 1%
 1`!
@@ -3055,7 +3055,7 @@ $end
 11"
 1V-
 1|
-1E
+1U
 #35000
 1%
 1`!
@@ -3124,13 +3124,13 @@ b1 !
 1~
 0|
 1&)
-0E
-1C
+0U
+1S
 0U-
 0v!
 1U#
 0}
-0D
+0T
 09#
 #45000
 1%
@@ -3253,38 +3253,38 @@ b1 $
 1!'
 0&)
 1s
-0C
+0S
 1,)
 1P!
 11'
 0+)
 1-)
-1S
+1C
 1R*
 1.)
 0,)
 0P!
 1/)
 0-)
-0S
+0C
 1S*
 1Q!
 0.)
 1T*
-1R
+1B
 1T-
 1~
 0/)
 1U*
 1&)
-1C
+1S
 0T-
 1S-
 1!!
 0~
 0&)
-0C
-1B
+0S
+1R
 #75000
 1%
 1`!
@@ -3361,8 +3361,8 @@ b0 $
 1-)
 0T*
 0!'
-1S
-0R
+1C
+0B
 0s
 0,)
 0P!
@@ -3370,21 +3370,21 @@ b0 $
 0U*
 0+)
 0-)
-0S
+0C
 1/)
 0.)
 0S-
 0!!
 0/)
-0B
+0R
 1T-
 1~
 1&)
-1C
+1S
 0T-
 0~
 0&)
-0C
+0S
 #95000
 1%
 1`!

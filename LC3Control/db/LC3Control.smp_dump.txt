@@ -1,0 +1,13 @@
+
+State Machine - |LC3Control|current_state
+Name current_state.100011 current_state.100001 current_state.100000 current_state.010010 
+current_state.010010 0 0 0 0 
+current_state.100000 0 0 1 1 
+current_state.100001 0 1 0 1 
+current_state.100011 1 0 0 1 
+
+State Machine - |LC3Control|next_state
+Name next_state.100001 next_state.100011 next_state.100000 
+next_state.100001 0 0 0 
+next_state.100000 1 0 1 
+next_state.100011 1 1 0 

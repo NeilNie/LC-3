@@ -21,7 +21,7 @@ module LC3 (clk,
 	// more testing
 	regOut0,
 	regOut1,
-	aluOut
+	ALUOut
 	// ------------------------------
 );
 
@@ -52,7 +52,7 @@ input regWE, memWE;
 // internal wires
 output [15:0] Bus;
 wire [15:0] PC;
-output [15:0] aluOut;
+output [15:0] ALUOut;
 wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
 output [15:0] regOut0;
@@ -70,7 +70,7 @@ bus_tri_state_buffer tsb(
 	.enaMARM(enaMARM),
 	.PC(PC),
 	.enaPC(enaPC),
-	.aluOut(aluOut),
+	.aluOut(ALUOut),
 	.enaALU(enaALU),
 	.MDROut(MDROut),
 	.enaMDR(enaMDR),
@@ -178,7 +178,7 @@ ALU alu(
 	.Rb(regOut1),
 	.IR(IR),
 	.aluControl(aluControl),
-	.aluOut(aluOut)
+	.aluOut(ALUOut)
 );
 
 // =======================================================================

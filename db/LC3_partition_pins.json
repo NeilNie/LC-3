@@ -196,67 +196,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[0]",
+					"name" : "ALUOut[0]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[1]",
+					"name" : "ALUOut[1]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[2]",
+					"name" : "ALUOut[2]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[3]",
+					"name" : "ALUOut[3]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[4]",
+					"name" : "ALUOut[4]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[5]",
+					"name" : "ALUOut[5]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[6]",
+					"name" : "ALUOut[6]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[7]",
+					"name" : "ALUOut[7]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[8]",
+					"name" : "ALUOut[8]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[9]",
+					"name" : "ALUOut[9]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[10]",
+					"name" : "ALUOut[10]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[11]",
+					"name" : "ALUOut[11]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[12]",
+					"name" : "ALUOut[12]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[13]",
+					"name" : "ALUOut[13]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[14]",
+					"name" : "ALUOut[14]",
 					"strict" : false
 				},
 				{
-					"name" : "aluOut[15]",
+					"name" : "ALUOut[15]",
 					"strict" : false
 				},
 				{
