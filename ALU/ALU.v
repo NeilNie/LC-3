@@ -30,7 +30,7 @@ always @ (IR or Rb) begin
 	if (IR[5] == 0) begin
 		adder_in_b = Rb;
 	end else begin
-		adder_in_b = {IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],6'b0};
+		adder_in_b = {IR[4],IR[4],IR[4],IR[4],IR[4],IR[4],IR[4],IR[4],IR[4],IR[4],6'b0};
 		adder_in_b = adder_in_b + IR;
 	end
 		

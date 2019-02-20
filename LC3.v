@@ -21,7 +21,8 @@ module LC3 (clk,
 	current_state,
 	
 	MDRSpcIn, MARSpcIn,
-	ldMARSpcIn
+	ldMARSpcIn,
+	memOut
 	// ------------------------------
 );
 
@@ -69,7 +70,7 @@ wire [15:0] IR;
 wire N, Z, P;
 
 // memory special inputs
-output [15:0] MDRSpcIn, MARSpcIn;
+output [15:0] MDRSpcIn, MARSpcIn, memOut;
 output ldMARSpcIn;
 
 // =======================================================================
@@ -157,7 +158,8 @@ Memory memory(
 	// memory special inputs
 	.MDRSpcIn(MDRSpcIn),
 	.MARSpcIn(MARSpcIn),
-	.ldMARSpcIn(ldMARSpcIn)
+	.ldMARSpcIn(ldMARSpcIn),
+	.memOut(memOut)
 );
 
 // -----------------------------------------------------

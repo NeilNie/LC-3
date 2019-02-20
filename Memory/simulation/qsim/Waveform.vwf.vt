@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/19/2019 20:06:33"
+// Generated on "02/20/2019 11:31:59"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Memory
 // 
@@ -40,12 +40,15 @@ reg memWE;
 reg reset;
 reg [1:0] selMDR;
 // wires                                               
+wire [15:0] MAROut;
 wire [15:0] MDROut;
+wire [15:0] memOut;
 
 // assign statements (if any)                          
 Memory i1 (
 // port map - connection between master ports and signals/registers   
 	.Bus(Bus),
+	.MAROut(MAROut),
 	.MARSpcIn(MARSpcIn),
 	.MDROut(MDROut),
 	.MDRSpcIn(MDRSpcIn),
@@ -53,6 +56,7 @@ Memory i1 (
 	.ldMAR(ldMAR),
 	.ldMARSpcIn(ldMARSpcIn),
 	.ldMDR(ldMDR),
+	.memOut(memOut),
 	.memWE(memWE),
 	.reset(reset),
 	.selMDR(selMDR)
@@ -84,8 +88,6 @@ begin
 	Bus[14] = 1'b0;
 	Bus[14] = #20000 1'b1;
 	Bus[14] = #20000 1'b0;
-	Bus[14] = #20000 1'b1;
-	Bus[14] = #10000 1'b0;
 end 
 // Bus[ 13 ]
 initial
@@ -93,8 +95,6 @@ begin
 	Bus[13] = 1'b0;
 	Bus[13] = #20000 1'b1;
 	Bus[13] = #20000 1'b0;
-	Bus[13] = #20000 1'b1;
-	Bus[13] = #10000 1'b0;
 end 
 // Bus[ 12 ]
 initial
@@ -102,8 +102,6 @@ begin
 	Bus[12] = 1'b0;
 	Bus[12] = #20000 1'b1;
 	Bus[12] = #20000 1'b0;
-	Bus[12] = #20000 1'b1;
-	Bus[12] = #10000 1'b0;
 end 
 // Bus[ 11 ]
 initial
@@ -111,8 +109,6 @@ begin
 	Bus[11] = 1'b0;
 	Bus[11] = #20000 1'b1;
 	Bus[11] = #20000 1'b0;
-	Bus[11] = #20000 1'b1;
-	Bus[11] = #10000 1'b0;
 end 
 // Bus[ 10 ]
 initial
@@ -178,7 +174,9 @@ end
 initial
 begin
 	ldMAR = 1'b1;
-	ldMAR = #30000 1'b0;
+	ldMAR = #10000 1'b0;
+	ldMAR = #10000 1'b1;
+	ldMAR = #10000 1'b0;
 	ldMAR = #30000 1'b1;
 	ldMAR = #10000 1'b0;
 end 
@@ -186,25 +184,28 @@ end
 // ldMDR
 initial
 begin
-	ldMDR = 1'b1;
-	ldMDR = #20000 1'b0;
+	ldMDR = 1'b0;
 	ldMDR = #10000 1'b1;
 	ldMDR = #10000 1'b0;
-	ldMDR = #20000 1'b1;
+	ldMDR = #10000 1'b1;
+	ldMDR = #10000 1'b0;
+	ldMDR = #30000 1'b1;
 	ldMDR = #10000 1'b0;
 end 
 // selMDR[ 1 ]
 initial
 begin
-	selMDR[1] = 1'b1;
+	selMDR[1] = 1'b0;
+	selMDR[1] = #10000 1'b1;
 	selMDR[1] = #10000 1'b0;
 end 
 // selMDR[ 0 ]
 initial
 begin
-	selMDR[0] = 1'b1;
-	selMDR[0] = #20000 1'b0;
-	selMDR[0] = #40000 1'b1;
+	selMDR[0] = 1'b0;
+	selMDR[0] = #10000 1'b1;
+	selMDR[0] = #10000 1'b0;
+	selMDR[0] = #50000 1'b1;
 	selMDR[0] = #10000 1'b0;
 end 
 
@@ -212,8 +213,8 @@ end
 initial
 begin
 	memWE = 1'b1;
-	memWE = #10000 1'b0;
-	memWE = #20000 1'b1;
+	memWE = #20000 1'b0;
+	memWE = #10000 1'b1;
 	memWE = #10000 1'b0;
 end 
 
@@ -227,13 +228,13 @@ end
 initial
 begin
 	ldMARSpcIn = 1'b1;
-	ldMARSpcIn = #20000 1'b0;
+	ldMARSpcIn = #10000 1'b0;
 end 
 // MARSpcIn[ 15 ]
 initial
 begin
 	MARSpcIn[15] = 1'b1;
-	MARSpcIn[15] = #20000 1'b0;
+	MARSpcIn[15] = #10000 1'b0;
 end 
 // MARSpcIn[ 14 ]
 initial
@@ -313,19 +314,22 @@ end
 // MDRSpcIn[ 15 ]
 initial
 begin
-	MDRSpcIn[15] = 1'b1;
+	MDRSpcIn[15] = 1'b0;
+	MDRSpcIn[15] = #10000 1'b1;
 	MDRSpcIn[15] = #10000 1'b0;
 end 
 // MDRSpcIn[ 14 ]
 initial
 begin
-	MDRSpcIn[14] = 1'b1;
+	MDRSpcIn[14] = 1'b0;
+	MDRSpcIn[14] = #10000 1'b1;
 	MDRSpcIn[14] = #10000 1'b0;
 end 
 // MDRSpcIn[ 13 ]
 initial
 begin
-	MDRSpcIn[13] = 1'b1;
+	MDRSpcIn[13] = 1'b0;
+	MDRSpcIn[13] = #10000 1'b1;
 	MDRSpcIn[13] = #10000 1'b0;
 end 
 // MDRSpcIn[ 12 ]

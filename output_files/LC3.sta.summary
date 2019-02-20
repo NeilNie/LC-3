@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'LC3Control:FSM|enaALU'
-Slack : -9.443
-TNS   : -140.993
+Slack : -9.926
+TNS   : -141.906
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.611
-TNS   : -527.710
+Slack : -3.931
+TNS   : -535.019
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.171
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'LC3Control:FSM|enaALU'
-Slack : 0.270
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -349.717
+TNS   : -344.577
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
-Slack : 0.445
+Slack : 0.420
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'LC3Control:FSM|enaALU'
-Slack : -8.776
-TNS   : -130.551
+Slack : -9.212
+TNS   : -131.769
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.305
-TNS   : -471.286
+Slack : -3.580
+TNS   : -480.291
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.236
+Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'LC3Control:FSM|enaALU'
-Slack : 0.331
+Slack : 0.551
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -348.881
+TNS   : -343.741
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
-Slack : 0.414
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'LC3Control:FSM|enaALU'
-Slack : -4.461
-TNS   : -66.242
+Slack : -4.649
+TNS   : -66.309
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.915
-TNS   : -136.321
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.154
-TNS   : -0.298
+Slack : -2.108
+TNS   : -134.369
 
 Type  : Fast 1200mV 0C Model Hold 'LC3Control:FSM|enaALU'
-Slack : -0.075
-TNS   : -0.075
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.173
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -276.568
+TNS   : -272.571
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
-Slack : 0.420
+Slack : 0.334
 TNS   : 0.000
 
 ------------------------------------------------------------

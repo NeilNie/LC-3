@@ -12,6 +12,8 @@ module Memory(
 	MDROut,
 	clk,
 	reset,
+	MAROut,
+	memOut,
 	
 	// memory special inputs
 	MDRSpcIn,
@@ -28,11 +30,11 @@ output [15:0] MDROut;
 // internal variables
 reg [15:0] MDRIn;
 reg [15:0] MARIn;
-wire [15:0] memOut;
-wire [15:0] MAROut;
+output [15:0] memOut;
+output [15:0] MAROut;
 
 // MDRMux
-always @ (Bus or memOut or MDRSpcIn) begin
+always @ (Bus or memOut or MDRSpcIn or selMDR) begin
 	
 	if (selMDR == 2'b01)
 		MDRIn <= memOut;

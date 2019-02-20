@@ -179,60 +179,68 @@ always @ (posedge clk) begin
 		selMAR <= 0;
 		enaMARM <= 1;
 		
+		// ldPC <= 1;
+		
 		next_state <= 6'b010010;
 	end
+	
+	else if (current_state == 6'b000011) begin
+		next_state <= 010111;
+	end
+	
 	
 	// ========================================================
 	// ========= Preload instructions into the memory =========
 	// ========================================================
+	
+	// first instruction
 	else if (current_state == 6'b000000) begin
 		
-		MDRSpcIn <= 16'b1110001000000111;	// LEA, R1, OffSet=7
 		MARSpcIn <= 16'h3001;
 		ldMAR <= 1;
-		ldMDR <= 1;
 		ldMARSpcIn <= 1;
-		selMDR <= 2'b11;
-		
+		memWE <= 1;
 		next_state <= 6'b111111;
+		
 	end
 	
-	// this is an empty state
 	else if (current_state == 6'b111111) begin
+		
+		MDRSpcIn <= 16'b1110001000000111;	// LEA, R1, OffSet=7
+		ldMDR <= 1;
+		selMDR <= 2'b11;
+		memWE <= 1;
 		
 		next_state <= 6'b110000;
 	end
 	
+	// next instruction
 	else if (current_state == 6'b110000) begin
 		
-		MDRSpcIn <= 16'b0001100001000011;	// ADD, R4, R1, R3
-		MARSpcIn <= 16'h3003;
+		MARSpcIn <= 16'h3002;
 		ldMAR <= 1;
-		ldMDR <= 1;
-		selMDR <= 2'b11;
 		ldMARSpcIn <= 1;
 		memWE <= 1;
+		next_state <= 6'b101000;
 		
-		next_state <= 6'b111000;
 	end
 	
-	else if (current_state == 6'b111000) begin
+	else if (current_state == 6'b101000) begin
 		
-		MDRSpcIn <= 16'b0001101001101111;	// ADD, R5, R1, 01111
-		MARSpcIn <= 16'h3004;
-		ldMAR <= 1;
+		MDRSpcIn <= 16'b0011001000000000;	// ST, R1, OffSet=0
 		ldMDR <= 1;
-		ldMARSpcIn <= 1;
 		selMDR <= 2'b11;
 		memWE <= 1;
-		
+
 		next_state <= 6'b111110;
 	end
 	
+	// ------------------------------------------------------
 	// testing reading values
+	// ------------------------------------------------------
 	else if (current_state == 6'b111110) begin
 		
-		MARSpcIn <= 16'h3001;
+		MARSpcIn <= 16'h3002;
 		ldMAR <= 1;
 		ldMARSpcIn <= 1;
 		memWE <= 0;
@@ -256,6 +264,7 @@ always @ (posedge clk) begin
 		next_state <= 6'b101011;
 	end
 	
+	// return to state 18
 	else if (current_state == 6'b101011) begin
 		
 		enaMDR <= 0;
@@ -266,17 +275,6 @@ always @ (posedge clk) begin
 		
 		next_state <= 6'b010010;
 	end
-	
-//	else if (current_state == 6'b111100) begin
-//		next_state <= 6'b010010;
-//		ldPC <= 1;
-//		
-//		memWE <= 0;
-//		ldMAR <= 0;
-//		ldMDR <= 0;
-//		ldMDRSpcIn <= 0;
-//		ldMARSpcIn <= 0;
-//	end
 	
 	// ========================================================
 	// ========================================================
