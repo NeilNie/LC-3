@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at LC3.v(62): object "PC" differs only in case from object "pc" in the same scope File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 62
-Info (10281): Verilog HDL Declaration information at LC3.v(69): object "IR" differs only in case from object "ir" in the same scope File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 69
+Info (10281): Verilog HDL Declaration information at LC3.v(44): object "PC" differs only in case from object "pc" in the same scope File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44
+Info (10281): Verilog HDL Declaration information at LC3.v(44): object "IR" differs only in case from object "ir" in the same scope File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 44

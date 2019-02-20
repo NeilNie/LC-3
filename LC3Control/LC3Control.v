@@ -65,6 +65,8 @@ always @ (posedge clk) begin
 		
 		// MAR <- PC
 		// PC <- PC + 1
+		
+		memWE <= 0;
 		enaMARM <= 0;
 		enaMDR <= 0;
 		enaALU <= 0;
@@ -184,8 +186,50 @@ always @ (posedge clk) begin
 		next_state <= 6'b010010;
 	end
 	
+	// state #: 3 (ST)
 	else if (current_state == 6'b000011) begin
-		next_state <= 010111;
+		
+		// MAR <= PC + Offset9
+		
+		enaMDR <= 0;
+		enaALU <= 0;
+		enaPC <= 0;
+		
+		selEAB2 <= 2'b10;
+		selEAB1 <= 1'b0;
+		selMAR <= 1'b0;
+		enaMARM <= 1'b1;
+		ldMAR <= 1'b1;
+		
+		next_state <= 6'b010111;
+	end
+	
+	// state #: 23
+	else if (current_state == 6'b010111) begin
+		
+		// MDR <= SR
+		
+		enaMDR <= 0;
+		enaALU <= 1;
+		enaPC <= 0;
+		enaMARM <= 0;
+		
+		SR1 <= IR[11:9];
+		regWE <= 1'b0;
+		aluControl <= 2'b00;
+		selMDR <= 2'b00;
+		ldMDR <= 1'b1;
+		
+		next_state <= 6'b010000;
+	end
+	
+	// state #: 16
+	else if (current_state == 6'b010000) begin
+	
+		// M[MAR <= MDR
+		
+		memWE <= 1;
+		next_state <= 6'b010010;
 	end
 	
 	
@@ -193,7 +237,7 @@ always @ (posedge clk) begin
 	// ========= Preload instructions into the memory =========
 	// ========================================================
 	
-	// first instruction
+	// first instruction address
 	else if (current_state == 6'b000000) begin
 		
 		MARSpcIn <= 16'h3001;
@@ -204,6 +248,7 @@ always @ (posedge clk) begin
 		
 	end
 	
+	// first instruction value
 	else if (current_state == 6'b111111) begin
 		
 		MDRSpcIn <= 16'b1110001000000111;	// LEA, R1, OffSet=7
@@ -214,7 +259,7 @@ always @ (posedge clk) begin
 		next_state <= 6'b110000;
 	end
 	
-	// next instruction
+	// second instruction address
 	else if (current_state == 6'b110000) begin
 		
 		MARSpcIn <= 16'h3002;
@@ -225,6 +270,7 @@ always @ (posedge clk) begin
 		
 	end
 	
+	// second instruction value
 	else if (current_state == 6'b101000) begin
 		
 		MDRSpcIn <= 16'b0011001000000000;	// ST, R1, OffSet=0
@@ -234,6 +280,7 @@ always @ (posedge clk) begin
 
 		next_state <= 6'b111110;
 	end
+	
 	
 	// ------------------------------------------------------
 	// testing reading values

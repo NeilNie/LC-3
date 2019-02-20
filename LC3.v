@@ -16,6 +16,7 @@ module LC3 (clk,
 //	selPC, selMDR,
 //	SR0, SR1, DR,
 //	regWE, memWE,
+	IR,
 	Bus,
 	PC,
 	current_state,
@@ -39,27 +40,8 @@ wire [1:0] selMDR;
 wire [2:0] SR0, SR1, DR;
 wire regWE, memWE;
 
-// for testing purposes only ---------------
-//input [1:0] selEAB2, aluControl, selPC;
-//input reset, enaALU, enaMARM, enaMDR, enaPC;
-//input selMAR, selEAB1;
-//input ldPC, ldIR, ldMAR, ldMDR;
-//input selMDR;
-//input [2:0] SR0, SR1, DR;
-//input regWE, memWE;
-// ----------------------------------------
-//output [1:0] selEAB2, aluControl, selPC;
-//output reset, enaALU, enaMARM, enaMDR, enaPC;
-//output selMAR, selEAB1;
-//output ldPC, ldIR, ldMAR, ldMDR;
-//output selMDR;
-//output [2:0] SR0, SR1, DR;
-//output regWE, memWE;
-//----------------------------------------
-
 // internal wires
-output [15:0] Bus;
-output [15:0] PC;
+output [15:0] IR, Bus, PC;
 wire [15:0] ALUOut;
 wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
@@ -77,17 +59,15 @@ output ldMARSpcIn;
 // ===================== Implementation begin ============================
 // =======================================================================
 
-bus_tri_state_buffer tsb(
-	.MARMuxOut(MARMuxOut),
-	.enaMARM(enaMARM),
-	.PC(PC),
-	.enaPC(enaPC),
-	.aluOut(ALUOut),
-	.enaALU(enaALU),
-	.MDROut(MDROut),
-	.enaMDR(enaMDR),
-	.Bus(Bus)
-);
+bus_tri_state_buffer tsb(.MARMuxOut(MARMuxOut),
+								 .enaMARM(enaMARM),
+								 .PC(PC),
+								 .enaPC(enaPC),
+								 .aluOut(ALUOut),
+								 .enaALU(enaALU),
+								 .MDROut(MDROut),
+								 .enaMDR(enaMDR),
+								 .Bus(Bus));
 
 // -----------------------------------------------------
 
@@ -116,7 +96,6 @@ LC3Control FSM(
 // -----------------------------------------------------
 
 RegisterFile reg_file(
-
 	.Bus(Bus), .Out0(regOut0), .Out1(regOut1),
 	.clk(clk), .WE(regWE), .reset(reset),
 	.DR(DR), .SR0(SR0), .SR1(SR1)
@@ -124,15 +103,13 @@ RegisterFile reg_file(
 
 // -----------------------------------------------------
 
-PC pc(
-	.clk(clk),
-	.reset(reset),
-	.ldPC(ldPC),
-	.eabOut(eabOut),
-	.selPC(selPC),
-	.Bus(Bus),
-	.PCOut(PC)
-);
+PC pc(.clk(clk),
+		.reset(reset),
+		.ldPC(ldPC),
+		.eabOut(eabOut),
+		.selPC(selPC),
+		.Bus(Bus),
+		.PCOut(PC));
 
 // -----------------------------------------------------
 
@@ -159,8 +136,7 @@ Memory memory(
 	.MDRSpcIn(MDRSpcIn),
 	.MARSpcIn(MARSpcIn),
 	.ldMARSpcIn(ldMARSpcIn),
-	.memOut(memOut)
-);
+	.memOut(memOut));
 
 // -----------------------------------------------------
 
@@ -168,8 +144,7 @@ MARMux mar_mux(
 	.IR(IR),
 	.eabOut(eabOut),
 	.selMAR(selMAR),
-	.MARMuxOut(MARMuxOut)
-);
+	.MARMuxOut(MARMuxOut));
 
 // -----------------------------------------------------
 
