@@ -8,58 +8,69 @@ module LC3 (clk,
 	
 	// for testing purposes only ----
 	// comment out when not testing -
-	reset,
-	aluControl,
-	enaALU, enaMARM, enaMDR, enaPC,
-	selMAR, selEAB1, selEAB2,
-	ldPC, ldIR, ldMAR, ldMDR,
-	selPC, selMDR,
-	SR0, SR1, DR,
-	regWE, memWE,
+//	reset,
+//	aluControl,
+//	enaALU, enaMARM, enaMDR, enaPC,
+//	selMAR, selEAB1, selEAB2,
+//	ldPC, ldIR, ldMAR, ldMDR,
+//	selPC, selMDR,
+//	SR0, SR1, DR,
+//	regWE, memWE,
 	Bus,
+	PC,
+	current_state,
 	
-	// more testing
-	regOut0,
-	regOut1,
-	ALUOut
+	MDRSpcIn, MARSpcIn,
+	ldMARSpcIn
 	// ------------------------------
 );
 
 input clk;
+output [5:0] current_state;
 
-//wire [1:0] selEAB2;
-//wire [1:0] aluControl;
-//wire [1:0] selPC;
-//wire reset, enaALU, enaMARM, enaMDR, enaPC;
-//wire selMAR, selEAB1;
-//wire ldPC, ldIR, ldMAR, ldMDR;
-//wire selMDR;
-//wire [2:0] SR0, SR1, DR;
-//wire regWE, memWE;
+wire [1:0] selEAB2;
+wire [1:0] aluControl;
+wire [1:0] selPC;
+wire reset, enaALU, enaMARM, enaMDR, enaPC;
+wire selMAR, selEAB1;
+wire ldPC, ldIR, ldMAR, ldMDR;
+wire [1:0] selMDR;
+wire [2:0] SR0, SR1, DR;
+wire regWE, memWE;
 
 // for testing purposes only ---------------
-input [1:0] selEAB2;
-input [1:0] aluControl;
-input [1:0] selPC;
-input reset, enaALU, enaMARM, enaMDR, enaPC;
-input selMAR, selEAB1;
-input ldPC, ldIR, ldMAR, ldMDR;
-input selMDR;
-input [2:0] SR0, SR1, DR;
-input regWE, memWE;
+//input [1:0] selEAB2, aluControl, selPC;
+//input reset, enaALU, enaMARM, enaMDR, enaPC;
+//input selMAR, selEAB1;
+//input ldPC, ldIR, ldMAR, ldMDR;
+//input selMDR;
+//input [2:0] SR0, SR1, DR;
+//input regWE, memWE;
 // ----------------------------------------
+//output [1:0] selEAB2, aluControl, selPC;
+//output reset, enaALU, enaMARM, enaMDR, enaPC;
+//output selMAR, selEAB1;
+//output ldPC, ldIR, ldMAR, ldMDR;
+//output selMDR;
+//output [2:0] SR0, SR1, DR;
+//output regWE, memWE;
+//----------------------------------------
 
 // internal wires
 output [15:0] Bus;
-wire [15:0] PC;
-output [15:0] ALUOut;
+output [15:0] PC;
+wire [15:0] ALUOut;
 wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
-output [15:0] regOut0;
-output [15:0] regOut1;
+wire [15:0] regOut0;
+wire [15:0] regOut1;
 wire [15:0] eabOut;
 wire [15:0] IR;
 wire N, Z, P;
+
+// memory special inputs
+output [15:0] MDRSpcIn, MARSpcIn;
+output ldMARSpcIn;
 
 // =======================================================================
 // ===================== Implementation begin ============================
@@ -80,22 +91,26 @@ bus_tri_state_buffer tsb(
 // -----------------------------------------------------
 
 // Finite State Machine Control 
-//LC3Control FSM(
-//
-//	// inputs
-//	.IR(IR),
-//	.N(N), .Z(Z), .P(P),
-//	// outputs
-//	.clk(clk),
-//	.reset(reset),
-//	.aluControl(aluControl),
-//	.enaALU(enaALU), .enaMARM(enaMARM), .enaMDR(enaMDR), .enaPC(enaPC),
-//	.selMAR(selMAR), .selEAB1(selEAB1), .selEAB2(selEAB2),
-//	.ldPC(ldPC), .ldIR(ldIR), .ldMAR(ldMAR), .ldMDR(ldMDR),
-//	.selPC(selPC), .selMDR(selMDR),
-//	.SR1(SR1), .SR2(SR2), .DR(DR),
-//	.regWE(regWE), .memWE(memWE),
-//);
+LC3Control FSM(
+
+	// inputs
+	.IR(IR),
+	.N(N), .Z(Z), .P(P),
+	// outputs
+	.clk(clk),
+	.reset(reset),
+	.aluControl(aluControl),
+	.enaALU(enaALU), .enaMARM(enaMARM), .enaMDR(enaMDR), .enaPC(enaPC),
+	.selMAR(selMAR), .selEAB1(selEAB1), .selEAB2(selEAB2),
+	.ldPC(ldPC), .ldIR(ldIR), .ldMAR(ldMAR), .ldMDR(ldMDR),
+	.selPC(selPC), .selMDR(selMDR),
+	.SR1(SR0), .SR2(SR1), .DR(DR),
+	.regWE(regWE), .memWE(memWE),
+	.current_state(current_state),
+	.MDRSpcIn(MDRSpcIn),
+	.MARSpcIn(MARSpcIn),
+	.ldMARSpcIn(ldMARSpcIn)
+);
 
 // -----------------------------------------------------
 
@@ -138,7 +153,11 @@ Memory memory(
 	.selMDR(selMDR),
 	.clk(clk),
 	.reset(reset),
-	.MDROut(MDROut)
+	.MDROut(MDROut),
+	// memory special inputs
+	.MDRSpcIn(MDRSpcIn),
+	.MARSpcIn(MARSpcIn),
+	.ldMARSpcIn(ldMARSpcIn)
 );
 
 // -----------------------------------------------------
@@ -152,34 +171,28 @@ MARMux mar_mux(
 
 // -----------------------------------------------------
 
-IR ir(
-	.clk(clk),
-	.ldIR(ldIR),
-	.reset(reset),
-	.Bus(Bus),
-	.IR(IR)
-);
+IR ir(.clk(clk),
+		.ldIR(ldIR),
+		.reset(reset),
+		.Bus(Bus),
+		.IR(IR));
 
 // -----------------------------------------------------
 
-EAB eab(
-	.IR(IR),
-	.Ra(regOut0),
-	.PC(PC),
-	.selEAB1(selEAB1),
-	.selEAB2(selEAB2),
-	.eabOut(eabOut),
-);
+EAB eab(.IR(IR),
+		  .Ra(regOut0),
+		  .PC(PC),
+		  .selEAB1(selEAB1),
+		  .selEAB2(selEAB2),
+		  .eabOut(eabOut),);
 
 // -----------------------------------------------------
 
-ALU alu(
-	.Ra(regOut0),
-	.Rb(regOut1),
-	.IR(IR),
-	.aluControl(aluControl),
-	.aluOut(ALUOut)
-);
+ALU alu(.Ra(regOut0),
+		  .Rb(regOut1),
+		  .IR(IR),
+		  .aluControl(aluControl),
+		  .aluOut(ALUOut));
 
 // =======================================================================
 // ====================== Implementation ends ============================

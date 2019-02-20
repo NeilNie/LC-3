@@ -2,148 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'selPC[0]'
-Slack : -8.062
-TNS   : -109.645
-
-Type  : Slow 1200mV 85C Model Setup 'enaALU'
-Slack : -6.613
-TNS   : -99.020
+Type  : Slow 1200mV 85C Model Setup 'LC3Control:FSM|enaALU'
+Slack : -9.443
+TNS   : -140.993
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.856
-TNS   : -1904.639
-
-Type  : Slow 1200mV 85C Model Setup 'selEAB2[0]'
-Slack : -2.384
-TNS   : -6.080
-
-Type  : Slow 1200mV 85C Model Hold 'selPC[0]'
-Slack : 0.152
-TNS   : 0.000
+Slack : -3.611
+TNS   : -527.710
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.385
+Slack : 0.171
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'selEAB2[0]'
-Slack : 0.762
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'enaALU'
-Slack : 0.957
+Type  : Slow 1200mV 85C Model Hold 'LC3Control:FSM|enaALU'
+Slack : 0.270
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1650.381
+TNS   : -349.717
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enaALU'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
+Slack : 0.445
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'selEAB2[0]'
-Slack : -3.000
-TNS   : -3.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'selPC[0]'
-Slack : -3.000
-TNS   : -3.000
-
-Type  : Slow 1200mV 0C Model Setup 'selPC[0]'
-Slack : -7.417
-TNS   : -99.840
-
-Type  : Slow 1200mV 0C Model Setup 'enaALU'
-Slack : -6.048
-TNS   : -90.080
+Type  : Slow 1200mV 0C Model Setup 'LC3Control:FSM|enaALU'
+Slack : -8.776
+TNS   : -130.551
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.571
-TNS   : -1677.227
-
-Type  : Slow 1200mV 0C Model Setup 'selEAB2[0]'
-Slack : -2.196
-TNS   : -5.723
-
-Type  : Slow 1200mV 0C Model Hold 'selPC[0]'
-Slack : 0.183
-TNS   : 0.000
+Slack : -3.305
+TNS   : -471.286
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.338
+Slack : 0.236
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'selEAB2[0]'
-Slack : 0.701
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'enaALU'
-Slack : 0.846
+Type  : Slow 1200mV 0C Model Hold 'LC3Control:FSM|enaALU'
+Slack : 0.331
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1627.853
+TNS   : -348.881
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enaALU'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
+Slack : 0.414
+TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'selEAB2[0]'
-Slack : -3.000
-TNS   : -3.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'selPC[0]'
-Slack : -3.000
-TNS   : -3.000
-
-Type  : Fast 1200mV 0C Model Setup 'selPC[0]'
-Slack : -4.230
-TNS   : -58.335
-
-Type  : Fast 1200mV 0C Model Setup 'enaALU'
-Slack : -2.841
-TNS   : -41.108
+Type  : Fast 1200mV 0C Model Setup 'LC3Control:FSM|enaALU'
+Slack : -4.461
+TNS   : -66.242
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.952
-TNS   : -822.384
-
-Type  : Fast 1200mV 0C Model Setup 'selEAB2[0]'
-Slack : -0.739
-TNS   : -1.753
-
-Type  : Fast 1200mV 0C Model Hold 'selPC[0]'
-Slack : 0.005
-TNS   : 0.000
+Slack : -1.915
+TNS   : -136.321
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.169
-TNS   : 0.000
+Slack : -0.154
+TNS   : -0.298
 
-Type  : Fast 1200mV 0C Model Hold 'selEAB2[0]'
-Slack : 0.304
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'enaALU'
-Slack : 0.331
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Hold 'LC3Control:FSM|enaALU'
+Slack : -0.075
+TNS   : -0.075
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -810.346
+TNS   : -276.568
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enaALU'
-Slack : -3.000
-TNS   : -3.001
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'selEAB2[0]'
-Slack : -3.000
-TNS   : -3.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'selPC[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LC3Control:FSM|enaALU'
+Slack : 0.420
+TNS   : 0.000
 
 ------------------------------------------------------------

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Memory
-Wed Feb 06 12:33:43 2019
+Tue Feb 19 19:49:37 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -12,16 +12,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Analysis & Synthesis IP Cores Summary
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  7. Analysis & Synthesis RAM Summary
+  8. Analysis & Synthesis IP Cores Summary
+  9. User-Specified and Inferred Latches
  10. General Register Statistics
- 11. Source assignments for mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated
- 12. Parameter Settings for User Entity Instance: mem:mem_inst|altsyncram:altsyncram_component
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated
+ 13. Parameter Settings for User Entity Instance: mem:mem_inst|altsyncram:altsyncram_component
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,18 +48,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 06 12:33:43 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 19 19:49:37 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Memory                                      ;
 ; Top-level Entity Name              ; Memory                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 22                                          ;
+; Total logic elements               ; 185                                         ;
+;     Total combinational functions  ; 179                                         ;
+;     Dedicated logic registers      ; 38                                          ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 72                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 1,048,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -175,45 +176,96 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-;                                             ;        ;
-; Total combinational functions               ; 0      ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 0      ;
-;     -- 3 input functions                    ; 0      ;
-;     -- <=2 input functions                  ; 0      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 0      ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 22     ;
-;                                             ;        ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; Bus[0] ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 22     ;
-; Average fan-out                             ; 0.50   ;
-+---------------------------------------------+--------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 185       ;
+;                                             ;           ;
+; Total combinational functions               ; 179       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 120       ;
+;     -- 3 input functions                    ; 57        ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 179       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 72        ;
+; Total memory bits                           ; 1048576   ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 166       ;
+; Total fan-out                               ; 3027      ;
+; Average fan-out                             ; 6.19      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Memory                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |Memory             ; Memory      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Memory                                   ; 179 (51)            ; 38 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 72   ; 0            ; |Memory                                                                                                    ; Memory              ; work         ;
+;    |bit_16_register:MAR_reg|              ; 32 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg                                                                            ; bit_16_register     ; work         ;
+;       |d_negedge_flip_flop:ff_0|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_0                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_10|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_10                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_11|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_11                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_12|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_12                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_13|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_13                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_14|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_14                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_15|         ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_15                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_1|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_1                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_2|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_2                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_3|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_3                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_4|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_4                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_5|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_5                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_6|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_6                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_7|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_7                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_8|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_8                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_9|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_9                                                   ; d_negedge_flip_flop ; work         ;
+;    |bit_16_register:MDR_reg|              ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg                                                                            ; bit_16_register     ; work         ;
+;       |d_negedge_flip_flop:ff_0|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_0                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_10|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_10                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_11|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_11                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_12|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_12                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_13|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_13                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_14|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_14                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_15|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_15                                                  ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_1|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_1                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_2|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_2                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_3|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_3                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_4|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_4                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_5|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_5                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_6|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_6                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_7|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_7                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_8|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_8                                                   ; d_negedge_flip_flop ; work         ;
+;       |d_negedge_flip_flop:ff_9|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_9                                                   ; d_negedge_flip_flop ; work         ;
+;    |mem:mem_inst|                         ; 80 (0)              ; 6 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst                                                                                       ; mem                 ; work         ;
+;       |altsyncram:altsyncram_component|   ; 80 (0)              ; 6 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst|altsyncram:altsyncram_component                                                       ; altsyncram          ; work         ;
+;          |altsyncram_skf1:auto_generated| ; 80 (0)              ; 6 (6)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated                        ; altsyncram_skf1     ; work         ;
+;             |decode_k8a:rden_decode|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|decode_k8a:rden_decode ; decode_k8a          ; work         ;
+;             |decode_rsa:decode3|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|decode_rsa:decode3     ; decode_rsa          ; work         ;
+;             |mux_qob:mux2|                ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Memory|mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|mux_qob:mux2           ; mux_qob             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                         ;
++----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                   ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
+; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 65536        ; 16           ; --           ; --           ; 1048576 ; None ;
++----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -225,58 +277,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                       ;
-+-----------------------------------------------------------------------------------------------------+--------------------+
-; Register name                                                                                       ; Reason for Removal ;
-+-----------------------------------------------------------------------------------------------------+--------------------+
-; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|address_reg_a[0..2]     ; Lost fanout        ;
-; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|out_address_reg_a[0..2] ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_15|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_14|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_13|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_12|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_11|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_10|Q                                                 ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_9|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_8|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_7|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_6|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_5|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_4|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_3|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_2|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_1|Q                                                  ; Lost fanout        ;
-; bit_16_register:MDR_reg|d_negedge_flip_flop:ff_0|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_15|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_14|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_13|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_12|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_11|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_10|Q                                                 ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_9|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_8|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_7|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_6|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_5|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_4|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_3|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_2|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_1|Q                                                  ; Lost fanout        ;
-; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_0|Q                                                  ; Lost fanout        ;
-; Total Number of Removed Registers = 38                                                              ;                    ;
-+-----------------------------------------------------------------------------------------------------+--------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
-+----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------+
-; Register name                                                                                ; Reason for Removal ; Registers Removed due to This Register              ;
-+----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------+
-; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|address_reg_a[2] ; Lost Fanouts       ; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_15|Q ;
-; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|address_reg_a[1] ; Lost Fanouts       ; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_14|Q ;
-; mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|address_reg_a[0] ; Lost Fanouts       ; bit_16_register:MAR_reg|d_negedge_flip_flop:ff_13|Q ;
-+----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; MDRIn[0]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[1]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[2]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[3]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[4]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[5]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[6]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[7]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[8]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[9]                                            ; MDRIn[1]            ; yes                    ;
+; MDRIn[10]                                           ; MDRIn[1]            ; yes                    ;
+; MDRIn[11]                                           ; MDRIn[1]            ; yes                    ;
+; MDRIn[12]                                           ; MDRIn[1]            ; yes                    ;
+; MDRIn[13]                                           ; MDRIn[1]            ; yes                    ;
+; MDRIn[14]                                           ; MDRIn[1]            ; yes                    ;
+; MDRIn[15]                                           ; MDRIn[1]            ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -284,14 +308,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Memory|MDRIn[1]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -386,14 +419,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 22                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 72                          ;
+; cycloneiii_ff         ; 38                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 179                         ;
+;     normal            ; 179                         ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 120                         ;
+; cycloneiii_ram_block  ; 128                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.05                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -401,7 +443,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -411,7 +453,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 06 12:33:11 2019
+    Info: Processing started: Tue Feb 19 19:49:09 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Memory -c Memory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -424,10 +466,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file memory.
 Info (12021): Found 1 design units, including 1 entities, in source file mem.v
     Info (12023): Found entity 1: mem File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 39
 Info (12127): Elaborating entity "Memory" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at Memory.v(28): variable "selMDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 28
-Info (12128): Elaborating entity "bit_16_register" for hierarchy "bit_16_register:MAR_reg" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at Memory.v(37): variable "selMDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at Memory.v(39): variable "selMDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at Memory.v(41): variable "selMDR" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 41
+Warning (10240): Verilog HDL Always Construct warning at Memory.v(35): inferring latch(es) for variable "MDRIn", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[0]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[1]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[2]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[3]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[4]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[5]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[6]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[7]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[8]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[9]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[10]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[11]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[12]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[13]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[14]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (10041): Inferred latch for "MDRIn[15]" at Memory.v(35) File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+Info (12128): Elaborating entity "bit_16_register" for hierarchy "bit_16_register:MAR_reg" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 57
 Info (12128): Elaborating entity "d_negedge_flip_flop" for hierarchy "bit_16_register:MAR_reg|d_negedge_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v Line: 15
-Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_inst" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 44
+Info (12128): Elaborating entity "mem" for hierarchy "mem:mem_inst" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 67
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mem:mem_inst|altsyncram:altsyncram_component" File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
 Info (12130): Elaborated megafunction instantiation "mem:mem_inst|altsyncram:altsyncram_component" File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
 Info (12133): Instantiated megafunction "mem:mem_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v Line: 85
@@ -457,169 +518,50 @@ Info (12128): Elaborating entity "decode_k8a" for hierarchy "mem:mem_inst|altsyn
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
     Info (12023): Found entity 1: mux_qob File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/mux_qob.tdf Line: 22
 Info (12128): Elaborating entity "mux_qob" for hierarchy "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|mux_qob:mux2" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 46
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a0" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 47
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a1" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 70
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a2" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 93
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a3" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 116
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a4" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 139
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a5" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 162
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a6" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 185
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a7" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 208
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a8" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 231
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a9" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 254
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a10" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 277
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a11" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 300
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a12" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 323
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a13" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 346
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a14" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 369
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a15" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 392
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a16" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 415
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a17" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 438
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a18" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 461
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a19" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 484
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a20" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 507
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a21" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 530
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a22" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 553
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a23" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 576
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a24" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 599
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a25" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 622
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a26" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 645
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a27" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 668
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a28" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 691
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a29" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 714
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a30" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 737
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a31" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 760
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a32" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 783
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a33" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 806
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a34" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 829
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a35" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 852
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a36" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 875
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a37" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 898
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a38" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 921
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a39" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 944
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a40" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 967
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a41" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 990
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a42" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1013
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a43" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1036
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a44" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1059
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a45" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1082
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a46" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1105
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a47" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1128
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a48" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1151
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a49" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1174
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a50" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1197
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a51" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1220
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a52" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1243
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a53" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1266
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a54" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1289
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a55" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1312
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a56" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1335
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a57" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1358
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a58" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1381
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a59" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1404
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a60" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1427
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a61" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1450
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a62" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1473
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a63" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1496
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a64" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1519
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a65" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1542
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a66" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1565
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a67" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1588
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a68" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1611
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a69" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1634
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a70" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1657
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a71" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1680
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a72" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1703
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a73" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1726
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a74" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1749
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a75" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1772
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a76" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1795
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a77" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1818
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a78" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1841
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a79" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1864
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a80" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1887
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a81" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1910
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a82" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1933
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a83" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1956
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a84" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 1979
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a85" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2002
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a86" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2025
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a87" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2048
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a88" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2071
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a89" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2094
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a90" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2117
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a91" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2140
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a92" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2163
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a93" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2186
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a94" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2209
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a95" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2232
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a96" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2255
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a97" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2278
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a98" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2301
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a99" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2324
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a100" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2347
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a101" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2370
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a102" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2393
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a103" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2416
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a104" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2439
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a105" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2462
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a106" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2485
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a107" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2508
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a108" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2531
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a109" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2554
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a110" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2577
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a111" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2600
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a112" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2623
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a113" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2646
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a114" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2669
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a115" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2692
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a116" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2715
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a117" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2738
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a118" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2761
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a119" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2784
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a120" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2807
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a121" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2830
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a122" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2853
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a123" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2876
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a124" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2899
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a125" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2922
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a126" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2945
-        Warning (14320): Synthesized away node "mem:mem_inst|altsyncram:altsyncram_component|altsyncram_skf1:auto_generated|ram_block1a127" File: C:/Users/USER1/Digital Logic/LC-3/Memory/db/altsyncram_skf1.tdf Line: 2968
-Info (17049): 38 registers lost all their fanouts during netlist optimizations.
+Warning (13012): Latch MDRIn[0] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[1] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[2] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[3] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[4] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[5] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[6] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[7] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[8] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[9] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[10] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[11] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[12] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[13] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[14] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[0] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Warning (13012): Latch MDRIn[15] has unsafe behavior File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selMDR[1] File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 25
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 22 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Bus[0]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[1]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[2]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[3]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[4]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[5]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[6]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[7]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[8]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[9]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[10]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[11]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[12]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[13]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[14]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "Bus[15]" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 17
-    Warning (15610): No output dependent on input pin "ldMAR" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-    Warning (15610): No output dependent on input pin "ldMDR" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-    Warning (15610): No output dependent on input pin "memWE" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-    Warning (15610): No output dependent on input pin "selMDR" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 18
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 22 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 155 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Wed Feb 06 12:33:43 2019
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:29
+Info (21057): Implemented 385 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 56 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 185 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Tue Feb 19 19:49:37 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:35
 
 

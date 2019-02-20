@@ -24,9 +24,12 @@ reg [15:0] PC_inc, PC;
 // the PC register
 bit_16_register pc_reg(.D(PC), .Q(PCOut), .en(ldPC), .reset(reset), .clk(clk));
 
-always @ (posedge clk)
-	PC_inc = PC + 1;
-
+always @ (posedge clk) begin
+	if (ldPC == 1'b1) begin
+		PC_inc = 16'h3000 + PC + 1;
+	end
+end
+		
 always @ (eabOut or Bus or PC_inc or selPC) begin
 	
 	if (selPC == 2'b00) begin
