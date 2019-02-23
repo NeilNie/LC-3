@@ -1,0 +1,462 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/LC-3/simulation/modelsim
+vALU
+Z1 !s110 1550850840
+!i10b 1
+!s100 zjM9Al^zQPAJanoXba0hR3
+IooFFWd3@mjboj@dOZahaC2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1550683690
+8C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v
+FC:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v
+L0 9
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1550850840.000000
+!s107 C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/ALU|C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/ALU}
+Z6 tCvgOpt 0
+n@a@l@u
+vbit_16_register
+Z7 !s110 1550850839
+!i10b 1
+!s100 ZOeB@123AMUzKNB3VX3fo1
+IX_lV2oY0]DAl=3YAe5C5X2
+R2
+R0
+w1549464577
+8C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v
+FC:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v
+L0 9
+R3
+r1
+!s85 0
+31
+Z8 !s108 1550850839.000000
+!s107 C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/PC|C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v|
+!i113 1
+R5
+Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/PC}
+R6
+vbus_tri_state_buffer
+Z10 !s110 1550850841
+!i10b 1
+!s100 Hb7R_j8@flc0REoF^nHO00
+IkQC;n2Bnh0R29Aazj[:lN2
+R2
+R0
+w1550625876
+8C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v
+FC:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3|C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v|
+!i113 1
+R5
+Z11 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3}
+R6
+vd_flip_flop
+Z12 !s110 1550850838
+!i10b 1
+!s100 _Q2NPMZaW``SZE?XfGGKG2
+IRhm0]Y;i>Wn2>hIA83Hd<2
+R2
+R0
+w1549909064
+8C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z13 !s108 1550850838.000000
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File|C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v|
+!i113 1
+R5
+Z14 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File}
+R6
+vd_negedge_flip_flop
+R7
+!i10b 1
+!s100 F5YR_Mbn675J3a^fWSzok1
+I@5b2Ljz3<J=]H4C2DQM7a3
+R2
+R0
+w1549419283
+8C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v
+FC:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v
+L0 7
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/PC|C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v|
+!i113 1
+R5
+R9
+R6
+vdecoder_3_8
+R12
+!i10b 1
+!s100 b=?MGRg4MHBiB[8dOhBKT3
+IJ^MiA`6[4Q:HgAYaC@^cZ1
+R2
+R0
+w1548892496
+8C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v
+L0 6
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File|C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v|
+!i113 1
+R5
+R14
+R6
+vEAB
+R1
+!i10b 1
+!s100 XH_[SkSCo<fUL5jgz[GVh0
+I;B`nobbMk]JB1Wg8TX=^10
+R2
+R0
+w1549649467
+8C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v
+FC:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/EAB|C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/EAB}
+R6
+n@e@a@b
+vgeneral_tb
+R10
+!i10b 1
+!s100 ;6d<WKA@gg:Hi5CGzfI1]2
+IBJPnhE1Yo3iCmcnCkz5eS0
+R2
+R0
+w1550850106
+8C:/Users/USER1/Digital Logic/LC-3/general_tb.v
+FC:/Users/USER1/Digital Logic/LC-3/general_tb.v
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1550850841.000000
+!s107 C:/Users/USER1/Digital Logic/LC-3/general_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3|C:/Users/USER1/Digital Logic/LC-3/general_tb.v|
+!i113 1
+R5
+R11
+R6
+vIR
+R1
+!i10b 1
+!s100 SeL_K0Ejf?]U[OJ]BXO]W0
+INMWU@mX8f:?4lKNfml9:P1
+R2
+R0
+w1549465332
+8C:/Users/USER1/Digital Logic/LC-3/IR/IR.v
+FC:/Users/USER1/Digital Logic/LC-3/IR/IR.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/IR/IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/IR|C:/Users/USER1/Digital Logic/LC-3/IR/IR.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/IR}
+R6
+n@i@r
+vLC3
+R1
+!i10b 1
+!s100 8c@I?IP4g]c3aGhk49^XD3
+Ib?dzz:5Q_m4mdS2YbiEZ<2
+R2
+R0
+w1550845112
+8C:/Users/USER1/Digital Logic/LC-3/LC3.v
+FC:/Users/USER1/Digital Logic/LC-3/LC3.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/LC3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3|C:/Users/USER1/Digital Logic/LC-3/LC3.v|
+!i113 1
+R5
+R11
+R6
+n@l@c3
+vLC3Control
+R1
+!i10b 1
+!s100 QX>FzACV@X7[a=ee2FBJT2
+ITB42[jm^VbhVTfo4@;SRh3
+R2
+R0
+w1550688441
+8C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v
+FC:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/LC3Control|C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/LC3Control}
+R6
+n@l@c3@control
+vMARMux
+R1
+!i10b 1
+!s100 VFfShoaPK6C1h2H?nJ<6E3
+I:7oR_bl44N?z0F0H@dhf?3
+R2
+R0
+w1549456911
+8C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v
+FC:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/MARMux|C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/MARMux}
+R6
+n@m@a@r@mux
+vmem
+R7
+!i10b 1
+!s100 gDTAo004L@?UoVAGZOZL72
+IFZM?nj6NVNAh>bz?MgN@h3
+R2
+R0
+w1549473530
+8C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v
+FC:/Users/USER1/Digital Logic/LC-3/Memory/mem.v
+L0 39
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Memory|C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v|
+!i113 1
+R5
+Z15 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/Memory}
+R6
+vMemory
+R7
+!i10b 1
+!s100 Vi@6SY3:WPzIA`AITPgYP0
+IW0oB7=iGAJRm0;EeJ<mKh2
+R2
+R0
+w1550676202
+8C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v
+FC:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v
+L0 6
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Memory|C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v|
+!i113 1
+R5
+R15
+R6
+n@memory
+vmux_8_1_bit_16
+R12
+!i10b 1
+!s100 6d=cW70bUjM?HLoJDXgQ63
+I<g^B<S4LZVAGjg@Cfi5K?1
+R2
+R0
+w1549909027
+8C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v
+L0 8
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File|C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v|
+!i113 1
+R5
+R14
+R6
+vNZP
+R7
+!i10b 1
+!s100 c[OR;j]h^RV[jYh<DHNf81
+ID>:iiEofiA>>gi41fOU:I3
+R2
+R0
+w1549460056
+8C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v
+FC:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v
+L0 5
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/NZP|C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v|
+!i113 1
+R5
+Z16 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/LC-3/NZP}
+R6
+n@n@z@p
+vNZP_register
+R7
+!i10b 1
+!s100 `3_<nS=6[EaCA^2:iggBF3
+IMaaZZ`]g[kf[ILQ_Om<d]2
+R2
+R0
+w1549457509
+8C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v
+FC:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/NZP|C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v|
+!i113 1
+R5
+R16
+R6
+n@n@z@p_register
+vPC
+R12
+!i10b 1
+!s100 A1QUjcXO0abFgO<>9miWH1
+I?5YS@_=F<7IX@IV9RCeC>2
+R2
+R0
+w1550114281
+8C:/Users/USER1/Digital Logic/LC-3/PC/PC.v
+FC:/Users/USER1/Digital Logic/LC-3/PC/PC.v
+L0 4
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/PC/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/PC|C:/Users/USER1/Digital Logic/LC-3/PC/PC.v|
+!i113 1
+R5
+R9
+R6
+n@p@c
+vRegister
+R12
+!i10b 1
+!s100 4M>[0F^f?oY8LYH6>[dg03
+I>c:@[Ffd[YNk=SIoA6=jB0
+R2
+R0
+w1548884560
+8C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/Register.v
+L0 8
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File|C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v|
+!i113 1
+R5
+R14
+R6
+n@register
+vRegisterFile
+R12
+!i10b 1
+!s100 j?hOK4C>d:R2H]A_;KR:b0
+IDiG;lWK?l0KV:Cc2lI@PB0
+R2
+R0
+w1549640415
+8C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v
+FC:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v
+L0 8
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File|C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v|
+!i113 1
+R5
+R14
+R6
+n@register@file

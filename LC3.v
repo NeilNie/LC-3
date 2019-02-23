@@ -6,16 +6,6 @@
 
 module LC3 (clk,
 	
-	// for testing purposes only ----
-	// comment out when not testing -
-//	reset,
-//	aluControl,
-//	enaALU, enaMARM, enaMDR, enaPC,
-//	selMAR, selEAB1, selEAB2,
-//	ldPC, ldIR, ldMAR, ldMDR,
-//	selPC, selMDR,
-//	SR0, SR1, DR,
-//	regWE, memWE,
 	IR,
 	Bus,
 	PC,
@@ -161,7 +151,7 @@ EAB eab(.IR(IR),
 		  .PC(PC),
 		  .selEAB1(selEAB1),
 		  .selEAB2(selEAB2),
-		  .eabOut(eabOut),);
+		  .eabOut(eabOut));
 
 // -----------------------------------------------------
 

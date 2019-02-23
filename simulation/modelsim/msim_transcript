@@ -1,0 +1,262 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do LC3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Register\ File {C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File" C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Register\ File {C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File" C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Register\ File {C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File" C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v 
+# -- Compiling module mux_8_1_bit_16
+# 
+# Top level modules:
+# 	mux_8_1_bit_16
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Register\ File {C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File" C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v 
+# -- Compiling module decoder_3_8
+# 
+# Top level modules:
+# 	decoder_3_8
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Register\ File {C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Register File" C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v 
+# -- Compiling module d_flip_flop
+# 
+# Top level modules:
+# 	d_flip_flop
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/PC {C:/Users/USER1/Digital Logic/LC-3/PC/PC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/PC" C:/Users/USER1/Digital Logic/LC-3/PC/PC.v 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 10:53:58 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/PC {C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:58 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/PC" C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v 
+# -- Compiling module d_negedge_flip_flop
+# 
+# Top level modules:
+# 	d_negedge_flip_flop
+# End time: 10:53:59 on Feb 22,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/PC {C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/PC" C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v 
+# -- Compiling module bit_16_register
+# 
+# Top level modules:
+# 	bit_16_register
+# End time: 10:53:59 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/NZP {C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/NZP" C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v 
+# -- Compiling module NZP_register
+# 
+# Top level modules:
+# 	NZP_register
+# End time: 10:53:59 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/NZP {C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/NZP" C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v 
+# -- Compiling module NZP
+# 
+# Top level modules:
+# 	NZP
+# End time: 10:53:59 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Memory {C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Memory" C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v 
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# End time: 10:53:59 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/Memory {C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/Memory" C:/Users/USER1/Digital Logic/LC-3/Memory/mem.v 
+# -- Compiling module mem
+# 
+# Top level modules:
+# 	mem
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/MARMux {C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/MARMux" C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v 
+# -- Compiling module MARMux
+# 
+# Top level modules:
+# 	MARMux
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/LC3Control {C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/LC3Control" C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v 
+# -- Compiling module LC3Control
+# 
+# Top level modules:
+# 	LC3Control
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/IR {C:/Users/USER1/Digital Logic/LC-3/IR/IR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/IR" C:/Users/USER1/Digital Logic/LC-3/IR/IR.v 
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/EAB {C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/EAB" C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v 
+# -- Compiling module EAB
+# 
+# Top level modules:
+# 	EAB
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3/ALU {C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3/ALU" C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3 {C:/Users/USER1/Digital Logic/LC-3/LC3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3" C:/Users/USER1/Digital Logic/LC-3/LC3.v 
+# -- Compiling module LC3
+# 
+# Top level modules:
+# 	LC3
+# End time: 10:54:00 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3 {C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:00 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3" C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v 
+# -- Compiling module bus_tri_state_buffer
+# 
+# Top level modules:
+# 	bus_tri_state_buffer
+# End time: 10:54:01 on Feb 22,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/LC-3 {C:/Users/USER1/Digital Logic/LC-3/general_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:01 on Feb 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/LC-3" C:/Users/USER1/Digital Logic/LC-3/general_tb.v 
+# -- Compiling module general_tb
+# 
+# Top level modules:
+# 	general_tb
+# End time: 10:54:01 on Feb 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  general_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" general_tb 
+# Start time: 10:54:01 on Feb 22,2019
+# Loading work.general_tb
+# Loading work.LC3
+# Loading work.bus_tri_state_buffer
+# Loading work.LC3Control
+# Loading work.RegisterFile
+# Loading work.decoder_3_8
+# Loading work.Register
+# Loading work.d_flip_flop
+# Loading work.mux_8_1_bit_16
+# Loading work.PC
+# Loading work.bit_16_register
+# Loading work.d_negedge_flip_flop
+# Loading work.NZP
+# Loading work.NZP_register
+# Loading work.Memory
+# Loading work.mem
+# Loading altera_mf_ver.altsyncram
+# Loading work.MARMux
+# Loading work.IR
+# Loading work.EAB
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3017) C:/Users/USER1/Digital Logic/LC-3/LC3.v(116): [TFMPC] - Too few port connections. Expected 13, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /general_tb/i1/memory File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v
+# ** Warning: (vsim-3722) C:/Users/USER1/Digital Logic/LC-3/LC3.v(116): [TFMPC] - Missing connection for port 'MAROut'.
+# ** Warning: (vsim-3015) C:/Users/USER1/Digital Logic/LC-3/LC3.v(133): [PCDPC] - Port size (8) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /general_tb/i1/mar_mux File: C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v
+# ** Warning: (vsim-3015) C:/Users/USER1/Digital Logic/LC-3/LC3.v(149): [PCDPC] - Port size (11) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /general_tb/i1/eab File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v
+# ** Warning: (vsim-3015) C:/Users/USER1/Digital Logic/LC-3/LC3.v(158): [PCDPC] - Port size (6) does not match connection size (16) for port 'IR'. The port definition is at: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /general_tb/i1/alu File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/USER1/Digital Logic/LC-3/general_tb.v(75)
+#    Time: 290 ps  Iteration: 1  Instance: /general_tb
+# Break in Module general_tb at C:/Users/USER1/Digital Logic/LC-3/general_tb.v line 75
+# End time: 10:55:05 on Feb 22,2019, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 5
