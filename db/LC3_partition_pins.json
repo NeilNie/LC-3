@@ -228,10 +228,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[2]",
-					"strict" : false
-				},
-				{
 					"name" : "MDRSpcIn[12]",
 					"strict" : false
 				},
@@ -249,6 +245,10 @@
 				},
 				{
 					"name" : "MARSpcIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ldMARSpcIn",
 					"strict" : false
 				},
 				{
@@ -313,6 +313,198 @@
 				},
 				{
 					"name" : "memOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MARIn[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MAROut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MDROut[15]",
 					"strict" : false
 				},
 				{

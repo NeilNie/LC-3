@@ -33,7 +33,9 @@ always @ (*) begin
 		Bus <= aluOut;
 	end else if (enaMDR == 1'b1) begin
 		Bus <= MDROut;
-	end
+	end // else begin
+//		Bus <= 16'hzzzz;
+//	end
 end
 
 endmodule

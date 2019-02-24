@@ -4,6 +4,7 @@
 //
 
 module Memory(
+	
 	Bus,
 	ldMAR,
 	ldMDR,
@@ -14,6 +15,7 @@ module Memory(
 	reset,
 	MAROut,
 	memOut,
+	MARIn,
 	
 	// memory special inputs
 	MDRSpcIn,
@@ -29,11 +31,11 @@ output [15:0] MDROut;
 
 // internal variables
 reg [15:0] MDRIn;
-reg [15:0] MARIn;
+output reg [15:0] MARIn;
 output [15:0] memOut;
 output [15:0] MAROut;
 
-// MDRMux
+//// MDRMux
 always @ (Bus or memOut or MDRSpcIn or selMDR) begin
 	
 	if (selMDR == 2'b01)
@@ -42,17 +44,18 @@ always @ (Bus or memOut or MDRSpcIn or selMDR) begin
 		MDRIn <= Bus;
 	else if (selMDR == 2'b11)
 		MDRIn <= MDRSpcIn;
+	
 end
 
-// handle MAR special input
-always @ (ldMARSpcIn or MARSpcIn or Bus) begin
+// handle MAR special input 
+always @ (ldMAR or ldMARSpcIn or MARSpcIn or Bus) begin
 	
 	if (ldMARSpcIn == 1) begin
 		MARIn <= MARSpcIn;
-	end else begin
+	end else if (ldMAR == 1) begin
 		MARIn <= Bus;
 	end
-
+		
 end
 
 // declare the two registers

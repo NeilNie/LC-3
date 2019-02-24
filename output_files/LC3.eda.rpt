@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LC3
-Fri Feb 22 10:52:02 2019
+Sat Feb 23 22:49:57 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -8,7 +8,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. EDA Netlist Writer Messages
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
 
 
 
@@ -34,11 +36,42 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Feb 22 10:52:02 2019 ;
+; EDA Netlist Writer Status ; Successful - Sat Feb 23 22:49:57 2019 ;
 ; Revision Name             ; LC3                                   ;
 ; Top-level Entity Name     ; LC3                                   ;
 ; Family                    ; Cyclone IV E                          ;
+; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                        ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-----------------------------------------------------------+
+; Simulation Generated Files                                ;
++-----------------------------------------------------------+
+; Generated Files                                           ;
++-----------------------------------------------------------+
+; C:/Users/USER1/Digital Logic/LC-3/simulation/qsim//LC3.vo ;
++-----------------------------------------------------------+
 
 
 +-----------------------------+
@@ -60,136 +93,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Feb 22 10:52:01 2019
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LC3 -c LC3 --vector_source="C:/Users/USER1/Digital Logic/LC-3/Waveform1.vwf" --testbench_file="C:/Users/USER1/Digital Logic/LC-3/simulation/modelsim/Waveform1.vwf.vt"
+    Info: Processing started: Sat Feb 23 22:49:56 2019
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/" LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning (201005): Ignoring output pin "Bus" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[15]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[14]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[13]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[12]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[11]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[10]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[9]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[8]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[7]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[6]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "Bus[0]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "current_state[0]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[15]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[14]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[13]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[12]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[11]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[10]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[9]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[8]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[7]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[6]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "PC[0]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[15]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[14]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[13]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[12]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[11]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[10]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[9]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[8]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[7]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[6]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MARSpcIn[0]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[15]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[14]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[13]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[12]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[11]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[10]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[9]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[8]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[7]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[6]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "MDRSpcIn[0]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[15]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[14]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[13]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[12]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[11]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[10]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[9]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[8]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[7]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[6]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[5]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[4]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[3]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[2]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[1]" in vector source file when writing test bench files
-Warning (201005): Ignoring output pin "memOut[0]" in vector source file when writing test bench files
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_0|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_1|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_2|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_3|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_4|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_5|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_6|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_7|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_8|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_9|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_10|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_11|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_12|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_13|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_14|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_15|D" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_0|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_1|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_2|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_3|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_4|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_5|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_6|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_7|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_9|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_10|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_11|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_12|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_13|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_14|Q" in design
-Warning (201007): Can't find port "RegisterFile:reg_file|Register:r0|d_flip_flop:ff_15|Q" in design
-Info (201000): Generated Verilog Test Bench File C:/Users/USER1/Digital Logic/LC-3/simulation/modelsim/Waveform1.vwf.vt for simulation
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 124 warnings
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Fri Feb 22 10:52:02 2019
+Info (204019): Generated file LC3.vo in folder "C:/Users/USER1/Digital Logic/LC-3/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4661 megabytes
+    Info: Processing ended: Sat Feb 23 22:49:57 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

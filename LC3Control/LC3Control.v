@@ -64,34 +64,37 @@ always @ (posedge clk) begin
 	if (current_state == 6'b010010) begin
 		
 		// MAR <- PC
-		// PC <- PC + 1
 		
 		memWE <= 0;
+		regWE <= 0;
 		enaMARM <= 0;
 		enaMDR <= 0;
 		enaALU <= 0;
-		
 		enaPC <= 1;
-		ldMAR <= 1;
-		selPC <= 2'b00;
-		ldPC <= 1;
 		
+		ldMAR <= 1;
+		ldPC <= 0;
+
 		next_state <= 6'b100001;
 	end
 	
 	// state #: 33
 	else if (current_state == 6'b100001) begin
-	
-		// MDR <- M
-		ldPC <= 0;
-		enaMARM <= 0;
-		enaMDR <= 0;
-		enaALU <= 0;
-		enaPC <= 0; 	// close all tri state buffer
 		
+		// PC <- PC + 1
+		// MDR <- M[MAR]
+
 		selMDR <= 2'b01;
 		ldMDR <= 1;
+		ldMAR <= 0;
+		ldPC <= 1;
+		selPC <= 2'b00;
 		
+		enaMARM <= 0;
+		enaMDR <= 1;
+		enaALU <= 0;
+		enaPC <= 0; 	// close all tri state buffer
+	
 		next_state <= 6'b100011;
 	end
 	
@@ -102,9 +105,10 @@ always @ (posedge clk) begin
 		enaMARM <= 0;
 		enaMDR <= 1;
 		enaALU <= 0;
-		enaPC <= 0; 	// close all tri state buffer
+		enaPC <= 0;
 		ldPC <= 0;
 		ldIR <= 1;
+		ldMDR <= 0;
 		
 		next_state <= 6'b100000;
 	end
@@ -120,7 +124,10 @@ always @ (posedge clk) begin
 		enaMDR <= 0;
 		enaALU <= 0;
 		enaPC <= 0; 	// close all tri state buffer
+		
 		ldPC <= 0;
+		ldIR <= 0;
+		
 		next_state <= {2'b00, IR[15:12]};
 	end
 	// end =============== instruction parse ==================
@@ -174,14 +181,17 @@ always @ (posedge clk) begin
 	// state #: 14 (LEA)
 	else if (current_state == 6'b001110) begin
 		
+		regWE <= 1;
 		DR <= IR[11:9];
 		
 		selEAB1 <= 0;
 		selEAB2 <= 2'b10;
 		selMAR <= 0;
-		enaMARM <= 1;
 		
-		// ldPC <= 1;
+		enaMARM <= 1;
+		enaPC <= 0;
+		enaMDR <= 0;
+		enaALU <= 0;
 		
 		next_state <= 6'b010010;
 	end
@@ -240,7 +250,7 @@ always @ (posedge clk) begin
 	// first instruction address
 	else if (current_state == 6'b000000) begin
 		
-		MARSpcIn <= 16'h3001;
+		MARSpcIn <= 16'h0001;
 		ldMAR <= 1;
 		ldMARSpcIn <= 1;
 		memWE <= 1;
@@ -251,7 +261,7 @@ always @ (posedge clk) begin
 	// first instruction value
 	else if (current_state == 6'b111111) begin
 		
-		MDRSpcIn <= 16'b1110001000000111;	// LEA, R1, OffSet=7
+		MDRSpcIn <= 16'b1110001000000011;	// LEA, R1, OffSet=3
 		ldMDR <= 1;
 		selMDR <= 2'b11;
 		memWE <= 1;
@@ -259,15 +269,22 @@ always @ (posedge clk) begin
 		next_state <= 6'b110000;
 	end
 	
-	// second instruction address
 	else if (current_state == 6'b110000) begin
 		
-		MARSpcIn <= 16'h3002;
+		memWE <= 0;
+		next_state <= 6'b101110;
+	end
+	
+	//----------------------------------------
+	// second instruction address
+	else if (current_state == 6'b101110) begin
+		
+		MARSpcIn <= 16'h0002;
 		ldMAR <= 1;
 		ldMARSpcIn <= 1;
-		memWE <= 1;
+		// memWE <= 1;
 		next_state <= 6'b101000;
-		
+	
 	end
 	
 	// second instruction value
@@ -278,20 +295,28 @@ always @ (posedge clk) begin
 		selMDR <= 2'b11;
 		memWE <= 1;
 
-		next_state <= 6'b111110;
+		next_state <= 6'b101001;
 	end
 	
 	
 	// ------------------------------------------------------
 	// testing reading values
 	// ------------------------------------------------------
-	else if (current_state == 6'b111110) begin
+	
+	else if (current_state == 6'b101001) begin
 		
-		MARSpcIn <= 16'h3002;
-		ldMAR <= 1;
-		ldMARSpcIn <= 1;
 		memWE <= 0;
 		
+		next_state <= 6'b111110;
+	
+	end
+	
+	else if (current_state == 6'b111110) begin
+		
+		MARSpcIn <= 16'h0001;
+		ldMAR <= 1;
+		ldMARSpcIn <= 1;
+	
 		next_state <= 6'b101010;
 	
 	end
@@ -307,6 +332,7 @@ always @ (posedge clk) begin
 		enaPC <= 0;
 		
 		ldPC <= 1;
+		selPC <= 2'b00;
 		
 		next_state <= 6'b101011;
 	end
@@ -314,11 +340,7 @@ always @ (posedge clk) begin
 	// return to state 18
 	else if (current_state == 6'b101011) begin
 		
-		enaMDR <= 0;
-		enaALU <= 0;
-		enaMARM <= 0;
-		enaPC <= 0;
-		ldPC <= 0;
+		ldMARSpcIn <= 0;
 		
 		next_state <= 6'b010010;
 	end
