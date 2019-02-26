@@ -16,6 +16,7 @@ module Memory(
 	MAROut,
 	memOut,
 	MARIn,
+	MDRIn,
 	
 	// memory special inputs
 	MDRSpcIn,
@@ -30,25 +31,21 @@ input [1:0] selMDR;
 output [15:0] MDROut;
 
 // internal variables
-reg [15:0] MDRIn;
+output reg [15:0] MDRIn;
 output reg [15:0] MARIn;
 output [15:0] memOut;
 output [15:0] MAROut;
 
-//// MDRMux
-always @ (Bus or memOut or MDRSpcIn or selMDR) begin
-	
+
+// handle MAR special input 
+always @ (*) begin
+
 	if (selMDR == 2'b01)
 		MDRIn <= memOut;
 	else if (selMDR == 2'b00)
 		MDRIn <= Bus;
 	else if (selMDR == 2'b11)
 		MDRIn <= MDRSpcIn;
-	
-end
-
-// handle MAR special input 
-always @ (ldMAR or ldMARSpcIn or MARSpcIn or Bus) begin
 	
 	if (ldMARSpcIn == 1) begin
 		MARIn <= MARSpcIn;
@@ -59,8 +56,8 @@ always @ (ldMAR or ldMARSpcIn or MARSpcIn or Bus) begin
 end
 
 // declare the two registers
-bit_16_register MAR_reg(.D(MARIn), .Q(MAROut), .en(ldMAR), .reset(reset), .clk(clk));
-bit_16_register MDR_reg(.D(MDRIn), .Q(MDROut), .en(ldMDR), .reset(reset), .clk(clk));
+bit_16_reg MAR_reg(.D(MARIn), .Q(MAROut), .en(ldMAR), .reset(reset), .clk(clk));
+bit_16_reg MDR_reg(.D(MDRIn), .Q(MDROut), .en(ldMDR), .reset(reset), .clk(clk));
 
 // declare the memory block
 mem mem_inst (

@@ -1,0 +1,12 @@
+// 
+// 16_bit all purpose register 
+// Neil Nie, (c) 2018
+// 
+
+module bit_16_reg(
+	D,
+	en,
+	Q,
+	reset,
+	clk
+);

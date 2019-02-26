@@ -1,5 +1,5 @@
 Flow report for LC3
-Sat Feb 23 22:49:57 2019
+Tue Feb 26 10:50:37 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 23 22:49:57 2019       ;
+; Flow Status                        ; Successful - Tue Feb 26 10:50:37 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 697 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 630 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 252 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 252                                         ;
-; Total pins                         ; 152 / 529 ( 29 % )                          ;
+; Total logic elements               ; 744 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 660 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 256 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 256                                         ;
+; Total pins                         ; 168 / 529 ( 32 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576 / 3,981,312 ( 26 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/23/2019 22:47:24 ;
+; Start date & time ; 02/26/2019 10:48:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LC3                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 8796753388042.155098004405172          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 8796753388042.155119609402888          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; general_tb     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; general_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -101,14 +101,14 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4768 MB             ; 00:00:34                           ;
-; Fitter               ; 00:01:07     ; 1.0                     ; 5318 MB             ; 00:01:04                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4699 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4816 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4678 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 4767 MB             ; 00:00:35                           ;
+; Fitter               ; 00:01:10     ; 1.0                     ; 5318 MB             ; 00:00:59                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4701 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 4823 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4650 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4661 MB             ; 00:00:01                           ;
-; Total                ; 00:02:02     ; --                      ; --                  ; 00:01:51                           ;
+; Total                ; 00:02:07     ; --                      ; --                  ; 00:01:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

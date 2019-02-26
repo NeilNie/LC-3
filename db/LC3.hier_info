@@ -151,6 +151,22 @@ MDROut[12] << MDROut[12].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[13] << MDROut[13].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[14] << MDROut[14].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[15] << MDROut[15].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[0] << Memory:memory.MDRIn
+MDRIn[1] << Memory:memory.MDRIn
+MDRIn[2] << Memory:memory.MDRIn
+MDRIn[3] << Memory:memory.MDRIn
+MDRIn[4] << Memory:memory.MDRIn
+MDRIn[5] << Memory:memory.MDRIn
+MDRIn[6] << Memory:memory.MDRIn
+MDRIn[7] << Memory:memory.MDRIn
+MDRIn[8] << Memory:memory.MDRIn
+MDRIn[9] << Memory:memory.MDRIn
+MDRIn[10] << Memory:memory.MDRIn
+MDRIn[11] << Memory:memory.MDRIn
+MDRIn[12] << Memory:memory.MDRIn
+MDRIn[13] << Memory:memory.MDRIn
+MDRIn[14] << Memory:memory.MDRIn
+MDRIn[15] << Memory:memory.MDRIn
 
 
 |LC3|bus_tri_state_buffer:tsb
@@ -270,58 +286,89 @@ MDROut[13] => Bus[13].DATAA
 MDROut[14] => Bus[14].DATAA
 MDROut[15] => Bus[15].DATAA
 enaMDR => Bus[15].IN1
-Bus[0] <= Bus[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[1] <= Bus[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[2] <= Bus[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[3] <= Bus[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[4] <= Bus[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[5] <= Bus[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[6] <= Bus[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[7] <= Bus[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[8] <= Bus[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[9] <= Bus[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[10] <= Bus[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[11] <= Bus[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[12] <= Bus[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[13] <= Bus[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[14] <= Bus[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
-Bus[15] <= Bus[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Bus[0] <= Bus[0].DB_MAX_OUTPUT_PORT_TYPE
+Bus[1] <= Bus[1].DB_MAX_OUTPUT_PORT_TYPE
+Bus[2] <= Bus[2].DB_MAX_OUTPUT_PORT_TYPE
+Bus[3] <= Bus[3].DB_MAX_OUTPUT_PORT_TYPE
+Bus[4] <= Bus[4].DB_MAX_OUTPUT_PORT_TYPE
+Bus[5] <= Bus[5].DB_MAX_OUTPUT_PORT_TYPE
+Bus[6] <= Bus[6].DB_MAX_OUTPUT_PORT_TYPE
+Bus[7] <= Bus[7].DB_MAX_OUTPUT_PORT_TYPE
+Bus[8] <= Bus[8].DB_MAX_OUTPUT_PORT_TYPE
+Bus[9] <= Bus[9].DB_MAX_OUTPUT_PORT_TYPE
+Bus[10] <= Bus[10].DB_MAX_OUTPUT_PORT_TYPE
+Bus[11] <= Bus[11].DB_MAX_OUTPUT_PORT_TYPE
+Bus[12] <= Bus[12].DB_MAX_OUTPUT_PORT_TYPE
+Bus[13] <= Bus[13].DB_MAX_OUTPUT_PORT_TYPE
+Bus[14] <= Bus[14].DB_MAX_OUTPUT_PORT_TYPE
+Bus[15] <= Bus[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LC3|LC3Control:FSM
 clk => MDRSpcIn[0]~reg0.CLK
+clk => MDRSpcIn[0]~en.CLK
 clk => MDRSpcIn[1]~reg0.CLK
+clk => MDRSpcIn[1]~en.CLK
 clk => MDRSpcIn[2]~reg0.CLK
+clk => MDRSpcIn[2]~en.CLK
 clk => MDRSpcIn[3]~reg0.CLK
+clk => MDRSpcIn[3]~en.CLK
 clk => MDRSpcIn[4]~reg0.CLK
+clk => MDRSpcIn[4]~en.CLK
 clk => MDRSpcIn[5]~reg0.CLK
+clk => MDRSpcIn[5]~en.CLK
 clk => MDRSpcIn[6]~reg0.CLK
+clk => MDRSpcIn[6]~en.CLK
 clk => MDRSpcIn[7]~reg0.CLK
+clk => MDRSpcIn[7]~en.CLK
 clk => MDRSpcIn[8]~reg0.CLK
+clk => MDRSpcIn[8]~en.CLK
 clk => MDRSpcIn[9]~reg0.CLK
+clk => MDRSpcIn[9]~en.CLK
 clk => MDRSpcIn[10]~reg0.CLK
+clk => MDRSpcIn[10]~en.CLK
 clk => MDRSpcIn[11]~reg0.CLK
+clk => MDRSpcIn[11]~en.CLK
 clk => MDRSpcIn[12]~reg0.CLK
+clk => MDRSpcIn[12]~en.CLK
 clk => MDRSpcIn[13]~reg0.CLK
+clk => MDRSpcIn[13]~en.CLK
 clk => MDRSpcIn[14]~reg0.CLK
+clk => MDRSpcIn[14]~en.CLK
 clk => MDRSpcIn[15]~reg0.CLK
-clk => ldMARSpcIn~reg0.CLK
+clk => MDRSpcIn[15]~en.CLK
 clk => MARSpcIn[0]~reg0.CLK
+clk => MARSpcIn[0]~en.CLK
 clk => MARSpcIn[1]~reg0.CLK
+clk => MARSpcIn[1]~en.CLK
 clk => MARSpcIn[2]~reg0.CLK
+clk => MARSpcIn[2]~en.CLK
 clk => MARSpcIn[3]~reg0.CLK
+clk => MARSpcIn[3]~en.CLK
 clk => MARSpcIn[4]~reg0.CLK
+clk => MARSpcIn[4]~en.CLK
 clk => MARSpcIn[5]~reg0.CLK
+clk => MARSpcIn[5]~en.CLK
 clk => MARSpcIn[6]~reg0.CLK
+clk => MARSpcIn[6]~en.CLK
 clk => MARSpcIn[7]~reg0.CLK
+clk => MARSpcIn[7]~en.CLK
 clk => MARSpcIn[8]~reg0.CLK
+clk => MARSpcIn[8]~en.CLK
 clk => MARSpcIn[9]~reg0.CLK
+clk => MARSpcIn[9]~en.CLK
 clk => MARSpcIn[10]~reg0.CLK
+clk => MARSpcIn[10]~en.CLK
 clk => MARSpcIn[11]~reg0.CLK
+clk => MARSpcIn[11]~en.CLK
 clk => MARSpcIn[12]~reg0.CLK
+clk => MARSpcIn[12]~en.CLK
 clk => MARSpcIn[13]~reg0.CLK
+clk => MARSpcIn[13]~en.CLK
 clk => MARSpcIn[14]~reg0.CLK
+clk => MARSpcIn[14]~en.CLK
 clk => MARSpcIn[15]~reg0.CLK
+clk => MARSpcIn[15]~en.CLK
 clk => selMAR~reg0.CLK
 clk => selEAB2[0]~reg0.CLK
 clk => selEAB2[1]~reg0.CLK
@@ -337,10 +384,6 @@ clk => SR1[2]~reg0.CLK
 clk => DR[0]~reg0.CLK
 clk => DR[1]~reg0.CLK
 clk => DR[2]~reg0.CLK
-clk => ldIR~reg0.CLK
-clk => selPC[0]~reg0.CLK
-clk => selPC[1]~reg0.CLK
-clk => ldMDR~reg0.CLK
 clk => selMDR[0]~reg0.CLK
 clk => selMDR[1]~reg0.CLK
 clk => next_state[0].CLK
@@ -349,8 +392,13 @@ clk => next_state[2].CLK
 clk => next_state[3].CLK
 clk => next_state[4].CLK
 clk => next_state[5].CLK
+clk => selPC[0]~reg0.CLK
+clk => selPC[1]~reg0.CLK
+clk => ldMARSpcIn~reg0.CLK
+clk => ldIR~reg0.CLK
 clk => ldPC~reg0.CLK
 clk => ldMAR~reg0.CLK
+clk => ldMDR~reg0.CLK
 clk => enaPC~reg0.CLK
 clk => enaALU~reg0.CLK
 clk => enaMDR~reg0.CLK
@@ -439,38 +487,38 @@ current_state[2] <= current_state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[3] <= current_state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[4] <= current_state[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[5] <= current_state[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[0] <= MDRSpcIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[1] <= MDRSpcIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[2] <= MDRSpcIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[3] <= MDRSpcIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[4] <= MDRSpcIn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[5] <= MDRSpcIn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[6] <= MDRSpcIn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[7] <= MDRSpcIn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[8] <= MDRSpcIn[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[9] <= MDRSpcIn[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[10] <= MDRSpcIn[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[11] <= MDRSpcIn[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[12] <= MDRSpcIn[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[13] <= MDRSpcIn[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[14] <= MDRSpcIn[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[15] <= MDRSpcIn[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[0] <= MARSpcIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[1] <= MARSpcIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[2] <= MARSpcIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[3] <= MARSpcIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[4] <= MARSpcIn[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[5] <= MARSpcIn[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[6] <= MARSpcIn[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[7] <= MARSpcIn[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[8] <= MARSpcIn[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[9] <= MARSpcIn[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[10] <= MARSpcIn[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[11] <= MARSpcIn[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[12] <= MARSpcIn[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[13] <= MARSpcIn[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[14] <= MARSpcIn[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MARSpcIn[15] <= MARSpcIn[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[0] <= MDRSpcIn[0].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[1] <= MDRSpcIn[1].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[2] <= MDRSpcIn[2].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[3] <= MDRSpcIn[3].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[4] <= MDRSpcIn[4].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[5] <= MDRSpcIn[5].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[6] <= MDRSpcIn[6].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[7] <= MDRSpcIn[7].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[8] <= MDRSpcIn[8].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[9] <= MDRSpcIn[9].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[10] <= MDRSpcIn[10].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[11] <= MDRSpcIn[11].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[12] <= MDRSpcIn[12].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[13] <= MDRSpcIn[13].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[14] <= MDRSpcIn[14].DB_MAX_OUTPUT_PORT_TYPE
+MDRSpcIn[15] <= MDRSpcIn[15].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[0] <= MARSpcIn[0].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[1] <= MARSpcIn[1].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[2] <= MARSpcIn[2].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[3] <= MARSpcIn[3].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[4] <= MARSpcIn[4].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[5] <= MARSpcIn[5].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[6] <= MARSpcIn[6].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[7] <= MARSpcIn[7].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[8] <= MARSpcIn[8].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[9] <= MARSpcIn[9].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[10] <= MARSpcIn[10].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[11] <= MARSpcIn[11].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[12] <= MARSpcIn[12].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[13] <= MARSpcIn[13].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[14] <= MARSpcIn[14].DB_MAX_OUTPUT_PORT_TYPE
+MARSpcIn[15] <= MARSpcIn[15].DB_MAX_OUTPUT_PORT_TYPE
 ldMARSpcIn <= ldMARSpcIn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -2812,6 +2860,22 @@ MARIn[12] <= MARIn[12].DB_MAX_OUTPUT_PORT_TYPE
 MARIn[13] <= MARIn[13].DB_MAX_OUTPUT_PORT_TYPE
 MARIn[14] <= MARIn[14].DB_MAX_OUTPUT_PORT_TYPE
 MARIn[15] <= MARIn[15].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[0] <= MDRIn[0].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[1] <= MDRIn[1].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[2] <= MDRIn[2].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[3] <= MDRIn[3].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[4] <= MDRIn[4].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[5] <= MDRIn[5].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[6] <= MDRIn[6].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[7] <= MDRIn[7].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[8] <= MDRIn[8].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[9] <= MDRIn[9].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[10] <= MDRIn[10].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[11] <= MDRIn[11].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[12] <= MDRIn[12].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[13] <= MDRIn[13].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[14] <= MDRIn[14].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[15] <= MDRIn[15].DB_MAX_OUTPUT_PORT_TYPE
 MDRSpcIn[0] => MDRIn[0].DATAA
 MDRSpcIn[1] => MDRIn[1].DATAA
 MDRSpcIn[2] => MDRIn[2].DATAA
@@ -2863,368 +2927,170 @@ ldMARSpcIn => MARIn[15].OUTPUTSELECT
 ldMARSpcIn => MARIn[15].IN0
 
 
-|LC3|Memory:memory|bit_16_register:MAR_reg
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_negedge_flip_flop:ff_0.Q
-Q[1] <= d_negedge_flip_flop:ff_1.Q
-Q[2] <= d_negedge_flip_flop:ff_2.Q
-Q[3] <= d_negedge_flip_flop:ff_3.Q
-Q[4] <= d_negedge_flip_flop:ff_4.Q
-Q[5] <= d_negedge_flip_flop:ff_5.Q
-Q[6] <= d_negedge_flip_flop:ff_6.Q
-Q[7] <= d_negedge_flip_flop:ff_7.Q
-Q[8] <= d_negedge_flip_flop:ff_8.Q
-Q[9] <= d_negedge_flip_flop:ff_9.Q
-Q[10] <= d_negedge_flip_flop:ff_10.Q
-Q[11] <= d_negedge_flip_flop:ff_11.Q
-Q[12] <= d_negedge_flip_flop:ff_12.Q
-Q[13] <= d_negedge_flip_flop:ff_13.Q
-Q[14] <= d_negedge_flip_flop:ff_14.Q
-Q[15] <= d_negedge_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MAR_reg|d_negedge_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_negedge_flip_flop:ff_0.Q
-Q[1] <= d_negedge_flip_flop:ff_1.Q
-Q[2] <= d_negedge_flip_flop:ff_2.Q
-Q[3] <= d_negedge_flip_flop:ff_3.Q
-Q[4] <= d_negedge_flip_flop:ff_4.Q
-Q[5] <= d_negedge_flip_flop:ff_5.Q
-Q[6] <= d_negedge_flip_flop:ff_6.Q
-Q[7] <= d_negedge_flip_flop:ff_7.Q
-Q[8] <= d_negedge_flip_flop:ff_8.Q
-Q[9] <= d_negedge_flip_flop:ff_9.Q
-Q[10] <= d_negedge_flip_flop:ff_10.Q
-Q[11] <= d_negedge_flip_flop:ff_11.Q
-Q[12] <= d_negedge_flip_flop:ff_12.Q
-Q[13] <= d_negedge_flip_flop:ff_13.Q
-Q[14] <= d_negedge_flip_flop:ff_14.Q
-Q[15] <= d_negedge_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|Memory:memory|bit_16_register:MDR_reg|d_negedge_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
+|LC3|Memory:memory|bit_16_reg:MAR_reg
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|Memory:memory|bit_16_reg:MDR_reg
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
 
 
 |LC3|Memory:memory|mem:mem_inst

@@ -16,7 +16,8 @@ module LC3 (clk,
 	memOut,
 	MARIn,
 	MAROut,
-	MDROut
+	MDROut,
+	MDRIn
 	// ------------------------------
 );
 
@@ -44,11 +45,13 @@ wire [15:0] eabOut;
 wire [15:0] IR;
 wire N, Z, P;
 
-// memory special inputs
+// memory I/Os
 output [15:0] MDRSpcIn, MARSpcIn, memOut;
 output ldMARSpcIn;
 output [15:0] MARIn;
 output [15:0] MAROut;
+output [15:0] MDRIn;
+
 // =======================================================================
 // ===================== Implementation begin ============================
 // =======================================================================
@@ -128,6 +131,7 @@ Memory memory(
 	.MDROut(MDROut),
 	.MARIn(MARIn),
 	.MAROut(MAROut),
+	.MDRIn(MDRIn),
 	// memory special inputs
 	.MDRSpcIn(MDRSpcIn),
 	.MARSpcIn(MARSpcIn),

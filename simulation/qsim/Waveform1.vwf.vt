@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/23/2019 22:49:55"
+// Generated on "02/26/2019 10:50:35"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LC3
 // 
@@ -36,6 +36,7 @@ wire [15:0] IR;
 wire [15:0] MARIn;
 wire [15:0] MAROut;
 wire [15:0] MARSpcIn;
+wire [15:0] MDRIn;
 wire [15:0] MDROut;
 wire [15:0] MDRSpcIn;
 wire [15:0] PC;
@@ -51,6 +52,7 @@ LC3 i1 (
 	.MARIn(MARIn),
 	.MAROut(MAROut),
 	.MARSpcIn(MARSpcIn),
+	.MDRIn(MDRIn),
 	.MDROut(MDROut),
 	.MDRSpcIn(MDRSpcIn),
 	.PC(PC),
