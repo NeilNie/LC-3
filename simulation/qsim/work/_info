@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dC:/Users/USER1/Digital Logic/LC-3/simulation/qsim
 vhard_block
-Z1 !s110 1550980199
+Z1 !s110 1551220730
 !i10b 1
-!s100 :8E<aXL3]EM=g302<2lW[0
-Io?;6[Wog84`?jaR6QD6=Q3
+!s100 2g4]1M4M8?HVV8JTbzC:?1
+Imz^Dc<]SAUn]2f=PH5g_j1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1550980197
+Z3 w1551220725
 Z4 8LC3.vo
 Z5 FLC3.vo
-L0 27390
+L0 26349
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1550980198.000000
+Z7 !s108 1551220730.000000
 Z8 !s107 LC3.vo|
 Z9 !s90 -work|work|LC3.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vLC3
 R1
 !i10b 1
-!s100 :C]>12ne`?BZ>[fgPCj3e0
-I3@EDWj>YH1cDjDh<K`WXQ0
+!s100 R4MIL<8EMTbZf?lgPP:F^2
+IQEXS@n01Y8RaRahfIT^W90
 R2
 R0
 R3
@@ -52,13 +52,13 @@ R10
 R11
 n@l@c3
 vLC3_vlg_vec_tst
-R1
+!s110 1551220731
 !i10b 1
-!s100 A4XG_=S3I[<@FXU@VUOKQ3
-I2g7CbV>b`2?k6_zZfM[B31
+!s100 Ye6j76>UWESQScS=Uz2141
+IkLnjYTGMLYGVNa0mE2gTD3
 R2
 R0
-w1550980196
+w1551220723
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
 L0 29
@@ -66,7 +66,7 @@ R6
 r1
 !s85 0
 31
-!s108 1550980199.000000
+R7
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1

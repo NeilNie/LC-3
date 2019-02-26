@@ -10,11 +10,8 @@ module LC3 (clk,
 	Bus,
 	PC,
 	current_state,
-	
-	MDRSpcIn, MARSpcIn,
-	ldMARSpcIn,
+
 	memOut,
-	MARIn,
 	MAROut,
 	MDROut
 	// ------------------------------
@@ -36,7 +33,6 @@ wire regWE, memWE;
 // internal wires
 output [15:0] IR, Bus, PC;
 wire [15:0] ALUOut;
-output [15:0] MDROut;
 wire [15:0] MARMuxOut;
 wire [15:0] regOut0;
 wire [15:0] regOut1;
@@ -44,11 +40,8 @@ wire [15:0] eabOut;
 wire [15:0] IR;
 wire N, Z, P;
 
-// memory special inputs
-output [15:0] MDRSpcIn, MARSpcIn, memOut;
-output ldMARSpcIn;
-output [15:0] MARIn;
-output [15:0] MAROut;
+// memory I/Os
+output [15:0] memOut, MAROut, MDROut;
 // =======================================================================
 // ===================== Implementation begin ============================
 // =======================================================================
@@ -126,12 +119,7 @@ Memory memory(
 	.clk(clk),
 	.reset(reset),
 	.MDROut(MDROut),
-	.MARIn(MARIn),
 	.MAROut(MAROut),
-	// memory special inputs
-	.MDRSpcIn(MDRSpcIn),
-	.MARSpcIn(MARSpcIn),
-	.ldMARSpcIn(ldMARSpcIn),
 	.memOut(memOut));
 
 // -----------------------------------------------------

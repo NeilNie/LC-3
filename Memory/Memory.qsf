@@ -48,13 +48,15 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE ../PC/d_negedge_flip_flop.v
-set_global_assignment -name VERILOG_FILE ../PC/bit_16_register.v
-set_global_assignment -name SOURCE_FILE mem.cmp
-set_global_assignment -name VERILOG_FILE Memory.v
-set_global_assignment -name QIP_FILE mem.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SOURCE_FILE two_port_ram.cmp
+set_global_assignment -name VERILOG_FILE ../PC/d_negedge_flip_flop.v
+set_global_assignment -name VERILOG_FILE ../PC/bit_16_register.v
+set_global_assignment -name VERILOG_FILE Memory.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name MIF_FILE ../LC3_instruction_mem_init.mif
+set_global_assignment -name QIP_FILE two_port_ram.qip
+set_global_assignment -name QIP_FILE two_port_ramv2.qip
