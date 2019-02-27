@@ -68,6 +68,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "mem_out_direct[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_out_direct[15]",
+					"strict" : false
+				},
+				{
 					"name" : "MAROut[0]",
 					"strict" : false
 				},
@@ -200,7 +264,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "Bus[0]",
+					"strict" : false
+				},
+				{
 					"name" : "ldMDR",
+					"strict" : false
+				},
+				{
+					"name" : "selMDR",
 					"strict" : false
 				},
 				{
@@ -208,31 +280,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "ldMAR",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Bus[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ldMARSpcIn",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[1]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[2]",
 					"strict" : false
 				},
 				{
@@ -240,15 +288,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[3]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[4]",
 					"strict" : false
 				},
 				{
@@ -256,15 +296,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[5]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[5]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[6]",
 					"strict" : false
 				},
 				{
@@ -272,15 +304,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[7]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[8]",
 					"strict" : false
 				},
 				{
@@ -288,15 +312,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[9]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[10]",
 					"strict" : false
 				},
 				{
@@ -304,15 +320,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[11]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[12]",
 					"strict" : false
 				},
 				{
@@ -320,23 +328,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[13]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[13]",
 					"strict" : false
 				},
 				{
-					"name" : "MARSpcIn[14]",
-					"strict" : false
-				},
-				{
 					"name" : "Bus[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MARSpcIn[15]",
 					"strict" : false
 				},
 				{
@@ -348,75 +344,139 @@
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[0]",
+					"name" : "address_in_direct[14]",
 					"strict" : false
 				},
 				{
-					"name" : "selMDR[1]",
+					"name" : "address_in_direct[15]",
 					"strict" : false
 				},
 				{
-					"name" : "selMDR[0]",
+					"name" : "address_in_direct[13]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[1]",
+					"name" : "clk_direct",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[2]",
+					"name" : "data_in_direct[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[3]",
+					"name" : "address_in_direct[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[4]",
+					"name" : "address_in_direct[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[5]",
+					"name" : "address_in_direct[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[6]",
+					"name" : "address_in_direct[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[7]",
+					"name" : "address_in_direct[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[8]",
+					"name" : "address_in_direct[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[9]",
+					"name" : "address_in_direct[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[10]",
+					"name" : "address_in_direct[7]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[11]",
+					"name" : "address_in_direct[8]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[12]",
+					"name" : "address_in_direct[9]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[13]",
+					"name" : "address_in_direct[10]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[14]",
+					"name" : "address_in_direct[11]",
 					"strict" : false
 				},
 				{
-					"name" : "MDRSpcIn[15]",
+					"name" : "address_in_direct[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_direct[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ldMAR",
 					"strict" : false
 				}
 			]

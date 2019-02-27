@@ -33,7 +33,7 @@ module LC3Control(
 input [15:0] IR;
 input clk, N,Z,P;
 
-// **20** outputs
+// outputs
 output reg reset, enaALU;
 output reg regWE, enaMARM, selMAR, selEAB1, enaPC;
 output reg ldPC, ldIR, ldMAR, ldMDR, memWE, enaMDR;
@@ -49,13 +49,14 @@ output reg [5:0] current_state;
 reg [5:0] next_state;
 
 initial begin
-	current_state <= 6'b000000;
-	next_state <= 6'b000000;
+	current_state <= 6'b101111;
+	// next_state <= 6'b000000;
 end
 
 
 always @ (posedge clk) begin
 
+	//
 	//
 	// begin ============= instruction fetch ==================
 	
@@ -63,17 +64,16 @@ always @ (posedge clk) begin
 	if (current_state == 6'b010010) begin
 		
 		// MAR <- PC
-		// PC <- PC + 1
 		
-		// turn off WE
-		memWE <= 0; 	regWE <= 0;
+		memWE <= 0;
+		regWE <= 0;
+		enaMARM <= 0;
+		enaMDR <= 0;
+		enaALU <= 0;
+		enaPC <= 1;
 		
-		// turn on PC tri state buffer 
-		enaMARM <= 0;	enaMDR <= 0;	enaALU <= 0;	enaPC <= 1;
-		
-		ldMDR <= 0;		ldMAR <= 1;		ldPC <= 1;		ldIR <= 0;
-		ldMARSpcIn <= 0;
-		selPC <= 2'b00;
+		ldMAR <= 1;
+		ldPC <= 0;
 
 		next_state <= 6'b100001;
 	end
@@ -81,19 +81,20 @@ always @ (posedge clk) begin
 	// state #: 33
 	else if (current_state == 6'b100001) begin
 		
+		// PC <- PC + 1
 		// MDR <- M[MAR]
 
 		selMDR <= 2'b01;
+		ldMDR <= 1;
+		ldMAR <= 0;
+		ldPC <= 1;
+		selPC <= 2'b00;
 		
-		// assert load signals (ldMAR still on???)
-		ldMDR <= 1;		ldMAR <= 0;		ldPC <= 0;		ldIR <= 0;
-		
-		// close all tri state buffer
-		enaMARM <= 0;	enaMDR <= 0;	enaALU <= 0;	enaPC <= 0;
+		enaMARM <= 0;
+		enaMDR <= 1;
+		enaALU <= 0;
+		enaPC <= 0; 	// close all tri state buffer
 	
-		// turn off WE
-		memWE <= 0; 	regWE <= 0;
-		
 		next_state <= 6'b100011;
 	end
 	
@@ -101,31 +102,31 @@ always @ (posedge clk) begin
 	else if (current_state == 6'b100011) begin
 		
 		// IR <- MDR
-		enaMARM <= 0;	enaMDR <= 1;	enaALU <= 0;	enaPC <= 0;
-		
-		// assert load signals
-		ldPC <= 0;		ldIR <= 1;		ldMDR <= 0;		ldMAR <= 0;
-		
-		// turn off WE
-		memWE <= 0; 	regWE <= 0;
+		enaMARM <= 0;
+		enaMDR <= 1;
+		enaALU <= 0;
+		enaPC <= 0;
+		ldPC <= 0;
+		ldIR <= 1;
+		ldMDR <= 0;
 		
 		next_state <= 6'b100000;
 	end
 	// end ============== instruction fetch ===================
+	
 	// 
 	//
+	
 	// begin ============= instruction parse ==================
 	
 	else if (current_state == 6'b100000) begin
+		enaMARM <= 0;
+		enaMDR <= 0;
+		enaALU <= 0;
+		enaPC <= 0; 	// close all tri state buffer
 		
-		// close all tri state buffer
-		enaMARM <= 0;	enaMDR <= 1;	enaALU <= 0;	enaPC <= 0;
-		
-		// turn off all loads
-		ldPC <= 0;		ldIR <= 0;		ldMDR <= 0;		ldMAR <= 0;
-		
-		// turn off WE
-		memWE <= 0; 	regWE <= 0;
+		ldPC <= 0;
+		ldIR <= 0;
 		
 		next_state <= {2'b00, IR[15:12]};
 	end
@@ -180,17 +181,11 @@ always @ (posedge clk) begin
 	// state #: 14 (LEA)
 	else if (current_state == 6'b001110) begin
 		
+		// DR <- PC + OffSet9
 		regWE <= 1;
-		DR <= IR[11:9];
-		
-		selEAB1 <= 0;
-		selEAB2 <= 2'b10;
-		selMAR <= 0;
-		
-		enaMARM <= 1;	enaPC <= 0;		enaMDR <= 0;	enaALU <= 0;
-		
-		// assert low load signals 
-		ldMDR <= 0;		ldMAR <= 0;		ldPC <= 0;		ldIR <= 0;
+		DR <= IR[11:9];	SR2 <= 3'b000; 	DR <= 3'b000;
+		selEAB1 <= 0; 		selEAB2 <= 2'b10;	selMAR <= 0;
+		enaMDR <= 0;		enaALU <= 0;		enaPC <= 0;			enaMARM <= 1;
 		
 		next_state <= 6'b010010;
 	end
@@ -199,16 +194,12 @@ always @ (posedge clk) begin
 	else if (current_state == 6'b000011) begin
 		
 		// MAR <= PC + Offset9
-		
-		enaMDR <= 0;
-		enaALU <= 0;
-		enaPC <= 0;
-		
-		selEAB2 <= 2'b10;
-		selEAB1 <= 1'b0;
-		selMAR <= 1'b0;
-		enaMARM <= 1'b1;
-		ldMAR <= 1'b1;
+	
+		enaMDR <= 0;		enaALU <= 0;		enaPC <= 0;			enaMARM <= 1'b1;
+		selEAB2 <= 2'b10;	selEAB1 <= 1'b0;	selMAR <= 1'b0;
+		ldMAR <= 1;			ldPC <= 0; 			ldIR <= 0;			ldMDR <= 0;
+		SR1 <= 3'b000; 	SR2 <= 3'b000; 	DR <= 3'b000;
+		memWE <= 0;			regWE <= 0;
 		
 		next_state <= 6'b010111;
 	end
@@ -218,16 +209,12 @@ always @ (posedge clk) begin
 		
 		// MDR <= SR
 		
-		enaMDR <= 0;
-		enaALU <= 1;
-		enaPC <= 0;
-		enaMARM <= 0;
-		
-		SR1 <= IR[11:9];
-		regWE <= 1'b0;
+		enaMDR <= 0;		enaALU <= 1;		enaPC <= 0;			enaMARM <= 0;
+		ldMAR <= 0;			ldPC <= 0; 			ldIR <= 0;			ldMDR <= 1;
+		SR1 <= IR[11:9]; 	SR2 <= 3'b000; 	DR <= 3'b000;
+		regWE <= 1'b0;		memWE <= 0;
 		aluControl <= 2'b00;
 		selMDR <= 2'b00;
-		ldMDR <= 1'b1;
 		
 		next_state <= 6'b010000;
 	end
@@ -245,88 +232,19 @@ always @ (posedge clk) begin
 	// ========================================================
 	// ========= Preload instructions into the memory =========
 	// ========================================================
-	
-	// first instruction address
-	else if (current_state == 6'b000000) begin
-		
-		MARSpcIn <= 16'h0001;
-		ldMAR <= 1;
-		ldMARSpcIn <= 1;
-		memWE <= 1;
-		next_state <= 6'b111111;
-		
-	end
-	
-	// first instruction value
-	else if (current_state == 6'b111111) begin
-		
-		MDRSpcIn <= 16'b1110001000000011;	// LEA, R1, OffSet=3
-		ldMDR <= 1;
-		selMDR <= 2'b11;
-		memWE <= 1;
-		
-		next_state <= 6'b110000;
-	end
-	
-	else if (current_state == 6'b110000) begin
-		
-		memWE <= 0;
-		next_state <= 6'b101110;
-	end
-	
-	//----------------------------------------
-	// second instruction address
-	else if (current_state == 6'b101110) begin
-		
-		MARSpcIn <= 16'h0002;
-		ldMAR <= 1;
-		ldMARSpcIn <= 1;
-		// memWE <= 1;
-		next_state <= 6'b101000;
-	
-	end
-	
-	// second instruction value
-	else if (current_state == 6'b101000) begin
-		
-		MDRSpcIn <= 16'b0011001000000000;	// ST, R1, OffSet=0
-		ldMDR <= 1;
-		selMDR <= 2'b11;
-		memWE <= 1;
 
-		next_state <= 6'b101001;
-	end
-	
-	
-	// ------------------------------------------------------
-	// testing reading values
-	// ------------------------------------------------------
-//	
-	else if (current_state == 6'b101001) begin
+	else if (current_state == 6'b101111) begin
 		
-		selPC <= 2'b00;
 		ldPC <= 1;
-		memWE <= 0;
+		selPC <= 2'b00;
 		
-		enaMDR <= 0;		enaALU <= 0;				enaMARM <= 0;				enaPC <= 0;
-		ldMARSpcIn <= 0;	MARSpcIn <= 16'hzzzz;	MDRSpcIn <= 16'hzzzz;	ldMDR <= 2'b00;
-		
-//		reset <= 0; enaALU;
-//  		regWE <= 0; enaMARM <= 0; selMAR, selEAB1, enaPC;
-//		ldPC, ldIR, ldMAR, ldMDR, memWE, enaMDR;
-//		[1:0] aluControl, selPC, selEAB2, selMDR;
-//		[2:0] SR1, SR2, DR;
-		
-		next_state <= 6'b111110;
-	
+		next_state <= 6'b101011;
 	end
 	
 	// return to state 18
-	else if (current_state == 6'b111110) begin
+	else if (current_state == 6'b101011) begin
 		
-		selPC <= 2'b00;
-		ldMARSpcIn <= 0;	ldMAR <= 0;		ldMDR <= 0;		ldPC <= 1;
-		enaMDR <= 0;		enaALU <= 0;	enaMARM <= 0;	enaPC <= 0;
+		ldMARSpcIn <= 0;
 		
 		next_state <= 6'b010010;
 	end
