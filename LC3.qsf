@@ -60,6 +60,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME general_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id general_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME general_tb -section_id general_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE general_tb.v -section_id general_tb
+set_global_assignment -name MIF_FILE LC3_instruction_mem_init.mif
 set_global_assignment -name VERILOG_FILE Memory/two_port_mem.v
 set_global_assignment -name VERILOG_FILE bit_16_reg.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf

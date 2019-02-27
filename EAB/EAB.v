@@ -37,15 +37,16 @@ always @(*) begin
 
 	if (selEAB2 == 2'b00) begin
 		adder_input_2 = 0;
-	end else if (selEAB2 == 2'b01) begin
-		mux_2_input = {IR[10],IR[10],IR[10],IR[10],IR[10],IR[10],IR[10],IR[10],IR[10],IR[10],6'b0};
-	end else if (selEAB2 == 2'b10) begin
-		mux_2_input = {IR[8],IR[8],IR[8],IR[8],IR[8],IR[8],IR[8],9'b0};
 	end else if (selEAB2 == 2'b11) begin
-		mux_2_input = {IR[5],IR[5],IR[5],IR[5],IR[5],11'b0};
+		mux_2_input = {IR[10],IR[10],IR[10],IR[10],IR[10]};
+		adder_input_2 = {mux_2_input, IR[10:0]};
+	end else if (selEAB2 == 2'b10) begin
+		mux_2_input = {IR[8],IR[8],IR[8],IR[8],IR[8],IR[8],IR[8]};
+		adder_input_2 = {mux_2_input, IR[8:0]};
+	end else if (selEAB2 == 2'b01) begin
+		mux_2_input = {IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5],IR[5]};
+		adder_input_2 = {mux_2_input, IR[5:0]};
 	end
-	
-	adder_input_2 = mux_2_input + IR;
 
 end
 

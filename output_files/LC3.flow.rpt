@@ -1,5 +1,5 @@
 Flow report for LC3
-Tue Feb 26 22:59:41 2019
+Wed Feb 27 12:18:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 26 22:59:41 2019       ;
+; Flow Status                        ; Successful - Wed Feb 27 12:18:30 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 575 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 528 / 114,480 ( < 1 % )                     ;
+; Total logic elements               ; 598 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 539 / 114,480 ( < 1 % )                     ;
 ;     Dedicated logic registers      ; 245 / 114,480 ( < 1 % )                     ;
 ; Total registers                    ; 245                                         ;
 ; Total pins                         ; 119 / 529 ( 22 % )                          ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/26/2019 22:29:36 ;
+; Start date & time ; 02/27/2019 12:09:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LC3                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 8796753388042.155123817601272          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 8796753388042.155128736103508          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; general_tb     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; general_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -101,18 +101,18 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4772 MB             ; 00:00:33                           ;
-; Fitter               ; 00:00:54     ; 1.0                     ; 5320 MB             ; 00:00:52                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4708 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4827 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4687 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4770 MB             ; 00:00:34                           ;
+; Fitter               ; 00:00:55     ; 1.0                     ; 5316 MB             ; 00:00:53                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4707 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.0                     ; 4825 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 4689 MB             ; 00:00:04                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4666 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
-; Total                ; 00:01:52     ; --                      ; --                  ; 00:01:43                           ;
+; Total                ; 00:02:02     ; --                      ; --                  ; 00:01:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3
-Tue Feb 26 22:30:13 2019
+Wed Feb 27 12:10:00 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,13 +54,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 26 22:30:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 27 12:10:00 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 692                                         ;
-;     Total combinational functions  ; 528                                         ;
+; Total logic elements               ; 703                                         ;
+;     Total combinational functions  ; 539                                         ;
 ;     Dedicated logic registers      ; 245                                         ;
 ; Total registers                    ; 245                                         ;
 ; Total pins                         ; 119                                         ;
@@ -157,46 +157,46 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; Memory/two_port_mem.v            ; yes             ; User Wizard-Generated File             ; C:/Users/USER1/Digital Logic/LC-3/Memory/two_port_mem.v                      ;         ;
-; bit_16_reg.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/bit_16_reg.v                               ;         ;
-; Register File/RegisterFile.v     ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v               ;         ;
-; Register File/Register.v         ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v                   ;         ;
-; Register File/mux_8_1_bit_16.v   ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v             ;         ;
-; Register File/decoder_3_8.v      ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v                ;         ;
-; Register File/d_flip_flop.v      ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v                ;         ;
-; PC/PC.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/PC/PC.v                                    ;         ;
-; PC/d_negedge_flip_flop.v         ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v                   ;         ;
-; PC/bit_16_register.v             ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v                       ;         ;
-; NZP/NZP_register.v               ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v                         ;         ;
-; NZP/NZP.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v                                  ;         ;
-; Memory/Memory.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v                            ;         ;
-; MARMux/MARMux.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v                            ;         ;
-; LC3Control/LC3Control.v          ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v                    ;         ;
-; IR/IR.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/IR/IR.v                                    ;         ;
-; EAB/EAB.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v                                  ;         ;
-; ALU/ALU.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v                                  ;         ;
-; LC3.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/LC3.v                                      ;         ;
-; bus_tri_state_buffer.v           ; yes             ; User Verilog HDL File                  ; C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v                     ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_67i2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf                     ;         ;
-; lc3_instruction_mem_init.mif     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/USER1/Digital Logic/LC-3/lc3_instruction_mem_init.mif               ;         ;
-; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/USER1/Digital Logic/LC-3/db/decode_rsa.tdf                          ;         ;
-; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/USER1/Digital Logic/LC-3/db/decode_k8a.tdf                          ;         ;
-; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/USER1/Digital Logic/LC-3/db/mux_qob.tdf                             ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; LC3_instruction_mem_init.mif     ; yes             ; User Memory Initialization File  ; C:/Users/USER1/Digital Logic/LC-3/LC3_instruction_mem_init.mif               ;         ;
+; Memory/two_port_mem.v            ; yes             ; User Wizard-Generated File       ; C:/Users/USER1/Digital Logic/LC-3/Memory/two_port_mem.v                      ;         ;
+; bit_16_reg.v                     ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/bit_16_reg.v                               ;         ;
+; Register File/RegisterFile.v     ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v               ;         ;
+; Register File/Register.v         ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v                   ;         ;
+; Register File/mux_8_1_bit_16.v   ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v             ;         ;
+; Register File/decoder_3_8.v      ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v                ;         ;
+; Register File/d_flip_flop.v      ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Register File/d_flip_flop.v                ;         ;
+; PC/PC.v                          ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/PC/PC.v                                    ;         ;
+; PC/d_negedge_flip_flop.v         ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/PC/d_negedge_flip_flop.v                   ;         ;
+; PC/bit_16_register.v             ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/PC/bit_16_register.v                       ;         ;
+; NZP/NZP_register.v               ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v                         ;         ;
+; NZP/NZP.v                        ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v                                  ;         ;
+; Memory/Memory.v                  ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v                            ;         ;
+; MARMux/MARMux.v                  ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/MARMux/MARMux.v                            ;         ;
+; LC3Control/LC3Control.v          ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v                    ;         ;
+; IR/IR.v                          ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/IR/IR.v                                    ;         ;
+; EAB/EAB.v                        ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v                                  ;         ;
+; ALU/ALU.v                        ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v                                  ;         ;
+; LC3.v                            ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/LC3.v                                      ;         ;
+; bus_tri_state_buffer.v           ; yes             ; User Verilog HDL File            ; C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v                     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_67i2.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf                     ;         ;
+; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction      ; C:/Users/USER1/Digital Logic/LC-3/db/decode_rsa.tdf                          ;         ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction      ; C:/Users/USER1/Digital Logic/LC-3/db/decode_k8a.tdf                          ;         ;
+; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction      ; C:/Users/USER1/Digital Logic/LC-3/db/mux_qob.tdf                             ;         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -204,17 +204,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 692       ;
+; Estimated Total logic elements              ; 703       ;
 ;                                             ;           ;
-; Total combinational functions               ; 528       ;
+; Total combinational functions               ; 539       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 362       ;
-;     -- 3 input functions                    ; 107       ;
-;     -- <=2 input functions                  ; 59        ;
+;     -- 4 input functions                    ; 372       ;
+;     -- 3 input functions                    ; 106       ;
+;     -- <=2 input functions                  ; 61        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 481       ;
-;     -- arithmetic mode                      ; 47        ;
+;     -- normal mode                          ; 495       ;
+;     -- arithmetic mode                      ; 44        ;
 ;                                             ;           ;
 ; Total registers                             ; 245       ;
 ;     -- Dedicated logic registers            ; 245       ;
@@ -227,8 +227,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 373       ;
-; Total fan-out                               ; 5193      ;
-; Average fan-out                             ; 4.56      ;
+; Total fan-out                               ; 5237      ;
+; Average fan-out                             ; 4.55      ;
 +---------------------------------------------+-----------+
 
 
@@ -237,9 +237,9 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name          ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |LC3                                         ; 528 (1)             ; 245 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 119  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
+; |LC3                                         ; 539 (1)             ; 245 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 119  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
 ;    |ALU:alu|                                 ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|ALU:alu                                                                                                                              ; ALU                  ; work         ;
-;    |EAB:eab|                                 ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|EAB:eab                                                                                                                              ; EAB                  ; work         ;
+;    |EAB:eab|                                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|EAB:eab                                                                                                                              ; EAB                  ; work         ;
 ;    |IR:ir|                                   ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir                                                                                                                                ; IR                   ; work         ;
 ;       |bit_16_register:register|             ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_register:register                                                                                                       ; bit_16_register      ; work         ;
 ;          |d_negedge_flip_flop:ff_0|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_0                                                                              ; d_negedge_flip_flop  ; work         ;
@@ -258,7 +258,7 @@ refer to the applicable agreement for further details.
 ;          |d_negedge_flip_flop:ff_7|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_7                                                                              ; d_negedge_flip_flop  ; work         ;
 ;          |d_negedge_flip_flop:ff_8|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_8                                                                              ; d_negedge_flip_flop  ; work         ;
 ;          |d_negedge_flip_flop:ff_9|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_9                                                                              ; d_negedge_flip_flop  ; work         ;
-;    |LC3Control:FSM|                          ; 105 (105)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
+;    |LC3Control:FSM|                          ; 121 (121)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
 ;    |Memory:memory|                           ; 96 (0)              ; 35 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory                                                                                                                        ; Memory               ; work         ;
 ;       |bit_16_reg:MAR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MAR_reg                                                                                                     ; bit_16_reg           ; work         ;
 ;       |bit_16_reg:MDR_reg|                   ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MDR_reg                                                                                                     ; bit_16_reg           ; work         ;
@@ -425,7 +425,7 @@ refer to the applicable agreement for further details.
 ;          |d_flip_flop:ff_9|                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_9                                                                                   ; d_flip_flop          ; work         ;
 ;       |mux_8_1_bit_16:mux0|                  ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0                                                                                            ; mux_8_1_bit_16       ; work         ;
 ;       |mux_8_1_bit_16:mux1|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux1                                                                                            ; mux_8_1_bit_16       ; work         ;
-;    |bus_tri_state_buffer:tsb|                ; 91 (91)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
+;    |bus_tri_state_buffer:tsb|                ; 90 (90)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -461,7 +461,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 245   ;
 ; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 19    ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 230   ;
@@ -474,31 +474,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; LC3Control:FSM|current_state[0]        ; 36      ;
-; LC3Control:FSM|current_state[1]        ; 29      ;
-; LC3Control:FSM|current_state[2]        ; 37      ;
-; LC3Control:FSM|current_state[3]        ; 30      ;
-; LC3Control:FSM|current_state[5]        ; 34      ;
+; LC3Control:FSM|current_state[0]        ; 41      ;
+; LC3Control:FSM|current_state[1]        ; 49      ;
+; LC3Control:FSM|current_state[2]        ; 44      ;
+; LC3Control:FSM|current_state[3]        ; 38      ;
+; LC3Control:FSM|current_state[5]        ; 44      ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |LC3|LC3Control:FSM|DR[2]                              ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |LC3|LC3Control:FSM|SR1[0]                             ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |LC3|LC3Control:FSM|aluControl[1]                      ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |LC3|LC3Control:FSM|SR2[2]                             ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 14 LEs               ; 70 LEs                 ; Yes        ; |LC3|LC3Control:FSM|next_state[5]                      ;
-; 64:1               ; 3 bits    ; 126 LEs       ; 12 LEs               ; 114 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMARM                            ;
-; 64:1               ; 4 bits    ; 168 LEs       ; 24 LEs               ; 144 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[3]                      ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[14] ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[6]                             ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[8]                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |LC3|LC3Control:FSM|aluControl[0]                     ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 14 LEs               ; 70 LEs                 ; Yes        ; |LC3|LC3Control:FSM|next_state[5]                     ;
+; 64:1               ; 3 bits    ; 126 LEs       ; 12 LEs               ; 114 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMDR                            ;
+; 64:1               ; 3 bits    ; 126 LEs       ; 3 LEs                ; 123 LEs                ; Yes        ; |LC3|LC3Control:FSM|SR2[1]                            ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 24 LEs               ; 144 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[2]                     ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |LC3|LC3Control:FSM|DR[1]                             ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |LC3|LC3Control:FSM|SR1[2]                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3] ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[11]                           ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[15]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -656,23 +656,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 1                           ;
 ;     ENA SCLR SLD      ; 1                           ;
 ;     ENA SLD           ; 17                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 14                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 13                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 533                         ;
-;     arith             ; 47                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 33                          ;
-;     normal            ; 486                         ;
+; cycloneiii_lcell_comb ; 544                         ;
+;     arith             ; 44                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 31                          ;
+;     normal            ; 500                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 74                          ;
-;         4 data inputs ; 362                         ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 372                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.10                       ;
-; Average LUT depth     ; 5.79                        ;
+; Max LUT depth         ; 10.80                       ;
+; Average LUT depth     ; 5.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -691,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 26 22:29:35 2019
+    Info: Processing started: Wed Feb 27 12:09:21 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3 -c LC3
 Warning (125092): Tcl Script File two_port_ram.qip not found
     Info (125063): set_global_assignment -name QIP_FILE two_port_ram.qip
@@ -858,24 +858,29 @@ Info (12128): Elaborating entity "MARMux" for hierarchy "MARMux:mar_mux" File: C
 Info (12128): Elaborating entity "IR" for hierarchy "IR:ir" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 143
 Info (12128): Elaborating entity "EAB" for hierarchy "EAB:eab" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 152
 Warning (10240): Verilog HDL Always Construct warning at EAB.v(26): inferring latch(es) for variable "adder_input_1", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 26
+Warning (10230): Verilog HDL assignment warning at EAB.v(42): truncated value with size 27 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 42
+Warning (10230): Verilog HDL assignment warning at EAB.v(45): truncated value with size 25 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 45
+Warning (10230): Verilog HDL assignment warning at EAB.v(48): truncated value with size 22 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 48
+Warning (10240): Verilog HDL Always Construct warning at EAB.v(38): inferring latch(es) for variable "adder_input_2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 38
 Warning (10240): Verilog HDL Always Construct warning at EAB.v(38): inferring latch(es) for variable "mux_2_input", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 38
-Info (10041): Inferred latch for "mux_2_input[0]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[1]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[2]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[3]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[4]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[5]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[6]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[7]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[8]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[9]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[10]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[11]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[12]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[13]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[14]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Info (10041): Inferred latch for "mux_2_input[15]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[0]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[1]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[2]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[3]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[4]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[5]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[6]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[7]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[8]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[9]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[10]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[11]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[12]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[13]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[14]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Info (10041): Inferred latch for "adder_input_2[15]" at EAB.v(40) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 160
+Warning (10230): Verilog HDL assignment warning at ALU.v(34): truncated value with size 21 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 34
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(39): inferring latch(es) for variable "aluOut", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Info (10041): Inferred latch for "aluOut[0]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Info (10041): Inferred latch for "aluOut[1]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
@@ -973,13 +978,22 @@ Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[12]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[11]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[10]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
-Warning (14026): LATCH primitive "EAB:eab|mux_2_input[9]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[12]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[11]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[10]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[9]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[8]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[7]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[6]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[5]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[4]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
+Warning (14026): LATCH primitive "EAB:eab|adder_input_2[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 40
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "bus_tri_state_buffer:tsb|Bus[0]" to the node "Memory:memory|bit_16_reg:MAR_reg|Q[0]" into an OR gate File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 18
@@ -1147,16 +1161,16 @@ Warning (15400): WYSIWYG primitive "Memory:memory|two_port_mem:two_port_ram_inst
 Warning (15400): WYSIWYG primitive "Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|ram_block1a95" has a port clk1 that is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf Line: 3570
 Warning (15400): WYSIWYG primitive "Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|ram_block1a79" has a port clk1 that is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf Line: 2978
 Warning (15400): WYSIWYG primitive "Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|ram_block1a127" has a port clk1 that is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf Line: 4754
-Info (21057): Implemented 971 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 982 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 118 output pins
-    Info (21061): Implemented 724 logic cells
+    Info (21061): Implemented 735 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 270 warnings
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Tue Feb 26 22:30:13 2019
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:34
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 284 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Wed Feb 27 12:10:00 2019
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:36
 
 
 +------------------------------------------+

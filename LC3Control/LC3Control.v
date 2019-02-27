@@ -64,16 +64,11 @@ always @ (posedge clk) begin
 	if (current_state == 6'b010010) begin
 		
 		// MAR <- PC
+		memWE <= 0;		regWE <= 0;
+		DR <= 3'b000; 	SR1 <= 3'b000; 	SR2 <= 3'b000;
 		
-		memWE <= 0;
-		regWE <= 0;
-		enaMARM <= 0;
-		enaMDR <= 0;
-		enaALU <= 0;
-		enaPC <= 1;
-		
-		ldMAR <= 1;
-		ldPC <= 0;
+		enaMARM <= 0; 	enaMDR <= 0; 		enaALU <= 0; enaPC <= 1;
+		ldMAR <= 1;		ldPC <= 0;
 
 		next_state <= 6'b100001;
 	end
@@ -90,10 +85,7 @@ always @ (posedge clk) begin
 		ldPC <= 1;
 		selPC <= 2'b00;
 		
-		enaMARM <= 0;
-		enaMDR <= 1;
-		enaALU <= 0;
-		enaPC <= 0; 	// close all tri state buffer
+		enaMARM <= 0;	enaMDR <= 0;	enaALU <= 0;	enaPC <= 0;
 	
 		next_state <= 6'b100011;
 	end
@@ -102,31 +94,22 @@ always @ (posedge clk) begin
 	else if (current_state == 6'b100011) begin
 		
 		// IR <- MDR
-		enaMARM <= 0;
-		enaMDR <= 1;
-		enaALU <= 0;
-		enaPC <= 0;
-		ldPC <= 0;
-		ldIR <= 1;
-		ldMDR <= 0;
+		enaMARM <= 0;	enaMDR <= 1;	enaALU <= 0;	enaPC <= 0;
+		ldPC <= 0;		ldIR <= 1;		ldMDR <= 0;
 		
 		next_state <= 6'b100000;
 	end
 	// end ============== instruction fetch ===================
-	
 	// 
 	//
-	
 	// begin ============= instruction parse ==================
 	
 	else if (current_state == 6'b100000) begin
-		enaMARM <= 0;
-		enaMDR <= 0;
-		enaALU <= 0;
-		enaPC <= 0; 	// close all tri state buffer
 		
-		ldPC <= 0;
-		ldIR <= 0;
+		// close all tri state buffer
+		enaMARM <= 0; 	enaMDR <= 0; 	enaALU <= 0; 	enaPC <= 0; 	
+		
+		ldPC <= 0;		ldIR <= 0;		ldMAR <= 0;		ldMDR <= 0;
 		
 		next_state <= {2'b00, IR[15:12]};
 	end
@@ -139,15 +122,15 @@ always @ (posedge clk) begin
 	else if (current_state == 6'b000001) begin
 		
 		// DR <- SR1 + Op
-		DR <= IR[11:9];
-		SR1 <= IR[8:6];
-		SR2 <= IR[2:0];
+		enaMARM <= 0; 		enaMDR <= 0; 		enaALU <= 1; 	enaPC <= 0; 
+		DR <= IR[11:9]; 	SR1 <= IR[8:6]; 	SR2 <= IR[2:0];
+		
 		aluControl <= 2'b01;
 		
-		enaALU <= 1;
 		regWE <= 1;
 		
 		next_state <= 6'b010010;
+		
 	end
 	
 	// state #: 5 (AND)
@@ -158,10 +141,11 @@ always @ (posedge clk) begin
 		SR1 <= IR[8:6];
 		SR2 <= IR[2:0];
 		aluControl <= 2'b10;
-		next_state <= 6'b010010;
 		
-		enaALU <= 1;
+		enaMARM <= 0; 		enaMDR <= 0; 		enaALU <= 1; 	enaPC <= 0;
 		regWE <= 1;
+		
+		next_state <= 6'b010010;
 	end
 	
 	// state #: 9 (NOT)
