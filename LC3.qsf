@@ -60,18 +60,14 @@ set_global_assignment -name EDA_TEST_BENCH_NAME general_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id general_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME general_tb -section_id general_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE general_tb.v -section_id general_tb
+set_global_assignment -name VERILOG_FILE PC/d_negedge_flip_flop.v
 set_global_assignment -name MIF_FILE LC3_instruction_mem_init.mif
 set_global_assignment -name VERILOG_FILE Memory/two_port_mem.v
 set_global_assignment -name VERILOG_FILE bit_16_reg.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE "Register File/RegisterFile.v"
-set_global_assignment -name VERILOG_FILE "Register File/Register.v"
 set_global_assignment -name VERILOG_FILE "Register File/mux_8_1_bit_16.v"
 set_global_assignment -name VERILOG_FILE "Register File/decoder_3_8.v"
-set_global_assignment -name VERILOG_FILE "Register File/d_flip_flop.v"
 set_global_assignment -name VERILOG_FILE PC/PC.v
-set_global_assignment -name VERILOG_FILE PC/d_negedge_flip_flop.v
-set_global_assignment -name VERILOG_FILE PC/bit_16_register.v
 set_global_assignment -name VERILOG_FILE NZP/NZP_register.v
 set_global_assignment -name VERILOG_FILE NZP/NZP.v
 set_global_assignment -name VERILOG_FILE Memory/Memory.v
@@ -84,5 +80,8 @@ set_global_assignment -name VERILOG_FILE LC3.v
 set_global_assignment -name VERILOG_FILE bus_tri_state_buffer.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE general_tb.v
-set_global_assignment -name QIP_FILE two_port_ram.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE BasicGeneralWaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE InDepthWaveform.vwf
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -22,7 +22,8 @@ module Memory(
 	
 	// debugging
 	MAROut,
-	memOut
+	memOut,
+	MDRIn
 );
 
 // module I/O
@@ -31,7 +32,7 @@ input ldMAR, ldMDR, memWE, clk, clk_direct, reset, selMDR;
 output [15:0] MDROut, mem_out_direct;
 
 // internal variables
-reg [15:0] MDRIn;
+output reg [15:0] MDRIn;
 output [15:0] memOut;
 output [15:0] MAROut;
 

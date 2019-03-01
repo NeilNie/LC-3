@@ -35,14 +35,14 @@ wire [7:0] DR_sel;
 decoder_3_8 decoder(.in(DR), .out(DR_sel));
 
 // declare the 8 registers
-Register r0(.D(Bus), .Q(reg0_out), .en((WE & DR_sel[0])), .reset(reset), .clk(clk));
-Register r1(.D(Bus), .Q(reg1_out), .en((WE & DR_sel[1])), .reset(reset), .clk(clk));
-Register r2(.D(Bus), .Q(reg2_out), .en((WE & DR_sel[2])), .reset(reset), .clk(clk));
-Register r3(.D(Bus), .Q(reg3_out), .en((WE & DR_sel[3])), .reset(reset), .clk(clk));
-Register r4(.D(Bus), .Q(reg4_out), .en((WE & DR_sel[4])), .reset(reset), .clk(clk));
-Register r5(.D(Bus), .Q(reg5_out), .en((WE & DR_sel[5])), .reset(reset), .clk(clk));
-Register r6(.D(Bus), .Q(reg6_out), .en((WE & DR_sel[6])), .reset(reset), .clk(clk));
-Register r7(.D(Bus), .Q(reg7_out), .en((WE & DR_sel[7])), .reset(reset), .clk(clk));
+bit_16_reg r0(.D(Bus), .Q(reg0_out), .en((WE & DR_sel[0])), .reset(reset), .clk(clk));
+bit_16_reg r1(.D(Bus), .Q(reg1_out), .en((WE & DR_sel[1])), .reset(reset), .clk(clk));
+bit_16_reg r2(.D(Bus), .Q(reg2_out), .en((WE & DR_sel[2])), .reset(reset), .clk(clk));
+bit_16_reg r3(.D(Bus), .Q(reg3_out), .en((WE & DR_sel[3])), .reset(reset), .clk(clk));
+bit_16_reg r4(.D(Bus), .Q(reg4_out), .en((WE & DR_sel[4])), .reset(reset), .clk(clk));
+bit_16_reg r5(.D(Bus), .Q(reg5_out), .en((WE & DR_sel[5])), .reset(reset), .clk(clk));
+bit_16_reg r6(.D(Bus), .Q(reg6_out), .en((WE & DR_sel[6])), .reset(reset), .clk(clk));
+bit_16_reg r7(.D(Bus), .Q(reg7_out), .en((WE & DR_sel[7])), .reset(reset), .clk(clk));
 
 // output mux
 mux_8_1_bit_16 mux0(	.sel(SR0), 

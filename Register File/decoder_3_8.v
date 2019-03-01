@@ -1,14 +1,17 @@
 //
 // 3 to 8 decoder
-// Neil Nie
 //
+// Copyright (c) 2018 by Neil Nie
+// All Rights Resered. 
+// MIT License
+// Contact: contact@neilnie.com
+// 
+
 
 module decoder_3_8(in, out);
 
 input [2:0] in;
-output [7:0] out;
-
-reg [7:0] out;
+output reg [7:0] out;
 
 always @(*) begin
 

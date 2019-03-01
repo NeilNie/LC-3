@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/27/2019 12:18:27"
+// Generated on "02/27/2019 19:06:54"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LC3
 // 
@@ -29,7 +29,10 @@
 module LC3_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg [15:0] address_in_direct;
 reg clk;
+reg clk_direct;
+reg [15:0] data_in_direct;
 // wires                                               
 wire [15:0] Bus;
 wire [15:0] IR;
@@ -39,6 +42,7 @@ wire [15:0] MDROut;
 wire [15:0] PC;
 wire [5:0] current_state;
 wire [15:0] memOut;
+wire [15:0] mem_out_direct;
 
 // assign statements (if any)                          
 LC3 i1 (
@@ -49,9 +53,13 @@ LC3 i1 (
 	.MDRIn(MDRIn),
 	.MDROut(MDROut),
 	.PC(PC),
+	.address_in_direct(address_in_direct),
 	.clk(clk),
+	.clk_direct(clk_direct),
 	.current_state(current_state),
-	.memOut(memOut)
+	.data_in_direct(data_in_direct),
+	.memOut(memOut),
+	.mem_out_direct(mem_out_direct)
 );
 initial 
 begin 
@@ -64,6 +72,172 @@ begin
 	clk = 1'b0;
 	clk = #5000 1'b1;
 	#5000;
+end 
+// address_in_direct[ 15 ]
+initial
+begin
+	address_in_direct[15] = 1'b0;
+end 
+// address_in_direct[ 14 ]
+initial
+begin
+	address_in_direct[14] = 1'b0;
+end 
+// address_in_direct[ 13 ]
+initial
+begin
+	address_in_direct[13] = 1'b0;
+end 
+// address_in_direct[ 12 ]
+initial
+begin
+	address_in_direct[12] = 1'b0;
+end 
+// address_in_direct[ 11 ]
+initial
+begin
+	address_in_direct[11] = 1'b0;
+end 
+// address_in_direct[ 10 ]
+initial
+begin
+	address_in_direct[10] = 1'b0;
+end 
+// address_in_direct[ 9 ]
+initial
+begin
+	address_in_direct[9] = 1'b0;
+end 
+// address_in_direct[ 8 ]
+initial
+begin
+	address_in_direct[8] = 1'b0;
+end 
+// address_in_direct[ 7 ]
+initial
+begin
+	address_in_direct[7] = 1'b0;
+end 
+// address_in_direct[ 6 ]
+initial
+begin
+	address_in_direct[6] = 1'b0;
+end 
+// address_in_direct[ 5 ]
+initial
+begin
+	address_in_direct[5] = 1'b0;
+end 
+// address_in_direct[ 4 ]
+initial
+begin
+	address_in_direct[4] = 1'b0;
+end 
+// address_in_direct[ 3 ]
+initial
+begin
+	address_in_direct[3] = 1'b0;
+end 
+// address_in_direct[ 2 ]
+initial
+begin
+	address_in_direct[2] = 1'b0;
+end 
+// address_in_direct[ 1 ]
+initial
+begin
+	address_in_direct[1] = 1'b0;
+end 
+// address_in_direct[ 0 ]
+initial
+begin
+	address_in_direct[0] = 1'b0;
+end 
+
+// clk_direct
+initial
+begin
+	clk_direct = 1'b0;
+end 
+// data_in_direct[ 15 ]
+initial
+begin
+	data_in_direct[15] = 1'b0;
+end 
+// data_in_direct[ 14 ]
+initial
+begin
+	data_in_direct[14] = 1'b0;
+end 
+// data_in_direct[ 13 ]
+initial
+begin
+	data_in_direct[13] = 1'b0;
+end 
+// data_in_direct[ 12 ]
+initial
+begin
+	data_in_direct[12] = 1'b0;
+end 
+// data_in_direct[ 11 ]
+initial
+begin
+	data_in_direct[11] = 1'b0;
+end 
+// data_in_direct[ 10 ]
+initial
+begin
+	data_in_direct[10] = 1'b0;
+end 
+// data_in_direct[ 9 ]
+initial
+begin
+	data_in_direct[9] = 1'b0;
+end 
+// data_in_direct[ 8 ]
+initial
+begin
+	data_in_direct[8] = 1'b0;
+end 
+// data_in_direct[ 7 ]
+initial
+begin
+	data_in_direct[7] = 1'b0;
+end 
+// data_in_direct[ 6 ]
+initial
+begin
+	data_in_direct[6] = 1'b0;
+end 
+// data_in_direct[ 5 ]
+initial
+begin
+	data_in_direct[5] = 1'b0;
+end 
+// data_in_direct[ 4 ]
+initial
+begin
+	data_in_direct[4] = 1'b0;
+end 
+// data_in_direct[ 3 ]
+initial
+begin
+	data_in_direct[3] = 1'b0;
+end 
+// data_in_direct[ 2 ]
+initial
+begin
+	data_in_direct[2] = 1'b0;
+end 
+// data_in_direct[ 1 ]
+initial
+begin
+	data_in_direct[1] = 1'b0;
+end 
+// data_in_direct[ 0 ]
+initial
+begin
+	data_in_direct[0] = 1'b0;
 end 
 endmodule
 

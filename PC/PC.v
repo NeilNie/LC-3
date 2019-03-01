@@ -22,7 +22,7 @@ output [15:0] PCOut;
 reg [15:0] PC_inc, PC;
 
 // the PC register
-bit_16_register pc_reg(.D(PC), .Q(PCOut), .en(ldPC), .reset(reset), .clk(clk));
+bit_16_reg pc_reg(.D(PC), .Q(PCOut), .en(ldPC), .reset(reset), .clk(clk));
 
 initial begin
 	PC <= 16'h0000;

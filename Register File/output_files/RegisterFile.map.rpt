@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RegisterFile
-Mon Feb 11 13:18:24 2019
+Wed Feb 27 16:20:46 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 11 13:18:24 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 27 16:20:46 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; RegisterFile                                ;
 ; Top-level Entity Name              ; RegisterFile                                ;
@@ -386,7 +386,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -396,7 +396,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 11 13:17:53 2019
+    Info: Processing started: Wed Feb 27 16:20:05 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegisterFile -c RegisterFile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -412,15 +412,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder_3_8 File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 6
 Info (12127): Elaborating entity "RegisterFile" for the top level hierarchy
 Info (12128): Elaborating entity "decoder_3_8" for hierarchy "decoder_3_8:decoder" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 35
-Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(15): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[0]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[1]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[2]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[3]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[4]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[5]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[6]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
-Info (10041): Inferred latch for "out[7]" at decoder_3_8.v(15) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(13): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[0]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[1]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[2]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[3]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[4]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[5]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[6]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
+Info (10041): Inferred latch for "out[7]" at decoder_3_8.v(13) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 13
 Info (12128): Elaborating entity "Register" for hierarchy "Register:r0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 38
 Info (12128): Elaborating entity "d_flip_flop" for hierarchy "Register:r0|d_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/Register.v Line: 14
 Info (12128): Elaborating entity "mux_8_1_bit_16" for hierarchy "mux_8_1_bit_16:mux0" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 53
@@ -481,9 +481,9 @@ Info (21057): Implemented 356 device resources after synthesis - the final resou
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 296 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Mon Feb 11 13:18:25 2019
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Wed Feb 27 16:20:46 2019
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:33
 
 

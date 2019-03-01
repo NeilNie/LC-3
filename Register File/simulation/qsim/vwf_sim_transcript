@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Mon Feb 11 13:20:14 2019
+    Info: Processing started: Wed Feb 27 16:18:50 2019
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RegisterFile -c RegisterFile --vector_source="C:/Users/USER1/Digital Logic/LC-3/Register File/Waveform.vwf" --testbench_file="C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim/Waveform.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -55,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Mon Feb 11 13:20:16 2019
+    Info: Processing started: Wed Feb 27 16:18:52 2019
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim/" RegisterFile -c RegisterFile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file RegisterFile.vo in folder "C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Mon Feb 11 13:20:17 2019
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Feb 27 16:18:54 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -81,34 +81,37 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
+
 # do RegisterFile.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:20:18 on Feb 11,2019
+# Start time: 16:18:57 on Feb 27,2019
 # vlog -work work RegisterFile.vo 
+
 # -- Compiling module RegisterFile
+
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	RegisterFile
-
-# End time: 13:20:18 on Feb 11,2019, Elapsed time: 0:00:00
+# End time: 16:18:58 on Feb 27,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:20:18 on Feb 11,2019
+# Start time: 16:18:58 on Feb 27,2019
 # vlog -work work Waveform.vwf.vt 
 
 # -- Compiling module RegisterFile_vlg_vec_tst
 # 
 # Top level modules:
 # 	RegisterFile_vlg_vec_tst
-# End time: 13:20:18 on Feb 11,2019, Elapsed time: 0:00:00
+# End time: 16:18:58 on Feb 27,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.RegisterFile_vlg_vec_tst 
-# Start time: 13:20:18 on Feb 11,2019
+# Start time: 16:18:59 on Feb 27,2019
 # Loading work.RegisterFile_vlg_vec_tst
 # Loading work.RegisterFile
 # Loading work.hard_block
@@ -123,8 +126,7 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # after#26
 # ** Note: $finish    : Waveform.vwf.vt(58)
 #    Time: 50 ns  Iteration: 0  Instance: /RegisterFile_vlg_vec_tst
-
-# End time: 13:20:19 on Feb 11,2019, Elapsed time: 0:00:01
+# End time: 16:19:00 on Feb 27,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -137,7 +139,7 @@ Reading C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim/Register
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim/RegisterFile_20190211132019.sim.vwf
+Writing the resulting VWF to C:/Users/USER1/Digital Logic/LC-3/Register File/simulation/qsim/RegisterFile_20190227161900.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,8 +1,12 @@
 //
 // LC-3 Processor
-// Neil Nie
-// (c) 2019, All Rights Reserved
 //
+// Copyright (c) 2018 by Neil Nie
+// All Rights Resered. 
+// MIT License
+// Contact: contact@neilnie.com
+// 
+
 
 module LC3 (clk,
 	
@@ -14,13 +18,21 @@ module LC3 (clk,
 	memOut,
 	MAROut,
 	MDROut,
-	MDRIn
+	MDRIn,
+	
+	// direct input
+	address_in_direct,
+	data_in_direct,
+	clk_direct,
+	mem_out_direct
 	// ------------------------------
 );
 
 input clk;
 output [5:0] current_state;
+output [15:0] IR, Bus, PC;
 
+// internal wires
 wire [1:0] selEAB2;
 wire [1:0] aluControl;
 wire [1:0] selPC;
@@ -30,9 +42,6 @@ wire ldPC, ldIR, ldMAR, ldMDR;
 wire [1:0] selMDR;
 wire [2:0] SR0, SR1, DR;
 wire regWE, memWE;
-
-// internal wires
-output [15:0] IR, Bus, PC;
 wire [15:0] ALUOut;
 wire [15:0] MARMuxOut;
 wire [15:0] regOut0;
@@ -45,6 +54,10 @@ wire N, Z, P;
 output [15:0] MDROut, memOut;
 output [15:0] MAROut;
 output [15:0] MDRIn;
+
+input [15:0] address_in_direct, data_in_direct;
+input clk_direct;
+output [15:0] mem_out_direct;
 
 // =======================================================================
 // ===================== Implementation begin ============================
@@ -68,6 +81,7 @@ LC3Control FSM(
 	// inputs
 	.IR(IR),
 	.N(N), .Z(Z), .P(P),
+	
 	// outputs
 	.clk(clk),
 	.reset(reset),
@@ -79,9 +93,6 @@ LC3Control FSM(
 	.SR1(SR0), .SR2(SR1), .DR(DR),
 	.regWE(regWE), .memWE(memWE),
 	.current_state(current_state),
-	.MDRSpcIn(MDRSpcIn),
-	.MARSpcIn(MARSpcIn),
-	.ldMARSpcIn(ldMARSpcIn)
 );
 
 // -----------------------------------------------------
@@ -89,8 +100,7 @@ LC3Control FSM(
 RegisterFile reg_file(
 	.Bus(Bus), .Out0(regOut0), .Out1(regOut1),
 	.clk(clk), .WE(regWE), .reset(reset),
-	.DR(DR), .SR0(SR0), .SR1(SR1)
-);
+	.DR(DR), .SR0(SR0), .SR1(SR1));
 
 // -----------------------------------------------------
 
@@ -109,8 +119,7 @@ NZP nzp(
 	.clk(clk),
 	.regWE(regWE),
 	.reset(reset),
-	.N(N), .Z(Z), .P(P)
-);
+	.N(N), .Z(Z), .P(P));
 
 // -----------------------------------------------------
 
@@ -123,8 +132,13 @@ Memory memory(
 	.clk(clk),
 	.reset(reset),
 	.MDROut(MDROut),
+	.MDRIn(MDRIn),
 	.MAROut(MAROut),
-	.memOut(memOut));
+	.memOut(memOut),
+	.address_in_direct(address_in_direct),
+	.data_in_direct(data_in_direct),
+	.clk_direct(clk_direct),
+	.mem_out_direct(mem_out_direct));
 
 // -----------------------------------------------------
 

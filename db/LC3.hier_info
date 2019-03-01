@@ -102,22 +102,71 @@ MDROut[12] << MDROut[12].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[13] << MDROut[13].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[14] << MDROut[14].DB_MAX_OUTPUT_PORT_TYPE
 MDROut[15] << MDROut[15].DB_MAX_OUTPUT_PORT_TYPE
-MDRIn[0] << <GND>
-MDRIn[1] << <GND>
-MDRIn[2] << <GND>
-MDRIn[3] << <GND>
-MDRIn[4] << <GND>
-MDRIn[5] << <GND>
-MDRIn[6] << <GND>
-MDRIn[7] << <GND>
-MDRIn[8] << <GND>
-MDRIn[9] << <GND>
-MDRIn[10] << <GND>
-MDRIn[11] << <GND>
-MDRIn[12] << <GND>
-MDRIn[13] << <GND>
-MDRIn[14] << <GND>
-MDRIn[15] << <GND>
+MDRIn[0] << Memory:memory.MDRIn
+MDRIn[1] << Memory:memory.MDRIn
+MDRIn[2] << Memory:memory.MDRIn
+MDRIn[3] << Memory:memory.MDRIn
+MDRIn[4] << Memory:memory.MDRIn
+MDRIn[5] << Memory:memory.MDRIn
+MDRIn[6] << Memory:memory.MDRIn
+MDRIn[7] << Memory:memory.MDRIn
+MDRIn[8] << Memory:memory.MDRIn
+MDRIn[9] << Memory:memory.MDRIn
+MDRIn[10] << Memory:memory.MDRIn
+MDRIn[11] << Memory:memory.MDRIn
+MDRIn[12] << Memory:memory.MDRIn
+MDRIn[13] << Memory:memory.MDRIn
+MDRIn[14] << Memory:memory.MDRIn
+MDRIn[15] << Memory:memory.MDRIn
+address_in_direct[0] => address_in_direct[0].IN1
+address_in_direct[1] => address_in_direct[1].IN1
+address_in_direct[2] => address_in_direct[2].IN1
+address_in_direct[3] => address_in_direct[3].IN1
+address_in_direct[4] => address_in_direct[4].IN1
+address_in_direct[5] => address_in_direct[5].IN1
+address_in_direct[6] => address_in_direct[6].IN1
+address_in_direct[7] => address_in_direct[7].IN1
+address_in_direct[8] => address_in_direct[8].IN1
+address_in_direct[9] => address_in_direct[9].IN1
+address_in_direct[10] => address_in_direct[10].IN1
+address_in_direct[11] => address_in_direct[11].IN1
+address_in_direct[12] => address_in_direct[12].IN1
+address_in_direct[13] => address_in_direct[13].IN1
+address_in_direct[14] => address_in_direct[14].IN1
+address_in_direct[15] => address_in_direct[15].IN1
+data_in_direct[0] => data_in_direct[0].IN1
+data_in_direct[1] => data_in_direct[1].IN1
+data_in_direct[2] => data_in_direct[2].IN1
+data_in_direct[3] => data_in_direct[3].IN1
+data_in_direct[4] => data_in_direct[4].IN1
+data_in_direct[5] => data_in_direct[5].IN1
+data_in_direct[6] => data_in_direct[6].IN1
+data_in_direct[7] => data_in_direct[7].IN1
+data_in_direct[8] => data_in_direct[8].IN1
+data_in_direct[9] => data_in_direct[9].IN1
+data_in_direct[10] => data_in_direct[10].IN1
+data_in_direct[11] => data_in_direct[11].IN1
+data_in_direct[12] => data_in_direct[12].IN1
+data_in_direct[13] => data_in_direct[13].IN1
+data_in_direct[14] => data_in_direct[14].IN1
+data_in_direct[15] => data_in_direct[15].IN1
+clk_direct => clk_direct.IN1
+mem_out_direct[0] << Memory:memory.mem_out_direct
+mem_out_direct[1] << Memory:memory.mem_out_direct
+mem_out_direct[2] << Memory:memory.mem_out_direct
+mem_out_direct[3] << Memory:memory.mem_out_direct
+mem_out_direct[4] << Memory:memory.mem_out_direct
+mem_out_direct[5] << Memory:memory.mem_out_direct
+mem_out_direct[6] << Memory:memory.mem_out_direct
+mem_out_direct[7] << Memory:memory.mem_out_direct
+mem_out_direct[8] << Memory:memory.mem_out_direct
+mem_out_direct[9] << Memory:memory.mem_out_direct
+mem_out_direct[10] << Memory:memory.mem_out_direct
+mem_out_direct[11] << Memory:memory.mem_out_direct
+mem_out_direct[12] << Memory:memory.mem_out_direct
+mem_out_direct[13] << Memory:memory.mem_out_direct
+mem_out_direct[14] << Memory:memory.mem_out_direct
+mem_out_direct[15] << Memory:memory.mem_out_direct
 
 
 |LC3|bus_tri_state_buffer:tsb
@@ -256,17 +305,26 @@ Bus[15] <= Bus[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LC3|LC3Control:FSM
-clk => ldMARSpcIn~reg0.CLK
 clk => selMAR~reg0.CLK
 clk => selEAB2[0]~reg0.CLK
 clk => selEAB2[1]~reg0.CLK
 clk => selEAB1~reg0.CLK
 clk => aluControl[0]~reg0.CLK
 clk => aluControl[1]~reg0.CLK
-clk => ldIR~reg0.CLK
+clk => memWE~reg0.CLK
+clk => regWE~reg0.CLK
+clk => DR[0]~reg0.CLK
+clk => DR[1]~reg0.CLK
+clk => DR[2]~reg0.CLK
+clk => SR2[0]~reg0.CLK
+clk => SR2[1]~reg0.CLK
+clk => SR2[2]~reg0.CLK
+clk => SR1[0]~reg0.CLK
+clk => SR1[1]~reg0.CLK
+clk => SR1[2]~reg0.CLK
+clk => ldMAR~reg0.CLK
 clk => selPC[0]~reg0.CLK
 clk => selPC[1]~reg0.CLK
-clk => ldMDR~reg0.CLK
 clk => selMDR[0]~reg0.CLK
 clk => selMDR[1]~reg0.CLK
 clk => next_state[0].CLK
@@ -275,63 +333,41 @@ clk => next_state[2].CLK
 clk => next_state[3].CLK
 clk => next_state[4].CLK
 clk => next_state[5].CLK
+clk => ldMDR~reg0.CLK
+clk => ldIR~reg0.CLK
 clk => ldPC~reg0.CLK
-clk => ldMAR~reg0.CLK
 clk => enaPC~reg0.CLK
 clk => enaALU~reg0.CLK
 clk => enaMDR~reg0.CLK
 clk => enaMARM~reg0.CLK
-clk => SR2[0]~reg0.CLK
-clk => SR2[1]~reg0.CLK
-clk => SR2[2]~reg0.CLK
-clk => SR1[0]~reg0.CLK
-clk => SR1[1]~reg0.CLK
-clk => SR1[2]~reg0.CLK
-clk => DR[0]~reg0.CLK
-clk => DR[1]~reg0.CLK
-clk => DR[2]~reg0.CLK
-clk => regWE~reg0.CLK
-clk => memWE~reg0.CLK
 clk => current_state[0]~reg0.CLK
 clk => current_state[1]~reg0.CLK
 clk => current_state[2]~reg0.CLK
 clk => current_state[3]~reg0.CLK
 clk => current_state[4]~reg0.CLK
 clk => current_state[5]~reg0.CLK
-IR[0] => SR2.DATAB
-IR[0] => SR2.DATAB
-IR[1] => SR2.DATAB
-IR[1] => SR2.DATAB
-IR[2] => SR2.DATAB
-IR[2] => SR2.DATAB
+IR[0] => Selector20.IN6
+IR[1] => Selector19.IN6
+IR[2] => Selector18.IN6
 IR[3] => ~NO_FANOUT~
 IR[4] => ~NO_FANOUT~
 IR[5] => ~NO_FANOUT~
-IR[6] => SR1.DATAB
-IR[6] => SR1.DATAB
-IR[6] => SR1.DATAB
-IR[7] => SR1.DATAB
-IR[7] => SR1.DATAB
-IR[7] => SR1.DATAB
-IR[8] => SR1.DATAB
-IR[8] => SR1.DATAB
-IR[8] => SR1.DATAB
-IR[9] => SR1.DATAB
-IR[9] => DR.DATAB
-IR[9] => DR.DATAB
-IR[9] => DR.DATAB
-IR[10] => SR1.DATAB
-IR[10] => DR.DATAB
-IR[10] => DR.DATAB
-IR[10] => DR.DATAB
-IR[11] => SR1.DATAB
-IR[11] => DR.DATAB
-IR[11] => DR.DATAB
-IR[11] => DR.DATAB
-IR[12] => next_state.DATAB
-IR[13] => next_state.DATAB
-IR[14] => next_state.DATAB
-IR[15] => next_state.DATAB
+IR[6] => Selector17.IN6
+IR[7] => Selector16.IN6
+IR[8] => Selector15.IN6
+IR[9] => Selector17.IN5
+IR[9] => Selector20.IN5
+IR[9] => Selector23.IN4
+IR[10] => Selector16.IN5
+IR[10] => Selector19.IN5
+IR[10] => Selector22.IN4
+IR[11] => Selector15.IN5
+IR[11] => Selector18.IN5
+IR[11] => Selector21.IN4
+IR[12] => Selector12.IN6
+IR[13] => Selector11.IN6
+IR[14] => Selector10.IN6
+IR[15] => Selector9.IN6
 N => ~NO_FANOUT~
 Z => ~NO_FANOUT~
 P => ~NO_FANOUT~
@@ -371,39 +407,6 @@ current_state[2] <= current_state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[3] <= current_state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[4] <= current_state[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 current_state[5] <= current_state[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MDRSpcIn[0] <= <GND>
-MDRSpcIn[1] <= <GND>
-MDRSpcIn[2] <= <GND>
-MDRSpcIn[3] <= <GND>
-MDRSpcIn[4] <= <GND>
-MDRSpcIn[5] <= <GND>
-MDRSpcIn[6] <= <GND>
-MDRSpcIn[7] <= <GND>
-MDRSpcIn[8] <= <GND>
-MDRSpcIn[9] <= <GND>
-MDRSpcIn[10] <= <GND>
-MDRSpcIn[11] <= <GND>
-MDRSpcIn[12] <= <GND>
-MDRSpcIn[13] <= <GND>
-MDRSpcIn[14] <= <GND>
-MDRSpcIn[15] <= <GND>
-MARSpcIn[0] <= <GND>
-MARSpcIn[1] <= <GND>
-MARSpcIn[2] <= <GND>
-MARSpcIn[3] <= <GND>
-MARSpcIn[4] <= <GND>
-MARSpcIn[5] <= <GND>
-MARSpcIn[6] <= <GND>
-MARSpcIn[7] <= <GND>
-MARSpcIn[8] <= <GND>
-MARSpcIn[9] <= <GND>
-MARSpcIn[10] <= <GND>
-MARSpcIn[11] <= <GND>
-MARSpcIn[12] <= <GND>
-MARSpcIn[13] <= <GND>
-MARSpcIn[14] <= <GND>
-MARSpcIn[15] <= <GND>
-ldMARSpcIn <= ldMARSpcIn~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LC3|RegisterFile:reg_file
@@ -511,1460 +514,668 @@ out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3|RegisterFile:reg_file|Register:r0
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r0|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r1|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r2|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r3|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r4|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r5|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r6|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_flip_flop:ff_0.Q
-Q[1] <= d_flip_flop:ff_1.Q
-Q[2] <= d_flip_flop:ff_2.Q
-Q[3] <= d_flip_flop:ff_3.Q
-Q[4] <= d_flip_flop:ff_4.Q
-Q[5] <= d_flip_flop:ff_5.Q
-Q[6] <= d_flip_flop:ff_6.Q
-Q[7] <= d_flip_flop:ff_7.Q
-Q[8] <= d_flip_flop:ff_8.Q
-Q[9] <= d_flip_flop:ff_9.Q
-Q[10] <= d_flip_flop:ff_10.Q
-Q[11] <= d_flip_flop:ff_11.Q
-Q[12] <= d_flip_flop:ff_12.Q
-Q[13] <= d_flip_flop:ff_13.Q
-Q[14] <= d_flip_flop:ff_14.Q
-Q[15] <= d_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|RegisterFile:reg_file|Register:r7|d_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
+|LC3|RegisterFile:reg_file|bit_16_reg:r0
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r1
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r2
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r3
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r4
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r5
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r6
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
+
+
+|LC3|RegisterFile:reg_file|bit_16_reg:r7
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
 
 
 |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0
@@ -2351,204 +1562,105 @@ Bus[12] => PC[12].DATAA
 Bus[13] => PC[13].DATAA
 Bus[14] => PC[14].DATAA
 Bus[15] => PC[15].DATAA
-PCOut[0] <= bit_16_register:pc_reg.Q
-PCOut[1] <= bit_16_register:pc_reg.Q
-PCOut[2] <= bit_16_register:pc_reg.Q
-PCOut[3] <= bit_16_register:pc_reg.Q
-PCOut[4] <= bit_16_register:pc_reg.Q
-PCOut[5] <= bit_16_register:pc_reg.Q
-PCOut[6] <= bit_16_register:pc_reg.Q
-PCOut[7] <= bit_16_register:pc_reg.Q
-PCOut[8] <= bit_16_register:pc_reg.Q
-PCOut[9] <= bit_16_register:pc_reg.Q
-PCOut[10] <= bit_16_register:pc_reg.Q
-PCOut[11] <= bit_16_register:pc_reg.Q
-PCOut[12] <= bit_16_register:pc_reg.Q
-PCOut[13] <= bit_16_register:pc_reg.Q
-PCOut[14] <= bit_16_register:pc_reg.Q
-PCOut[15] <= bit_16_register:pc_reg.Q
+PCOut[0] <= bit_16_reg:pc_reg.Q
+PCOut[1] <= bit_16_reg:pc_reg.Q
+PCOut[2] <= bit_16_reg:pc_reg.Q
+PCOut[3] <= bit_16_reg:pc_reg.Q
+PCOut[4] <= bit_16_reg:pc_reg.Q
+PCOut[5] <= bit_16_reg:pc_reg.Q
+PCOut[6] <= bit_16_reg:pc_reg.Q
+PCOut[7] <= bit_16_reg:pc_reg.Q
+PCOut[8] <= bit_16_reg:pc_reg.Q
+PCOut[9] <= bit_16_reg:pc_reg.Q
+PCOut[10] <= bit_16_reg:pc_reg.Q
+PCOut[11] <= bit_16_reg:pc_reg.Q
+PCOut[12] <= bit_16_reg:pc_reg.Q
+PCOut[13] <= bit_16_reg:pc_reg.Q
+PCOut[14] <= bit_16_reg:pc_reg.Q
+PCOut[15] <= bit_16_reg:pc_reg.Q
 
 
-|LC3|PC:pc|bit_16_register:pc_reg
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_negedge_flip_flop:ff_0.Q
-Q[1] <= d_negedge_flip_flop:ff_1.Q
-Q[2] <= d_negedge_flip_flop:ff_2.Q
-Q[3] <= d_negedge_flip_flop:ff_3.Q
-Q[4] <= d_negedge_flip_flop:ff_4.Q
-Q[5] <= d_negedge_flip_flop:ff_5.Q
-Q[6] <= d_negedge_flip_flop:ff_6.Q
-Q[7] <= d_negedge_flip_flop:ff_7.Q
-Q[8] <= d_negedge_flip_flop:ff_8.Q
-Q[9] <= d_negedge_flip_flop:ff_9.Q
-Q[10] <= d_negedge_flip_flop:ff_10.Q
-Q[11] <= d_negedge_flip_flop:ff_11.Q
-Q[12] <= d_negedge_flip_flop:ff_12.Q
-Q[13] <= d_negedge_flip_flop:ff_13.Q
-Q[14] <= d_negedge_flip_flop:ff_14.Q
-Q[15] <= d_negedge_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|PC:pc|bit_16_register:pc_reg|d_negedge_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
+|LC3|PC:pc|bit_16_reg:pc_reg
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
 
 
 |LC3|NZP:nzp
@@ -2771,6 +1883,22 @@ memOut[12] <= two_port_mem:two_port_ram_inst.q_a
 memOut[13] <= two_port_mem:two_port_ram_inst.q_a
 memOut[14] <= two_port_mem:two_port_ram_inst.q_a
 memOut[15] <= two_port_mem:two_port_ram_inst.q_a
+MDRIn[0] <= MDRIn[0].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[1] <= MDRIn[1].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[2] <= MDRIn[2].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[3] <= MDRIn[3].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[4] <= MDRIn[4].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[5] <= MDRIn[5].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[6] <= MDRIn[6].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[7] <= MDRIn[7].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[8] <= MDRIn[8].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[9] <= MDRIn[9].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[10] <= MDRIn[10].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[11] <= MDRIn[11].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[12] <= MDRIn[12].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[13] <= MDRIn[13].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[14] <= MDRIn[14].DB_MAX_OUTPUT_PORT_TYPE
+MDRIn[15] <= MDRIn[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LC3|Memory:memory|bit_16_reg:MAR_reg
@@ -8422,204 +7550,105 @@ Bus[12] => Bus[12].IN1
 Bus[13] => Bus[13].IN1
 Bus[14] => Bus[14].IN1
 Bus[15] => Bus[15].IN1
-IR[0] <= bit_16_register:register.Q
-IR[1] <= bit_16_register:register.Q
-IR[2] <= bit_16_register:register.Q
-IR[3] <= bit_16_register:register.Q
-IR[4] <= bit_16_register:register.Q
-IR[5] <= bit_16_register:register.Q
-IR[6] <= bit_16_register:register.Q
-IR[7] <= bit_16_register:register.Q
-IR[8] <= bit_16_register:register.Q
-IR[9] <= bit_16_register:register.Q
-IR[10] <= bit_16_register:register.Q
-IR[11] <= bit_16_register:register.Q
-IR[12] <= bit_16_register:register.Q
-IR[13] <= bit_16_register:register.Q
-IR[14] <= bit_16_register:register.Q
-IR[15] <= bit_16_register:register.Q
+IR[0] <= bit_16_reg:register.Q
+IR[1] <= bit_16_reg:register.Q
+IR[2] <= bit_16_reg:register.Q
+IR[3] <= bit_16_reg:register.Q
+IR[4] <= bit_16_reg:register.Q
+IR[5] <= bit_16_reg:register.Q
+IR[6] <= bit_16_reg:register.Q
+IR[7] <= bit_16_reg:register.Q
+IR[8] <= bit_16_reg:register.Q
+IR[9] <= bit_16_reg:register.Q
+IR[10] <= bit_16_reg:register.Q
+IR[11] <= bit_16_reg:register.Q
+IR[12] <= bit_16_reg:register.Q
+IR[13] <= bit_16_reg:register.Q
+IR[14] <= bit_16_reg:register.Q
+IR[15] <= bit_16_reg:register.Q
 
 
-|LC3|IR:ir|bit_16_register:register
-D[0] => D[0].IN1
-D[1] => D[1].IN1
-D[2] => D[2].IN1
-D[3] => D[3].IN1
-D[4] => D[4].IN1
-D[5] => D[5].IN1
-D[6] => D[6].IN1
-D[7] => D[7].IN1
-D[8] => D[8].IN1
-D[9] => D[9].IN1
-D[10] => D[10].IN1
-D[11] => D[11].IN1
-D[12] => D[12].IN1
-D[13] => D[13].IN1
-D[14] => D[14].IN1
-D[15] => D[15].IN1
-Q[0] <= d_negedge_flip_flop:ff_0.Q
-Q[1] <= d_negedge_flip_flop:ff_1.Q
-Q[2] <= d_negedge_flip_flop:ff_2.Q
-Q[3] <= d_negedge_flip_flop:ff_3.Q
-Q[4] <= d_negedge_flip_flop:ff_4.Q
-Q[5] <= d_negedge_flip_flop:ff_5.Q
-Q[6] <= d_negedge_flip_flop:ff_6.Q
-Q[7] <= d_negedge_flip_flop:ff_7.Q
-Q[8] <= d_negedge_flip_flop:ff_8.Q
-Q[9] <= d_negedge_flip_flop:ff_9.Q
-Q[10] <= d_negedge_flip_flop:ff_10.Q
-Q[11] <= d_negedge_flip_flop:ff_11.Q
-Q[12] <= d_negedge_flip_flop:ff_12.Q
-Q[13] <= d_negedge_flip_flop:ff_13.Q
-Q[14] <= d_negedge_flip_flop:ff_14.Q
-Q[15] <= d_negedge_flip_flop:ff_15.Q
-en => en.IN16
-reset => reset.IN16
-clk => clk.IN16
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_0
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_1
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_2
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_3
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_4
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_5
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_6
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_7
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_8
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_9
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_10
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_11
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_12
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_13
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_14
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
-
-
-|LC3|IR:ir|bit_16_register:register|d_negedge_flip_flop:ff_15
-clk => Q~reg0.CLK
-D => in.IN0
-sel => in.IN1
-sel => in.IN1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clr => Q.OUTPUTSELECT
+|LC3|IR:ir|bit_16_reg:register
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+D[4] => Q.DATAB
+D[5] => Q.DATAB
+D[6] => Q.DATAB
+D[7] => Q.DATAB
+D[8] => Q.DATAB
+D[9] => Q.DATAB
+D[10] => Q.DATAB
+D[11] => Q.DATAB
+D[12] => Q.DATAB
+D[13] => Q.DATAB
+D[14] => Q.DATAB
+D[15] => Q.DATAB
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+clk => Q[14]~reg0.CLK
+clk => Q[15]~reg0.CLK
 
 
 |LC3|EAB:eab
