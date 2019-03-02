@@ -9,7 +9,10 @@ module RegisterFile(
 
 	Bus, Out0, Out1,
 	clk, WE, reset,
-	DR, SR0, SR1
+	DR, SR0, SR1,
+	
+	// input, clk, output 2
+	clk_r, SR_r, Out_r
 );
 
 input [15:0] Bus;
@@ -20,6 +23,11 @@ input clk, WE, reset;
 input [2:0] DR;
 input [2:0] SR0;
 input [2:0] SR1;
+
+// debug read I/O
+input clk_r;
+input [2:0] SR_r;
+output reg [15:0] Out_r;
 
 wire [15:0] reg0_out;
 wire [15:0] reg1_out;
@@ -58,4 +66,25 @@ mux_8_1_bit_16 mux1(	.sel(SR1),
 							.in4(reg4_out), .in5(reg5_out), 
 							.in6(reg6_out), .in7(reg7_out), 
 							.out(Out1));
+							
+
+always @ (posedge clk_r) begin
+
+	case (SR_r) 
+	
+		0: Out_r <= reg0_out;
+		1: Out_r <= reg1_out;
+		2: Out_r <= reg2_out;
+		3: Out_r <= reg3_out;
+		4: Out_r <= reg4_out;
+		5: Out_r <= reg5_out;
+		6: Out_r <= reg6_out;
+		7: Out_r <= reg7_out;
+
+		default: Out_r <= 16'h0000;
+		
+	endcase
+
+end	
+	
 endmodule

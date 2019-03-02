@@ -8,7 +8,12 @@
 // 
 
 
-module LC3 (clk,
+module LC3 (
+
+	clk,
+	clk_r,
+	SR_r,
+	Out_r,
 	
 	IR,
 	Bus,
@@ -32,23 +37,10 @@ input clk;
 output [5:0] current_state;
 output [15:0] IR, Bus, PC;
 
-// internal wires
-wire [1:0] selEAB2;
-wire [1:0] aluControl;
-wire [1:0] selPC;
-wire reset, enaALU, enaMARM, enaMDR, enaPC;
-wire selMAR, selEAB1;
-wire ldPC, ldIR, ldMAR, ldMDR;
-wire [1:0] selMDR;
-wire [2:0] SR0, SR1, DR;
-wire regWE, memWE;
-wire [15:0] ALUOut;
-wire [15:0] MARMuxOut;
-wire [15:0] regOut0;
-wire [15:0] regOut1;
-wire [15:0] eabOut;
-wire [15:0] IR;
-wire N, Z, P;
+// debug read I/O
+input clk_r;
+input [2:0] SR_r;
+output [2:0] Out_r;
 
 // memory I/Os
 output [15:0] MDROut, memOut;
@@ -58,6 +50,24 @@ output [15:0] MDRIn;
 input [15:0] address_in_direct, data_in_direct;
 input clk_direct;
 output [15:0] mem_out_direct;
+
+// internal wires
+wire reset, enaALU, enaMARM, enaMDR, enaPC;
+wire ldPC, ldIR, ldMAR, ldMDR;
+wire selMAR, selEAB1;
+wire regWE, memWE;
+wire [1:0] selEAB2;
+wire [1:0] aluControl;
+wire [1:0] selPC;
+wire [1:0] selMDR;
+wire [2:0] SR0, SR1, DR;
+wire [15:0] ALUOut;
+wire [15:0] MARMuxOut;
+wire [15:0] regOut0;
+wire [15:0] regOut1;
+wire [15:0] eabOut;
+wire [15:0] IR;
+wire N, Z, P;
 
 // =======================================================================
 // ===================== Implementation begin ============================
@@ -100,7 +110,8 @@ LC3Control FSM(
 RegisterFile reg_file(
 	.Bus(Bus), .Out0(regOut0), .Out1(regOut1),
 	.clk(clk), .WE(regWE), .reset(reset),
-	.DR(DR), .SR0(SR0), .SR1(SR1));
+	.DR(DR), .SR0(SR0), .SR1(SR1),
+	.clk_r(clk_r), .SR_r(SR_r), .Out_r(Out_r));
 
 // -----------------------------------------------------
 

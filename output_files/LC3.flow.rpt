@@ -1,5 +1,5 @@
 Flow report for LC3
-Thu Feb 28 21:11:24 2019
+Fri Mar 01 18:49:29 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 28 21:11:24 2019       ;
+; Flow Status                        ; Successful - Fri Mar 01 18:49:29 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 723 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 666 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 248 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 248                                         ;
-; Total pins                         ; 168 / 529 ( 32 % )                          ;
+; Total logic elements               ; 732 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 678 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 251 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 251                                         ;
+; Total pins                         ; 175 / 529 ( 33 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576 / 3,981,312 ( 26 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/28/2019 21:08:58 ;
+; Start date & time ; 03/01/2019 18:46:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LC3                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 8796753388042.155140613701112          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 8796753388042.155148398206928          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; general_tb     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; general_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -102,12 +102,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4768 MB             ; 00:00:34                           ;
-; Fitter               ; 00:01:28     ; 1.0                     ; 5322 MB             ; 00:00:59                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4709 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4837 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 4694 MB             ; 00:00:03                           ;
-; Total                ; 00:02:21     ; --                      ; --                  ; 00:01:45                           ;
+; Analysis & Synthesis ; 00:00:54     ; 1.0                     ; 4771 MB             ; 00:00:36                           ;
+; Fitter               ; 00:01:39     ; 1.0                     ; 5288 MB             ; 00:00:55                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4708 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.0                     ; 4836 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
+; Total                ; 00:02:50     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
