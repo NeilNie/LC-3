@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3FPGA
-Sun Mar 03 11:31:44 2019
+Sun Mar 03 12:17:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -35,13 +35,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  27. Port Connectivity Checks: "LC3:processor|EAB:eab"
  28. Port Connectivity Checks: "LC3:processor|MARMux:mar_mux"
  29. Port Connectivity Checks: "LC3:processor|Memory:memory"
- 30. Port Connectivity Checks: "LC3:processor|RegisterFile:reg_file"
- 31. Port Connectivity Checks: "LC3:processor|LC3Control:FSM"
- 32. Port Connectivity Checks: "LC3:processor"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+ 30. Port Connectivity Checks: "LC3:processor|LC3Control:FSM"
+ 31. Port Connectivity Checks: "LC3:processor"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,15 +66,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 03 11:31:44 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 03 12:17:30 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3FPGA                                     ;
 ; Top-level Entity Name              ; LC3FPGA                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 913                                         ;
-;     Total combinational functions  ; 746                                         ;
-;     Dedicated logic registers      ; 251                                         ;
-; Total registers                    ; 251                                         ;
+; Total logic elements               ; 979                                         ;
+;     Total combinational functions  ; 812                                         ;
+;     Dedicated logic registers      ; 264                                         ;
+; Total registers                    ; 264                                         ;
 ; Total pins                         ; 81                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576                                   ;
@@ -216,20 +215,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 913          ;
+; Estimated Total logic elements              ; 979          ;
 ;                                             ;              ;
-; Total combinational functions               ; 746          ;
+; Total combinational functions               ; 812          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 518          ;
-;     -- 3 input functions                    ; 166          ;
-;     -- <=2 input functions                  ; 62           ;
+;     -- 4 input functions                    ; 579          ;
+;     -- 3 input functions                    ; 192          ;
+;     -- <=2 input functions                  ; 41           ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 702          ;
+;     -- normal mode                          ; 768          ;
 ;     -- arithmetic mode                      ; 44           ;
 ;                                             ;              ;
-; Total registers                             ; 251          ;
-;     -- Dedicated logic registers            ; 251          ;
+; Total registers                             ; 264          ;
+;     -- Dedicated logic registers            ; 264          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 81           ;
@@ -239,8 +238,8 @@ refer to the applicable agreement for further details.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 374          ;
-; Total fan-out                               ; 7936         ;
-; Average fan-out                             ; 6.17         ;
+; Total fan-out                               ; 8255         ;
+; Average fan-out                             ; 6.04         ;
 +---------------------------------------------+--------------+
 
 
@@ -249,13 +248,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name          ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |LC3FPGA                                        ; 746 (64)            ; 251 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 81   ; 0            ; |LC3FPGA                                                                                                                                                    ; LC3FPGA              ; work         ;
-;    |LC3:processor|                              ; 670 (0)             ; 251 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor                                                                                                                                      ; LC3                  ; work         ;
+; |LC3FPGA                                        ; 812 (85)            ; 264 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 81   ; 0            ; |LC3FPGA                                                                                                                                                    ; LC3FPGA              ; work         ;
+;    |LC3:processor|                              ; 715 (0)             ; 264 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor                                                                                                                                      ; LC3                  ; work         ;
 ;       |ALU:alu|                                 ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|ALU:alu                                                                                                                              ; ALU                  ; work         ;
-;       |EAB:eab|                                 ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|EAB:eab                                                                                                                              ; EAB                  ; work         ;
+;       |EAB:eab|                                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|EAB:eab                                                                                                                              ; EAB                  ; work         ;
 ;       |IR:ir|                                   ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|IR:ir                                                                                                                                ; IR                   ; work         ;
 ;          |bit_16_reg:register|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|IR:ir|bit_16_reg:register                                                                                                            ; bit_16_reg           ; work         ;
-;       |LC3Control:FSM|                          ; 121 (121)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
+;       |LC3Control:FSM|                          ; 122 (122)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
 ;       |Memory:memory|                           ; 192 (0)             ; 38 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|Memory:memory                                                                                                                        ; Memory               ; work         ;
 ;          |bit_16_reg:MAR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MAR_reg                                                                                                     ; bit_16_reg           ; work         ;
 ;          |bit_16_reg:MDR_reg|                   ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MDR_reg                                                                                                     ; bit_16_reg           ; work         ;
@@ -270,7 +269,7 @@ refer to the applicable agreement for further details.
 ;                   |mux_qob:mux5|                ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux5             ; mux_qob              ; work         ;
 ;       |PC:pc|                                   ; 16 (16)             ; 32 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|PC:pc                                                                                                                                ; PC                   ; work         ;
 ;          |bit_16_reg:pc_reg|                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|PC:pc|bit_16_reg:pc_reg                                                                                                              ; bit_16_reg           ; work         ;
-;       |RegisterFile:reg_file|                   ; 107 (23)            ; 131 (3)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file                                                                                                                ; RegisterFile         ; work         ;
+;       |RegisterFile:reg_file|                   ; 172 (88)            ; 144 (16)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file                                                                                                                ; RegisterFile         ; work         ;
 ;          |bit_16_reg:r0|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|bit_16_reg:r0                                                                                                  ; bit_16_reg           ; work         ;
 ;          |bit_16_reg:r1|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|bit_16_reg:r1                                                                                                  ; bit_16_reg           ; work         ;
 ;          |bit_16_reg:r2|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|bit_16_reg:r2                                                                                                  ; bit_16_reg           ; work         ;
@@ -281,7 +280,7 @@ refer to the applicable agreement for further details.
 ;          |bit_16_reg:r7|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|bit_16_reg:r7                                                                                                  ; bit_16_reg           ; work         ;
 ;          |mux_8_1_bit_16:mux0|                  ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0                                                                                            ; mux_8_1_bit_16       ; work         ;
 ;          |mux_8_1_bit_16:mux1|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux1                                                                                            ; mux_8_1_bit_16       ; work         ;
-;       |bus_tri_state_buffer:tsb|                ; 94 (94)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
+;       |bus_tri_state_buffer:tsb|                ; 74 (74)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|LC3:processor|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
 ;    |SevenSegmentDecoder:state_disp1|            ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|SevenSegmentDecoder:state_disp1                                                                                                                    ; SevenSegmentDecoder  ; work         ;
 ;    |SevenSegmentDecoder:state_disp2|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3FPGA|SevenSegmentDecoder:state_disp2                                                                                                                    ; SevenSegmentDecoder  ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
@@ -336,7 +335,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 251   ;
+; Total registers                              ; 264   ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 19    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -351,11 +350,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
-; LC3:processor|LC3Control:FSM|current_state[1] ; 46      ;
+; LC3:processor|LC3Control:FSM|current_state[1] ; 47      ;
 ; LC3:processor|LC3Control:FSM|current_state[3] ; 54      ;
-; LC3:processor|LC3Control:FSM|current_state[0] ; 44      ;
+; LC3:processor|LC3Control:FSM|current_state[0] ; 43      ;
 ; LC3:processor|LC3Control:FSM|current_state[2] ; 51      ;
-; LC3:processor|LC3Control:FSM|current_state[5] ; 43      ;
+; LC3:processor|LC3Control:FSM|current_state[5] ; 44      ;
 ; Total number of inverted registers = 5        ;         ;
 +-----------------------------------------------+---------+
 
@@ -365,19 +364,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MDR_reg|Q[13]           ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|Out_r[0]                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MDR_reg|Q[14]           ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|Out_r[3]                   ;
 ; 64:1               ; 3 bits    ; 126 LEs       ; 12 LEs               ; 114 LEs                ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|enaPC                             ;
 ; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|aluControl[0]                     ;
-; 66:1               ; 2 bits    ; 88 LEs        ; 12 LEs               ; 76 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|next_state[4]                     ;
-; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|next_state[0]                     ;
+; 66:1               ; 2 bits    ; 88 LEs        ; 12 LEs               ; 76 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|next_state[5]                     ;
+; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|next_state[1]                     ;
 ; 28:1               ; 3 bits    ; 54 LEs        ; 3 LEs                ; 51 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|DR[0]                             ;
-; 30:1               ; 3 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|SR1[0]                            ;
+; 30:1               ; 3 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|SR1[2]                            ;
 ; 32:1               ; 3 bits    ; 63 LEs        ; 9 LEs                ; 54 LEs                 ; Yes        ; |LC3FPGA|LC3:processor|LC3Control:FSM|SR2[0]                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LC3FPGA|HEX0_out                                                       ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[7] ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|ALU:alu|adder_in_b[2]                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|bus_tri_state_buffer:tsb|Bus[14]                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[8] ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|ALU:alu|adder_in_b[5]                            ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3FPGA|LC3:processor|bus_tri_state_buffer:tsb|Bus[0]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
@@ -588,15 +586,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LC3:processor|RegisterFile:reg_file"                                                                                        ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                    ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Out_r ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "Out_r[15..3]" have no fanouts ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "LC3:processor|LC3Control:FSM"                                                            ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -612,8 +601,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port           ; Type   ; Severity ; Details                                                                                                                                                                            ;
 +----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; SR_r           ; Input  ; Warning  ; Input port expression (18 bits) is wider than the input port (3 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Out_r          ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (16 bits) it drives.  The 13 most-significant bit(s) in the port expression will be connected to GND.            ;
-; IR             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; Bus            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
 ; PC             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
 ; MDROut         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
@@ -627,27 +614,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 81                          ;
-; cycloneiii_ff         ; 251                         ;
+; cycloneiii_ff         ; 264                         ;
 ;     ENA               ; 207                         ;
 ;     ENA SCLR          ; 4                           ;
 ;     ENA SCLR SLD      ; 1                           ;
 ;     ENA SLD           ; 16                          ;
 ;     SLD               ; 2                           ;
-;     plain             ; 21                          ;
-; cycloneiii_lcell_comb ; 748                         ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 814                         ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 704                         ;
+;     normal            ; 770                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 135                         ;
-;         4 data inputs ; 518                         ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 161                         ;
+;         4 data inputs ; 579                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.30                        ;
-; Average LUT depth     ; 4.96                        ;
+; Max LUT depth         ; 10.10                       ;
+; Average LUT depth     ; 4.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -666,7 +653,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Mar 03 11:30:37 2019
+    Info: Processing started: Sun Mar 03 12:16:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3FPGA -c LC3FPGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -880,20 +867,6 @@ Info (10041): Inferred latch for "aluOut[13]" at ALU.v(39) File: C:/Users/USER1/
 Info (10041): Inferred latch for "aluOut[14]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Info (10041): Inferred latch for "aluOut[15]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Info (12128): Elaborating entity "SevenSegmentDecoder" for hierarchy "SevenSegmentDecoder:disp1" File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 65
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "reg_output[15]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[14]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[13]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[12]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[11]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[10]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[9]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[8]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[7]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[6]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[5]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[4]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
-    Warning (12110): Net "reg_output[3]" is missing source, defaulting to GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 26
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "LC3:processor|bus_tri_state_buffer:tsb|Bus[0]" feeding internal logic into a wire File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 18
     Warning (13049): Converted tri-state buffer "LC3:processor|bus_tri_state_buffer:tsb|Bus[1]" feeding internal logic into a wire File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 18
@@ -991,7 +964,7 @@ Warning (14026): LATCH primitive "LC3:processor|ALU:alu|aluOut[12]" is permanent
 Warning (14026): LATCH primitive "LC3:processor|ALU:alu|aluOut[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Warning (14026): LATCH primitive "LC3:processor|ALU:alu|aluOut[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Warning (14026): LATCH primitive "LC3:processor|ALU:alu|aluOut[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
-Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
+Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux1|out[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux1|out[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux1|out[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
@@ -1010,6 +983,7 @@ Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bi
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux1|out[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[15]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[14]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
+Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[13]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[12]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[11]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[10]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
@@ -1022,23 +996,9 @@ Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bi
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
-Warning (14026): LATCH primitive "LC3:processor|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[0]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
-Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 20
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
@@ -1047,16 +1007,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/USER1/Digital Logic/LC-3/FPGA/LC3FPGA.v Line: 12
-Info (21057): Implemented 1141 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1207 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 932 logic cells
+    Info (21061): Implemented 998 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 192 warnings
-    Info: Peak virtual memory: 4786 megabytes
-    Info: Processing ended: Sun Mar 03 11:31:44 2019
-    Info: Elapsed time: 00:01:07
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 165 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sun Mar 03 12:17:31 2019
+    Info: Elapsed time: 00:00:58
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+

@@ -37,7 +37,7 @@ output [15:0] IR, Bus, PC;
 // debug read I/O
 input clk_r;
 input [2:0] SR_r;
-output [2:0] Out_r;
+output [15:0] Out_r;
 
 // memory I/Os
 output [15:0] MDROut;

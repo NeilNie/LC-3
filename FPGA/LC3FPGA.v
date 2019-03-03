@@ -58,7 +58,7 @@ LC3 processor(
 	//	PC,
 );
 
-assign LEDR[15:0] = reg_output;//IR;
+assign LEDR[15:0] = IR;
 assign LEDR[17] = ~KEY[0];
 
 // seven segment display reg

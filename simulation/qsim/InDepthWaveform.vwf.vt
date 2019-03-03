@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/03/2019 11:48:08"
+// Generated on "03/03/2019 12:18:30"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LC3
 // 
@@ -39,7 +39,7 @@ reg [15:0] data_in_direct;
 wire [15:0] Bus;
 wire [15:0] IR;
 wire [15:0] MDROut;
-wire [2:0] Out_r;
+wire [15:0] Out_r;
 wire [15:0] PC;
 wire [5:0] current_state;
 wire [15:0] mem_out_direct;
@@ -262,6 +262,7 @@ end
 initial
 begin
 	SR_r[1] = 1'b0;
+	SR_r[1] = #320000 1'b1;
 end 
 // SR_r[ 0 ]
 initial

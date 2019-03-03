@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3
-Sun Mar 03 11:38:16 2019
+Sun Mar 03 12:08:12 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -24,12 +24,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  16. Port Connectivity Checks: "EAB:eab"
  17. Port Connectivity Checks: "MARMux:mar_mux"
  18. Port Connectivity Checks: "Memory:memory"
- 19. Port Connectivity Checks: "RegisterFile:reg_file"
- 20. Port Connectivity Checks: "LC3Control:FSM"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 19. Port Connectivity Checks: "LC3Control:FSM"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,16 +54,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 03 11:38:16 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 03 12:08:12 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 840                                         ;
-;     Total combinational functions  ; 673                                         ;
-;     Dedicated logic registers      ; 252                                         ;
-; Total registers                    ; 252                                         ;
-; Total pins                         ; 127                                         ;
+; Total logic elements               ; 908                                         ;
+;     Total combinational functions  ; 741                                         ;
+;     Dedicated logic registers      ; 265                                         ;
+; Total registers                    ; 265                                         ;
+; Total pins                         ; 140                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -202,31 +201,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 840       ;
+; Estimated Total logic elements              ; 908       ;
 ;                                             ;           ;
-; Total combinational functions               ; 673       ;
+; Total combinational functions               ; 741       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 458       ;
-;     -- 3 input functions                    ; 160       ;
-;     -- <=2 input functions                  ; 55        ;
+;     -- 4 input functions                    ; 516       ;
+;     -- 3 input functions                    ; 171       ;
+;     -- <=2 input functions                  ; 54        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 629       ;
+;     -- normal mode                          ; 697       ;
 ;     -- arithmetic mode                      ; 44        ;
 ;                                             ;           ;
-; Total registers                             ; 252       ;
-;     -- Dedicated logic registers            ; 252       ;
+; Total registers                             ; 265       ;
+;     -- Dedicated logic registers            ; 265       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 127       ;
+; I/O pins                                    ; 140       ;
 ; Total memory bits                           ; 1048576   ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 374       ;
-; Total fan-out                               ; 7774      ;
-; Average fan-out                             ; 5.95      ;
+; Total fan-out                               ; 8089      ;
+; Average fan-out                             ; 5.72      ;
 +---------------------------------------------+-----------+
 
 
@@ -235,12 +234,12 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name          ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |LC3                                         ; 673 (1)             ; 252 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 127  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
-;    |ALU:alu|                                 ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|ALU:alu                                                                                                                              ; ALU                  ; work         ;
+; |LC3                                         ; 741 (1)             ; 265 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 140  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
+;    |ALU:alu|                                 ; 108 (108)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|ALU:alu                                                                                                                              ; ALU                  ; work         ;
 ;    |EAB:eab|                                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|EAB:eab                                                                                                                              ; EAB                  ; work         ;
 ;    |IR:ir|                                   ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir                                                                                                                                ; IR                   ; work         ;
 ;       |bit_16_reg:register|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_reg:register                                                                                                            ; bit_16_reg           ; work         ;
-;    |LC3Control:FSM|                          ; 128 (128)           ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
+;    |LC3Control:FSM|                          ; 129 (129)           ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
 ;    |Memory:memory|                           ; 192 (0)             ; 38 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory                                                                                                                        ; Memory               ; work         ;
 ;       |bit_16_reg:MAR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MAR_reg                                                                                                     ; bit_16_reg           ; work         ;
 ;       |bit_16_reg:MDR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MDR_reg                                                                                                     ; bit_16_reg           ; work         ;
@@ -255,7 +254,7 @@ refer to the applicable agreement for further details.
 ;                |mux_qob:mux5|                ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux5             ; mux_qob              ; work         ;
 ;    |PC:pc|                                   ; 16 (16)             ; 32 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|PC:pc                                                                                                                                ; PC                   ; work         ;
 ;       |bit_16_reg:pc_reg|                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|PC:pc|bit_16_reg:pc_reg                                                                                                              ; bit_16_reg           ; work         ;
-;    |RegisterFile:reg_file|                   ; 107 (23)            ; 131 (3)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file                                                                                                                ; RegisterFile         ; work         ;
+;    |RegisterFile:reg_file|                   ; 172 (88)            ; 144 (16)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file                                                                                                                ; RegisterFile         ; work         ;
 ;       |bit_16_reg:r0|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|bit_16_reg:r0                                                                                                  ; bit_16_reg           ; work         ;
 ;       |bit_16_reg:r1|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|bit_16_reg:r1                                                                                                  ; bit_16_reg           ; work         ;
 ;       |bit_16_reg:r2|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|bit_16_reg:r2                                                                                                  ; bit_16_reg           ; work         ;
@@ -266,7 +265,7 @@ refer to the applicable agreement for further details.
 ;       |bit_16_reg:r7|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|bit_16_reg:r7                                                                                                  ; bit_16_reg           ; work         ;
 ;       |mux_8_1_bit_16:mux0|                  ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0                                                                                            ; mux_8_1_bit_16       ; work         ;
 ;       |mux_8_1_bit_16:mux1|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux1                                                                                            ; mux_8_1_bit_16       ; work         ;
-;    |bus_tri_state_buffer:tsb|                ; 90 (90)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
+;    |bus_tri_state_buffer:tsb|                ; 91 (91)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -299,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 252   ;
+; Total registers                              ; 265   ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -315,10 +314,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; LC3Control:FSM|current_state[0]        ; 39      ;
-; LC3Control:FSM|current_state[1]        ; 44      ;
-; LC3Control:FSM|current_state[2]        ; 48      ;
-; LC3Control:FSM|current_state[3]        ; 53      ;
-; LC3Control:FSM|current_state[5]        ; 44      ;
+; LC3Control:FSM|current_state[1]        ; 45      ;
+; LC3Control:FSM|current_state[2]        ; 49      ;
+; LC3Control:FSM|current_state[3]        ; 52      ;
+; LC3Control:FSM|current_state[5]        ; 45      ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
@@ -328,18 +327,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |LC3|Memory:memory|bit_16_reg:MDR_reg|Q[11]           ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |LC3|RegisterFile:reg_file|Out_r[0]                   ;
-; 64:1               ; 4 bits    ; 168 LEs       ; 20 LEs               ; 148 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMARM                           ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3|LC3Control:FSM|aluControl[0]                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |LC3|Memory:memory|bit_16_reg:MDR_reg|Q[8]            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |LC3|RegisterFile:reg_file|Out_r[2]                   ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 20 LEs               ; 148 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMDR                            ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3|LC3Control:FSM|aluControl[1]                     ;
 ; 66:1               ; 2 bits    ; 88 LEs        ; 12 LEs               ; 76 LEs                 ; Yes        ; |LC3|LC3Control:FSM|next_state[5]                     ;
-; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[2]                     ;
+; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[3]                     ;
 ; 28:1               ; 3 bits    ; 54 LEs        ; 3 LEs                ; 51 LEs                 ; Yes        ; |LC3|LC3Control:FSM|DR[2]                             ;
 ; 30:1               ; 3 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR1[1]                            ;
 ; 32:1               ; 3 bits    ; 63 LEs        ; 9 LEs                ; 54 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR2[2]                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3] ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[14]                           ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[15]                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[8] ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[2]                            ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[6]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -469,15 +468,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RegisterFile:reg_file"                                                                                                      ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                    ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Out_r ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "Out_r[15..3]" have no fanouts ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "LC3Control:FSM"                                                                          ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -492,29 +482,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 127                         ;
-; cycloneiii_ff         ; 252                         ;
+; boundary_port         ; 140                         ;
+; cycloneiii_ff         ; 265                         ;
 ;     ENA               ; 207                         ;
 ;     ENA SCLR          ; 4                           ;
 ;     ENA SCLR SLD      ; 1                           ;
 ;     ENA SLD           ; 17                          ;
 ;     SLD               ; 2                           ;
-;     plain             ; 21                          ;
+;     plain             ; 34                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 677                         ;
+; cycloneiii_lcell_comb ; 745                         ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 633                         ;
+;     normal            ; 701                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 129                         ;
-;         4 data inputs ; 458                         ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 140                         ;
+;         4 data inputs ; 516                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.10                       ;
-; Average LUT depth     ; 5.05                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 4.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -523,7 +513,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -533,7 +523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Mar 03 11:37:18 2019
+    Info: Processing started: Sun Mar 03 12:07:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -834,7 +824,7 @@ Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[2]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Warning (14026): LATCH primitive "RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[1]" is permanently enabled File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "bus_tri_state_buffer:tsb|Bus[0]" to the node "IR:ir|bit_16_reg:register|Q[0]" into an OR gate File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 18
     Warning (13047): Converted the fan-out from the tri-state buffer "bus_tri_state_buffer:tsb|Bus[1]" to the node "IR:ir|bit_16_reg:register|Q[1]" into an OR gate File: C:/Users/USER1/Digital Logic/LC-3/bus_tri_state_buffer.v Line: 18
@@ -856,16 +846,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/USER1/Digital Logic/LC-3/output_files/LC3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1114 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1194 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 89 output pins
-    Info (21061): Implemented 859 logic cells
+    Info (21059): Implemented 102 output pins
+    Info (21061): Implemented 926 logic cells
     Info (21064): Implemented 128 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Sun Mar 03 11:38:16 2019
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Sun Mar 03 12:08:12 2019
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+

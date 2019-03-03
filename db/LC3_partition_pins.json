@@ -16,6 +16,58 @@
 					"strict" : false
 				},
 				{
+					"name" : "Out_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Out_r[15]",
+					"strict" : false
+				},
+				{
 					"name" : "IR[0]",
 					"strict" : false
 				},

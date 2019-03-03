@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dC:/Users/USER1/Digital Logic/LC-3/simulation/qsim
 vhard_block
-Z1 !s110 1551631694
+Z1 !s110 1551633523
 !i10b 1
-!s100 X^V35HV7NA:hd[:P[Rg3S3
-I:hZBB;BB]3][X96U;A14^0
+!s100 @^2h>bJbWl_P[kB>Kbg561
+Iha<Ek>MU_UXIRXnZQL9fb0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1551631691
+Z3 w1551633519
 Z4 8LC3.vo
 Z5 FLC3.vo
-L0 30483
+L0 32719
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1551631693.000000
+Z7 !s108 1551633522.000000
 Z8 !s107 LC3.vo|
 Z9 !s90 -work|work|LC3.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vLC3
 R1
 !i10b 1
-!s100 zN5fdWS@AU]lWN1icR1fe0
-I4fQ6A^o>8ZiM>Gc_4Ge0g2
+!s100 M;TW>zohWSoIO5E3MCj<72
+IiK@5jg0^:z92HC]Kh=[0;3
 R2
 R0
 R3
@@ -54,11 +54,11 @@ n@l@c3
 vLC3_vlg_vec_tst
 R1
 !i10b 1
-!s100 8dmXS=i>1TQ?@R3HdFh0T0
-IVi79:_j?>KB6[zTzeW][F0
+!s100 ?J<EcQ_Q<fnl2EVSaLT?D1
+Ih`IR2oEMhW^B^TQ:^2G]^3
 R2
 R0
-w1551631688
+w1551633511
 8InDepthWaveform.vwf.vt
 FInDepthWaveform.vwf.vt
 L0 29
@@ -66,7 +66,7 @@ R6
 r1
 !s85 0
 31
-!s108 1551631694.000000
+!s108 1551633523.000000
 !s107 InDepthWaveform.vwf.vt|
 !s90 -work|work|InDepthWaveform.vwf.vt|
 !i113 1

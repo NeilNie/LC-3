@@ -1,26 +1,26 @@
 # do LC3.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:48:13 on Mar 03,2019
+# Start time: 12:18:42 on Mar 03,2019
 # vlog -work work LC3.vo 
 # -- Compiling module LC3
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	LC3
-# End time: 11:48:14 on Mar 03,2019, Elapsed time: 0:00:01
+# End time: 12:18:43 on Mar 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:48:14 on Mar 03,2019
+# Start time: 12:18:43 on Mar 03,2019
 # vlog -work work InDepthWaveform.vwf.vt 
 # -- Compiling module LC3_vlg_vec_tst
 # 
 # Top level modules:
 # 	LC3_vlg_vec_tst
-# End time: 11:48:14 on Mar 03,2019, Elapsed time: 0:00:00
+# End time: 12:18:43 on Mar 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.LC3_vlg_vec_tst 
-# Start time: 11:48:14 on Mar 03,2019
+# Start time: 12:18:44 on Mar 03,2019
 # Loading work.LC3_vlg_vec_tst
 # Loading work.LC3
 # Loading work.hard_block
@@ -38,5 +38,5 @@
 # after#26
 # ** Note: $finish    : InDepthWaveform.vwf.vt(66)
 #    Time: 350 ns  Iteration: 0  Instance: /LC3_vlg_vec_tst
-# End time: 11:48:16 on Mar 03,2019, Elapsed time: 0:00:02
+# End time: 12:18:48 on Mar 03,2019, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
