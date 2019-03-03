@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LC3
-Fri Mar 01 18:47:18 2019
+Sun Mar 03 11:38:16 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -55,16 +55,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 01 18:47:16 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 03 11:38:16 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3                                         ;
 ; Top-level Entity Name              ; LC3                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 845                                         ;
-;     Total combinational functions  ; 678                                         ;
-;     Dedicated logic registers      ; 251                                         ;
-; Total registers                    ; 251                                         ;
-; Total pins                         ; 175                                         ;
+; Total logic elements               ; 840                                         ;
+;     Total combinational functions  ; 673                                         ;
+;     Dedicated logic registers      ; 252                                         ;
+; Total registers                    ; 252                                         ;
+; Total pins                         ; 127                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576                                   ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -202,31 +202,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 845       ;
+; Estimated Total logic elements              ; 840       ;
 ;                                             ;           ;
-; Total combinational functions               ; 678       ;
+; Total combinational functions               ; 673       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 488       ;
-;     -- 3 input functions                    ; 133       ;
-;     -- <=2 input functions                  ; 57        ;
+;     -- 4 input functions                    ; 458       ;
+;     -- 3 input functions                    ; 160       ;
+;     -- <=2 input functions                  ; 55        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 634       ;
+;     -- normal mode                          ; 629       ;
 ;     -- arithmetic mode                      ; 44        ;
 ;                                             ;           ;
-; Total registers                             ; 251       ;
-;     -- Dedicated logic registers            ; 251       ;
+; Total registers                             ; 252       ;
+;     -- Dedicated logic registers            ; 252       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 175       ;
+; I/O pins                                    ; 127       ;
 ; Total memory bits                           ; 1048576   ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 373       ;
-; Total fan-out                               ; 7882      ;
-; Average fan-out                             ; 5.60      ;
+; Maximum fan-out                             ; 374       ;
+; Total fan-out                               ; 7774      ;
+; Average fan-out                             ; 5.95      ;
 +---------------------------------------------+-----------+
 
 
@@ -235,13 +235,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name          ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |LC3                                         ; 678 (1)             ; 251 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 175  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
-;    |ALU:alu|                                 ; 109 (109)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|ALU:alu                                                                                                                              ; ALU                  ; work         ;
-;    |EAB:eab|                                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|EAB:eab                                                                                                                              ; EAB                  ; work         ;
+; |LC3                                         ; 673 (1)             ; 252 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 127  ; 0            ; |LC3                                                                                                                                      ; LC3                  ; work         ;
+;    |ALU:alu|                                 ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|ALU:alu                                                                                                                              ; ALU                  ; work         ;
+;    |EAB:eab|                                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|EAB:eab                                                                                                                              ; EAB                  ; work         ;
 ;    |IR:ir|                                   ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir                                                                                                                                ; IR                   ; work         ;
 ;       |bit_16_reg:register|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|IR:ir|bit_16_reg:register                                                                                                            ; bit_16_reg           ; work         ;
-;    |LC3Control:FSM|                          ; 118 (118)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
-;    |Memory:memory|                           ; 208 (16)            ; 38 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory                                                                                                                        ; Memory               ; work         ;
+;    |LC3Control:FSM|                          ; 128 (128)           ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|LC3Control:FSM                                                                                                                       ; LC3Control           ; work         ;
+;    |Memory:memory|                           ; 192 (0)             ; 38 (0)                    ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory                                                                                                                        ; Memory               ; work         ;
 ;       |bit_16_reg:MAR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MAR_reg                                                                                                     ; bit_16_reg           ; work         ;
 ;       |bit_16_reg:MDR_reg|                   ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|bit_16_reg:MDR_reg                                                                                                     ; bit_16_reg           ; work         ;
 ;       |two_port_mem:two_port_ram_inst|       ; 192 (0)             ; 6 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|Memory:memory|two_port_mem:two_port_ram_inst                                                                                         ; two_port_mem         ; work         ;
@@ -266,7 +266,7 @@ refer to the applicable agreement for further details.
 ;       |bit_16_reg:r7|                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|bit_16_reg:r7                                                                                                  ; bit_16_reg           ; work         ;
 ;       |mux_8_1_bit_16:mux0|                  ; 80 (80)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0                                                                                            ; mux_8_1_bit_16       ; work         ;
 ;       |mux_8_1_bit_16:mux1|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux1                                                                                            ; mux_8_1_bit_16       ; work         ;
-;    |bus_tri_state_buffer:tsb|                ; 103 (103)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
+;    |bus_tri_state_buffer:tsb|                ; 90 (90)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LC3|bus_tri_state_buffer:tsb                                                                                                             ; bus_tri_state_buffer ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -288,10 +288,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LC3Control:FSM|selEAB2[1]             ; Stuck at VCC due to stuck port data_in ;
 ; LC3Control:FSM|selEAB2[0]             ; Stuck at GND due to stuck port data_in ;
 ; LC3Control:FSM|selMAR                 ; Stuck at GND due to stuck port data_in ;
-; LC3Control:FSM|selEAB1                ; Stuck at GND due to stuck port data_in ;
 ; LC3Control:FSM|selPC[1]               ; Merged with LC3Control:FSM|selPC[0]    ;
 ; LC3Control:FSM|selPC[0]               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 6 ;                                        ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -300,12 +299,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 251   ;
-; Number of registers using Synchronous Clear  ; 6     ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Total registers                              ; 252   ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 231   ;
+; Number of registers using Clock Enable       ; 229   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -315,11 +314,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; LC3Control:FSM|current_state[0]        ; 38      ;
-; LC3Control:FSM|current_state[1]        ; 46      ;
-; LC3Control:FSM|current_state[2]        ; 45      ;
-; LC3Control:FSM|current_state[3]        ; 40      ;
-; LC3Control:FSM|current_state[5]        ; 45      ;
+; LC3Control:FSM|current_state[0]        ; 39      ;
+; LC3Control:FSM|current_state[1]        ; 44      ;
+; LC3Control:FSM|current_state[2]        ; 48      ;
+; LC3Control:FSM|current_state[3]        ; 53      ;
+; LC3Control:FSM|current_state[5]        ; 44      ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
@@ -329,17 +328,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |LC3|Memory:memory|bit_16_reg:MDR_reg|Q[11]           ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |LC3|RegisterFile:reg_file|Out_r[0]                   ;
-; 64:1               ; 3 bits    ; 126 LEs       ; 12 LEs               ; 114 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMDR                            ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3|LC3Control:FSM|aluControl[1]                     ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 20 LEs               ; 148 LEs                ; Yes        ; |LC3|LC3Control:FSM|enaMARM                           ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 4 LEs                ; 80 LEs                 ; Yes        ; |LC3|LC3Control:FSM|aluControl[0]                     ;
 ; 66:1               ; 2 bits    ; 88 LEs        ; 12 LEs               ; 76 LEs                 ; Yes        ; |LC3|LC3Control:FSM|next_state[5]                     ;
-; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[3]                     ;
-; 30:1               ; 3 bits    ; 60 LEs        ; 3 LEs                ; 57 LEs                 ; Yes        ; |LC3|LC3Control:FSM|DR[0]                             ;
-; 32:1               ; 3 bits    ; 63 LEs        ; 6 LEs                ; 57 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR2[1]                            ;
-; 32:1               ; 3 bits    ; 63 LEs        ; 6 LEs                ; 57 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR1[0]                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[6] ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[1]                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[1]                  ;
+; 66:1               ; 4 bits    ; 176 LEs       ; 48 LEs               ; 128 LEs                ; Yes        ; |LC3|LC3Control:FSM|next_state[2]                     ;
+; 28:1               ; 3 bits    ; 54 LEs        ; 3 LEs                ; 51 LEs                 ; Yes        ; |LC3|LC3Control:FSM|DR[2]                             ;
+; 30:1               ; 3 bits    ; 60 LEs        ; 6 LEs                ; 54 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR1[1]                            ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 9 LEs                ; 54 LEs                 ; Yes        ; |LC3|LC3Control:FSM|SR2[2]                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |LC3|RegisterFile:reg_file|mux_8_1_bit_16:mux0|out[3] ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |LC3|ALU:alu|adder_in_b[14]                           ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |LC3|bus_tri_state_buffer:tsb|Bus[15]                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -492,29 +492,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 175                         ;
-; cycloneiii_ff         ; 251                         ;
-;     ENA               ; 224                         ;
+; boundary_port         ; 127                         ;
+; cycloneiii_ff         ; 252                         ;
+;     ENA               ; 207                         ;
 ;     ENA SCLR          ; 4                           ;
-;     ENA SCLR SLD      ; 2                           ;
-;     ENA SLD           ; 1                           ;
-;     SLD               ; 1                           ;
-;     plain             ; 19                          ;
+;     ENA SCLR SLD      ; 1                           ;
+;     ENA SLD           ; 17                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 21                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 683                         ;
+; cycloneiii_lcell_comb ; 677                         ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 639                         ;
+;     normal            ; 633                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 102                         ;
-;         4 data inputs ; 488                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 129                         ;
+;         4 data inputs ; 458                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.70                       ;
-; Average LUT depth     ; 5.08                        ;
+; Max LUT depth         ; 11.10                       ;
+; Average LUT depth     ; 5.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -533,7 +533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 01 18:46:21 2019
+    Info: Processing started: Sun Mar 03 11:37:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
@@ -555,6 +555,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file nzp/nzp
     Info (12023): Found entity 1: NZP_register File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file nzp/nzp.v
     Info (12023): Found entity 1: NZP File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 5
+Warning (10238): Verilog Module Declaration warning at Memory.v(27): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "Memory" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file memory/memory.v
     Info (12023): Found entity 1: Memory File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file marmux/marmux.v
@@ -568,7 +569,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file eab/eab
     Info (12023): Found entity 1: EAB File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file alu/alu.v
     Info (12023): Found entity 1: ALU File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 9
-Warning (10275): Verilog HDL Module Instantiation warning at LC3.v(106): ignored dangling comma in List of Port Connections File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 106
+Warning (10275): Verilog HDL Module Instantiation warning at LC3.v(101): ignored dangling comma in List of Port Connections File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 101
 Info (12021): Found 1 design units, including 1 entities, in source file lc3.v
     Info (12023): Found entity 1: LC3 File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file bus_tri_state_buffer.v
@@ -576,10 +577,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file bus_tri
 Info (12021): Found 1 design units, including 1 entities, in source file general_tb.v
     Info (12023): Found entity 1: general_tb File: C:/Users/USER1/Digital Logic/LC-3/general_tb.v Line: 29
 Info (12127): Elaborating entity "LC3" for the top level hierarchy
-Info (12128): Elaborating entity "bus_tri_state_buffer" for hierarchy "bus_tri_state_buffer:tsb" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 84
-Info (12128): Elaborating entity "LC3Control" for hierarchy "LC3Control:FSM" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 106
+Info (12128): Elaborating entity "bus_tri_state_buffer" for hierarchy "bus_tri_state_buffer:tsb" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 79
+Info (12128): Elaborating entity "LC3Control" for hierarchy "LC3Control:FSM" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 101
 Warning (10034): Output port "reset" at LC3Control.v(38) has no driver File: C:/Users/USER1/Digital Logic/LC-3/LC3Control/LC3Control.v Line: 38
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:reg_file" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 114
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:reg_file" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 109
 Info (12128): Elaborating entity "decoder_3_8" for hierarchy "RegisterFile:reg_file|decoder_3_8:decoder" File: C:/Users/USER1/Digital Logic/LC-3/Register File/RegisterFile.v Line: 43
 Warning (10240): Verilog HDL Always Construct warning at decoder_3_8.v(18): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 18
 Info (10041): Inferred latch for "out[0]" at decoder_3_8.v(18) File: C:/Users/USER1/Digital Logic/LC-3/Register File/decoder_3_8.v Line: 18
@@ -609,7 +610,7 @@ Info (10041): Inferred latch for "out[12]" at mux_8_1_bit_16.v(20) File: C:/User
 Info (10041): Inferred latch for "out[13]" at mux_8_1_bit_16.v(20) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Info (10041): Inferred latch for "out[14]" at mux_8_1_bit_16.v(20) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
 Info (10041): Inferred latch for "out[15]" at mux_8_1_bit_16.v(20) File: C:/Users/USER1/Digital Logic/LC-3/Register File/mux_8_1_bit_16.v Line: 20
-Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 124
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 119
 Warning (10230): Verilog HDL assignment warning at PC.v(33): truncated value with size 32 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 33
 Warning (10240): Verilog HDL Always Construct warning at PC.v(37): inferring latch(es) for variable "PC", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 37
 Info (10041): Inferred latch for "PC[0]" at PC.v(37) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 37
@@ -628,7 +629,7 @@ Info (10041): Inferred latch for "PC[12]" at PC.v(37) File: C:/Users/USER1/Digit
 Info (10041): Inferred latch for "PC[13]" at PC.v(37) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 37
 Info (10041): Inferred latch for "PC[14]" at PC.v(37) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 37
 Info (10041): Inferred latch for "PC[15]" at PC.v(37) File: C:/Users/USER1/Digital Logic/LC-3/PC/PC.v Line: 37
-Info (12128): Elaborating entity "NZP" for hierarchy "NZP:nzp" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 133
+Info (12128): Elaborating entity "NZP" for hierarchy "NZP:nzp" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 128
 Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "N_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
 Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "P_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
 Warning (10240): Verilog HDL Always Construct warning at NZP.v(29): inferring latch(es) for variable "Z_buffer", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
@@ -637,7 +638,7 @@ Info (10041): Inferred latch for "P_buffer" at NZP.v(29) File: C:/Users/USER1/Di
 Info (10041): Inferred latch for "N_buffer" at NZP.v(29) File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 29
 Info (12128): Elaborating entity "NZP_register" for hierarchy "NZP:nzp|NZP_register:register" File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP.v Line: 27
 Info (12128): Elaborating entity "d_negedge_flip_flop" for hierarchy "NZP:nzp|NZP_register:register|d_negedge_flip_flop:ff_0" File: C:/Users/USER1/Digital Logic/LC-3/NZP/NZP_register.v Line: 10
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memory" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 152
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memory" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 144
 Warning (10240): Verilog HDL Always Construct warning at Memory.v(40): inferring latch(es) for variable "MDRIn", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 40
 Info (12128): Elaborating entity "two_port_mem" for hierarchy "Memory:memory|two_port_mem:two_port_ram_inst" File: C:/Users/USER1/Digital Logic/LC-3/Memory/Memory.v Line: 63
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component" File: C:/Users/USER1/Digital Logic/LC-3/Memory/two_port_mem.v Line: 99
@@ -681,9 +682,9 @@ Info (12128): Elaborating entity "decode_k8a" for hierarchy "Memory:memory|two_p
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
     Info (12023): Found entity 1: mux_qob File: C:/Users/USER1/Digital Logic/LC-3/db/mux_qob.tdf Line: 22
 Info (12128): Elaborating entity "mux_qob" for hierarchy "Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux4" File: C:/Users/USER1/Digital Logic/LC-3/db/altsyncram_67i2.tdf Line: 53
-Info (12128): Elaborating entity "MARMux" for hierarchy "MARMux:mar_mux" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 160
-Info (12128): Elaborating entity "IR" for hierarchy "IR:ir" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 168
-Info (12128): Elaborating entity "EAB" for hierarchy "EAB:eab" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 177
+Info (12128): Elaborating entity "MARMux" for hierarchy "MARMux:mar_mux" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 152
+Info (12128): Elaborating entity "IR" for hierarchy "IR:ir" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 160
+Info (12128): Elaborating entity "EAB" for hierarchy "EAB:eab" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 169
 Warning (10240): Verilog HDL Always Construct warning at EAB.v(30): inferring latch(es) for variable "adder_input_1", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 30
 Warning (10240): Verilog HDL Always Construct warning at EAB.v(43): inferring latch(es) for variable "adder_input_2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 43
 Info (10041): Inferred latch for "adder_input_2[0]" at EAB.v(45) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 45
@@ -702,7 +703,7 @@ Info (10041): Inferred latch for "adder_input_2[12]" at EAB.v(45) File: C:/Users
 Info (10041): Inferred latch for "adder_input_2[13]" at EAB.v(45) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 45
 Info (10041): Inferred latch for "adder_input_2[14]" at EAB.v(45) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 45
 Info (10041): Inferred latch for "adder_input_2[15]" at EAB.v(45) File: C:/Users/USER1/Digital Logic/LC-3/EAB/EAB.v Line: 45
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 185
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/USER1/Digital Logic/LC-3/LC3.v Line: 177
 Warning (10230): Verilog HDL assignment warning at ALU.v(34): truncated value with size 21 to match size of target (16) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 34
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(39): inferring latch(es) for variable "aluOut", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
 Info (10041): Inferred latch for "aluOut[0]" at ALU.v(39) File: C:/Users/USER1/Digital Logic/LC-3/ALU/ALU.v Line: 39
@@ -855,16 +856,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/USER1/Digital Logic/LC-3/output_files/LC3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1182 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1114 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 137 output pins
-    Info (21061): Implemented 879 logic cells
+    Info (21059): Implemented 89 output pins
+    Info (21061): Implemented 859 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 146 warnings
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Fri Mar 01 18:47:19 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Sun Mar 03 11:38:16 2019
     Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

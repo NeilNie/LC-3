@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/01/2019 15:05:41"
+// Generated on "03/03/2019 11:48:08"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          LC3
 // 
@@ -38,13 +38,10 @@ reg [15:0] data_in_direct;
 // wires                                               
 wire [15:0] Bus;
 wire [15:0] IR;
-wire [15:0] MAROut;
-wire [15:0] MDRIn;
 wire [15:0] MDROut;
 wire [2:0] Out_r;
 wire [15:0] PC;
 wire [5:0] current_state;
-wire [15:0] memOut;
 wire [15:0] mem_out_direct;
 
 // assign statements (if any)                          
@@ -52,8 +49,6 @@ LC3 i1 (
 // port map - connection between master ports and signals/registers   
 	.Bus(Bus),
 	.IR(IR),
-	.MAROut(MAROut),
-	.MDRIn(MDRIn),
 	.MDROut(MDROut),
 	.Out_r(Out_r),
 	.PC(PC),
@@ -64,7 +59,6 @@ LC3 i1 (
 	.clk_r(clk_r),
 	.current_state(current_state),
 	.data_in_direct(data_in_direct),
-	.memOut(memOut),
 	.mem_out_direct(mem_out_direct)
 );
 initial 
@@ -73,15 +67,11 @@ begin
 end 
 
 // clk
-initial
+always
 begin
-	repeat(31)
-	begin
-		clk = 1'b0;
-		clk = #5000 1'b1;
-		# 5000;
-	end
 	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
 end 
 
 // clk_direct

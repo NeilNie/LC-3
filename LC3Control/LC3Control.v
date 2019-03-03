@@ -150,7 +150,8 @@ always @ (posedge clk) begin
 			DR <= IR[11:9];	SR1 <= IR[8:6]; 	SR2 <= 3'b000;
 			aluControl <= 2'b11;
 			
-			enaALU <= 1;		regWE <= 1;
+			enaMARM <= 0; 		enaMDR <= 0; 		enaALU <= 1; 	enaPC <= 0;
+			regWE <= 1;
 			
 			next_state <= 6'b010010;
 		
@@ -161,6 +162,7 @@ always @ (posedge clk) begin
 		
 			// DR <- PC + OffSet9
 			regWE <= 1;
+			
 			DR <= IR[11:9];	SR2 <= 3'b000; 	SR1 <= 3'b000;
 			selEAB1 <= 0; 		selEAB2 <= 2'b10;	selMAR <= 0;
 			enaMDR <= 0;		enaALU <= 0;		enaPC <= 0;			enaMARM <= 1;
@@ -172,12 +174,20 @@ always @ (posedge clk) begin
 		// state #: 2 (LD)
 		2: begin
 		
+			selEAB2 <= 2'b10;	selEAB1 <= 0;	selMAR <= 0;
+			ldMAR <= 1;			ldMDR <= 0;		ldIR <= 0;		ldPC <= 0;
+			enaMARM <= 1;		enaPC <= 0;		enaMDR <= 0; 	enaALU <= 0;
+			
 			next_state <= 25;
 		end
 		
 		// state #: 25
 		25: begin
 		
+			selMDR <= 1;	
+			ldMDR <= 1;		ldMAR <= 0;		ldIR <= 0;		ldPC <= 0;
+			enaMARM <= 0;		enaPC <= 0;		enaMDR <= 0; 	enaALU <= 0;
+			
 			next_state <= 27;
 		
 		end
@@ -185,13 +195,23 @@ always @ (posedge clk) begin
 		// state #: 27
 		27: begin
 		
+			DR <= IR[11:9];	regWE <= 1;
+			SR1 <= 3'b000;		SR2 <= 3'b111;
+			ldMDR <= 0;		ldMAR <= 0;		ldIR <= 0;		ldPC <= 0;
+			enaMARM <= 0;		enaPC <= 0;		enaMDR <= 1; 	enaALU <= 0;
+			
 			next_state <= 18;
 			
 		end
 		
 		// state #: 6	(LDR)
 		6: begin
-		
+			
+			SR1 <= IR[8:6];		SR2 <= 3'b111;	DR <= 3'b000;
+			selEAB2 <= 2'b10;	selEAB1 <= 1;	selMAR <= 0;
+			ldMAR <= 1;			ldMDR <= 0;		ldIR <= 0;		ldPC <= 0;
+			enaMARM <= 1;		enaPC <= 0;		enaMDR <= 0; 	enaALU <= 0;
+			
 			next_state <= 25;
 			
 		end

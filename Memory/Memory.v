@@ -21,9 +21,9 @@ module Memory(
 	mem_out_direct,
 	
 	// debugging
-	MAROut,
-	memOut,
-	MDRIn
+//	MAROut,
+//	memOut,
+//	MDRIn
 );
 
 // module I/O
@@ -32,9 +32,9 @@ input ldMAR, ldMDR, memWE, clk, clk_direct, reset, selMDR;
 output [15:0] MDROut, mem_out_direct;
 
 // internal variables
-output reg [15:0] MDRIn;
-output [15:0] memOut;
-output [15:0] MAROut;
+reg [15:0] MDRIn;
+wire [15:0] memOut;
+wire [15:0] MAROut;
 
 //// MDRMux
 always @ (Bus or memOut or selMDR) begin

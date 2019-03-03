@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Mar 01 18:46:50 2019
+Analysis & Synthesis Status : Successful - Sun Mar 03 11:31:44 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LC3FPGA
 Top-level Entity Name : LC3FPGA
 Family : Cyclone IV E
-Total logic elements : 709
-    Total combinational functions : 545
-    Dedicated logic registers : 247
-Total registers : 247
-Total pins : 65
+Total logic elements : 913
+    Total combinational functions : 746
+    Dedicated logic registers : 251
+Total registers : 251
+Total pins : 81
 Total virtual pins : 0
 Total memory bits : 1,048,576
 Embedded Multiplier 9-bit elements : 0

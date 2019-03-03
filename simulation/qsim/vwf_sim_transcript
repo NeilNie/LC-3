@@ -25,14 +25,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Mar 01 15:05:39 2019
+    Info: Processing started: Sun Mar 03 11:48:07 2019
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LC3 -c LC3 --vector_source="C:/Users/USER1/Digital Logic/LC-3/InDepthWaveform.vwf" --testbench_file="C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/InDepthWaveform.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-arning (201007): Can't find port "RegisterFile:reg_file|bit_16_reg:r5|Q[9]" in design
-
-ed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+"RegisterFile:reg_file|bit_16_reg:r7|Q[9]" in design
 
 Completed successfully. 
 
@@ -58,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Mar 01 15:05:42 2019
+    Info: Processing started: Sun Mar 03 11:48:09 2019
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/" LC3 -c LC3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file LC3.vo in folder "C:/Users/USER1/Digital Logic/LC-3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4671 megabytes
-    Info: Processing ended: Fri Mar 01 15:05:44 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Sun Mar 03 11:48:12 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -87,9 +84,8 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # do LC3.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:05:45 on Mar 01,2019
+# Start time: 11:48:13 on Mar 03,2019
 # vlog -work work LC3.vo 
 
 # -- Compiling module LC3
@@ -98,22 +94,22 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # 
 # Top level modules:
 # 	LC3
-# End time: 15:05:46 on Mar 01,2019, Elapsed time: 0:00:01
+# End time: 11:48:14 on Mar 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:05:46 on Mar 01,2019
+# Start time: 11:48:14 on Mar 03,2019
 # vlog -work work InDepthWaveform.vwf.vt 
-
 # -- Compiling module LC3_vlg_vec_tst
+
 # 
 # Top level modules:
 # 	LC3_vlg_vec_tst
-# End time: 15:05:47 on Mar 01,2019, Elapsed time: 0:00:01
+# End time: 11:48:14 on Mar 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.LC3_vlg_vec_tst 
-# Start time: 15:05:47 on Mar 01,2019
+# Start time: 11:48:14 on Mar 03,2019
 # Loading work.LC3_vlg_vec_tst
 # Loading work.LC3
 # Loading work.hard_block
@@ -130,9 +126,9 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#26
 
-# ** Note: $finish    : InDepthWaveform.vwf.vt(72)
+# ** Note: $finish    : InDepthWaveform.vwf.vt(66)
 #    Time: 350 ns  Iteration: 0  Instance: /LC3_vlg_vec_tst
-# End time: 15:05:48 on Mar 01,2019, Elapsed time: 0:00:01
+# End time: 11:48:16 on Mar 03,2019, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -145,7 +141,7 @@ Reading C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/LC3.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/LC3_20190301150548.sim.vwf
+Writing the resulting VWF to C:/Users/USER1/Digital Logic/LC-3/simulation/qsim/LC3_20190303114816.sim.vwf
 
 Finished VCD to VWF conversion.
 

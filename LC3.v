@@ -20,10 +20,7 @@ module LC3 (
 	PC,
 	current_state,
 
-	memOut,
-	MAROut,
 	MDROut,
-	MDRIn,
 	
 	// direct input
 	address_in_direct,
@@ -43,9 +40,7 @@ input [2:0] SR_r;
 output [2:0] Out_r;
 
 // memory I/Os
-output [15:0] MDROut, memOut;
-output [15:0] MAROut;
-output [15:0] MDRIn;
+output [15:0] MDROut;
 
 input [15:0] address_in_direct, data_in_direct;
 input clk_direct;
@@ -143,9 +138,6 @@ Memory memory(
 	.clk(clk),
 	.reset(reset),
 	.MDROut(MDROut),
-	.MDRIn(MDRIn),
-	.MAROut(MAROut),
-	.memOut(memOut),
 	.address_in_direct(address_in_direct),
 	.data_in_direct(data_in_direct),
 	.clk_direct(clk_direct),
