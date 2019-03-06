@@ -5,8 +5,8 @@
 
 module LC3FPGA(
 
-	HEX0, HEX1, HEX2, HEX3, HEX6, HEX7, 
-	LEDR, KEY, SW
+	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, 
+	LEDR, KEY, SW, LEDG, CLOCK_50
 );
 
 input [17:0] SW;
@@ -16,9 +16,12 @@ output [6:0] HEX0;
 output [6:0] HEX1;
 output [6:0] HEX2;
 output [6:0] HEX3;
+output [6:0] HEX4;
+output [6:0] HEX5;
 output [6:0] HEX6;
 output [6:0] HEX7;
 output [17:0] LEDR;
+output  [2:0] LEDG;
 
 // internal wires
 wire [5:0] current_state;
@@ -40,26 +43,31 @@ wire [15:0] disp6_wire;
 wire [15:0] disp7_wire;
 
 wire [15:0] mem_out;
+wire [15:0] PC;
+wire N, Z, P;
+input CLOCK_50;
+wire slow_clk;
+
+clock_1hz clk(CLOCK_50, slow_clk);
 
 LC3 processor(
 
-	.clk(~KEY[0]),
-	.clk_r(~KEY[1]),
+	.clk(slow_clk),
+	.clk_r(slow_clk),
 	.SR_r(SW),
 	.Out_r(reg_output),
-	
+	.PC(PC), 
 	.IR(IR),
-	
 	.current_state(current_state),
 	.address_in_direct(SW[15:0]),
-	.clk_direct(~KEY[2]),
-	.mem_out_direct(mem_out)
-	// .data_in_direct(),
-	//	PC,
+	.clk_direct(slow_clk),
+	.mem_out_direct(mem_out),
+	.N(N), .Z(Z), .P(P)
 );
 
 assign LEDR[15:0] = IR;
 assign LEDR[17] = ~KEY[0];
+assign LEDG[2:0] = {N, Z, P};
 
 // seven segment display reg
 SevenSegmentDecoder disp1(.in(reg_output[3:0]),		.HEX0(disp0_wire));
@@ -76,8 +84,11 @@ SevenSegmentDecoder disp8(.in(mem_out[15:12]),		.HEX0(disp7_wire));
 SevenSegmentDecoder state_disp1(.in(current_state[3:0]),	.HEX0(HEX6));
 SevenSegmentDecoder state_disp2(.in((4'b0000 + current_state[5:4])),	.HEX0(HEX7));
 
+SevenSegmentDecoder pc_disp1(.in(PC[3:0]),	.HEX0(HEX4));
+SevenSegmentDecoder pc_disp2(.in((4'b0000 + PC[5:4])),	.HEX0(HEX5));
+
 // HEX display output
-always @ (SW) begin
+always @ (*) begin
 
 	if (SW[17] == 1) begin
 	
@@ -85,14 +96,12 @@ always @ (SW) begin
 		HEX1_out <= disp1_wire;
 		HEX2_out <= disp2_wire;
 		HEX3_out <= disp3_wire;
-		
 	end else begin
 		
 		HEX0_out <= disp4_wire;
 		HEX1_out <= disp5_wire;
 		HEX2_out <= disp6_wire;
 		HEX3_out <= disp7_wire;
-	
 	end
 
 end

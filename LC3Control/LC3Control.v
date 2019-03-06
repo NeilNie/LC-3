@@ -27,7 +27,7 @@ module LC3Control(
 	selPC, selMDR,
 	SR1, SR2, DR,
 	regWE, memWE,
-	current_state,
+	current_state
 );
 
 // inputs
@@ -61,10 +61,12 @@ always @ (posedge clk) begin
 		18: begin
 		
 			// MAR <- PC
+			// PC <- PC + 1
 			memWE <= 0;		regWE <= 0;
 			DR <= 3'b000; 	SR1 <= 3'b000; 	SR2 <= 3'b000;
 			enaMARM <= 0; 	enaMDR <= 0; 		enaALU <= 0; enaPC <= 1;
-			ldMAR <= 1;		ldPC <= 0;
+			selPC <= 2'b00;
+			ldMAR <= 1;		ldPC <= 1;
 
 			next_state <= 6'b100001;
 		
@@ -72,11 +74,10 @@ always @ (posedge clk) begin
 		
 		33: begin
 			
-			// PC <- PC + 1
-			// MDR <- M[MAR]
 			
+			// MDR <- M[MAR]
 			selMDR <= 2'b01;	selPC <= 2'b00;
-			ldMDR <= 1;			ldMAR <= 0;			ldPC <= 1;
+			ldMDR <= 1;			ldMAR <= 0;			ldPC <= 0;
 			SR1 <= 3'b000; 	SR2 <= 3'b000; 	DR <= 3'b000;
 			enaMARM <= 0;		enaMDR <= 0;		enaALU <= 0;	enaPC <= 0;
 		
@@ -272,6 +273,7 @@ always @ (posedge clk) begin
 		
 			// M[MAR] <= MDR
 			memWE <= 1;
+			regWE <= 0;
 			
 			// make sure to turn everyhting else off 
 			SR1 <= 3'b000; 	SR2 <= 3'b000; 	DR <= 3'b000;
@@ -282,8 +284,43 @@ always @ (posedge clk) begin
 		
 		end
 		
-		default: begin
+		// state #: 0 (BR)
+		0: begin
+			
+			reg [2:0] cond_code;
+			cond_code <= {IR[11], IR[10], IR[9]};
+			
+			if (N == IR[11] && Z == IR[10] && P == IR[9]) begin
+				
+				enaPC <= 0;	enaMARM <= 0; enaMDR <= 0; enaALU <= 0;
+				ldMAR <= 0; ldMDR <= 0;
+				regWE <= 0;	memWE <= 0;
+				
+				selEAB1 <= 0; selEAB2 <= 2'b10;
+				selPC <= 2'b01;	ldPC <= 1;
+			end 
+			
+			next_state <= 6'b010010;
+			
+		end
 		
+		// state #: 0 (TRAP)
+		15: begin
+			
+			if (IR[7:0] == 8'b00100101) begin
+				next_state <= 6'b111111;
+			end
+		
+		end
+		
+		default: begin
+			
+			// outputs
+			reset <= 0; enaALU <= 0;
+			regWE <= 0; enaMARM <= 0; selMAR <= 0; selEAB1 <= 0; enaPC <= 0;
+			ldPC <= 0; ldIR <= 0; ldMAR <= 0; ldMDR <= 0; memWE <= 0; enaMDR <= 0;
+			aluControl <= 2'b00; selPC <= 2'b00; selEAB2 <= 2'b00; selMDR <= 2'b00;
+			SR1 <= 3'b000; SR2 <= 3'b000; DR <= 3'b000;
 		end
 	
 	endcase

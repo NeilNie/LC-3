@@ -1,5 +1,5 @@
 Flow report for LC3FPGA
-Sun Mar 03 12:19:06 2019
+Tue Mar 05 18:56:57 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 03 12:19:06 2019       ;
+; Flow Status                        ; Successful - Tue Mar 05 18:56:57 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LC3FPGA                                     ;
 ; Top-level Entity Name              ; LC3FPGA                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 892 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 812 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 264 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 264                                         ;
-; Total pins                         ; 81 / 529 ( 15 % )                           ;
+; Total logic elements               ; 1,030 / 114,480 ( < 1 % )                   ;
+;     Total combinational functions  ; 971 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 296 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 296                                         ;
+; Total pins                         ; 99 / 529 ( 19 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576 / 3,981,312 ( 26 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2019 12:16:34 ;
+; Start date & time ; 03/05/2019 18:53:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LC3FPGA             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 8796753388042.155163339400796          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 8796753388042.155183003504636          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -86,6 +86,8 @@ refer to the applicable agreement for further details.
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
@@ -95,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 4774 MB             ; 00:00:38                           ;
-; Fitter               ; 00:00:52     ; 1.0                     ; 5323 MB             ; 00:00:48                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 4709 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:13     ; 1.0                     ; 4840 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4696 MB             ; 00:00:05                           ;
-; Total                ; 00:02:23     ; --                      ; --                  ; 00:01:43                           ;
+; Analysis & Synthesis ; 00:01:06     ; 1.0                     ; 4774 MB             ; 00:00:37                           ;
+; Fitter               ; 00:01:18     ; 1.0                     ; 5327 MB             ; 00:00:48                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4708 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.0                     ; 4838 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4697 MB             ; 00:00:03                           ;
+; Total                ; 00:02:51     ; --                      ; --                  ; 00:01:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

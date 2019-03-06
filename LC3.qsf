@@ -78,7 +78,6 @@ set_global_assignment -name VERILOG_FILE EAB/EAB.v
 set_global_assignment -name VERILOG_FILE ALU/ALU.v
 set_global_assignment -name VERILOG_FILE LC3.v
 set_global_assignment -name VERILOG_FILE bus_tri_state_buffer.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE general_tb.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE BasicGeneralWaveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE InDepthWaveform.vwf

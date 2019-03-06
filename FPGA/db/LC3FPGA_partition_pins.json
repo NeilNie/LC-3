@@ -116,6 +116,58 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[6]",
+					"strict" : false
+				},
+				{
 					"name" : "HEX6[0]",
 					"strict" : false
 				},
@@ -236,6 +288,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[2]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[17]",
 					"strict" : false
 				},
@@ -256,10 +320,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[1]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[15]",
 					"strict" : false
 				},
@@ -269,10 +329,6 @@
 				},
 				{
 					"name" : "SW[13]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
@@ -313,6 +369,10 @@
 				},
 				{
 					"name" : "SW[12]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
 					"strict" : false
 				}
 			]

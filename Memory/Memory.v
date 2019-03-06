@@ -18,12 +18,7 @@ module Memory(
 	address_in_direct,
 	data_in_direct,
 	clk_direct,
-	mem_out_direct,
-	
-	// debugging
-//	MAROut,
-//	memOut,
-//	MDRIn
+	mem_out_direct
 );
 
 // module I/O

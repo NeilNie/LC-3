@@ -30,7 +30,7 @@ end
 
 always @ (posedge clk) begin
 	if (ldPC == 1'b1) begin
-		PC_inc = PC + 1;
+		PC_inc = PCOut + 1;
 	end
 end
 		

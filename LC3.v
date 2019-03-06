@@ -11,23 +11,16 @@
 module LC3 (
 
 	clk,
-	clk_r,
-	SR_r,
-	Out_r,
-	
-	IR,
-	Bus,
-	PC,
-	current_state,
-
-	MDROut,
+	clk_r, SR_r, Out_r,
+	IR, Bus,	PC, current_state,
 	
 	// direct input
 	address_in_direct,
-	data_in_direct,
 	clk_direct,
-	mem_out_direct
-	// ------------------------------
+	mem_out_direct,
+	
+	// NZP
+	N, Z, P
 );
 
 input clk;
@@ -40,9 +33,7 @@ input [2:0] SR_r;
 output [15:0] Out_r;
 
 // memory I/Os
-output [15:0] MDROut;
-
-input [15:0] address_in_direct, data_in_direct;
+input [15:0] address_in_direct;
 input clk_direct;
 output [15:0] mem_out_direct;
 
@@ -57,12 +48,13 @@ wire [1:0] selPC;
 wire [1:0] selMDR;
 wire [2:0] SR0, SR1, DR;
 wire [15:0] ALUOut;
+wire [15:0] MDROut;
 wire [15:0] MARMuxOut;
 wire [15:0] regOut0;
 wire [15:0] regOut1;
 wire [15:0] eabOut;
 wire [15:0] IR;
-wire N, Z, P;
+output N, Z, P;
 
 // =======================================================================
 // ===================== Implementation begin ============================
@@ -97,7 +89,7 @@ LC3Control FSM(
 	.selPC(selPC), .selMDR(selMDR),
 	.SR1(SR0), .SR2(SR1), .DR(DR),
 	.regWE(regWE), .memWE(memWE),
-	.current_state(current_state),
+	.current_state(current_state)
 );
 
 // -----------------------------------------------------
@@ -120,12 +112,11 @@ PC pc(.clk(clk),
 
 // -----------------------------------------------------
 
-NZP nzp(
-	.Bus(Bus),
-	.clk(clk),
-	.regWE(regWE),
-	.reset(reset),
-	.N(N), .Z(Z), .P(P));
+NZP nzp(	.Bus(Bus),
+			.clk(clk),
+			.regWE(regWE),
+			.reset(reset),
+			.N(N), .Z(Z), .P(P));
 
 // -----------------------------------------------------
 
@@ -139,7 +130,6 @@ Memory memory(
 	.reset(reset),
 	.MDROut(MDROut),
 	.address_in_direct(address_in_direct),
-	.data_in_direct(data_in_direct),
 	.clk_direct(clk_direct),
 	.mem_out_direct(mem_out_direct));
 

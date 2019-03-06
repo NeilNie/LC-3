@@ -1,15 +1,18 @@
 //
 // NZP
 //
+// Copyright (c) 2018 by Neil Nie
+// All Rights Resered. 
+// MIT License
+// Contact: contact@neilnie.com
+// 
 
 module NZP (
 	Bus,
 	clk,
 	regWE,
 	reset,
-	N,
-	Z,
-	P
+	N,	Z,	P
 );
 
 input [15:0] Bus;

@@ -284,70 +284,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "MDROut[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[4]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[5]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[8]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[10]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[12]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MDROut[15]",
-					"strict" : false
-				},
-				{
 					"name" : "mem_out_direct[0]",
 					"strict" : false
 				},
@@ -412,6 +348,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "N",
+					"strict" : false
+				},
+				{
+					"name" : "Z",
+					"strict" : false
+				},
+				{
+					"name" : "P",
+					"strict" : false
+				},
+				{
 					"name" : "SR_r[0]",
 					"strict" : false
 				},
@@ -445,10 +393,6 @@
 				},
 				{
 					"name" : "clk_direct",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[0]",
 					"strict" : false
 				},
 				{
@@ -501,66 +445,6 @@
 				},
 				{
 					"name" : "address_in_direct[12]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[1]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[2]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[3]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[5]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[6]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[7]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[8]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[9]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[10]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[11]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[12]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[13]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[14]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in_direct[15]",
 					"strict" : false
 				}
 			]
