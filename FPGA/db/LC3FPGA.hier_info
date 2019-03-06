@@ -1,78 +1,78 @@
 |LC3FPGA
-HEX0[0] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] << HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[0] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[1] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[2] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[3] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[4] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[5] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[6] << HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[0] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[1] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[2] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[3] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[4] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[5] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[6] << HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[0] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[1] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[2] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[3] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[4] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[5] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[6] << HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[0] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[1] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[2] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[3] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[4] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[5] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX4[6] << SevenSegmentDecoder:pc_disp1.HEX0
-HEX5[0] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[1] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[2] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[3] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[4] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[5] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX5[6] << SevenSegmentDecoder:pc_disp2.HEX0
-HEX6[0] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[1] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[2] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[3] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[4] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[5] << SevenSegmentDecoder:state_disp1.HEX0
-HEX6[6] << SevenSegmentDecoder:state_disp1.HEX0
-HEX7[0] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[1] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[2] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[3] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[4] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[5] << SevenSegmentDecoder:state_disp2.HEX0
-HEX7[6] << SevenSegmentDecoder:state_disp2.HEX0
-LEDR[0] << LC3:processor.IR
-LEDR[1] << LC3:processor.IR
-LEDR[2] << LC3:processor.IR
-LEDR[3] << LC3:processor.IR
-LEDR[4] << LC3:processor.IR
-LEDR[5] << LC3:processor.IR
-LEDR[6] << LC3:processor.IR
-LEDR[7] << LC3:processor.IR
-LEDR[8] << LC3:processor.IR
-LEDR[9] << LC3:processor.IR
-LEDR[10] << LC3:processor.IR
-LEDR[11] << LC3:processor.IR
-LEDR[12] << LC3:processor.IR
-LEDR[13] << LC3:processor.IR
-LEDR[14] << LC3:processor.IR
-LEDR[15] << LC3:processor.IR
-LEDR[16] << <GND>
-LEDR[17] << KEY[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= HEX1_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= HEX2_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[1] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[2] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[3] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[4] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[5] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[6] <= HEX3_out.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[0] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[1] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[2] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[3] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[4] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[5] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX4[6] <= SevenSegmentDecoder:pc_disp1.HEX0
+HEX5[0] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[1] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[2] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[3] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[4] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[5] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX5[6] <= SevenSegmentDecoder:pc_disp2.HEX0
+HEX6[0] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[1] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[2] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[3] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[4] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[5] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX6[6] <= SevenSegmentDecoder:state_disp1.HEX0
+HEX7[0] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[1] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[2] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[3] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[4] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[5] <= SevenSegmentDecoder:state_disp2.HEX0
+HEX7[6] <= SevenSegmentDecoder:state_disp2.HEX0
+LEDR[0] <= LC3:processor.IR
+LEDR[1] <= LC3:processor.IR
+LEDR[2] <= LC3:processor.IR
+LEDR[3] <= LC3:processor.IR
+LEDR[4] <= LC3:processor.IR
+LEDR[5] <= LC3:processor.IR
+LEDR[6] <= LC3:processor.IR
+LEDR[7] <= LC3:processor.IR
+LEDR[8] <= LC3:processor.IR
+LEDR[9] <= LC3:processor.IR
+LEDR[10] <= LC3:processor.IR
+LEDR[11] <= LC3:processor.IR
+LEDR[12] <= LC3:processor.IR
+LEDR[13] <= LC3:processor.IR
+LEDR[14] <= LC3:processor.IR
+LEDR[15] <= LC3:processor.IR
+LEDR[16] <= <GND>
+LEDR[17] <= KEY[0].DB_MAX_OUTPUT_PORT_TYPE
 KEY[0] => LEDR[17].DATAIN
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -94,9 +94,9 @@ SW[14] => SW[14].IN2
 SW[15] => SW[15].IN2
 SW[16] => SW[16].IN1
 SW[17] => SW[17].IN1
-LEDG[0] << LC3:processor.P
-LEDG[1] << LC3:processor.Z
-LEDG[2] << LC3:processor.N
+LEDG[0] <= LC3:processor.P
+LEDG[1] <= LC3:processor.Z
+LEDG[2] <= LC3:processor.N
 CLOCK_50 => CLOCK_50.IN1
 
 
@@ -224,22 +224,22 @@ address_in_direct[13] => address_in_direct[13].IN1
 address_in_direct[14] => address_in_direct[14].IN1
 address_in_direct[15] => address_in_direct[15].IN1
 clk_direct => clk_direct.IN1
-mem_out_direct[0] <= Memory:memory.mem_out_direct
-mem_out_direct[1] <= Memory:memory.mem_out_direct
-mem_out_direct[2] <= Memory:memory.mem_out_direct
-mem_out_direct[3] <= Memory:memory.mem_out_direct
-mem_out_direct[4] <= Memory:memory.mem_out_direct
-mem_out_direct[5] <= Memory:memory.mem_out_direct
-mem_out_direct[6] <= Memory:memory.mem_out_direct
-mem_out_direct[7] <= Memory:memory.mem_out_direct
-mem_out_direct[8] <= Memory:memory.mem_out_direct
-mem_out_direct[9] <= Memory:memory.mem_out_direct
-mem_out_direct[10] <= Memory:memory.mem_out_direct
-mem_out_direct[11] <= Memory:memory.mem_out_direct
-mem_out_direct[12] <= Memory:memory.mem_out_direct
-mem_out_direct[13] <= Memory:memory.mem_out_direct
-mem_out_direct[14] <= Memory:memory.mem_out_direct
-mem_out_direct[15] <= Memory:memory.mem_out_direct
+mem_out_direct[0] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[1] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[2] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[3] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[4] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[5] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[6] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[7] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[8] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[9] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[10] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[11] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[12] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[13] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[14] <= Memory:mem_inst.mem_out_direct
+mem_out_direct[15] <= Memory:mem_inst.mem_out_direct
 N <= N.DB_MAX_OUTPUT_PORT_TYPE
 Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
 P <= P.DB_MAX_OUTPUT_PORT_TYPE
@@ -1685,7 +1685,7 @@ out[14] <= out[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= out[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|PC:pc
+|LC3FPGA|LC3:processor|PC:PC_inst
 clk => clk.IN1
 reset => reset.IN1
 ldPC => ldPC.IN1
@@ -1745,7 +1745,7 @@ PCOut[14] <= bit_16_reg:pc_reg.Q
 PCOut[15] <= bit_16_reg:pc_reg.Q
 
 
-|LC3FPGA|LC3:processor|PC:pc|bit_16_reg:pc_reg
+|LC3FPGA|LC3:processor|PC:PC_inst|bit_16_reg:pc_reg
 D[0] => Q.DATAB
 D[1] => Q.DATAB
 D[2] => Q.DATAB
@@ -1828,7 +1828,7 @@ clk => Q[14]~reg0.CLK
 clk => Q[15]~reg0.CLK
 
 
-|LC3FPGA|LC3:processor|NZP:nzp
+|LC3FPGA|LC3:processor|NZP:NZP_inst
 Bus[0] => LessThan0.IN32
 Bus[0] => Equal0.IN15
 Bus[1] => LessThan0.IN31
@@ -1874,7 +1874,7 @@ Z <= NZP_register:register.Q
 P <= NZP_register:register.Q
 
 
-|LC3FPGA|LC3:processor|NZP:nzp|NZP_register:register
+|LC3FPGA|LC3:processor|NZP:NZP_inst|NZP_register:register
 D[0] => D[0].IN1
 D[1] => D[1].IN1
 D[2] => D[2].IN1
@@ -1886,7 +1886,7 @@ reset => reset.IN3
 clk => clk.IN3
 
 
-|LC3FPGA|LC3:processor|NZP:nzp|NZP_register:register|d_negedge_flip_flop:ff_0
+|LC3FPGA|LC3:processor|NZP:NZP_inst|NZP_register:register|d_negedge_flip_flop:ff_0
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -1895,7 +1895,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|LC3FPGA|LC3:processor|NZP:nzp|NZP_register:register|d_negedge_flip_flop:ff_1
+|LC3FPGA|LC3:processor|NZP:NZP_inst|NZP_register:register|d_negedge_flip_flop:ff_1
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -1904,7 +1904,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|LC3FPGA|LC3:processor|NZP:nzp|NZP_register:register|d_negedge_flip_flop:ff_2
+|LC3FPGA|LC3:processor|NZP:NZP_inst|NZP_register:register|d_negedge_flip_flop:ff_2
 clk => Q~reg0.CLK
 D => in.IN0
 sel => in.IN1
@@ -1913,7 +1913,7 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clr => Q.OUTPUTSELECT
 
 
-|LC3FPGA|LC3:processor|Memory:memory
+|LC3FPGA|LC3:processor|Memory:mem_inst
 Bus[0] => Bus[0].IN1
 Bus[1] => Bus[1].IN1
 Bus[2] => Bus[2].IN1
@@ -2018,7 +2018,7 @@ mem_out_direct[14] <= two_port_mem:two_port_ram_inst.q_b
 mem_out_direct[15] <= two_port_mem:two_port_ram_inst.q_b
 
 
-|LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MAR_reg
+|LC3FPGA|LC3:processor|Memory:mem_inst|bit_16_reg:MAR_reg
 D[0] => Q.DATAB
 D[1] => Q.DATAB
 D[2] => Q.DATAB
@@ -2101,7 +2101,7 @@ clk => Q[14]~reg0.CLK
 clk => Q[15]~reg0.CLK
 
 
-|LC3FPGA|LC3:processor|Memory:memory|bit_16_reg:MDR_reg
+|LC3FPGA|LC3:processor|Memory:mem_inst|bit_16_reg:MDR_reg
 D[0] => Q.DATAB
 D[1] => Q.DATAB
 D[2] => Q.DATAB
@@ -2184,7 +2184,7 @@ clk => Q[14]~reg0.CLK
 clk => Q[15]~reg0.CLK
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst
 address_a[0] => address_a[0].IN1
 address_a[1] => address_a[1].IN1
 address_a[2] => address_a[2].IN1
@@ -2287,7 +2287,7 @@ q_b[14] <= altsyncram:altsyncram_component.q_b
 q_b[15] <= altsyncram:altsyncram_component.q_b
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component
 wren_a => altsyncram_67i2:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_67i2:auto_generated.wren_b
@@ -2405,7 +2405,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6306,7 +6306,7 @@ wren_a => decode_rsa:decode2.enable
 wren_b => decode_rsa:decode3.enable
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_rsa:decode2
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_rsa:decode2
 data[0] => w_anode1645w[1].IN0
 data[0] => w_anode1662w[1].IN1
 data[0] => w_anode1672w[1].IN0
@@ -6349,7 +6349,7 @@ eq[6] <= w_anode1712w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode1722w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_rsa:decode3
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_rsa:decode3
 data[0] => w_anode1645w[1].IN0
 data[0] => w_anode1662w[1].IN1
 data[0] => w_anode1672w[1].IN0
@@ -6392,7 +6392,7 @@ eq[6] <= w_anode1712w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode1722w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_k8a:rden_decode_a
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_k8a:rden_decode_a
 data[0] => w_anode1733w[1].IN0
 data[0] => w_anode1751w[1].IN1
 data[0] => w_anode1762w[1].IN0
@@ -6427,7 +6427,7 @@ eq[6] <= w_anode1806w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode1817w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_k8a:rden_decode_b
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|decode_k8a:rden_decode_b
 data[0] => w_anode1733w[1].IN0
 data[0] => w_anode1751w[1].IN1
 data[0] => w_anode1762w[1].IN0
@@ -6462,7 +6462,7 @@ eq[6] <= w_anode1806w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode1817w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux4
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux4
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -7025,7 +7025,7 @@ sel[2] => result_node[0].IN0
 sel[2] => _.IN0
 
 
-|LC3FPGA|LC3:processor|Memory:memory|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux5
+|LC3FPGA|LC3:processor|Memory:mem_inst|two_port_mem:two_port_ram_inst|altsyncram:altsyncram_component|altsyncram_67i2:auto_generated|mux_qob:mux5
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -7647,7 +7647,7 @@ MARMuxOut[14] <= MARMuxOut.DB_MAX_OUTPUT_PORT_TYPE
 MARMuxOut[15] <= MARMuxOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|IR:ir
+|LC3FPGA|LC3:processor|IR:IR_inst
 clk => clk.IN1
 ldIR => ldIR.IN1
 reset => reset.IN1
@@ -7685,7 +7685,7 @@ IR[14] <= bit_16_reg:register.Q
 IR[15] <= bit_16_reg:register.Q
 
 
-|LC3FPGA|LC3:processor|IR:ir|bit_16_reg:register
+|LC3FPGA|LC3:processor|IR:IR_inst|bit_16_reg:register
 D[0] => Q.DATAB
 D[1] => Q.DATAB
 D[2] => Q.DATAB
@@ -7768,7 +7768,7 @@ clk => Q[14]~reg0.CLK
 clk => Q[15]~reg0.CLK
 
 
-|LC3FPGA|LC3:processor|EAB:eab
+|LC3FPGA|LC3:processor|EAB:EAB_inst
 IR[0] => adder_input_2[0].DATAIN
 IR[1] => adder_input_2[1].DATAIN
 IR[2] => adder_input_2[2].DATAIN
@@ -7860,7 +7860,7 @@ eabOut[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 eabOut[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LC3FPGA|LC3:processor|ALU:alu
+|LC3FPGA|LC3:processor|ALU:ALU_inst
 Ra[0] => Add0.IN16
 Ra[0] => aluOut.IN1
 Ra[0] => aluOut[0].DATAB

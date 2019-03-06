@@ -1,7 +1,11 @@
 //
 // LC3 FPGA
 //
-// Neil Nie
+// Copyright (c) 2018 by Neil Nie
+// All Rights Resered. 
+// MIT License
+// Contact: contact@neilnie.com
+// 
 
 module LC3FPGA(
 

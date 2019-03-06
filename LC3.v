@@ -102,25 +102,25 @@ RegisterFile reg_file(
 
 // -----------------------------------------------------
 
-PC pc(.clk(clk),
-		.reset(reset),
-		.ldPC(ldPC),
-		.eabOut(eabOut),
-		.selPC(selPC),
-		.Bus(Bus),
-		.PCOut(PC));
+PC PC_inst(	.clk(clk),
+				.reset(reset),
+				.ldPC(ldPC),
+				.eabOut(eabOut),
+				.selPC(selPC),
+				.Bus(Bus),
+				.PCOut(PC));
 
 // -----------------------------------------------------
 
-NZP nzp(	.Bus(Bus),
-			.clk(clk),
-			.regWE(regWE),
-			.reset(reset),
-			.N(N), .Z(Z), .P(P));
+NZP NZP_inst(	.Bus(Bus),
+					.clk(clk),
+					.regWE(regWE),
+					.reset(reset),
+					.N(N), .Z(Z), .P(P));
 
 // -----------------------------------------------------
 
-Memory memory(
+Memory mem_inst(
 	.Bus(Bus),
 	.ldMAR(ldMAR),
 	.ldMDR(ldMDR),
@@ -143,7 +143,7 @@ MARMux mar_mux(
 
 // -----------------------------------------------------
 
-IR ir(.clk(clk),
+IR IR_inst(.clk(clk),
 		.ldIR(ldIR),
 		.reset(reset),
 		.Bus(Bus),
@@ -151,7 +151,7 @@ IR ir(.clk(clk),
 
 // -----------------------------------------------------
 
-EAB eab(.IR(IR),
+EAB EAB_inst(.IR(IR),
 		  .Ra(regOut0),
 		  .PC(PC),
 		  .selEAB1(selEAB1),
@@ -160,7 +160,7 @@ EAB eab(.IR(IR),
 
 // -----------------------------------------------------
 
-ALU alu(.Ra(regOut0),
+ALU ALU_inst(.Ra(regOut0),
 		  .Rb(regOut1),
 		  .IR(IR),
 		  .aluControl(aluControl),

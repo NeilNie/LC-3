@@ -1,9 +1,11 @@
 //
 // ALU with IR Mux included
 //
-// Neil Nie 
-// (c) Yongyang Nie, 2019
-//
+// Copyright (c) 2018 by Neil Nie
+// All Rights Resered. 
+// MIT License
+// Contact: contact@neilnie.com
+// 
 
 
 module ALU(
